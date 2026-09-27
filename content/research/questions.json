@@ -846,8 +846,8 @@
       "officialSources": [],
       "firstSeen": "2026-09-26",
       "lastSeen": "2026-09-27",
-      "status": "new",
-      "kbSlug": null
+      "status": "published",
+      "kbSlug": "how-much-house-can-i-afford"
     },
     {
       "id": "buy-preapproval",
@@ -936,8 +936,8 @@
       "notes": "Strong candidate for one page per state (/locations/*). State programs to verify: CalHFA, GSFA (CA); TSAHC (TX); Florida Housing (FL); CHFA (CO). Los Angeles LIPA/MIPA (up to $161K, shared appreciation) promoted by brokers in r/CaliforniaMortgages; Texas 5% DPA posts in r/TexasMortgageRates. Free homebuyer education classes often unlock DPA.",
       "firstSeen": "2026-09-26",
       "lastSeen": "2026-09-27",
-      "status": "new",
-      "kbSlug": null
+      "status": "drafting",
+      "kbSlug": "down-payment-assistance-ca-tx-fl-co"
     },
     {
       "id": "fha-what-is-it",
@@ -1878,8 +1878,8 @@
       "officialSources": [],
       "firstSeen": "2026-09-26",
       "lastSeen": "2026-09-26",
-      "status": "new",
-      "kbSlug": null
+      "status": "drafting",
+      "kbSlug": "va-loan-credit-score-bankruptcy"
     },
     {
       "id": "va-eligibility-coe",
@@ -2375,8 +2375,8 @@
       "officialSources": [],
       "firstSeen": "2026-09-26",
       "lastSeen": "2026-09-27",
-      "status": "new",
-      "kbSlug": null,
+      "status": "drafting",
+      "kbSlug": "how-to-choose-a-mortgage-lender",
       "notes": "Dallas and Bay Area buyers asking for local lenders. No 'best/lowest' claims."
     },
     {
@@ -2705,8 +2705,8 @@
       "officialSources": [],
       "firstSeen": "2026-09-26",
       "lastSeen": "2026-09-27",
-      "status": "new",
-      "kbSlug": null,
+      "status": "drafting",
+      "kbSlug": "arm-vs-buydown-vs-fixed",
       "notes": "ARM share of applications is rising (news). Explain temporary vs permanent buydowns and ARM caps. Reg Z trigger-term rules apply to any example payment."
     },
     {

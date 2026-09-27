@@ -1,0 +1,8 @@
+{
+  "_note": "Rate scenarios and slider limits. Ace updates this file; never invent rates. If scenarios is empty, the site shows 'Call or chat for today's rates'.",
+  "maxCLTV": {
+    "heloc": 0.8,
+    "cashOut": 0.8
+  },
+  "scenarios": []
+}

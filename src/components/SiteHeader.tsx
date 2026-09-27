@@ -5,7 +5,7 @@ import { licensing, mainNav } from "@/lib/site";
 export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-brand-steel/30 bg-white/95 backdrop-blur">
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-2 px-4 py-3 sm:gap-4 sm:px-6">
         <Link href="/" className="shrink-0" aria-label={`${licensing.brandName} home`}>
           <Image
             src="/brand/logo-horizontal.png"
@@ -14,7 +14,7 @@ export function SiteHeader() {
             height={612}
             preload
             sizes="180px"
-            className="h-10 w-auto sm:h-12"
+            className="h-8 w-auto min-[360px]:h-10 sm:h-12"
           />
         </Link>
 
@@ -30,7 +30,7 @@ export function SiteHeader() {
           </ul>
         </nav>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 sm:gap-3">
           <a
             href={`tel:${licensing.phoneE164}`}
             className="hidden whitespace-nowrap text-sm font-semibold text-brand-slate hover:underline md:inline"
@@ -39,7 +39,7 @@ export function SiteHeader() {
           </a>
           <Link
             href="/book"
-            className="whitespace-nowrap rounded-full bg-brand-slate px-4 py-2 text-sm font-semibold text-white hover:bg-brand-ink"
+            className="whitespace-nowrap rounded-full bg-brand-slate px-3 py-2 text-sm font-semibold text-white hover:bg-brand-ink sm:px-4"
           >
             Book a call
           </Link>

@@ -10,13 +10,13 @@ Priority = times asked + 1 per thread from the past year + 3 if asked about CA, 
 |---|---|---|---|---|
 | 79 | 38 | CA CO TX | published | How do I know if my mortgage rate and Loan Estimate are a good deal? |
 | 41 | 19 | CA FL | published | How do I know if my VA loan rate and Loan Estimate are a good deal? |
-| 38 | 20 | CA CO TX | new | How much house can I afford? |
-| 26 | 16 | CA CO FL TX | new | Are there down payment assistance programs for first-time buyers in California, Texas, Florida, or Colorado? |
-| 25 | 11 | CA TX | new | How do I choose a mortgage lender, and should I just use the one my real estate agent recommends? |
+| 38 | 20 | CA CO TX | drafting | How much house can I afford? |
+| 26 | 16 | CA CO FL TX | drafting | Are there down payment assistance programs for first-time buyers in California, Texas, Florida, or Colorado? |
+| 25 | 11 | CA TX | drafting | How do I choose a mortgage lender, and should I just use the one my real estate agent recommends? |
 | 23 | 10 | FL | published | Can I use a VA loan to build a home or buy new construction? |
 | 23 | 10 | CA | published | How do I find a lender that really knows VA loans? |
-| 21 | 9 | CA | new | What credit score do I need for a VA loan, and can I qualify after collections or bankruptcy? |
-| 21 | 9 | CA | new | With rates above 7%, should I pick an adjustable-rate mortgage, a seller or builder rate buydown, or a 30-year fixed? |
+| 21 | 9 | CA | drafting | What credit score do I need for a VA loan, and can I qualify after collections or bankruptcy? |
+| 21 | 9 | CA | drafting | With rates above 7%, should I pick an adjustable-rate mortgage, a seller or builder rate buydown, or a 30-year fixed? |
 | 20 | 10 |  | new | How does assuming a VA loan work: can a non-veteran assume it, what does it cost, and how do I cover the seller's equity? |
 | 19 | 13 |  | new | How does a VA home loan work, and what should first-time VA buyers know? |
 | 17 | 7 | TX | new | Should I buy now or wait for mortgage rates to come down? |
@@ -173,13 +173,13 @@ Priority = times asked + 1 per thread from the past year + 3 if asked about CA, 
 
 ## Next 10 to answer
 
-1. How much house can I afford? (`buy-how-much-afford`)
-2. Are there down payment assistance programs for first-time buyers in California, Texas, Florida, or Colorado? (`buy-down-payment-assistance`)
-3. How do I choose a mortgage lender, and should I just use the one my real estate agent recommends? (`buy-choose-lender`)
-4. What credit score do I need for a VA loan, and can I qualify after collections or bankruptcy? (`va-credit-score`)
-5. With rates above 7%, should I pick an adjustable-rate mortgage, a seller or builder rate buydown, or a 30-year fixed? (`buy-arm-buydown-fixed`)
-6. Should I use a HELOC to pay for home improvements like a renovation, new roof, or ADU? (`heloc-home-improvements`)
-7. How does assuming a VA loan work: can a non-veteran assume it, what does it cost, and how do I cover the seller's equity? (`va-assumption-buyer`)
-8. HELOC or cash-out refinance: which is better? (`heloc-vs-cash-out`)
-9. How does a VA home loan work, and what should first-time VA buyers know? (`va-how-it-works`)
-10. How do I get my ex off the mortgage after a breakup or divorce? (`remove-coborrower-breakup`)
+1. Should I use a HELOC to pay for home improvements like a renovation, new roof, or ADU? (`heloc-home-improvements`)
+2. How does assuming a VA loan work: can a non-veteran assume it, what does it cost, and how do I cover the seller's equity? (`va-assumption-buyer`)
+3. HELOC or cash-out refinance: which is better? (`heloc-vs-cash-out`)
+4. How does a VA home loan work, and what should first-time VA buyers know? (`va-how-it-works`)
+5. How do I get my ex off the mortgage after a breakup or divorce? (`remove-coborrower-breakup`)
+6. When is refinancing worth it, and how much lower does my rate need to be? (`refi-when-worth-it`)
+7. Should I use a HELOC instead of pulling money from my 401(k) or investments? (`heloc-vs-401k-investments`)
+8. Should I pay off my mortgage early or invest the extra money? (`pay-off-vs-invest`)
+9. Should I buy now or wait for mortgage rates to come down? (`buy-now-or-wait`)
+10. What's the difference between a HELOC and a home equity loan? (`heloc-vs-home-equity-loan`)

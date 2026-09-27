@@ -34,6 +34,8 @@ export function llmsTxt() {
     `- [Home](${siteUrl}/): who we are and how to reach us`,
     `- [Mortgage questions answered](${siteUrl}/answers): plain-English answers to real borrower questions, searchable by topic and state`,
     `- [Full answer text](${siteUrl}/llms-full.txt): every published answer as plain text`,
+    `- [How we estimate home equity](${siteUrl}/how-we-estimate): the formula behind our equity estimate`,
+    `- [Book a call](${siteUrl}/book): schedule with Ace Ausar`,
     "",
     "## Book a call with Ace Ausar",
     "",

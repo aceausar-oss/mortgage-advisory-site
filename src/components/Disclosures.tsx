@@ -1,12 +1,12 @@
 import type { KbEntry } from "@/lib/kb";
 
 // Topic-specific advertising disclosures (CLAUDE.md §8). Shown on every answer page that touches the topic.
-export function Disclosures({ entry }: { entry: Pick<KbEntry, "category" | "products"> }) {
+export function Disclosures({ entry, debt: debtTopic = false }: { entry: Pick<KbEntry, "category" | "products">; debt?: boolean }) {
   const has = (p: KbEntry["products"][number]) => entry.products.includes(p);
   const reverse = entry.category === "reverse-mortgage" || has("hecm") || has("proprietary-reverse") || has("reverse-second");
   const proprietary = has("proprietary-reverse") || has("reverse-second");
   const heloc = has("heloc");
-  const debt = entry.category === "debt-consolidation";
+  const debt = debtTopic || entry.category === "debt-consolidation";
   const items: string[] = [];
 
   if (reverse) {

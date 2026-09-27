@@ -121,3 +121,29 @@ export function searchEntries({ q, category, state }: { q?: string; category?: s
     return words.every((w) => haystack.includes(w));
   });
 }
+
+const STOPWORDS = new Set(
+  "a an and are as at be by can could do does for from get go how i if in into is it its me my of on or our should so that the this to up was we what when where which who why will with you your".split(" "),
+);
+
+/** Loose relevance ranking for free-text questions (hero chat, /ask). Best matches first. */
+export function rankEntries(q: string, limit = 5): KbEntry[] {
+  const words = q
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, " ")
+    .split(/\s+/)
+    .filter((w) => w.length > 2 && !STOPWORDS.has(w));
+  if (!words.length) return [];
+  return getEntries()
+    .map((e) => {
+      const question = e.question.toLowerCase();
+      const tldr = e.tldr.toLowerCase();
+      const body = e.body.toLowerCase();
+      const score = words.reduce((n, w) => n + (question.includes(w) ? 3 : 0) + (tldr.includes(w) ? 2 : 0) + (body.includes(w) ? 1 : 0), 0);
+      return { e, score };
+    })
+    .filter((x) => x.score > 0)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, limit)
+    .map((x) => x.e);
+}

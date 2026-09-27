@@ -3,6 +3,8 @@
 /* Brand tokens (CLAUDE.md §3). Usage: bg-brand-blue, text-brand-slate, bg-mist, font-heading, etc. */
 @theme {
   --color-brand-blue: #76b3e2;
+  /* Deeper brand blue for text on light backgrounds (brand-blue alone fails WCAG AA contrast). */
+  --color-brand-blue-deep: #2a6aa6;
   --color-brand-slate: #43565f;
   --color-brand-steel: #87959f;
   --color-brand-ink: #231f20;
@@ -110,4 +112,15 @@ h4 {
   background: var(--color-mist);
   border-radius: 0 1rem 1rem 0;
   padding: 1rem 1.25rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }

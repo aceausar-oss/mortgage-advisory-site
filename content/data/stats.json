@@ -1,0 +1,4 @@
+{
+  "_note": "Real, sourced housing statistics for our markets. Each needs value, label, source, sourceUrl, asOf. Never invent a number; if empty, the homepage stat badge is hidden.",
+  "stats": []
+}
