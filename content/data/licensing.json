@@ -1,0 +1,57 @@
+{
+  "legalName": "The Mortgage Advisory, Inc.",
+  "brandName": "The Mortgage Advisory",
+  "nmls": "1549739",
+  "nmlsConsumerAccessUrl": "https://www.nmlsconsumeraccess.org/EntityDetails.aspx/COMPANY/1549739",
+  "entityStatement": "The Mortgage Advisory, Inc. is a direct mortgage lender (mortgage banker) licensed in California, Texas, Florida, and Colorado, NMLS #1549739. Founded by Ace Ausar, a mortgage banker with 25+ years in real estate and lending. We offer home purchase loans, refinancing, HELOCs and home equity access, reverse mortgages (HECM and proprietary, including second-lien reverse mortgages), debt consolidation using cash-out refinances, HELOCs, or reverse mortgage seconds, and FHA, VA, conventional, and Non-QM loans.",
+  "address": {
+    "street": "999 Corporate Drive, Ste 100",
+    "city": "Ladera Ranch",
+    "region": "CA",
+    "postalCode": "92694",
+    "country": "US"
+  },
+  "phone": "(949) 395-9223",
+  "phoneE164": "+19493959223",
+  "email": "Ace@TheMortgageAdvisory.com",
+  "founder": {
+    "name": "Ace Ausar",
+    "jobTitle": "Mortgage Banker",
+    "image": "/brand/ace-hero.png"
+  },
+  "states": [
+    {
+      "code": "CA",
+      "name": "California",
+      "regulator": "California Department of Financial Protection and Innovation (DFPI)",
+      "licenseType": "[VERIFY: CRMLA vs. CFL]",
+      "licenseNumber": "[VERIFY]",
+      "statement": "[VERIFY: DFPI-required licensing statement]"
+    },
+    {
+      "code": "TX",
+      "name": "Texas",
+      "regulator": "Texas Department of Savings and Mortgage Lending (SML)",
+      "licenseType": "[VERIFY]",
+      "licenseNumber": "[VERIFY]",
+      "statement": "[VERIFY: official current Texas Consumer Complaint and Recovery Fund Notice from SML]"
+    },
+    {
+      "code": "FL",
+      "name": "Florida",
+      "regulator": "Florida Office of Financial Regulation (OFR)",
+      "licenseType": "[VERIFY]",
+      "licenseNumber": "[VERIFY]",
+      "statement": "[VERIFY]"
+    },
+    {
+      "code": "CO",
+      "name": "Colorado",
+      "regulator": "Colorado Division of Real Estate",
+      "licenseType": "[VERIFY]",
+      "licenseNumber": "[VERIFY]",
+      "statement": "[VERIFY: Regulated by the Division of Real Estate statement]"
+    }
+  ],
+  "sameAs": []
+}

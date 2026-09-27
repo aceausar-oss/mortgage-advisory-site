@@ -1,0 +1,3440 @@
+{
+  "updated": "2026-09-27",
+  "howToUpdate": "See content/research/README.md",
+  "questions": [
+    {
+      "id": "rm-heirs-owe",
+      "question": "What happens to a reverse mortgage when the borrower dies, and do the heirs have to pay it back?",
+      "category": "reverse-mortgage",
+      "loanTypes": [
+        "hecm"
+      ],
+      "personas": [
+        "adult-child"
+      ],
+      "states": [],
+      "mentions": 8,
+      "sources": [
+        "https://www.agingcare.com/questions/what-happens-when-mother-dies-and-has-reverse-mortgage-on-house-four-or-5-siblings-live-with-her-can-485185.htm",
+        "https://www.quora.com/What-happens-to-a-reverse-mortgage-when-the-borrower-passes-away-Does-their-family-need-to-pay-off-the-loan-before-selling-the-property-or-inheriting-anything",
+        "https://www.agingcare.com/questions/am-i-responsible-deceased-fathers-mortgage-200275.htm",
+        "https://www.bogleheads.org/forum/viewtopic.php?t=361756",
+        "https://www.agingcare.com/questions/mother-had-a-reverse-mortgage-how-do-i-release-siblings-share-430955.htm",
+        "https://www.quora.com/What-happens-to-a-home-with-a-reverse-mortgage-when-the-owner-dies",
+        "https://www.quora.com/What-happens-to-the-heirs-when-their-parents-pass-away-and-have-not-paid-their-reverse-mortgage-payments-but-have-assets-left-behind",
+        "reddit:r/inheritance (5d)"
+      ],
+      "officialSources": [
+        "https://www.consumerfinance.gov/ask-cfpb/when-do-i-have-to-pay-back-a-reverse-mortgage-loan-en-236/"
+      ],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null,
+      "notes": "Reddit 'People also search for': 'negotiating a reverse mortgage payoff' (HECM heirs can pay the lesser of balance or 95% of appraised value)."
+    },
+    {
+      "id": "rm-heirs-keep-house",
+      "question": "Can family members keep the house after a parent with a reverse mortgage dies, and how long do they have?",
+      "category": "reverse-mortgage",
+      "loanTypes": [
+        "hecm"
+      ],
+      "personas": [
+        "adult-child"
+      ],
+      "states": [],
+      "mentions": 3,
+      "sources": [
+        "https://www.quora.com/How-soon-after-death-do-the-heirs-have-to-notify-the-reverse-mortgage-company-and-what-if-they-wait-a-few-months",
+        "https://www.quora.com/My-dad-had-a-reverse-mortgage-condo-and-died-I-am-his-daughter-and-was-living-with-him-If-I-am-giving-the-place-back-to-the-mortgage-company-how-long-can-I-stay-here",
+        "https://www.bogleheads.org/forum/viewtopic.php?t=413174"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "rm-good-idea-parent",
+      "question": "Is a reverse mortgage a good idea for my elderly parent?",
+      "category": "reverse-mortgage",
+      "loanTypes": [
+        "hecm"
+      ],
+      "personas": [
+        "adult-child",
+        "retiree"
+      ],
+      "states": [],
+      "mentions": 7,
+      "sources": [
+        "https://www.bogleheads.org/forum/viewtopic.php?t=431338",
+        "https://www.bogleheads.org/forum/viewtopic.php?p=8810401",
+        "https://www.bogleheads.org/forum/viewtopic.php?t=327365",
+        "https://www.bogleheads.org/forum/viewtopic.php?t=297330",
+        "https://www.agingcare.com/questions/reverse-mortgage-advice-490297.htm",
+        "https://www.reddit.com/r/personalfinance/comments/1tr60qg/",
+        "reddit:r/ReverseMortgageInfo (10d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-27",
+      "status": "new",
+      "kbSlug": null,
+      "notes": "Ace's framing (2026-09-27): in other countries reverse mortgages are seen as a 'housing pension', a retirement goal that lets you use the money you put into your home while aging in place (e.g., South Korea's government-guaranteed Korean Home Pension). Use this framing on reverse mortgage pages."
+    },
+    {
+      "id": "rm-how-it-works",
+      "question": "How does a reverse mortgage work, and what are the pros and cons?",
+      "category": "reverse-mortgage",
+      "loanTypes": [
+        "hecm"
+      ],
+      "personas": [
+        "retiree"
+      ],
+      "states": [],
+      "mentions": 8,
+      "sources": [
+        "https://www.bogleheads.org/forum/viewtopic.php?t=64118",
+        "https://www.bogleheads.org/forum/viewtopic.php?t=377315",
+        "https://www.bogleheads.org/forum/viewtopic.php?t=367718",
+        "https://www.bogleheads.org/forum/viewtopic.php?t=386111",
+        "https://www.bogleheads.org/forum/viewtopic.php?t=152367",
+        "https://www.bogleheads.org/forum/viewtopic.php?t=461519",
+        "https://www.reddit.com/r/NoStupidQuestions/comments/1vkt43c/",
+        "reddit:r/Mortgages (12d)"
+      ],
+      "officialSources": [
+        "https://www.consumerfinance.gov/ask-cfpb/what-is-a-reverse-mortgage-en-224/"
+      ],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-27",
+      "status": "new",
+      "kbSlug": null,
+      "notes": "Ace's framing (2026-09-27): in other countries reverse mortgages are seen as a 'housing pension', a retirement goal that lets you use the money you put into your home while aging in place (e.g., South Korea's government-guaranteed Korean Home Pension). Use this framing on reverse mortgage pages."
+    },
+    {
+      "id": "rm-assisted-living",
+      "question": "What happens to a reverse mortgage if my parent moves into assisted living or a nursing home?",
+      "category": "reverse-mortgage",
+      "loanTypes": [
+        "hecm"
+      ],
+      "personas": [
+        "adult-child"
+      ],
+      "states": [],
+      "mentions": 2,
+      "sources": [
+        "https://www.agingcare.com/questions/reverse-home-mortgages-are-they-to-allow-the-senior-to-stay-in-their-home-longer-or-do-they-exist-to-490889.htm",
+        "https://www.agingcare.com/articles/can-a-reverse-mortgage-help-your-elderly-parent-expenses-95604.htm"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "rm-benefits-impact",
+      "question": "Does a reverse mortgage affect Medicaid, Social Security, or Medicare?",
+      "category": "reverse-mortgage",
+      "loanTypes": [
+        "hecm"
+      ],
+      "personas": [
+        "retiree",
+        "adult-child"
+      ],
+      "states": [],
+      "mentions": 2,
+      "sources": [
+        "https://www.agingcare.com/articles/can-a-reverse-mortgage-help-your-elderly-parent-expenses-95604.htm",
+        "https://www.bogleheads.org/forum/viewtopic.php?t=370846"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "rm-costs",
+      "question": "What does a reverse mortgage cost, and why are the upfront fees so high?",
+      "category": "reverse-mortgage",
+      "loanTypes": [
+        "hecm"
+      ],
+      "personas": [
+        "retiree"
+      ],
+      "states": [],
+      "mentions": 3,
+      "sources": [
+        "https://www.bogleheads.org/forum/viewtopic.php?t=367718",
+        "https://www.bogleheads.org/forum/viewtopic.php?t=213167",
+        "https://www.bogleheads.org/forum/viewtopic.php?t=252040"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null,
+      "notes": "Also asked as 'What are reverse mortgage closing costs?' (lender post in r/ReverseMortgageInfo)."
+    },
+    {
+      "id": "rm-second-lien",
+      "question": "Can I get a reverse mortgage without paying off my current low-rate first mortgage?",
+      "category": "reverse-mortgage",
+      "loanTypes": [
+        "proprietary-reverse",
+        "reverse-second"
+      ],
+      "personas": [
+        "retiree"
+      ],
+      "states": [],
+      "mentions": 0,
+      "sources": [],
+      "officialSources": [],
+      "notes": "No forum threads found yet; product is new (second-lien reverse, e.g. launched by Finance of America). Demand signal is industry coverage of rate lock-in. Good first-mover answer. Must say it is NOT an FHA-insured HECM.",
+      "industrySources": [
+        "https://nationalmortgageprofessional.com/news/finance-america-launches-second-lien-reverse-mortgage-amid-rate-lock-demand",
+        "https://www.housingwire.com/articles/46918-finance-of-america-reverse-introduces-first-ever-second-lien-reverse-mortgage/"
+      ],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "published",
+      "kbSlug": "reverse-mortgage-keep-first-mortgage",
+      "pinned": true
+    },
+    {
+      "id": "rm-for-purchase",
+      "question": "Can I use a reverse mortgage to buy a new home or downsize?",
+      "category": "reverse-mortgage",
+      "loanTypes": [
+        "hecm"
+      ],
+      "personas": [
+        "retiree"
+      ],
+      "states": [],
+      "mentions": 3,
+      "sources": [
+        "https://www.quora.com/If-we-have-a-reverse-mortgage-can-we-use-it-to-buy-another-house-if-we-are-selling-our-current-one",
+        "https://www.bogleheads.org/forum/viewtopic.php?t=252040",
+        "https://www.quora.com/Can-you-use-money-from-a-reverse-mortgage-to-purchase-a-second-property"
+      ],
+      "officialSources": [
+        "https://www.consumerfinance.gov/ask-cfpb/can-i-use-a-reverse-mortgage-loan-to-buy-a-home-en-238/"
+      ],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "rm-eligibility",
+      "question": "Who qualifies for a reverse mortgage (age, equity, counseling)?",
+      "category": "reverse-mortgage",
+      "loanTypes": [
+        "hecm",
+        "proprietary-reverse"
+      ],
+      "personas": [
+        "retiree"
+      ],
+      "states": [],
+      "mentions": 1,
+      "sources": [
+        "https://www.bogleheads.org/forum/viewtopic.php?t=442269"
+      ],
+      "officialSources": [
+        "https://www.consumerfinance.gov/ask-cfpb/can-anyone-take-out-a-reverse-mortgage-loan-en-227/"
+      ],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "rm-line-of-credit",
+      "question": "How does a reverse mortgage line of credit work?",
+      "category": "reverse-mortgage",
+      "loanTypes": [
+        "hecm"
+      ],
+      "personas": [
+        "retiree"
+      ],
+      "states": [],
+      "mentions": 2,
+      "sources": [
+        "https://www.bogleheads.org/forum/viewtopic.php?t=442277",
+        "https://www.bogleheads.org/forum/viewtopic.php?t=415118"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "rm-pay-off-early",
+      "question": "Can I pay off a reverse mortgage early, and should I?",
+      "category": "reverse-mortgage",
+      "loanTypes": [
+        "hecm"
+      ],
+      "personas": [
+        "retiree"
+      ],
+      "states": [],
+      "mentions": 1,
+      "sources": [
+        "https://www.bogleheads.org/forum/viewtopic.php?t=449611"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "heloc-vs-cash-out",
+      "question": "HELOC or cash-out refinance: which is better?",
+      "category": "heloc",
+      "loanTypes": [
+        "heloc",
+        "cash-out-refi"
+      ],
+      "personas": [
+        "homeowner"
+      ],
+      "states": [],
+      "mentions": 15,
+      "sources": [
+        "https://www.quora.com/Is-it-better-to-get-a-HELOC-or-cash-out-refinance",
+        "https://www.biggerpockets.com/forums/50/topics/416906-heloc-vs-cash-out-refinance",
+        "https://www.biggerpockets.com/forums/50/topics/271899-heloc-vs-cash-out-refi",
+        "https://www.biggerpockets.com/forums/12/topics/764191-cash-out-refi-vs-heloc",
+        "https://www.biggerpockets.com/forums/50/topics/1147128-should-i-do-a-cash-out-refinance-or-a-heloc",
+        "https://www.biggerpockets.com/forums/853/topics/1232676-heloc-or-cash-out-refi",
+        "https://www.biggerpockets.com/forums/49/topics/809739-cash-out-refinance-vs-heloc-at-such-low-rates",
+        "https://www.bogleheads.org/forum/viewtopic.php?t=387200",
+        "https://www.bogleheads.org/forum/viewtopic.php?t=160229",
+        "https://www.reddit.com/r/Mortgages/comments/1mo4inu/",
+        "reddit:r/Mortgages (6mo)",
+        "reddit:r/personalfinance (8y)",
+        "reddit:r/personalfinance (8y)",
+        "reddit:r/personalfinance (6y)",
+        "reddit:r/personalfinance (6d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "heloc-keep-low-rate",
+      "question": "Should I get a HELOC instead of a cash-out refinance so I keep my low mortgage rate?",
+      "category": "heloc",
+      "loanTypes": [
+        "heloc",
+        "cash-out-refi"
+      ],
+      "personas": [
+        "homeowner"
+      ],
+      "states": [],
+      "mentions": 5,
+      "sources": [
+        "https://www.biggerpockets.com/forums/49/topics/809739-cash-out-refinance-vs-heloc-at-such-low-rates",
+        "https://www.quora.com/What-are-the-advantages-of-getting-a-HELOC-instead-of-taking-out-another-mortgage-while-interest-rates-are-low",
+        "https://www.biggerpockets.com/forums/311/topics/1265947-sell-heloc-or-cash-out-refinance",
+        "reddit:r/Mortgages (3d)",
+        "reddit:r/Mortgages (2d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "heloc-how-it-works",
+      "question": "How does a HELOC work: draw period, repayment period, and variable rate?",
+      "category": "heloc",
+      "loanTypes": [
+        "heloc"
+      ],
+      "personas": [
+        "homeowner"
+      ],
+      "states": [],
+      "mentions": 20,
+      "sources": [
+        "https://www.bogleheads.org/forum/viewtopic.php?t=423758",
+        "https://www.bogleheads.org/forum/viewtopic.php?f=2&t=130446",
+        "https://www.bogleheads.org/forum/viewtopic.php?t=211994",
+        "https://www.biggerpockets.com/forums/50/topics/974433-helocs-5-year-length-at-lower-rate-vs-10-years-at-a-higher-rate",
+        "https://www.biggerpockets.com/forums/50/topics/1098777-heloc-questions-for-rookie",
+        "https://www.biggerpockets.com/forums/617/topics/623060-ask-these-questions-before-applying-for-heloc",
+        "reddit:r/personalfinance (2y)",
+        "reddit:r/personalfinance (2y)",
+        "reddit:r/explainlikeimfive (2y)",
+        "reddit:r/personalfinance (5y)",
+        "reddit:r/personalfinance (3y)",
+        "reddit:r/FinancialPlanning (2y)",
+        "reddit:r/personalfinance (3y)",
+        "reddit:r/MortgageBrokerQuotes (7mo)",
+        "reddit:r/homeowners (4y)",
+        "reddit:r/personalfinance (3y)",
+        "reddit:r/Mortgages (2y)",
+        "reddit:r/Money (2y)",
+        "reddit:r/personalfinance (3y)",
+        "reddit:r/HELOC (14h)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "published",
+      "kbSlug": "how-does-a-heloc-work"
+    },
+    {
+      "id": "heloc-how-much",
+      "question": "How much can I borrow with a HELOC?",
+      "category": "heloc",
+      "loanTypes": [
+        "heloc"
+      ],
+      "personas": [
+        "homeowner"
+      ],
+      "states": [],
+      "mentions": 2,
+      "sources": [
+        "https://www.quora.com/How-much-money-can-you-borrow-with-a-home-equity-line-of-credit-and-how-does-it-work",
+        "https://www.bogleheads.org/forum/viewtopic.php?t=170746"
+      ],
+      "officialSources": [],
+      "notes": "Ties directly to the homepage equity slider (§4.3).",
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "heloc-qualify",
+      "question": "What credit score and debt-to-income ratio do I need for a HELOC?",
+      "category": "heloc",
+      "loanTypes": [
+        "heloc"
+      ],
+      "personas": [
+        "homeowner"
+      ],
+      "states": [],
+      "mentions": 7,
+      "sources": [
+        "https://www.biggerpockets.com/forums/49/topics/439763-debt-to-income-ratio-for-heloc",
+        "https://www.biggerpockets.com/forums/49/topics/1059436-does-a-heloc-use-your-credit-score",
+        "https://www.bogleheads.org/forum/viewtopic.php?t=342291",
+        "https://www.biggerpockets.com/forums/12/topics/710502-high-dti-ratio-with-heloc",
+        "reddit:r/Mortgages (2y)",
+        "reddit:r/personalfinance (13y)",
+        "reddit:r/personalfinance (4y)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "heloc-unused-dti",
+      "question": "Does an unused HELOC count against my debt-to-income when I apply for another loan?",
+      "category": "heloc",
+      "loanTypes": [
+        "heloc"
+      ],
+      "personas": [
+        "homeowner"
+      ],
+      "states": [],
+      "mentions": 2,
+      "sources": [
+        "https://www.quora.com/Does-having-a-HELOC-and-owing-no-money-against-it-count-towards-my-debt-to-income-ratio",
+        "https://www.biggerpockets.com/forums/49/topics/205894-does-a-heloc-affect-debt-income-when-applying-for-conventional-loans"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "heloc-vs-home-equity-loan",
+      "question": "What's the difference between a HELOC and a home equity loan?",
+      "category": "heloc",
+      "loanTypes": [
+        "heloc",
+        "home-equity-loan"
+      ],
+      "personas": [
+        "homeowner"
+      ],
+      "states": [],
+      "mentions": 14,
+      "sources": [
+        "https://www.bogleheads.org/forum/viewtopic.php?t=439979",
+        "reddit:r/personalfinance (1y)",
+        "reddit:r/personalfinance (1y)",
+        "reddit:r/RealEstate (2y)",
+        "reddit:r/personalfinance (1y)",
+        "reddit:r/personalfinance (6y)",
+        "reddit:r/personalfinance (6y)",
+        "reddit:r/personalfinance (3y)",
+        "reddit:r/personalfinance (12y)",
+        "reddit:r/personalfinance (5y)",
+        "reddit:r/homeowners (2y)",
+        "reddit:r/personalfinance (4y)",
+        "reddit:r/explainlikeimfive (1y)",
+        "reddit:r/HighYieldSavings (1y)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "dc-pay-off-credit-cards",
+      "question": "Should I use a HELOC or a cash-out refinance to pay off credit card debt?",
+      "category": "debt-consolidation",
+      "loanTypes": [
+        "heloc",
+        "cash-out-refi"
+      ],
+      "personas": [
+        "homeowner"
+      ],
+      "states": [],
+      "mentions": 10,
+      "sources": [
+        "https://www.quora.com/What-is-the-best-option-for-paying-off-credit-card-debt-a-HELOC-or-cash-out-refinance-Why",
+        "https://www.bogleheads.org/forum/viewtopic.php?t=338582",
+        "https://www.bogleheads.org/forum/viewtopic.php?t=219532",
+        "https://www.biggerpockets.com/forums/52/topics/1167419-cash-out-refinance-to-clear-high-interest-credit-cards-debt",
+        "https://www.bogleheads.org/forum/viewtopic.php?t=392950",
+        "reddit:r/personalfinance (1mo)",
+        "reddit:r/personalfinance (2y)",
+        "reddit:r/personalfinance (9y)",
+        "reddit:r/personalfinance (2y)",
+        "reddit:r/Mortgages (2d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "dc-bad-credit-high-dti",
+      "question": "Can I use my home equity to consolidate debt if I have bad credit or a high debt-to-income ratio?",
+      "category": "debt-consolidation",
+      "loanTypes": [
+        "heloc",
+        "cash-out-refi",
+        "non-qm"
+      ],
+      "personas": [
+        "homeowner"
+      ],
+      "states": [],
+      "mentions": 5,
+      "sources": [
+        "https://www.biggerpockets.com/forums/50/topics/1140319-how-can-i-access-the-equity-in-my-personal-home-with-bad-credit",
+        "https://www.quora.com/Can-you-get-a-home-equity-loan-with-bad-credit?top_ans=102812358",
+        "https://www.biggerpockets.com/forums/50/topics/1021316-high-dti-and-how-to-get-over-it-for-a-heloc-w2-is-a-trap",
+        "https://www.bogleheads.org/forum/viewtopic.php?t=411487",
+        "https://www.quora.com/How-can-you-convince-a-lender-to-approve-a-mortgage-with-a-high-DTI"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "dc-risks",
+      "question": "What are the risks of turning credit card debt into debt secured by my home?",
+      "category": "debt-consolidation",
+      "loanTypes": [
+        "heloc",
+        "cash-out-refi",
+        "reverse-second"
+      ],
+      "personas": [
+        "homeowner",
+        "retiree"
+      ],
+      "states": [],
+      "mentions": 6,
+      "sources": [
+        "https://www.bogleheads.org/forum/viewtopic.php?t=338582",
+        "https://www.quora.com/What-is-the-best-option-for-paying-off-credit-card-debt-a-HELOC-or-cash-out-refinance-Why",
+        "https://www.reddit.com/r/Mortgages/comments/1mo4inu/",
+        "reddit:r/personalfinance (12y)",
+        "reddit:r/debtfree (4d)",
+        "reddit:r/DebtAdvice (5d)"
+      ],
+      "officialSources": [],
+      "notes": "Required disclosure topic under CLAUDE.md §8 debt consolidation rule. Real examples this week: people who consolidated, then maxed their cards again (debt doubled).",
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "dc-reverse-pay-debt",
+      "question": "Can I use a reverse mortgage to pay off my credit cards and other debts in retirement?",
+      "category": "debt-consolidation",
+      "loanTypes": [
+        "hecm",
+        "reverse-second"
+      ],
+      "personas": [
+        "retiree",
+        "adult-child"
+      ],
+      "states": [],
+      "mentions": 3,
+      "sources": [
+        "https://www.bogleheads.org/forum/viewtopic.php?t=370846",
+        "https://www.bogleheads.org/forum/viewtopic.php?t=221187",
+        "https://www.agingcare.com/questions/how-safe-reverse-mortgages-for-elderly-428447.htm"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "refi-when-worth-it",
+      "question": "When is refinancing worth it, and how much lower does my rate need to be?",
+      "category": "refinancing",
+      "loanTypes": [
+        "rate-term-refi"
+      ],
+      "personas": [
+        "homeowner"
+      ],
+      "states": [],
+      "mentions": 11,
+      "sources": [
+        "https://www.bogleheads.org/forum/viewtopic.php?t=462773",
+        "https://www.bogleheads.org/forum/viewtopic.php?t=468434",
+        "https://www.bogleheads.org/forum/viewtopic.php?t=101273",
+        "https://www.bogleheads.org/forum/viewtopic.php?t=289559&start=13050",
+        "reddit:r/Mortgages (5d)",
+        "reddit:r/Mortgages (6d)",
+        "reddit:r/Mortgages (3d)",
+        "reddit:r/Mortgages (1d)",
+        "reddit:r/Mortgages (3d)",
+        "reddit:r/HomeLoanInfo (4d)",
+        "reddit:r/MortgageBrokerRates (4d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null,
+      "notes": "Includes a borrower stuck at 8% in a non-warrantable condo (needs non-QM condo options)."
+    },
+    {
+      "id": "refi-break-even",
+      "question": "How do I figure the break-even on refinance closing costs, and should I roll them into the loan or pay cash?",
+      "category": "refinancing",
+      "loanTypes": [
+        "rate-term-refi"
+      ],
+      "personas": [
+        "homeowner"
+      ],
+      "states": [],
+      "mentions": 4,
+      "sources": [
+        "https://www.bogleheads.org/forum/viewtopic.php?t=275165",
+        "https://www.bogleheads.org/forum/viewtopic.php?t=309348",
+        "https://www.bogleheads.org/forum/viewtopic.php?t=448571",
+        "https://www.bogleheads.org/forum/viewtopic.php?t=328563"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "refi-no-cost",
+      "question": "What is a no-closing-cost refinance, and is it really free?",
+      "category": "refinancing",
+      "loanTypes": [
+        "rate-term-refi"
+      ],
+      "personas": [
+        "homeowner"
+      ],
+      "states": [],
+      "mentions": 2,
+      "sources": [
+        "https://www.bogleheads.org/forum/viewtopic.php?p=1714557",
+        "https://www.bogleheads.org/forum/viewtopic.php?t=275165"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "refi-might-move",
+      "question": "Should I refinance if I might move in a few years?",
+      "category": "refinancing",
+      "loanTypes": [
+        "rate-term-refi"
+      ],
+      "personas": [
+        "homeowner"
+      ],
+      "states": [],
+      "mentions": 1,
+      "sources": [
+        "https://www.bogleheads.org/forum/viewtopic.php?t=306291"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "refi-remove-fha-mip",
+      "question": "How do I get rid of FHA mortgage insurance?",
+      "category": "refinancing",
+      "loanTypes": [
+        "fha",
+        "conventional"
+      ],
+      "personas": [
+        "homeowner"
+      ],
+      "states": [
+        "CA"
+      ],
+      "mentions": 6,
+      "sources": [
+        "https://www.quora.com/I-bought-a-house-in-2020-California-I-have-a-2-75-percent-interest-rate-on-an-FHA-loan-I-pay-PMI-Is-there-any-way-to-remove-this-from-my-loan",
+        "https://www.quora.com/How-do-I-get-rid-of-a-mortgage-insurance-premium-on-an-FHA-loan",
+        "https://www.quora.com/I-have-a-15-year-old-FHA-mortgage-loan-and-I-m-7-years-in-I-am-sick-and-tired-of-paying-PMI-private-mortgage-insurance-How-can-I-get-out-of-it-I-will-be-65-on-January-6-2023",
+        "https://www.bogleheads.org/forum/viewtopic.php?t=66945",
+        "https://www.quora.com/Should-I-refinance-to-avoid-PMI-if-I-am-currently-paying-on-an-FHA-home-mortgage",
+        "https://www.quora.com/How-do-you-stop-paying-FHA-mortgage-insurance"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "refi-fha-to-conventional",
+      "question": "How do I refinance from an FHA loan to a conventional loan, and is it worth it?",
+      "category": "refinancing",
+      "loanTypes": [
+        "fha",
+        "conventional"
+      ],
+      "personas": [
+        "homeowner"
+      ],
+      "states": [],
+      "mentions": 4,
+      "sources": [
+        "https://www.quora.com/How-do-I-convert-an-FHA-loan-to-conventional",
+        "https://www.quora.com/What-do-I-need-to-do-in-order-to-refinance-from-an-FHA-to-a-Conventional-loan?top_ans=601376",
+        "https://www.quora.com/How-do-I-move-from-FHA-to-conventional",
+        "https://www.quora.com/What-are-the-benefits-of-refinancing-from-an-FHA-loan-to-a-conventional-loan-or-vice-versa-if-you-have-good-credit-and-can-get-low-rates-on-both-loans-less-than-three-years-into-owning-the-house"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "refi-va-irrrl",
+      "question": "What is a VA streamline refinance (IRRRL), and do I qualify?",
+      "category": "refinancing",
+      "loanTypes": [
+        "va"
+      ],
+      "personas": [
+        "veteran"
+      ],
+      "states": [],
+      "mentions": 9,
+      "sources": [
+        "https://www.quora.com/What-is-an-interest-rate-reduction-refinance-loan-IRRRL",
+        "https://www.quora.com/What-is-the-difference-between-a-refinance-and-an-interest-rate-reduction-loan-IRRL",
+        "https://www.quora.com/Is-it-a-good-idea-to-refinance-my-VA-mortgage-loan-now-that-there-are-lower-interest-rates",
+        "https://www.biggerpockets.com/forums/49/topics/813825-best-va-streamline-irrrl-rate",
+        "https://www.biggerpockets.com/forums/22/topics/813827-best-va-streamline-irrrl-rates",
+        "https://www.biggerpockets.com/forums/49/topics/1197409-va-irrrl-benefit-statement",
+        "https://www.biggerpockets.com/forums/22/topics/816334-va-streamline-irrrl-for-rental-property",
+        "reddit:r/VeteransBenefits (25d)",
+        "reddit:r/MortgageBrokerRates (24d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "buy-how-much-afford",
+      "question": "How much house can I afford?",
+      "category": "buying",
+      "loanTypes": [],
+      "personas": [
+        "first-time-buyer"
+      ],
+      "states": [
+        "CA",
+        "CO",
+        "TX"
+      ],
+      "mentions": 20,
+      "sources": [
+        "https://www.bogleheads.org/forum/viewtopic.php?t=376710",
+        "https://www.bogleheads.org/forum/viewtopic.php?t=301552",
+        "https://www.bogleheads.org/forum/viewtopic.php?t=316890",
+        "https://www.quora.com/How-much-of-a-loan-can-first-time-home-buyers-get-approved-for",
+        "https://www.quora.com/What-is-my-max-affordability-for-a-home-on-mortgage-at-85k-income-100k-payment-800-credit-score-no-debt-Can-I-afford-a-475000-home",
+        "reddit:r/Mortgages (3d)",
+        "reddit:r/FirstTimeHomeBuyer (7d)",
+        "reddit:r/FirstTimeHomeBuyers (7d)",
+        "reddit:r/FirstTimeHomeBuyer (4d) [TX]",
+        "reddit:r/FirstTimeHomeBuyer (3d)",
+        "reddit:r/personalfinance (2d)",
+        "reddit:r/FIREyFemmes (5d)",
+        "reddit:r/BayAreaRealEstate (25d) [CA]",
+        "reddit:r/Mortgages (15d)",
+        "reddit:r/personalfinance (1mo)",
+        "reddit:r/MovingtoNewJersey (22d)",
+        "reddit:r/FirstTimeHomeBuyer (24d)",
+        "reddit:r/movingtoNYC (5d)",
+        "reddit:r/NewbHomebuyer (12d) [CO]",
+        "reddit:r/NewbHomebuyer (23d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-27",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "buy-preapproval",
+      "question": "How does mortgage pre-approval work, and when should I get pre-approved?",
+      "category": "buying",
+      "loanTypes": [],
+      "personas": [
+        "first-time-buyer"
+      ],
+      "states": [],
+      "mentions": 3,
+      "sources": [
+        "https://www.bogleheads.org/forum/viewtopic.php?t=252507",
+        "https://www.bogleheads.org/forum/viewtopic.php?t=122246",
+        "reddit:r/FirstTimeHomeBuyer (5d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "buy-credit-score",
+      "question": "What credit score do I need to buy a house, and can I buy with bad credit?",
+      "category": "buying",
+      "loanTypes": [
+        "fha",
+        "conventional"
+      ],
+      "personas": [
+        "first-time-buyer"
+      ],
+      "states": [],
+      "mentions": 4,
+      "sources": [
+        "https://www.quora.com/Did-anyone-buy-a-house-with-a-550-or-less-credit-score",
+        "https://www.quora.com/What-are-the-requirements-for-getting-approved-for-a-first-time-home-buyer-loan-with-bad-credit-and-student-loans",
+        "reddit:r/Mortgages (9h)",
+        "reddit:r/Bankruptcy (3d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "buy-down-payment-assistance",
+      "question": "Are there down payment assistance programs for first-time buyers in California, Texas, Florida, or Colorado?",
+      "category": "buying",
+      "loanTypes": [
+        "fha",
+        "conventional",
+        "va"
+      ],
+      "personas": [
+        "first-time-buyer"
+      ],
+      "states": [
+        "CA",
+        "CO",
+        "FL",
+        "TX"
+      ],
+      "mentions": 16,
+      "sources": [
+        "https://www.quora.com/Are-there-any-programs-available-to-help-first-time-homebuyers-with-down-payments-or-closing-costs",
+        "https://www.quora.com/What-programs-in-the-state-of-California-help-with-a-down-payment-for-a-first-time-home-buyer-Im-a-single-male-employed-with-a-FICO-score-of-767-no-children-and-Ive-been-trying-to-save-up-for-a-condominium",
+        "https://www.quora.com/How-does-one-get-first-time-home-buyer-help-with-down-payment",
+        "https://www.quora.com/Can-a-first-time-home-buyer-use-multiple-down-payment-assistance-grants-and-loans-on-a-single-mortgage-if-their-area-has-them-and-they-qualify",
+        "https://www.quora.com/For-a-first-time-home-buyer-what-are-the-best-resources-for-down-payment-assistance-in-Santa-Clara-County",
+        "https://www.quora.com/Are-there-any-loan-discounts-for-first-time-home-buyers-in-California",
+        "https://www.quora.com/What-are-some-programs-in-Florida-that-help-first-time-home-buyers-take-out-loans-for-buying-homes",
+        "https://www.quora.com/Are-there-any-government-programs-to-help-with-the-down-payment-of-a-home-or-rental-home-in-the-state-of-Florida",
+        "https://www.bogleheads.org/forum/viewtopic.php?t=409747",
+        "reddit:r/FirstTimeHomeBuyer (3d)",
+        "reddit:r/FirstTimeHomeBuyer (5d)",
+        "reddit:r/HomeLoans (5d)",
+        "reddit:r/FirstTimeHomeBuyer (23d)",
+        "reddit:r/FirstTimeHomeBuyer (20d) [TX]",
+        "reddit:r/HouseBuyers (14d)",
+        "reddit:r/FirstTimeHomeBuying (23d)"
+      ],
+      "officialSources": [],
+      "notes": "Strong candidate for one page per state (/locations/*). State programs to verify: CalHFA, GSFA (CA); TSAHC (TX); Florida Housing (FL); CHFA (CO). Los Angeles LIPA/MIPA (up to $161K, shared appreciation) promoted by brokers in r/CaliforniaMortgages; Texas 5% DPA posts in r/TexasMortgageRates. Free homebuyer education classes often unlock DPA.",
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-27",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "fha-what-is-it",
+      "question": "What is an FHA loan, what are the requirements, and is it right for me?",
+      "category": "buying",
+      "loanTypes": [
+        "fha"
+      ],
+      "personas": [
+        "first-time-buyer"
+      ],
+      "states": [
+        "FL"
+      ],
+      "mentions": 5,
+      "sources": [
+        "https://www.quora.com/What-is-an-FHA-loan-and-how-do-I-know-if-its-right-for-me",
+        "https://www.quora.com/What-are-the-requirements-for-a-first-time-buyer-FHA-loan",
+        "https://www.quora.com/What-are-the-pros-and-cons-of-using-an-FHA-loan-to-buy-your-first-home",
+        "https://www.quora.com/Can-I-qualify-for-FHA-100-financing-in-Florida-if-Im-a-first-time-homebuyer",
+        "reddit:r/FirstTimeHomeBuyer (6d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "fha-vs-conventional",
+      "question": "FHA or conventional: which is better when I have a small down payment?",
+      "category": "buying",
+      "loanTypes": [
+        "fha",
+        "conventional"
+      ],
+      "personas": [
+        "first-time-buyer"
+      ],
+      "states": [],
+      "mentions": 8,
+      "sources": [
+        "https://www.biggerpockets.com/forums/22/topics/585641-fha-loan-35-vs-conventional-3",
+        "https://www.biggerpockets.com/forums/49/topics/604408-the-end-of-the-fha-and-househack-combo-for-newbies",
+        "https://www.bogleheads.org/forum/viewtopic.php?t=368892",
+        "reddit:r/FirstTimeHomeBuyer (2d)",
+        "reddit:r/Mortgages (7d)",
+        "reddit:r/Mortgages (6d)",
+        "reddit:r/FirstTimeHomeBuyer (17d)",
+        "reddit:r/MortgageRateCheck (16d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-27",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "fha-already-own",
+      "question": "Can I get an FHA loan if I already own a home?",
+      "category": "buying",
+      "loanTypes": [
+        "fha"
+      ],
+      "personas": [
+        "homeowner",
+        "investor"
+      ],
+      "states": [],
+      "mentions": 3,
+      "sources": [
+        "https://www.biggerpockets.com/forums/922/topics/1136600-qualifying-for-fha-loan-if-you-already-own-a-property-free-amd-clear",
+        "https://www.biggerpockets.com/forums/61/topics/423685-using-a-fha-loan-for-the-first-time-while-already-having-2-mortga",
+        "https://www.biggerpockets.com/forums/49/topics/1148139-can-i-get-a-conventional-loan-and-fha-loan-at-the-same-time"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "va-how-it-works",
+      "question": "How does a VA home loan work, and what should first-time VA buyers know?",
+      "category": "buying",
+      "loanTypes": [
+        "va"
+      ],
+      "personas": [
+        "veteran",
+        "first-time-buyer"
+      ],
+      "states": [],
+      "mentions": 13,
+      "sources": [
+        "https://www.quora.com/What-are-important-things-to-know-when-using-your-VA-home-loan-for-the-first-time",
+        "https://www.quora.com/What-are-some-things-I-should-know-before-buying-a-home-with-a-VA-loan",
+        "https://www.quora.com/Are-VA-loans-good-for-buying-your-first-home",
+        "https://www.quora.com/What-are-some-tips-and-good-to-knows-for-a-Veteran-using-their-VA-loan-to-purchase-their-first-home",
+        "https://www.quora.com/How-do-I-use-my-VA-home-loan-effectively-for-my-first-home",
+        "https://www.quora.com/How-does-a-VA-home-loan-work",
+        "https://www.quora.com/What-are-the-things-most-veterans-need-to-know-about-VA-home-loans",
+        "reddit:r/VeteransBenefits (22d)",
+        "reddit:r/Veterans (28d)",
+        "reddit:r/Mortgages (1mo)",
+        "reddit:r/Mortgages (7d)",
+        "reddit:r/VA_Loans (17d)",
+        "reddit:r/RealEstateAdvice (21d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "va-funding-fee",
+      "question": "What is the VA funding fee, and who is exempt from paying it?",
+      "category": "buying",
+      "loanTypes": [
+        "va"
+      ],
+      "personas": [
+        "veteran"
+      ],
+      "states": [],
+      "mentions": 2,
+      "sources": [
+        "https://www.quora.com/What-are-some-things-I-should-know-before-buying-a-home-with-a-VA-loan",
+        "reddit:r/Veterans (26d)"
+      ],
+      "officialSources": [],
+      "notes": "Heavily covered by military.com guides; cite VA.gov directly in the answer.",
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "va-vs-fha",
+      "question": "VA loan or FHA loan: what are the trade-offs for a first-time buyer?",
+      "category": "buying",
+      "loanTypes": [
+        "va",
+        "fha"
+      ],
+      "personas": [
+        "veteran",
+        "first-time-buyer"
+      ],
+      "states": [],
+      "mentions": 1,
+      "sources": [
+        "https://www.quora.com/What-are-the-potential-drawbacks-of-using-a-VA-home-loan-instead-of-an-FHA-mortgage-for-a-first-time-home-buyer"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "va-plus-assistance",
+      "question": "Can I combine a VA loan with first-time buyer grants or down payment assistance?",
+      "category": "buying",
+      "loanTypes": [
+        "va"
+      ],
+      "personas": [
+        "veteran",
+        "first-time-buyer"
+      ],
+      "states": [],
+      "mentions": 1,
+      "sources": [
+        "https://www.quora.com/I-m-purchasing-a-new-home-I-have-been-pre-qualified-for-a-VA-home-loan-I-was-looking-to-see-if-there-are-any-first-time-homebuyers-grants-available-I-have-been-unsuccessful-in-my-search-Do-you-know-of-any-programs-I"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "va-multi-unit",
+      "question": "Can I use a VA loan to buy a multi-unit property or keep my home as a rental later?",
+      "category": "buying",
+      "loanTypes": [
+        "va"
+      ],
+      "personas": [
+        "veteran",
+        "investor"
+      ],
+      "states": [],
+      "mentions": 4,
+      "sources": [
+        "https://www.biggerpockets.com/forums/49/topics/223098-advanced-investing-with-va-loan---what-is-the-reality",
+        "https://www.biggerpockets.com/forums/22/topics/816334-va-streamline-irrrl-for-rental-property",
+        "reddit:r/MilitaryFinance (19d)",
+        "reddit:r/Veterans (11d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "se-can-qualify",
+      "question": "Can I get a mortgage if I'm self-employed?",
+      "category": "self-employed",
+      "loanTypes": [
+        "non-qm",
+        "conventional"
+      ],
+      "personas": [
+        "self-employed"
+      ],
+      "states": [],
+      "mentions": 3,
+      "sources": [
+        "https://www.quora.com/Can-self-employed-people-qualify-for-a-mortgage-easily",
+        "https://www.quora.com/Can-I-get-a-mortgage-as-a-self-employed-person-I-do-own-one-property-but-my-tax-returns-are-very-low-great-credit-and-a-possible-foreign-co-signer-with-a-bank-account-in-the-US",
+        "https://www.quora.com/What-are-the-most-important-financial-factors-for-a-self-employed-mortgage-loan-applicant-to-succeed"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "se-documents-income",
+      "question": "What documents do self-employed borrowers need, and how is my income calculated?",
+      "category": "self-employed",
+      "loanTypes": [
+        "non-qm",
+        "conventional"
+      ],
+      "personas": [
+        "self-employed"
+      ],
+      "states": [],
+      "mentions": 4,
+      "sources": [
+        "https://www.quora.com/What-is-the-process-for-self-employed-individuals-to-provide-proof-of-income-to-landlords-or-mortgage-lenders",
+        "https://www.quora.com/How-do-banks-verify-income-on-mortgage-applications-for-self-employed-applicants",
+        "https://www.quora.com/What-documents-are-needed-for-a-home-loan-when-self-employed-How-would-my-income-be-calculated",
+        "https://www.quora.com/If-I-want-to-apply-for-a-mortgage-as-someone-whos-self-employed-will-lenders-accept-sales-reports-from-my-Amazon-account-as-proof-of-income"
+      ],
+      "officialSources": [],
+      "notes": "Bank-statement / 1099 / P&L Non-QM programs are the answer for big write-offs.",
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "se-under-two-years",
+      "question": "Can I get a mortgage with less than two years of self-employment?",
+      "category": "self-employed",
+      "loanTypes": [
+        "non-qm"
+      ],
+      "personas": [
+        "self-employed"
+      ],
+      "states": [],
+      "mentions": 2,
+      "sources": [
+        "https://www.quora.com/I-ve-been-self-employed-for-a-little-under-a-year-Lenders-usually-want-to-see-2-years-of-statements-tax-returns-for-self-employed-Will-going-back-to-a-w-2-job-to-a-position-that-I-haven-t-had-for-the-past-5-years",
+        "https://www.biggerpockets.com/forums/49/topics/1159604-for-a-mortgage-if-you-are-an-employee-of-an-llc-you-own-are-you-self-employed"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "refi-mailer-rate-legit",
+      "question": "I got a mailer offering a very low cash-out refinance rate. Is it real, and how do I spot hidden points or an adjustable rate?",
+      "category": "refinancing",
+      "loanTypes": [
+        "cash-out-refi"
+      ],
+      "personas": [
+        "homeowner"
+      ],
+      "states": [],
+      "mentions": 3,
+      "sources": [
+        "https://www.reddit.com/r/Mortgages/comments/1w5a3kn/",
+        "reddit:r/VeteransAffairs (18d)",
+        "reddit:r/FirstTimeHomeBuyer (5d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-27",
+      "status": "new",
+      "kbSlug": null,
+      "notes": "Answer should walk through Loan Estimate page 2, Section A (origination charges and discount points). Strong trust-builder. New buyers report a flood of mailers/calls after closing because mortgage records are public (88-upvote thread)."
+    },
+    {
+      "id": "refi-cash-out-renovations",
+      "question": "Is a cash-out refinance worth it to pay for home renovations?",
+      "category": "refinancing",
+      "loanTypes": [
+        "cash-out-refi",
+        "heloc"
+      ],
+      "personas": [
+        "homeowner"
+      ],
+      "states": [],
+      "mentions": 1,
+      "sources": [
+        "https://www.reddit.com/r/Mortgages/comments/1mo4inu/"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "refi-cash-out-costs",
+      "question": "How much does a cash-out refinance cost, and should I take a higher rate with low closing costs if I plan to refinance again later?",
+      "category": "refinancing",
+      "loanTypes": [
+        "cash-out-refi"
+      ],
+      "personas": [
+        "homeowner"
+      ],
+      "states": [],
+      "mentions": 1,
+      "sources": [
+        "https://www.reddit.com/r/MortgageBrokerRates/comments/1s99d9n/"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "heloc-before-rental",
+      "question": "Should I open a HELOC before turning my home into a rental property?",
+      "category": "heloc",
+      "loanTypes": [
+        "heloc"
+      ],
+      "personas": [
+        "homeowner",
+        "investor"
+      ],
+      "states": [],
+      "mentions": 1,
+      "sources": [
+        "https://www.reddit.com/r/MortgageBrokerRates/comments/1vwfjcp/"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null,
+      "notes": "Lenders are stricter on HELOCs for non-owner-occupied homes."
+    },
+    {
+      "id": "rm-is-it-a-scam",
+      "question": "Is a reverse mortgage a scam?",
+      "category": "reverse-mortgage",
+      "loanTypes": [
+        "hecm"
+      ],
+      "personas": [
+        "retiree",
+        "adult-child"
+      ],
+      "states": [],
+      "mentions": 4,
+      "sources": [
+        "https://www.reddit.com/r/NoStupidQuestions/comments/1vkt43c/",
+        "https://www.reddit.com/r/personalfinance/comments/1pwbmfc/",
+        "reddit:r/Mortgages (12d)",
+        "reddit:r/personalfinance (20d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-27",
+      "status": "published",
+      "kbSlug": "is-a-reverse-mortgage-a-scam",
+      "notes": "Very likely a top question typed into AI assistants. Answer directly: not a scam, government-insured HECMs have mandatory HUD counseling; explain what predatory selling looks like. Must follow §8 reverse mortgage rules. Sept 2026: r/personalfinance 'reverse mortgage skepticism' (215 upvotes) and r/Mortgages thread (175 comments) calling them 'the worst financing, for desperate people'. Strong negative sentiment to address head-on. Ace's framing (2026-09-27): in other countries reverse mortgages are seen as a 'housing pension', a retirement goal that lets you use the money you put into your home while aging in place (e.g., South Korea's government-guaranteed Korean Home Pension). Use this framing on reverse mortgage pages.",
+      "pinned": true
+    },
+    {
+      "id": "rm-alternatives",
+      "question": "What are the alternatives to a reverse mortgage (selling and renting, a HELOC, or family help)?",
+      "category": "reverse-mortgage",
+      "loanTypes": [
+        "hecm",
+        "heloc"
+      ],
+      "personas": [
+        "retiree",
+        "adult-child"
+      ],
+      "states": [],
+      "mentions": 1,
+      "sources": [
+        "https://www.reddit.com/r/personalfinance/comments/1tr60qg/"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null,
+      "notes": "Ace's framing (2026-09-27): in other countries reverse mortgages are seen as a 'housing pension', a retirement goal that lets you use the money you put into your home while aging in place (e.g., South Korea's government-guaranteed Korean Home Pension). Use this framing on reverse mortgage pages."
+    },
+    {
+      "id": "rm-protect-parent",
+      "question": "My parent is being pitched a reverse mortgage. How do I make sure it isn't predatory?",
+      "category": "reverse-mortgage",
+      "loanTypes": [
+        "hecm"
+      ],
+      "personas": [
+        "adult-child"
+      ],
+      "states": [],
+      "mentions": 1,
+      "sources": [
+        "https://www.reddit.com/r/personalfinance/comments/1pwbmfc/"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null,
+      "notes": "Cover mandatory HUD counseling, right to cancel (rescission), red flags, involving family/attorney. Ace's framing (2026-09-27): in other countries reverse mortgages are seen as a 'housing pension', a retirement goal that lets you use the money you put into your home while aging in place (e.g., South Korea's government-guaranteed Korean Home Pension). Use this framing on reverse mortgage pages."
+    },
+    {
+      "id": "rm-buy-inherited-home",
+      "question": "How do I find out who services the reverse mortgage on a deceased owner's home so I can make an offer before it goes to auction?",
+      "category": "reverse-mortgage",
+      "loanTypes": [
+        "hecm"
+      ],
+      "personas": [
+        "investor",
+        "first-time-buyer"
+      ],
+      "states": [],
+      "mentions": 1,
+      "sources": [
+        "reddit:screenshot (post about 10 years old)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null,
+      "notes": "Answer: county recorder for the recorded deed of trust / mortgage; heirs or estate control the sale; HECM heirs can sell for the lesser of balance or 95% of appraised value."
+    },
+    {
+      "id": "heloc-home-improvements",
+      "question": "Should I use a HELOC to pay for home improvements like a renovation, new roof, or ADU?",
+      "category": "heloc",
+      "loanTypes": [
+        "heloc",
+        "home-equity-loan"
+      ],
+      "personas": [
+        "homeowner"
+      ],
+      "states": [],
+      "mentions": 11,
+      "sources": [
+        "reddit:r/homeowners (9mo)",
+        "reddit:r/Mortgages (24d)",
+        "reddit:r/personalfinance (4d)",
+        "reddit:r/FinancialPlanning (5y)",
+        "reddit:r/personalfinance (10y)",
+        "reddit:r/personalfinance (3y)",
+        "reddit:r/personalfinance (6y)",
+        "reddit:r/HELOC (6d)",
+        "reddit:r/FirstTimeHomeBuyer (5d)",
+        "reddit:r/personalfinance (7d)",
+        "reddit:r/HomeMaintenance (5d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "heloc-vs-reverse-retirement",
+      "question": "HELOC or reverse mortgage in retirement: which is better, and can retirees without a paycheck qualify for a HELOC?",
+      "category": "reverse-mortgage",
+      "loanTypes": [
+        "heloc",
+        "hecm"
+      ],
+      "personas": [
+        "retiree",
+        "adult-child"
+      ],
+      "states": [],
+      "mentions": 4,
+      "sources": [
+        "reddit:r/personalfinance (2d)",
+        "reddit:r/retirement (7mo)",
+        "reddit:r/FinancialPlanning (2y)",
+        "reddit:r/personalfinance (5y)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null,
+      "notes": "The r/personalfinance post (2 days old) had 218 upvotes / 115 comments: very hot. HELOC needs income to repay; reverse mortgage doesn't require monthly payments. Core Ace topic."
+    },
+    {
+      "id": "heloc-keep-open-unused",
+      "question": "Is there any downside to opening a HELOC and keeping it unused as an emergency backup?",
+      "category": "heloc",
+      "loanTypes": [
+        "heloc"
+      ],
+      "personas": [
+        "homeowner"
+      ],
+      "states": [],
+      "mentions": 5,
+      "sources": [
+        "reddit:r/Bogleheads (3y)",
+        "reddit:r/personalfinance (5y)",
+        "reddit:r/personalfinance (6y)",
+        "reddit:r/personalfinance (5y)",
+        "reddit:r/realestateinvesting (3y)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "heloc-vs-401k-investments",
+      "question": "Should I use a HELOC instead of pulling money from my 401(k) or investments?",
+      "category": "heloc",
+      "loanTypes": [
+        "heloc"
+      ],
+      "personas": [
+        "homeowner"
+      ],
+      "states": [],
+      "mentions": 9,
+      "sources": [
+        "reddit:r/personalfinance (2y)",
+        "reddit:r/personalfinance (4mo)",
+        "reddit:r/personalfinance (5y)",
+        "reddit:r/Debt (3d)",
+        "reddit:r/personalfinance (4d)",
+        "reddit:r/CRedit (1d)",
+        "reddit:r/Retirement401k (3d)",
+        "reddit:r/debtfree (6d)",
+        "reddit:r/debtfree (7d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "heloc-buy-another-property",
+      "question": "Can I use a HELOC to buy another home, a second home, or land?",
+      "category": "heloc",
+      "loanTypes": [
+        "heloc"
+      ],
+      "personas": [
+        "homeowner",
+        "investor"
+      ],
+      "states": [],
+      "mentions": 4,
+      "sources": [
+        "reddit:r/personalfinance (9y)",
+        "reddit:r/personalfinance (4y)",
+        "reddit:r/personalfinance (3y)",
+        "reddit:r/HouseFlipping (1d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "heloc-where-to-get",
+      "question": "Where should I get a HELOC: my current bank, a credit union, or a different lender?",
+      "category": "heloc",
+      "loanTypes": [
+        "heloc"
+      ],
+      "personas": [
+        "homeowner"
+      ],
+      "states": [],
+      "mentions": 3,
+      "sources": [
+        "reddit:r/Mortgages (11y)",
+        "reddit:r/Mortgages (1y)",
+        "reddit:r/StLouis (2y)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null,
+      "notes": "Answer must avoid 'best/lowest rate' claims (§8). Affiliate 'review' posts comparing online HELOC lenders (Figure, Aven, Upstart) circulate on Reddit. NOTE: Figure and Aven are The Mortgage Advisory's HELOC partners (Ace sends most HELOCs to them); Upstart is a competitor."
+    },
+    {
+      "id": "heloc-payoff",
+      "question": "What's the smartest way to pay off a HELOC balance, and are there fees for paying it off early?",
+      "category": "heloc",
+      "loanTypes": [
+        "heloc"
+      ],
+      "personas": [
+        "homeowner",
+        "retiree"
+      ],
+      "states": [],
+      "mentions": 2,
+      "sources": [
+        "reddit:r/personalfinance (5d)",
+        "reddit:r/retirement (7mo)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null,
+      "notes": "One poster was charged a $500 early-closure fee on sale of the home."
+    },
+    {
+      "id": "heloc-when-owner-dies",
+      "question": "What happens to a HELOC when the homeowner dies?",
+      "category": "heloc",
+      "loanTypes": [
+        "heloc"
+      ],
+      "personas": [
+        "adult-child"
+      ],
+      "states": [],
+      "mentions": 4,
+      "sources": [
+        "reddit:r/EstatePlanning (2y)",
+        "reddit:r/Ask_Lawyers (9mo)",
+        "reddit:r/personalfinance (6y)",
+        "reddit:r/personalfinance (4d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "heloc-why-experts-against",
+      "question": "Why do some financial experts say you should never take out a HELOC?",
+      "category": "heloc",
+      "loanTypes": [
+        "heloc"
+      ],
+      "personas": [
+        "homeowner"
+      ],
+      "states": [],
+      "mentions": 4,
+      "sources": [
+        "reddit:r/homeowners (4y)",
+        "reddit:r/DirtyDave (9mo)",
+        "reddit:r/webuyhouses (5y)",
+        "reddit:r/NoStupidQuestions (3y)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null,
+      "notes": "Objection-handling page; balanced 'Our take' from Ace."
+    },
+    {
+      "id": "se-bank-statement-heloc",
+      "question": "Can I get a HELOC if I'm self-employed, using bank statements instead of tax returns?",
+      "category": "self-employed",
+      "loanTypes": [
+        "heloc",
+        "non-qm"
+      ],
+      "personas": [
+        "self-employed"
+      ],
+      "states": [],
+      "mentions": 1,
+      "sources": [
+        "reddit:r/loanoriginators (3y)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null,
+      "notes": "Matches the CLAUDE.md example question; pair with California page."
+    },
+    {
+      "id": "heloc-vs-home-equity-investment",
+      "question": "Is a home equity investment (shared-equity agreement) better than a HELOC?",
+      "category": "heloc",
+      "loanTypes": [
+        "heloc"
+      ],
+      "personas": [
+        "homeowner",
+        "retiree"
+      ],
+      "states": [],
+      "mentions": 3,
+      "sources": [
+        "reddit:r/Mortgages (1y)",
+        "reddit:r/Mortgages (5d)",
+        "reddit:r/personalfinance (5d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null,
+      "notes": "80 comments. Explain the large balloon/share-of-value payoff at the end. Also marketed as 'home equity agreements (HEA)' via affiliate posts."
+    },
+    {
+      "id": "heloc-appraisal-as-is",
+      "question": "Why does a HELOC appraisal value my home as-is, not after planned improvements?",
+      "category": "heloc",
+      "loanTypes": [
+        "heloc"
+      ],
+      "personas": [
+        "homeowner"
+      ],
+      "states": [],
+      "mentions": 1,
+      "sources": [
+        "reddit:r/appraisal (23d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "heloc-divorce",
+      "question": "What happens to a mortgage and HELOC in a divorce?",
+      "category": "heloc",
+      "loanTypes": [
+        "heloc"
+      ],
+      "personas": [
+        "homeowner"
+      ],
+      "states": [],
+      "mentions": 1,
+      "sources": [
+        "reddit:r/Mortgages (2mo)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "heloc-how-to-apply",
+      "question": "How do I apply for a HELOC, and what do I need?",
+      "category": "heloc",
+      "loanTypes": [
+        "heloc"
+      ],
+      "personas": [
+        "homeowner"
+      ],
+      "states": [],
+      "mentions": 0,
+      "sources": [],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null,
+      "notes": "From Reddit's 'People also search for' box (no thread count)."
+    },
+    {
+      "id": "va-rate-estimate-good",
+      "question": "How do I know if my VA loan rate and Loan Estimate are a good deal?",
+      "category": "buying",
+      "loanTypes": [
+        "va"
+      ],
+      "personas": [
+        "veteran",
+        "first-time-buyer"
+      ],
+      "states": [
+        "CA",
+        "FL"
+      ],
+      "mentions": 19,
+      "sources": [
+        "reddit:r/MilitaryFinance (22d)",
+        "reddit:r/VeteransBenefits (3d) [FL]",
+        "reddit:r/MortgageRateCheck (3d)",
+        "reddit:r/MilitaryFinance (17d)",
+        "reddit:r/MortgageBrokerRates (11d)",
+        "reddit:r/MortgageBrokerRates (23d)",
+        "reddit:r/MortgageBrokerQuotes (5d)",
+        "reddit:r/MilitaryFinance (3d)",
+        "reddit:r/MortgageBrokerRates (1d)",
+        "reddit:r/FirstTimeHomeBuyer (3d)",
+        "reddit:r/MortgageBrokerRates (10d) [CA]",
+        "reddit:r/Mortgages (12d)",
+        "reddit:r/MortgageBrokerRates (24d)",
+        "reddit:r/MortgageBrokerRates (9d)",
+        "reddit:r/VeteransBenefits (3d)",
+        "reddit:r/Veterans (26d)",
+        "reddit:r/MortgageBrokerRates (5d)",
+        "reddit:r/MortgageBrokerRates (1mo)",
+        "reddit:r/MortgageRateCheck (25d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-27",
+      "status": "published",
+      "kbSlug": "va-loan-estimate-good-deal",
+      "notes": "Biggest VA cluster this month. Answer = how to read a Loan Estimate for a VA loan (APR, points, VA fee limits, funding fee, disability exemption). Never quote rates outside pricing.json."
+    },
+    {
+      "id": "va-assumption-buyer",
+      "question": "How does assuming a VA loan work: can a non-veteran assume it, what does it cost, and how do I cover the seller's equity?",
+      "category": "buying",
+      "loanTypes": [
+        "va",
+        "assumption"
+      ],
+      "personas": [
+        "first-time-buyer",
+        "veteran"
+      ],
+      "states": [],
+      "mentions": 10,
+      "sources": [
+        "reddit:r/VeteransBenefits (19d)",
+        "reddit:r/VeteransBenefits (12d)",
+        "reddit:r/MilitaryFinance (17d)",
+        "reddit:r/MilitaryFinance (6d)",
+        "reddit:r/VettedVA (17d)",
+        "reddit:r/VA_Loans (7d)",
+        "reddit:r/VeteransBenefits (8d)",
+        "reddit:r/Mortgages (7d)",
+        "reddit:r/Mortgages (9h)",
+        "reddit:r/DMV_RealEstate (22d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null,
+      "notes": "Second cluster. Equity gap is often covered with a second mortgage: a natural fit for our second-lien/HELOC products. Assumptions can take months."
+    },
+    {
+      "id": "va-assumption-seller-entitlement",
+      "question": "If someone assumes my VA loan, do I get my entitlement back?",
+      "category": "buying",
+      "loanTypes": [
+        "va",
+        "assumption"
+      ],
+      "personas": [
+        "veteran"
+      ],
+      "states": [],
+      "mentions": 3,
+      "sources": [
+        "reddit:r/VettedVA (14d)",
+        "reddit:r/VeteransBenefits (20d)",
+        "reddit:r/Mortgages (3d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "va-credit-score",
+      "question": "What credit score do I need for a VA loan, and can I qualify after collections or bankruptcy?",
+      "category": "buying",
+      "loanTypes": [
+        "va"
+      ],
+      "personas": [
+        "veteran"
+      ],
+      "states": [
+        "CA"
+      ],
+      "mentions": 9,
+      "sources": [
+        "reddit:r/VeteransBenefits (25d)",
+        "reddit:r/VettedVA (8d)",
+        "reddit:r/CreditScore (10d)",
+        "reddit:r/VettedVA (9d)",
+        "reddit:r/VALoanGuru (12d)",
+        "reddit:r/VeteransBenefits (11d)",
+        "reddit:r/Mortgages (20d)",
+        "reddit:r/FirstTimeHomeBuyer (10d) [CA]",
+        "reddit:r/Mortgages (14d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "va-eligibility-coe",
+      "question": "Am I eligible for a VA loan, and how do I get my Certificate of Eligibility (COE)?",
+      "category": "buying",
+      "loanTypes": [
+        "va"
+      ],
+      "personas": [
+        "veteran",
+        "service-member"
+      ],
+      "states": [],
+      "mentions": 8,
+      "sources": [
+        "reddit:r/Veterans (13d)",
+        "reddit:r/FirstTimeHomeBuyer (13d)",
+        "reddit:r/nationalguard (13d)",
+        "reddit:r/MilitarySpouse (28d)",
+        "reddit:r/VeteransBenefits (16d)",
+        "reddit:r/nationalguard (7d)",
+        "reddit:r/army (7d)",
+        "reddit:r/nationalguard (13d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null,
+      "notes": "Includes National Guard/Reserve points, discharge character, active-duty 90-day rule."
+    },
+    {
+      "id": "va-income-after-separation",
+      "question": "Can I get a VA loan soon after leaving the military without two years of civilian job history?",
+      "category": "buying",
+      "loanTypes": [
+        "va"
+      ],
+      "personas": [
+        "veteran"
+      ],
+      "states": [],
+      "mentions": 2,
+      "sources": [
+        "reddit:r/Mortgages (11d)",
+        "reddit:r/Veterans (13d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "va-new-construction",
+      "question": "Can I use a VA loan to build a home or buy new construction?",
+      "category": "buying",
+      "loanTypes": [
+        "va",
+        "construction"
+      ],
+      "personas": [
+        "veteran"
+      ],
+      "states": [
+        "FL"
+      ],
+      "mentions": 10,
+      "sources": [
+        "reddit:r/VeteransBenefits (27d)",
+        "reddit:r/VAConstructionloans (27d)",
+        "reddit:r/VeteransBenefits (27d)",
+        "reddit:r/VAConstructionloans (24d)",
+        "reddit:r/VAConstructionloans (16d)",
+        "reddit:r/VAConstructionloans (8d) [FL]",
+        "reddit:r/VAConstructionloans (27d)",
+        "reddit:r/VAConstructionloans (2mo)",
+        "reddit:r/VettedVA (23d)",
+        "reddit:r/FirstTimeHomeBuyer (8d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "published",
+      "kbSlug": "va-loan-new-construction",
+      "notes": "Builder must have a VA builder ID; builder buydowns; duplex-fourplex if owner-occupied."
+    },
+    {
+      "id": "va-find-lender",
+      "question": "How do I find a lender that really knows VA loans?",
+      "category": "buying",
+      "loanTypes": [
+        "va"
+      ],
+      "personas": [
+        "veteran"
+      ],
+      "states": [
+        "CA"
+      ],
+      "mentions": 10,
+      "sources": [
+        "reddit:r/MilitaryFinance (12d) [CA]",
+        "reddit:r/fresno (15d) [CA]",
+        "reddit:r/Appleton (5d)",
+        "reddit:r/rochestermn (12d)",
+        "reddit:r/FirstTimeHomeBuyer (8d)",
+        "reddit:r/FirstTimeHomeBuyer (17d)",
+        "reddit:r/Militaryfaq (13d)",
+        "reddit:r/VeteransBenefits (10d)",
+        "reddit:r/VeteransBenefits (1mo)",
+        "reddit:r/Mortgages (1mo)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "published",
+      "kbSlug": "how-to-find-a-va-loan-lender",
+      "notes": "Southern California and Fresno veterans asking for VA-experienced lenders: direct local opportunity. No 'best lender' claims."
+    },
+    {
+      "id": "va-calvet",
+      "question": "CalVet home loan vs VA loan: which is better, and can I use both?",
+      "category": "buying",
+      "loanTypes": [
+        "va",
+        "calvet"
+      ],
+      "personas": [
+        "veteran"
+      ],
+      "states": [
+        "CA"
+      ],
+      "mentions": 2,
+      "sources": [
+        "reddit:r/VeteransBenefits (25d) [CA]",
+        "reddit:r/FirstTimeHomeBuyer (10d) [CA]"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null,
+      "notes": "California-specific; strong local page."
+    },
+    {
+      "id": "va-sellers-reject-offers",
+      "question": "Why do sellers turn down VA offers, and how can I make my VA offer stronger?",
+      "category": "buying",
+      "loanTypes": [
+        "va"
+      ],
+      "personas": [
+        "veteran",
+        "first-time-buyer"
+      ],
+      "states": [],
+      "mentions": 4,
+      "sources": [
+        "reddit:r/HomeLoans (10d)",
+        "reddit:r/vamortgages (12d)",
+        "reddit:r/FirstTimeHomeBuyer (26d)",
+        "reddit:r/VettedVA (12d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null,
+      "notes": "Myths about VA appraisals/inspections; 'switch to conventional' advice."
+    },
+    {
+      "id": "va-seller-credits",
+      "question": "How do seller credits and concessions work on a VA loan, and can the seller buy down my rate?",
+      "category": "buying",
+      "loanTypes": [
+        "va"
+      ],
+      "personas": [
+        "veteran"
+      ],
+      "states": [],
+      "mentions": 3,
+      "sources": [
+        "reddit:r/Mortgages (2d)",
+        "reddit:r/AskRealEstateAgents (8d)",
+        "reddit:r/VettedVA (24d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null,
+      "notes": "VA 4% concession limit vs closing-cost credits."
+    },
+    {
+      "id": "va-low-appraisal",
+      "question": "What happens if a VA appraisal comes in low (Tidewater, reconsideration of value)?",
+      "category": "buying",
+      "loanTypes": [
+        "va"
+      ],
+      "personas": [
+        "veteran"
+      ],
+      "states": [],
+      "mentions": 2,
+      "sources": [
+        "reddit:r/VeteransBenefits (9d)",
+        "reddit:r/vamortgages (12d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "va-manufactured-home",
+      "question": "Can I use a VA loan to buy a manufactured or mobile home?",
+      "category": "buying",
+      "loanTypes": [
+        "va"
+      ],
+      "personas": [
+        "veteran"
+      ],
+      "states": [],
+      "mentions": 2,
+      "sources": [
+        "reddit:r/VeteransBenefits (1mo)",
+        "reddit:r/VettedVA (5d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "va-cosigner-spouse",
+      "question": "Can I have a co-signer or my spouse on a VA loan, and how do community property states like California and Texas affect it?",
+      "category": "buying",
+      "loanTypes": [
+        "va"
+      ],
+      "personas": [
+        "veteran"
+      ],
+      "states": [
+        "CA",
+        "TX"
+      ],
+      "mentions": 2,
+      "sources": [
+        "reddit:r/VettedVA (26d)",
+        "reddit:r/loanoriginators (15d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null,
+      "notes": "Community-property rule: non-borrowing spouse debts count on government loans in CA and TX."
+    },
+    {
+      "id": "va-condo-approval",
+      "question": "Does a condo need to be VA-approved before I can buy it with a VA loan?",
+      "category": "buying",
+      "loanTypes": [
+        "va"
+      ],
+      "personas": [
+        "veteran"
+      ],
+      "states": [],
+      "mentions": 2,
+      "sources": [
+        "reddit:r/FirstTimeHomeBuying (28d)",
+        "reddit:r/NewOrleansRealEstate (9d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "va-second-use",
+      "question": "Can I use my VA loan benefit again or have two VA loans at once?",
+      "category": "buying",
+      "loanTypes": [
+        "va"
+      ],
+      "personas": [
+        "veteran"
+      ],
+      "states": [],
+      "mentions": 2,
+      "sources": [
+        "reddit:r/DMV_RealEstate (2d)",
+        "reddit:r/MilitaryFinance (18d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "va-vs-conventional",
+      "question": "VA loan or conventional loan: which is better for me?",
+      "category": "buying",
+      "loanTypes": [
+        "va",
+        "conventional"
+      ],
+      "personas": [
+        "veteran"
+      ],
+      "states": [],
+      "mentions": 2,
+      "sources": [
+        "reddit:r/VettedVA (12d)",
+        "reddit:r/VAConstructionloans (2mo)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "va-cant-afford-home",
+      "question": "I can't afford my VA-financed home anymore. What are my options (sell, rent it out, short sale)?",
+      "category": "buying",
+      "loanTypes": [
+        "va"
+      ],
+      "personas": [
+        "veteran"
+      ],
+      "states": [],
+      "mentions": 3,
+      "sources": [
+        "reddit:r/MilitaryFinance (24d)",
+        "reddit:r/RealEstateAdvice (25d)",
+        "reddit:r/Mortgages (3d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "va-recast-payoff",
+      "question": "Can I recast a VA loan, or should I pay it off early?",
+      "category": "refinancing",
+      "loanTypes": [
+        "va"
+      ],
+      "personas": [
+        "veteran"
+      ],
+      "states": [],
+      "mentions": 2,
+      "sources": [
+        "reddit:r/VettedVA (13d)",
+        "reddit:r/Mortgages (27d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "va-cash-out-paid-off",
+      "question": "Can I use my VA benefit to take cash out of a home I own free and clear?",
+      "category": "refinancing",
+      "loanTypes": [
+        "va",
+        "cash-out-refi"
+      ],
+      "personas": [
+        "veteran",
+        "homeowner"
+      ],
+      "states": [],
+      "mentions": 1,
+      "sources": [
+        "reddit:r/VeteransBenefits (23d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null,
+      "notes": "VA cash-out refinance; also a debt-consolidation angle."
+    },
+    {
+      "id": "buy-loan-estimate-good-deal",
+      "question": "How do I know if my mortgage rate and Loan Estimate are a good deal?",
+      "category": "buying",
+      "loanTypes": [
+        "fha",
+        "conventional"
+      ],
+      "personas": [
+        "first-time-buyer"
+      ],
+      "states": [
+        "CA",
+        "CO",
+        "TX"
+      ],
+      "mentions": 38,
+      "sources": [
+        "reddit:r/HomeLoans (5d)",
+        "reddit:r/MortgageBrokerRates (4d) [TX]",
+        "reddit:r/FHAmortgages (7d)",
+        "reddit:r/MortgageBrokerRates (1d)",
+        "reddit:r/MortgageBrokerRates (2d)",
+        "reddit:r/MortgageBrokerRates (5d)",
+        "reddit:r/MortgageBrokerRates (5d)",
+        "reddit:r/MortgageBrokerRates (2d)",
+        "reddit:r/MortgageBrokerRates (4d)",
+        "reddit:r/MortgageRateCheck (5d) [CA]",
+        "reddit:r/MortgageBrokerRates (5d)",
+        "reddit:r/MortgageBrokerRates (4d)",
+        "reddit:r/MortgageBrokerRates (3d)",
+        "reddit:r/MortgageBrokerRates (4d)",
+        "reddit:r/MortgageBrokerRates (6d)",
+        "reddit:r/MortgageRateCheck (4d)",
+        "reddit:r/MortgageBrokerQuotes (4d)",
+        "reddit:r/MortgageBrokerRates (5d)",
+        "reddit:r/MortgageBrokerQuotes (5d)",
+        "reddit:r/MortgageRateCheck (7d)",
+        "reddit:r/HomeLoans (7d)",
+        "reddit:r/Mortgages (6d)",
+        "reddit:r/Denver (7d) [CO]",
+        "reddit:r/MortgageBrokerRates (6d)",
+        "reddit:r/MortgageBrokerRates (5d)",
+        "reddit:r/MortgageRateCheck (17d)",
+        "reddit:r/MortgageBrokerRates (17d)",
+        "reddit:r/MortgageBrokerRates (17d)",
+        "reddit:r/MortgageBrokerRates (11d)",
+        "reddit:r/MortgageRateCheck (21d)",
+        "reddit:r/MortgageBrokerRates (17d)",
+        "reddit:r/MortgageBrokerRates (18d)",
+        "reddit:r/MortgageRateCheck (9d)",
+        "reddit:r/MortgageBrokerRates (18d)",
+        "reddit:r/MortgageRateCheck (27d)",
+        "reddit:r/MortgageBrokerRates (16d)",
+        "reddit:r/MortgageRateCheck (26d)",
+        "reddit:r/Mortgages (20d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-27",
+      "status": "published",
+      "kbSlug": "how-to-tell-if-your-loan-estimate-is-a-good-deal",
+      "notes": "Single biggest cluster across all pastes (with the VA version). Buyers post their Loan Estimates for strangers to judge. Build one great 'how to read your Loan Estimate' page + a VA variant; ideal chat use case too. Never quote rates outside pricing.json. Sept 2026 FTHB paste: 'Am I being taken advantage of?' and 'Is my lender getting over on me?' phrasing is common; also points-vs-rate trade-off questions (higher rate/less cash vs lower rate/more cash)."
+    },
+    {
+      "id": "buy-choose-lender",
+      "question": "How do I choose a mortgage lender, and should I just use the one my real estate agent recommends?",
+      "category": "buying",
+      "loanTypes": [],
+      "personas": [
+        "first-time-buyer"
+      ],
+      "states": [
+        "CA",
+        "TX"
+      ],
+      "mentions": 11,
+      "sources": [
+        "reddit:r/FirstTimeHomeBuyer (7d)",
+        "reddit:r/MortgageRateCheck (3d)",
+        "reddit:r/FirstTimeHomeBuyer (6d)",
+        "reddit:r/FirstTimeHomeBuyer (6d)",
+        "reddit:r/AskDallas (18h) [TX]",
+        "reddit:r/BayAreaRealEstate (4d) [CA]",
+        "reddit:r/MortgageBrokerRates (4d)",
+        "reddit:r/Mortgages (17h)",
+        "reddit:r/MortgageBrokerRates (6d)",
+        "reddit:r/FirstTimeHomeBuyer (11d)",
+        "reddit:r/SDRealEstate (23d) [CA]"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-27",
+      "status": "new",
+      "kbSlug": null,
+      "notes": "Dallas and Bay Area buyers asking for local lenders. No 'best/lowest' claims."
+    },
+    {
+      "id": "fha-property-requirements",
+      "question": "How strict are FHA appraisal and property requirements, and could they kill my deal?",
+      "category": "buying",
+      "loanTypes": [
+        "fha"
+      ],
+      "personas": [
+        "first-time-buyer"
+      ],
+      "states": [],
+      "mentions": 3,
+      "sources": [
+        "reddit:r/FirstTimeHomeBuyer (7d)",
+        "reddit:r/centuryhomes (3d)",
+        "reddit:r/FHAmortgages (4d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null,
+      "notes": "FHA has proposed property-requirement changes (draft, Sept 2026): verify current HUD 4000.1 status before writing."
+    },
+    {
+      "id": "fha-mip-cost",
+      "question": "How much is FHA mortgage insurance, and how long do I have to pay it?",
+      "category": "buying",
+      "loanTypes": [
+        "fha"
+      ],
+      "personas": [
+        "first-time-buyer"
+      ],
+      "states": [],
+      "mentions": 2,
+      "sources": [
+        "reddit:r/FirstTimeHomeBuyer (6d)",
+        "reddit:r/FirstTimeHomeBuyer (7d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null,
+      "notes": "Upfront 1.75% + annual MIP; life of loan under 10% down. Cite HUD."
+    },
+    {
+      "id": "buy-closing-costs",
+      "question": "What closing costs and fees do homebuyers pay, and how does escrow work?",
+      "category": "costs",
+      "loanTypes": [],
+      "personas": [
+        "first-time-buyer"
+      ],
+      "states": [],
+      "mentions": 3,
+      "sources": [
+        "reddit:r/FirstTimeHomeBuyer (7d)",
+        "reddit:r/Mortgages (6d)",
+        "reddit:r/RealEstateAdvice (4d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-27",
+      "status": "new",
+      "kbSlug": null,
+      "notes": "First question in the Costs & Pricing tab; feeds /costs fee sheet (§9)."
+    },
+    {
+      "id": "buy-first-time-definition",
+      "question": "What counts as a first-time homebuyer, and can my lender change my locked rate if I don't qualify?",
+      "category": "buying",
+      "loanTypes": [],
+      "personas": [
+        "first-time-buyer"
+      ],
+      "states": [],
+      "mentions": 1,
+      "sources": [
+        "reddit:r/Mortgages (3d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "buy-first-steps",
+      "question": "What are the first steps to buying a home?",
+      "category": "buying",
+      "loanTypes": [],
+      "personas": [
+        "first-time-buyer"
+      ],
+      "states": [],
+      "mentions": 7,
+      "sources": [
+        "reddit:r/FirstTimeHomeBuyer (2d)",
+        "reddit:r/FirstTimeHomeBuyer (5d)",
+        "reddit:r/FirstTimeHomeBuyer (2d)",
+        "reddit:r/FirstTimeHomeBuyers (14h)",
+        "reddit:r/FirstTimeHomeBuyer (5d)",
+        "reddit:r/FirstTimeHomeBuyer (3d)",
+        "reddit:r/personalfinance (7d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "buy-seller-credits",
+      "question": "How much can a seller pay toward my closing costs, and can I get cash back?",
+      "category": "buying",
+      "loanTypes": [
+        "conventional",
+        "fha"
+      ],
+      "personas": [
+        "first-time-buyer"
+      ],
+      "states": [],
+      "mentions": 1,
+      "sources": [
+        "reddit:r/Mortgages (2d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null,
+      "notes": "Concession limits differ by loan type (conventional 3/6/9%, FHA 6%, VA 4%)."
+    },
+    {
+      "id": "buy-assume-mortgage",
+      "question": "Can I assume a seller's low-rate FHA (or VA) mortgage when I buy?",
+      "category": "buying",
+      "loanTypes": [
+        "fha",
+        "assumption"
+      ],
+      "personas": [
+        "first-time-buyer"
+      ],
+      "states": [
+        "CA"
+      ],
+      "mentions": 3,
+      "sources": [
+        "reddit:r/FirstTimeHomeBuyer (7d) [CA]",
+        "reddit:r/Mortgages (6d)",
+        "reddit:r/RealEstate (23d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-27",
+      "status": "new",
+      "kbSlug": null,
+      "notes": "Lake Arrowhead, CA buyer assumed a 2.75% loan (505 upvotes). Equity gap often needs a second mortgage."
+    },
+    {
+      "id": "buy-daca",
+      "question": "Can DACA recipients get a mortgage?",
+      "category": "buying",
+      "loanTypes": [
+        "fha",
+        "conventional"
+      ],
+      "personas": [
+        "first-time-buyer"
+      ],
+      "states": [],
+      "mentions": 1,
+      "sources": [
+        "reddit:r/DACA (4d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null,
+      "notes": "Answer factually and consistently (fair lending, §8)."
+    },
+    {
+      "id": "buy-physician-loan",
+      "question": "What are physician or medical professional mortgage loans?",
+      "category": "buying",
+      "loanTypes": [
+        "non-qm"
+      ],
+      "personas": [
+        "first-time-buyer"
+      ],
+      "states": [],
+      "mentions": 1,
+      "sources": [
+        "reddit:r/FirstTimeHomeBuyer (5d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null,
+      "notes": "Confirm whether we offer this before publishing."
+    },
+    {
+      "id": "buy-from-family",
+      "question": "How do I buy a home from a family member, and how does a gift of equity work?",
+      "category": "buying",
+      "loanTypes": [
+        "conventional",
+        "fha"
+      ],
+      "personas": [
+        "first-time-buyer"
+      ],
+      "states": [],
+      "mentions": 4,
+      "sources": [
+        "reddit:r/FirstTimeHomeBuyer (3d)",
+        "reddit:r/Mortgages (22d)",
+        "reddit:r/personalfinance (22d)",
+        "reddit:r/FirstTimeHomeBuying (9d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-27",
+      "status": "new",
+      "kbSlug": null,
+      "notes": "Medicaid 5-year look-back applies when buying a parent's home below value (160-upvote thread)."
+    },
+    {
+      "id": "buy-now-or-wait",
+      "question": "Should I buy now or wait for mortgage rates to come down?",
+      "category": "buying",
+      "loanTypes": [],
+      "personas": [
+        "first-time-buyer"
+      ],
+      "states": [
+        "TX"
+      ],
+      "mentions": 7,
+      "sources": [
+        "reddit:r/RealEstateAdvice (6d)",
+        "reddit:r/FirstTimeHomeBuyer (9d)",
+        "reddit:r/RealEstate (6d)",
+        "reddit:r/FirstTimeHomeBuyer (3d)",
+        "reddit:r/DMV_RealEstate (3d)",
+        "reddit:r/asheville (3d)",
+        "reddit:r/Dallas (6d) [TX]"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null,
+      "notes": "Rates crossed 7% this week; expect this to spike."
+    },
+    {
+      "id": "rates-jump-lock-now",
+      "question": "Why did mortgage rates just jump above 7%, and should I lock my rate now or wait?",
+      "category": "costs",
+      "loanTypes": [],
+      "personas": [
+        "first-time-buyer",
+        "homeowner"
+      ],
+      "states": [
+        "CA"
+      ],
+      "mentions": 13,
+      "sources": [
+        "reddit:r/Mortgages (1d)",
+        "reddit:r/news (2d)",
+        "reddit:r/HomeMortgageRates (3d)",
+        "reddit:r/HomeMortgageRates (2d)",
+        "reddit:r/BayAreaRealEstate (3d) [CA]",
+        "reddit:r/BayAreaRealEstate (3d) [CA]",
+        "reddit:r/BayAreaRealEstate (7h) [CA]",
+        "reddit:r/SeattleAreaRE (1d)",
+        "reddit:r/HomeLoans (2d)",
+        "reddit:r/HomeLoans (3d)",
+        "reddit:r/MortgageBrokerRates (2d)",
+        "reddit:r/HawaiiUncensored (2d)",
+        "reddit:r/HomeLoans (18h)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "published",
+      "kbSlug": "why-mortgage-rates-jumped-lock-or-wait",
+      "notes": "Breaking this week (30-yr avg ~7.45%, 10-yr Treasury ~5.2%). Common confusion: Fed rate vs mortgage rates (mortgages track the 10-year Treasury). r/news thread: 9.1K upvotes, borrower told to 'hold tight, rates will go down'. Explain rate locks; no rate predictions. Refresh this page whenever rates move sharply."
+    },
+    {
+      "id": "buy-arm-buydown-fixed",
+      "question": "With rates above 7%, should I pick an adjustable-rate mortgage, a seller or builder rate buydown, or a 30-year fixed?",
+      "category": "buying",
+      "loanTypes": [
+        "arm",
+        "conventional"
+      ],
+      "personas": [
+        "first-time-buyer"
+      ],
+      "states": [
+        "CA"
+      ],
+      "mentions": 9,
+      "sources": [
+        "reddit:r/Mortgages (3d)",
+        "reddit:r/Mortgages (3d)",
+        "reddit:r/SeattleAreaRE (3d)",
+        "reddit:r/LosAngelesRealEstate (1d) [CA]",
+        "reddit:r/Mortgages (13d)",
+        "reddit:r/FirstTimeHomeBuyer (6d)",
+        "reddit:r/MortgageBrokerRates (10d)",
+        "reddit:r/Mortgages (19d)",
+        "reddit:r/Mortgages (17d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-27",
+      "status": "new",
+      "kbSlug": null,
+      "notes": "ARM share of applications is rising (news). Explain temporary vs permanent buydowns and ARM caps. Reg Z trigger-term rules apply to any example payment."
+    },
+    {
+      "id": "pay-off-vs-invest",
+      "question": "Should I pay off my mortgage early or invest the extra money?",
+      "category": "refinancing",
+      "loanTypes": [],
+      "personas": [
+        "homeowner"
+      ],
+      "states": [],
+      "mentions": 9,
+      "sources": [
+        "reddit:r/Mortgages (5d)",
+        "reddit:r/mildlyinfuriating (6d)",
+        "reddit:r/DaveRamsey (4d)",
+        "reddit:r/Retirement401k (6d)",
+        "reddit:r/DirtyDave (5d)",
+        "reddit:r/personalfinance (6d)",
+        "reddit:r/Bogleheads (5d)",
+        "reddit:r/Mortgages (18d)",
+        "reddit:r/Bogleheads (19d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-27",
+      "status": "new",
+      "kbSlug": null,
+      "notes": "Very high engagement (1.6K and 292-comment threads). Neutral answer; no investment advice (not licensed for it) — frame as mortgage math."
+    },
+    {
+      "id": "remove-coborrower-breakup",
+      "question": "How do I get my ex off the mortgage after a breakup or divorce?",
+      "category": "refinancing",
+      "loanTypes": [
+        "rate-term-refi",
+        "assumption"
+      ],
+      "personas": [
+        "homeowner"
+      ],
+      "states": [
+        "CA"
+      ],
+      "mentions": 8,
+      "sources": [
+        "reddit:r/Mortgages (5d)",
+        "reddit:r/Mortgages (4d)",
+        "reddit:r/DivorceHelp (3d)",
+        "reddit:r/Smallclaims (5d)",
+        "reddit:r/Mortgages (2d)",
+        "reddit:r/Mortgages (15d)",
+        "reddit:r/legaladvice (1d)",
+        "reddit:r/CaliforniaMortgages (24d) [CA]"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-27",
+      "status": "new",
+      "kbSlug": null,
+      "notes": "335-upvote / 499-comment thread. Deed vs note; options: sell, refinance, or assumption with release of liability (FHA/VA). Includes buying out a co-owner (California). One reply suggested a HELOC/home equity loan in one spouse's name to pay off the joint mortgage."
+    },
+    {
+      "id": "manufactured-home-financing",
+      "question": "What loan options and rates are available for manufactured homes (chattel loan vs mortgage)?",
+      "category": "buying",
+      "loanTypes": [
+        "chattel",
+        "fha",
+        "va"
+      ],
+      "personas": [
+        "first-time-buyer"
+      ],
+      "states": [],
+      "mentions": 1,
+      "sources": [
+        "reddit:r/ManufacturedHome (5d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "dc-personal-loan-vs-equity",
+      "question": "Should I use a personal loan or my home equity to pay off credit card debt?",
+      "category": "debt-consolidation",
+      "loanTypes": [
+        "heloc",
+        "cash-out-refi"
+      ],
+      "personas": [
+        "homeowner"
+      ],
+      "states": [],
+      "mentions": 3,
+      "sources": [
+        "reddit:r/debtfree (1d)",
+        "reddit:r/DebtAdvice (5d)",
+        "reddit:r/debtfree (3d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "facing-foreclosure",
+      "question": "I'm falling behind on my mortgage. Should I sell, refinance, or let it go to foreclosure?",
+      "category": "refinancing",
+      "loanTypes": [
+        "rate-term-refi",
+        "hecm"
+      ],
+      "personas": [
+        "homeowner",
+        "retiree"
+      ],
+      "states": [],
+      "mentions": 4,
+      "sources": [
+        "reddit:r/Mortgages (1d)",
+        "reddit:r/Mortgages (2d)",
+        "reddit:r/Mortgages (3d)",
+        "reddit:r/RealEstateAdvice (11d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-27",
+      "status": "new",
+      "kbSlug": null,
+      "notes": "One borrower refinanced out of foreclosure at the last minute; another asked about selling at a loss vs. foreclosure (99 comments); a third about deed in lieu. For 62+ owners with equity, a reverse mortgage can sometimes pay off the existing loan. Point to HUD-approved housing counselors. Sensitive: no promises."
+    },
+    {
+      "id": "cash-out-to-invest",
+      "question": "Should I take cash out of my home to invest?",
+      "category": "refinancing",
+      "loanTypes": [
+        "cash-out-refi",
+        "heloc"
+      ],
+      "personas": [
+        "homeowner"
+      ],
+      "states": [],
+      "mentions": 1,
+      "sources": [
+        "reddit:r/Fire (7d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null,
+      "notes": "No investment advice; explain the risk of borrowing against the home."
+    },
+    {
+      "id": "rm-lose-home",
+      "question": "Can you lose your home with a reverse mortgage?",
+      "category": "reverse-mortgage",
+      "loanTypes": [
+        "hecm",
+        "proprietary-reverse"
+      ],
+      "personas": [
+        "retiree",
+        "adult-child"
+      ],
+      "states": [],
+      "mentions": 1,
+      "sources": [
+        "reddit:r/PissedConsumerCom (7d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "published",
+      "kbSlug": "can-you-lose-your-home-with-a-reverse-mortgage",
+      "notes": "Reddit 'People also search for' shows 'dangers/downsides of reverse mortgages'. Answer directly: yes, if taxes/insurance/upkeep lapse or the home stops being the primary residence (§8 borrower obligations). Pairs with rm-is-it-a-scam. Ace's framing (2026-09-27): in other countries reverse mortgages are seen as a 'housing pension', a retirement goal that lets you use the money you put into your home while aging in place (e.g., South Korea's government-guaranteed Korean Home Pension). Use this framing on reverse mortgage pages.",
+      "pinned": true
+    },
+    {
+      "id": "rm-stopped-paying",
+      "question": "Why would a reverse mortgage stop paying out, and what can the family do?",
+      "category": "reverse-mortgage",
+      "loanTypes": [
+        "hecm"
+      ],
+      "personas": [
+        "adult-child"
+      ],
+      "states": [],
+      "mentions": 1,
+      "sources": [
+        "reddit:r/AITH (3d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null,
+      "notes": "622-upvote thread (also cross-posted to r/Redditor_Updates): a mother-in-law's reverse mortgage stopped paying out and there's little savings. Explains line-of-credit/tenure limits and planning."
+    },
+    {
+      "id": "rm-home-value-drops",
+      "question": "What happens to a reverse mortgage if my home's value drops?",
+      "category": "reverse-mortgage",
+      "loanTypes": [
+        "hecm"
+      ],
+      "personas": [
+        "retiree"
+      ],
+      "states": [],
+      "mentions": 0,
+      "sources": [],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null,
+      "notes": "Seen only as lender video posts in r/AskReverseMortgage (competitor content), no real askers yet. Non-recourse feature is the answer."
+    },
+    {
+      "id": "rm-veterans",
+      "question": "Do veterans get any special benefit or discount on a reverse mortgage?",
+      "category": "reverse-mortgage",
+      "loanTypes": [
+        "hecm"
+      ],
+      "personas": [
+        "veteran",
+        "retiree"
+      ],
+      "states": [],
+      "mentions": 0,
+      "sources": [],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null,
+      "notes": "Seen as a promotional post in r/ReverseMortgageInfo; no real askers yet. Honest answer: no VA reverse mortgage program; VA disability income can help qualify."
+    },
+    {
+      "id": "escrow-shortage",
+      "question": "Why did my escrow come up short and my mortgage payment go up?",
+      "category": "costs",
+      "loanTypes": [],
+      "personas": [
+        "homeowner"
+      ],
+      "states": [],
+      "mentions": 2,
+      "sources": [
+        "reddit:r/Mortgages (6d)",
+        "reddit:r/Mortgages (5d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null,
+      "notes": "Property tax and insurance increases; NJ example. Good Costs & Pricing tab entry."
+    },
+    {
+      "id": "loan-sold-servicer",
+      "question": "Why was my mortgage sold to another company, and what are my rights with the new servicer?",
+      "category": "costs",
+      "loanTypes": [],
+      "personas": [
+        "homeowner"
+      ],
+      "states": [],
+      "mentions": 1,
+      "sources": [
+        "reddit:r/Mortgages (4d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null,
+      "notes": "PennyMac complaint thread cross-posted to 4 subreddits (counted once). Confirm whether we service our own loans before writing."
+    },
+    {
+      "id": "buy-big-down-payment",
+      "question": "Should I make a very large down payment to offset today's high mortgage rates?",
+      "category": "buying",
+      "loanTypes": [],
+      "personas": [
+        "first-time-buyer"
+      ],
+      "states": [],
+      "mentions": 1,
+      "sources": [
+        "reddit:r/FirstTimeHomeBuying (16h)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "new",
+      "kbSlug": null,
+      "notes": "158 comments; cross-posted to r/HomeLoans (counted once)."
+    },
+    {
+      "id": "dc-options-compared",
+      "question": "I'm a homeowner with credit card debt. What are all my options: balance transfer, personal loan, debt management plan, 401(k), home equity, or bankruptcy?",
+      "category": "debt-consolidation",
+      "loanTypes": [
+        "heloc",
+        "cash-out-refi",
+        "reverse-second"
+      ],
+      "personas": [
+        "homeowner"
+      ],
+      "states": [],
+      "mentions": 15,
+      "sources": [
+        "reddit:r/debtfree (4d)",
+        "reddit:r/debtfree (2d)",
+        "reddit:r/DebtAdvice (4d)",
+        "reddit:r/DebtAdvice (5d)",
+        "reddit:r/DebtAdvice (3d)",
+        "reddit:r/DebtAdvice (1d)",
+        "reddit:r/Debt (5d)",
+        "reddit:r/Debt (5d)",
+        "reddit:r/personalfinance (7d)",
+        "reddit:r/DebtAdvice (6d)",
+        "reddit:r/Debt (8h)",
+        "reddit:r/personalfinance (2d)",
+        "reddit:r/personalfinance (5d)",
+        "reddit:r/Debt (4d)",
+        "reddit:r/Debt (17h)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26",
+      "status": "published",
+      "kbSlug": "homeowner-credit-card-debt-options",
+      "notes": "Most askers don't say whether they own a home, and home equity is almost never suggested in replies. Common suggestions: 401(k), balance transfer, nonprofit debt management plans, bankruptcy. Opportunity: a neutral side-by-side comparison for homeowners. Must follow §8 debt-consolidation rules (not 'debt relief'; secured-debt and total-interest disclosures). Reddit 'People also search for' includes 'borrowing against equity in home'.",
+      "pinned": true
+    },
+    {
+      "id": "second-mortgage-how",
+      "question": "How does a second mortgage (home equity loan) work, and can I get one?",
+      "category": "heloc",
+      "loanTypes": [
+        "home-equity-loan",
+        "heloc"
+      ],
+      "personas": [
+        "homeowner"
+      ],
+      "states": [],
+      "mentions": 3,
+      "sources": [
+        "reddit:r/askanything (17d)",
+        "reddit:r/Mortgages (17d)",
+        "reddit:r/Mortgages (11d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-27",
+      "lastSeen": "2026-09-27",
+      "status": "new",
+      "kbSlug": null,
+      "notes": "Natural lead-in to fixed seconds and reverse mortgage seconds."
+    },
+    {
+      "id": "inherited-home-assume",
+      "question": "Can I take over the mortgage on a parent's home I inherited?",
+      "category": "refinancing",
+      "loanTypes": [
+        "assumption"
+      ],
+      "personas": [
+        "adult-child"
+      ],
+      "states": [],
+      "mentions": 3,
+      "sources": [
+        "reddit:r/Mortgages (13d)",
+        "reddit:r/Mortgages (3d)",
+        "reddit:r/Mortgages (14d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-27",
+      "lastSeen": "2026-09-27",
+      "status": "new",
+      "kbSlug": null,
+      "notes": "Heirs can generally keep the existing loan after a death (federal Garn-St Germain protections); servicer must recognize the successor in interest. Pairs with reverse-mortgage heir questions."
+    },
+    {
+      "id": "extra-payments-principal",
+      "question": "Why aren't my extra mortgage payments going to principal, and how do I make sure they do?",
+      "category": "costs",
+      "loanTypes": [],
+      "personas": [
+        "homeowner"
+      ],
+      "states": [],
+      "mentions": 2,
+      "sources": [
+        "reddit:r/personalfinance (8d)",
+        "reddit:r/Mortgages (1mo)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-27",
+      "lastSeen": "2026-09-27",
+      "status": "new",
+      "kbSlug": null,
+      "notes": "232- and 279-upvote threads (payments placed in 'paid-ahead' or 'unapplied funds')."
+    },
+    {
+      "id": "recast-mortgage",
+      "question": "Can I recast my mortgage to lower my payment instead of refinancing?",
+      "category": "refinancing",
+      "loanTypes": [
+        "conventional"
+      ],
+      "personas": [
+        "homeowner"
+      ],
+      "states": [],
+      "mentions": 1,
+      "sources": [
+        "reddit:r/Mortgages (16d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-27",
+      "lastSeen": "2026-09-27",
+      "status": "new",
+      "kbSlug": null,
+      "notes": "69 upvotes / 100 comments. VA and FHA generally can't be recast (see va-recast-payoff)."
+    },
+    {
+      "id": "underwater-sell",
+      "question": "I owe more than my home is worth. Should I sell, rent it out, or keep paying?",
+      "category": "refinancing",
+      "loanTypes": [],
+      "personas": [
+        "homeowner"
+      ],
+      "states": [],
+      "mentions": 2,
+      "sources": [
+        "reddit:r/realtors (9d)",
+        "reddit:r/RealEstateAdvice (2d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-27",
+      "lastSeen": "2026-09-27",
+      "status": "new",
+      "kbSlug": null,
+      "notes": "158-upvote thread ($150k underwater, cross-posted to r/REBubble, counted once)."
+    },
+    {
+      "id": "loan-mod-parents",
+      "question": "My parents were talked into a bad loan modification. Can anything be done?",
+      "category": "refinancing",
+      "loanTypes": [
+        "hecm"
+      ],
+      "personas": [
+        "adult-child"
+      ],
+      "states": [],
+      "mentions": 1,
+      "sources": [
+        "reddit:r/Mortgages (8d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-27",
+      "lastSeen": "2026-09-27",
+      "status": "new",
+      "kbSlug": null,
+      "notes": "Balloon modification sold by a radio advertiser. Point to CFPB complaint + HUD-approved counselor; if 62+, compare a reverse mortgage refinance. Pairs with rm-protect-parent."
+    },
+    {
+      "id": "buy-second-home",
+      "question": "How do I finance a second home or a small multifamily investment property?",
+      "category": "buying",
+      "loanTypes": [
+        "conventional",
+        "non-qm"
+      ],
+      "personas": [
+        "investor",
+        "homeowner"
+      ],
+      "states": [],
+      "mentions": 2,
+      "sources": [
+        "reddit:r/Mortgages (17d)",
+        "reddit:r/Mortgages (1mo)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-27",
+      "lastSeen": "2026-09-27",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "buy-how-much-down",
+      "question": "How much should a first-time buyer put down, and do I really need 20%?",
+      "category": "buying",
+      "loanTypes": [
+        "fha",
+        "conventional",
+        "va"
+      ],
+      "personas": [
+        "first-time-buyer"
+      ],
+      "states": [],
+      "mentions": 3,
+      "sources": [
+        "reddit:r/newjersey (18d)",
+        "reddit:r/NewbHomebuyer (11d)",
+        "reddit:r/FirstTimeHomeBuyer (23d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-27",
+      "lastSeen": "2026-09-27",
+      "status": "new",
+      "kbSlug": null,
+      "notes": "NewbHomebuyer thread had 300 comments. Common myth: 20% required. Include closing costs, which can rival the down payment."
+    },
+    {
+      "id": "dpa-drawbacks",
+      "question": "Are there downsides to down payment assistance programs?",
+      "category": "buying",
+      "loanTypes": [
+        "fha",
+        "conventional"
+      ],
+      "personas": [
+        "first-time-buyer"
+      ],
+      "states": [],
+      "mentions": 1,
+      "sources": [
+        "reddit:r/FirstTimeHomeBuyer (11d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-27",
+      "lastSeen": "2026-09-27",
+      "status": "new",
+      "kbSlug": null,
+      "notes": "Repayment/forgivable terms, second liens, shared appreciation (e.g. LA LIPA/MIPA), resale and refinance restrictions."
+    },
+    {
+      "id": "gift-funds-down-payment",
+      "question": "Can family help with my down payment, and how do gift funds work?",
+      "category": "buying",
+      "loanTypes": [
+        "fha",
+        "conventional",
+        "va"
+      ],
+      "personas": [
+        "first-time-buyer"
+      ],
+      "states": [],
+      "mentions": 1,
+      "sources": [
+        "reddit:r/Mortgages (21d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-27",
+      "lastSeen": "2026-09-27",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "income-calculation",
+      "question": "How do lenders calculate my income (including VA disability, bonuses, or side work)?",
+      "category": "buying",
+      "loanTypes": [
+        "va",
+        "fha",
+        "conventional"
+      ],
+      "personas": [
+        "first-time-buyer",
+        "veteran"
+      ],
+      "states": [],
+      "mentions": 1,
+      "sources": [
+        "reddit:r/FirstTimeHomeBuyer (15d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-27",
+      "lastSeen": "2026-09-27",
+      "status": "new",
+      "kbSlug": null
+    },
+    {
+      "id": "lender-requires-repairs",
+      "question": "Why won't my lender fund the loan until the seller fixes something (like an electrical panel)?",
+      "category": "buying",
+      "loanTypes": [
+        "fha",
+        "conventional",
+        "va"
+      ],
+      "personas": [
+        "first-time-buyer"
+      ],
+      "states": [],
+      "mentions": 3,
+      "sources": [
+        "reddit:r/FirstTimeHomeBuyers (3d)",
+        "reddit:r/AskElectricians (22d)",
+        "reddit:r/appraisal (6d)"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-27",
+      "lastSeen": "2026-09-27",
+      "status": "new",
+      "kbSlug": null,
+      "notes": "107-comment 'nightmare' thread; insurers refusing certain electrical panels; VA appraisal repair conditions and rehab-loan options."
+    },
+    {
+      "id": "buy-new-construction",
+      "question": "Should a first-time buyer buy new construction from a big builder, and what can go wrong?",
+      "category": "buying",
+      "loanTypes": [
+        "conventional",
+        "fha",
+        "va"
+      ],
+      "personas": [
+        "first-time-buyer"
+      ],
+      "states": [
+        "TX"
+      ],
+      "mentions": 3,
+      "sources": [
+        "reddit:r/FirstTimeHomeBuyer (7d)",
+        "reddit:r/FirstTimeHomeBuyer (3d)",
+        "reddit:r/dfw (25d) [TX]"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-27",
+      "lastSeen": "2026-09-27",
+      "status": "new",
+      "kbSlug": null,
+      "notes": "Builder incentives tied to preferred lenders; foundation issues; get an independent inspection. See va-new-construction."
+    },
+    {
+      "id": "buy-condo-vs-house",
+      "question": "Should my first home be a condo or a house, and how do HOA fees and special assessments affect my loan?",
+      "category": "buying",
+      "loanTypes": [
+        "conventional",
+        "fha"
+      ],
+      "personas": [
+        "first-time-buyer"
+      ],
+      "states": [
+        "CA",
+        "FL"
+      ],
+      "mentions": 3,
+      "sources": [
+        "reddit:r/bayarea (4d) [CA]",
+        "reddit:r/FirstTimeHomeBuyer (20d)",
+        "reddit:r/FirstTimeHomeBuyer (25d) [FL]"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-27",
+      "lastSeen": "2026-09-27",
+      "status": "new",
+      "kbSlug": null,
+      "notes": "Florida condo special assessments after Surfside; condo approval/warrantability affects rates and loan options."
+    },
+    {
+      "id": "homestead-exemption",
+      "question": "How do I apply for a homestead exemption after buying my home?",
+      "category": "costs",
+      "loanTypes": [],
+      "personas": [
+        "first-time-buyer",
+        "homeowner"
+      ],
+      "states": [
+        "TX"
+      ],
+      "mentions": 1,
+      "sources": [
+        "reddit:r/plano (23d) [TX]"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-27",
+      "lastSeen": "2026-09-27",
+      "status": "new",
+      "kbSlug": null,
+      "notes": "Texas: apply through the county appraisal district. Also relevant in Florida. State-specific pages."
+    },
+    {
+      "id": "halal-financing",
+      "question": "Is there a halal (interest-free) way to finance a home?",
+      "category": "buying",
+      "loanTypes": [],
+      "personas": [
+        "first-time-buyer"
+      ],
+      "states": [
+        "CO"
+      ],
+      "mentions": 1,
+      "sources": [
+        "reddit:r/IslamicFinance (12d) [CO]"
+      ],
+      "officialSources": [],
+      "firstSeen": "2026-09-27",
+      "lastSeen": "2026-09-27",
+      "status": "new",
+      "kbSlug": null,
+      "notes": "Confirm whether we offer or can refer before publishing."
+    }
+  ]
+}
