@@ -20,8 +20,10 @@ export default function Home() {
   return (
     <>
       {/* 4.1 Hero */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-mist via-mist to-white">
-        <div className="mx-auto max-w-5xl space-y-6 px-4 pb-16 pt-14 text-center sm:px-6 sm:pt-20">
+      <section className="relative isolate overflow-hidden bg-gradient-to-b from-mist via-mist to-white">
+        {/* "AI shimmer": slow-moving light-blue glow behind the hero (static when reduced motion is on). */}
+        <div aria-hidden="true" className="ai-shimmer" />
+        <div className="relative mx-auto max-w-5xl space-y-6 px-4 pb-16 pt-14 text-center sm:px-6 sm:pt-20">
           <p className="inline-block rounded-full border border-brand-steel/40 bg-white px-4 py-1 text-sm font-medium text-brand-slate">
             Direct Lender · NMLS #{licensing.nmls} · Licensed in {stateCodes.join(", ")}
           </p>
@@ -99,7 +101,7 @@ export default function Home() {
                 <option>Buy a home</option>
                 <option>Lower my payment</option>
               </select>
-              <button type="submit" className="rounded-full bg-brand-slate px-5 py-2 font-semibold text-white hover:bg-brand-ink">
+              <button type="submit" className="rounded-full bg-brand-button px-5 py-2 font-semibold text-white hover:bg-brand-slate">
                 Ask
               </button>
             </form>

@@ -1,4 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
+import { PillCta } from "@/components/PillCta";
 import { consentedStories } from "@/lib/home";
 
 // Story sections (CLAUDE.md §4.4). Educational copy until real client stories with written consent exist.
@@ -28,6 +30,7 @@ const GOALS = [
     points: ["Stay in your home", "No required monthly mortgage payment on the reverse mortgage", "Family welcome at every meeting"],
     cta: { label: "See reverse mortgage options", q: "Is a reverse mortgage right for me?" },
     related: { href: "/answers/is-a-reverse-mortgage-a-scam", label: "Is a reverse mortgage a scam?" },
+    image: { src: "/images/retirement-couple.jpg", alt: "Smiling retired couple at home" },
     icon: "M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10Z",
   },
   {
@@ -44,7 +47,7 @@ const GOALS = [
 export function StorySections() {
   const stories = consentedStories();
   return (
-    <div className="space-y-16">
+    <div className="space-y-20">
       {GOALS.map((g, i) => {
         const story = stories.find((s) => s.goal === g.goal);
         return (
@@ -61,42 +64,55 @@ export function StorySections() {
                 </blockquote>
               )}
               <div className="mt-5 flex flex-wrap items-center gap-4">
-                <Link
-                  href={`/ask?q=${encodeURIComponent(g.cta.q)}`}
-                  className="inline-flex items-center gap-2 rounded-full bg-brand-slate py-2.5 pl-3 pr-5 font-semibold text-white hover:bg-brand-ink"
-                >
-                  <span aria-hidden="true" className="flex h-7 w-7 items-center justify-center rounded-full bg-white/15">
-                    <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d={g.icon} />
-                    </svg>
-                  </span>
-                  {g.cta.label}
-                  <span aria-hidden="true">→</span>
-                </Link>
+                <PillCta href={`/ask?q=${encodeURIComponent(g.cta.q)}`} label={g.cta.label} icon={g.icon} />
                 {g.related && (
-                  <Link href={g.related.href} className="text-sm font-semibold text-brand-slate underline underline-offset-4">
+                  <Link href={g.related.href} className="text-sm font-semibold text-brand-button underline underline-offset-4">
                     {g.related.label}
                   </Link>
                 )}
               </div>
             </div>
-            <div className={`rounded-3xl bg-gradient-to-br from-mist to-white p-8 shadow-sm ring-1 ring-brand-steel/20 ${i % 2 === 1 ? "md:order-1" : ""}`}>
-              <span aria-hidden="true" className="flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-blue text-white">
-                <svg viewBox="0 0 24 24" className="h-7 w-7" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d={g.icon} />
-                </svg>
-              </span>
-              <ul className="mt-6 space-y-3">
-                {g.points.map((p) => (
-                  <li key={p} className="flex items-start gap-3 text-brand-slate">
-                    <span aria-hidden="true" className="mt-1 text-brand-blue-deep">
-                      ✓
-                    </span>
-                    <span className="font-medium">{p}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            {"image" in g && g.image ? (
+              // Illustrative photo only (not a client). Points float over the photo on larger screens.
+              <div className={`relative ${i % 2 === 1 ? "md:order-1" : ""}`}>
+                <Image
+                  src={g.image.src}
+                  alt={g.image.alt}
+                  width={1200}
+                  height={1200}
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                  className="aspect-[4/3] w-full rounded-3xl object-cover shadow-lg ring-1 ring-brand-steel/20"
+                />
+                <ul className="mt-4 space-y-2 rounded-2xl bg-white/95 p-5 shadow-lg ring-1 ring-brand-blue/40 md:absolute md:-bottom-6 md:left-6 md:right-6 md:mt-0">
+                  {g.points.map((p) => (
+                    <li key={p} className="flex items-start gap-3 text-brand-slate">
+                      <span aria-hidden="true" className="mt-0.5 text-brand-blue-deep">
+                        ✓
+                      </span>
+                      <span className="font-medium">{p}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ) : (
+              <div className={`rounded-3xl bg-gradient-to-br from-brand-blue/25 via-mist to-white p-8 shadow-md ring-1 ring-brand-blue/40 ${i % 2 === 1 ? "md:order-1" : ""}`}>
+                <span aria-hidden="true" className="flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-button text-white shadow-md">
+                  <svg viewBox="0 0 24 24" className="h-7 w-7" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d={g.icon} />
+                  </svg>
+                </span>
+                <ul className="mt-6 space-y-3">
+                  {g.points.map((p) => (
+                    <li key={p} className="flex items-start gap-3 text-brand-slate">
+                      <span aria-hidden="true" className="mt-1 text-brand-blue-deep">
+                        ✓
+                      </span>
+                      <span className="font-medium">{p}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </section>
         );
       })}

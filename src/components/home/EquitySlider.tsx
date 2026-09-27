@@ -49,7 +49,7 @@ export function EquitySlider({ maxCLTV }: { maxCLTV: Record<Mode, number> }) {
               ["cashOut", "Cash-out refinance"],
             ] as const
           ).map(([key, label]) => (
-            <label key={key} className={`cursor-pointer rounded-full px-4 py-1.5 text-sm font-semibold ${mode === key ? "bg-brand-slate text-white" : "text-brand-slate"}`}>
+            <label key={key} className={`cursor-pointer rounded-full px-4 py-1.5 text-sm font-semibold ${mode === key ? "bg-brand-button text-white" : "text-brand-slate"}`}>
               <input type="radio" name={`${id}-mode`} value={key} checked={mode === key} onChange={() => setMode(key)} className="sr-only" />
               {label}
             </label>
@@ -86,7 +86,7 @@ export function EquitySlider({ maxCLTV }: { maxCLTV: Record<Mode, number> }) {
               mode === "heloc" ? "How can I get a HELOC and keep my low first-mortgage rate?" : "Should I do a cash-out refinance?"
             }`,
           )}`}
-          className="inline-flex items-center gap-2 rounded-full bg-brand-slate px-5 py-2.5 font-semibold text-white hover:bg-brand-ink"
+          className="inline-flex items-center gap-2 rounded-full bg-brand-button px-5 py-2.5 font-semibold text-white hover:bg-brand-slate"
         >
           See my {mode === "heloc" ? "HELOC" : "cash-out"} options <span aria-hidden="true">→</span>
         </Link>

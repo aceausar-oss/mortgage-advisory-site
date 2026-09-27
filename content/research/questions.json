@@ -933,10 +933,10 @@
         "reddit:r/FirstTimeHomeBuying (23d)"
       ],
       "officialSources": [],
-      "notes": "Strong candidate for one page per state (/locations/*). State programs to verify: CalHFA, GSFA (CA); TSAHC (TX); Florida Housing (FL); CHFA (CO). Los Angeles LIPA/MIPA (up to $161K, shared appreciation) promoted by brokers in r/CaliforniaMortgages; Texas 5% DPA posts in r/TexasMortgageRates. Free homebuyer education classes often unlock DPA.",
+      "notes": "Strong candidate for one page per state (/locations/*). State programs to verify: CalHFA, GSFA (CA); TSAHC (TX); Florida Housing (FL); CHFA (CO). Los Angeles LIPA/MIPA (up to $161K, shared appreciation) promoted by brokers in r/CaliforniaMortgages; Texas 5% DPA posts in r/TexasMortgageRates. Free homebuyer education classes often unlock DPA. As of 2026-09-28 Ace is NOT an approved CalHFA or CHFA lender (can become one if needed); keep the page's neutral 'ask your lender' wording until that changes.",
       "firstSeen": "2026-09-26",
       "lastSeen": "2026-09-27",
-      "status": "drafting",
+      "status": "published",
       "kbSlug": "down-payment-assistance-ca-tx-fl-co"
     },
     {
@@ -2375,7 +2375,7 @@
       "officialSources": [],
       "firstSeen": "2026-09-26",
       "lastSeen": "2026-09-27",
-      "status": "drafting",
+      "status": "published",
       "kbSlug": "how-to-choose-a-mortgage-lender",
       "notes": "Dallas and Bay Area buyers asking for local lenders. No 'best/lowest' claims."
     },

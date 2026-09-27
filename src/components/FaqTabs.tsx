@@ -13,7 +13,7 @@ export function FaqTabs({ entries, idPrefix = "faq" }: { entries: KbEntry[]; idP
   const css = tabs
     .map(
       (t) => `#${t.id}:checked ~ .faq-panels [data-panel="${t.id}"]{display:block}
-#${t.id}:checked ~ .faq-tablist label[for="${t.id}"]{background:var(--color-brand-slate);color:#fff;border-color:var(--color-brand-slate)}
+#${t.id}:checked ~ .faq-tablist label[for="${t.id}"]{background:var(--color-brand-button);color:#fff;border-color:var(--color-brand-button)}
 #${t.id}:focus-visible ~ .faq-tablist label[for="${t.id}"]{outline:3px solid var(--color-brand-blue);outline-offset:2px}`,
     )
     .join("\n");
@@ -40,7 +40,7 @@ export function FaqTabs({ entries, idPrefix = "faq" }: { entries: KbEntry[]; idP
           <label
             key={t.id}
             htmlFor={t.id}
-            className="cursor-pointer rounded-full border border-brand-steel/50 bg-white px-4 py-2 text-sm font-semibold text-brand-slate hover:border-brand-slate"
+            className="cursor-pointer rounded-full border-2 border-brand-blue-deep/40 bg-white px-4 py-2 text-sm font-semibold text-brand-button shadow-sm hover:border-brand-blue-deep"
           >
             {t.label} <span className="font-normal">({t.items.length})</span>
           </label>
@@ -51,7 +51,7 @@ export function FaqTabs({ entries, idPrefix = "faq" }: { entries: KbEntry[]; idP
           <section key={t.id} data-panel={t.id} aria-label={t.long}>
             <h2 className="sr-only">{t.long}</h2>
             {t.items.length === 0 ? (
-              <p className="rounded-2xl bg-mist p-5">
+              <p className="rounded-2xl border-l-4 border-brand-blue bg-mist p-5">
                 We’re writing answers for this topic now. Have a question?{" "}
                 <Link href="/book" className="font-semibold underline underline-offset-4">
                   Book a call with Ace
@@ -61,13 +61,13 @@ export function FaqTabs({ entries, idPrefix = "faq" }: { entries: KbEntry[]; idP
             ) : (
               <ul className="space-y-4">
                 {t.items.map((e) => (
-                  <li key={e.slug} className="rounded-2xl border border-brand-steel/30 p-5">
+                  <li key={e.slug} className="rounded-2xl border-l-4 border-brand-blue-deep bg-gradient-to-r from-mist to-white p-5 shadow-sm ring-1 ring-brand-blue/30 transition hover:shadow-md">
                     <h3 className="text-lg font-semibold">
                       {e.question}
                       {e.isDraft && <span className="ml-2 rounded bg-mist px-2 py-0.5 align-middle text-xs font-semibold">Draft</span>}
                     </h3>
                     <p className="mt-2 leading-relaxed">{e.tldr}</p>
-                    <Link href={`/answers/${e.slug}`} className="mt-2 inline-block font-semibold text-brand-slate underline underline-offset-4">
+                    <Link href={`/answers/${e.slug}`} className="mt-2 inline-block font-semibold text-brand-button underline underline-offset-4">
                       Read the full answer →
                     </Link>
                   </li>

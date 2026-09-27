@@ -10,8 +10,8 @@ Priority = times asked + 1 per thread from the past year + 3 if asked about CA, 
 |---|---|---|---|---|
 | 79 | 38 | CA CO TX | published | How do I know if my mortgage rate and Loan Estimate are a good deal? |
 | 41 | 19 | CA FL | published | How do I know if my VA loan rate and Loan Estimate are a good deal? |
-| 38 | 20 | CA CO TX | drafting | How much house can I afford? |
-| 26 | 16 | CA CO FL TX | drafting | Are there down payment assistance programs for first-time buyers in California, Texas, Florida, or Colorado? |
+| 38 | 20 | CA CO TX | published | How much house can I afford? |
+| 26 | 16 | CA CO FL TX | published | Are there down payment assistance programs for first-time buyers in California, Texas, Florida, or Colorado? |
 | 25 | 11 | CA TX | drafting | How do I choose a mortgage lender, and should I just use the one my real estate agent recommends? |
 | 23 | 10 | FL | published | Can I use a VA loan to build a home or buy new construction? |
 | 23 | 10 | CA | published | How do I find a lender that really knows VA loans? |

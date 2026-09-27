@@ -42,7 +42,9 @@ Never describe the company as a CRM, software, SaaS, marketing agency, or Go Hig
 **Colors** (sampled from business card and logo; define as CSS variables / Tailwind tokens):
 | Token | Hex | Use |
 |---|---|---|
-| `brand-blue` | `#76B3E2` | Accent, highlighted headline word, pills, slider fill, links |
+| `brand-blue` | `#88B4E0` | Logo blue (sampled from the M mark): map, soft backgrounds, shimmer, glows |
+| `brand-blue-deep` | `#3D85CC` | Darker "M badge" blue: highlighted headline word, icons, pill outlines, topic tags (large text/graphics only) |
+| `brand-button` | `#2F73B6` | Filled buttons with white text and small blue text/links (passes WCAG AA) |
 | `brand-slate` | `#43565F` | Headings, logo text, primary buttons |
 | `brand-steel` | `#87959F` | Secondary text, contact bands, borders |
 | `brand-ink` | `#231F20` | Body text |

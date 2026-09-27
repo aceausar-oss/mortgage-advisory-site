@@ -77,7 +77,7 @@ export default function HowWeEstimatePage() {
       </p>
 
       <div className="flex flex-wrap gap-3">
-        <Link href="/#equity-heading" className="rounded-full bg-brand-slate px-5 py-2.5 font-semibold text-white hover:bg-brand-ink">
+        <Link href="/#equity-heading" className="rounded-full bg-brand-button px-5 py-2.5 font-semibold text-white hover:bg-brand-slate">
           Try the estimate
         </Link>
         <Link href="/book" className="rounded-full border border-brand-slate px-5 py-2.5 font-semibold text-brand-slate hover:bg-mist">
