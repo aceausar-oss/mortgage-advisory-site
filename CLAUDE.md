@@ -8,7 +8,7 @@ Read this whole file before writing any code. Every page, component, and feature
 
 Build TheMortgageAdvisory.com so it (1) earns credibility, (2) converts visitors into chats and booked calls, and (3) gets **cited by ChatGPT, Gemini, Perplexity, and Google AI Overviews** for mortgage questions in our licensed states.
 
-Baseline (HubSpot AI Search Grader, Sept 2026): ChatGPT 33, Perplexity 38, Gemini 41 of 100. AI models currently **confuse us with a Go High Level CRM/SaaS vendor.** Fixing that entity confusion is job #1. **Note (Sept 2026):** those scores reflect the old Go High Level site, which is being retired when the domain is redirected to this site. Treat AEO/LLM visibility as built from scratch here, so every page must state the entity clearly from day one.
+Baseline (HubSpot AI Search Grader, Sept 2026): ChatGPT 33, Perplexity 38, Gemini 41 of 100. AI models currently **confuse us with a Go High Level CRM/SaaS vendor.** Fixing that entity confusion is job #1. **Note (Sept 2026):** those scores reflect the old LeadPops site, which is being retired when the domain is redirected to this site. Treat AEO/LLM visibility as built from scratch here, so every page must state the entity clearly from day one.
 
 **Homepage headline (approved):** "Tap your home equity and *keep* your low rate." Mention the AI assistant as a feature below the headline, never in it (avoids reinforcing the software-company confusion).
 

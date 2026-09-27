@@ -3,40 +3,41 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-type Item = { question: string; slug: string };
+type Item = { question: string; slug: string; topic: string };
 
-// "Questions people are asking" (CLAUDE.md §4.2). Every question is a real, crawlable link;
-// with JavaScript, the visible window slowly rotates and each pill can send its question to the hero box.
-export function QuestionFeed({ items, visible = 4 }: { items: Item[]; visible?: number }) {
+const VISIBLE = 3;
+// Top pill is fully visible; the ones below fade out (Vora-style rolling stack).
+const STYLES = ["opacity-100", "opacity-70 sm:translate-x-4", "opacity-40 sm:-translate-x-2"];
+
+// "Questions people are asking" (CLAUDE.md §4.2): one-line question snippets that roll in to spark curiosity.
+// Each pill is a real link to the full answer. No fake timestamps; the topic label shows instead.
+export function QuestionFeed({ items }: { items: Item[] }) {
   const [start, setStart] = useState(0);
 
   useEffect(() => {
-    if (items.length <= visible || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    const id = setInterval(() => setStart((s) => (s + 1) % items.length), 4000);
+    if (items.length <= VISIBLE || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const id = setInterval(() => setStart((s) => (s + 1) % items.length), 3500);
     return () => clearInterval(id);
-  }, [items.length, visible]);
+  }, [items.length]);
 
-  const shown = new Set(Array.from({ length: Math.min(visible, items.length) }, (_, i) => (start + i) % items.length));
+  // Newest on top: the pill that just rolled in is first.
+  const shown = Array.from({ length: Math.min(VISIBLE, items.length) }, (_, i) => items[(start - i + items.length * 2) % items.length]);
 
   return (
-    <ul className="space-y-3" aria-label="Questions people are asking">
-      {items.map((item, i) => (
-        <li
-          key={item.slug}
-          className={`${shown.has(i) ? "flex" : "hidden"} animate-[fadeIn_0.8s_ease] items-center gap-2 rounded-full border border-brand-steel/30 bg-white py-2 pl-4 pr-2 shadow-sm`}
-        >
-          <Link href={`/answers/${item.slug}`} className="flex-1 text-[0.95rem] font-medium text-brand-slate hover:underline">
-            {item.question}
-          </Link>
-          {/* "js-only": hidden when JavaScript is off (see layout), since this button needs it. */}
-          <button
-            type="button"
-            onClick={() => window.dispatchEvent(new CustomEvent("tma:ask", { detail: item.question }))}
-            className="js-only shrink-0 rounded-full bg-mist px-3 py-1 text-xs font-semibold text-brand-slate hover:bg-brand-blue/20"
-            aria-label={`Ask: ${item.question}`}
+    <ul className="mx-auto flex w-full max-w-2xl flex-col items-center gap-3" aria-label="Questions people are asking">
+      {shown.map((item, i) => (
+        <li key={item.slug} className={`w-full transition-all duration-700 ease-out ${STYLES[i]} ${i === 0 ? "animate-[rollIn_0.7s_ease-out]" : ""}`}>
+          <Link
+            href={`/answers/${item.slug}`}
+            className="flex items-center gap-3 rounded-full bg-white/90 px-5 py-3 text-left shadow-md ring-1 ring-brand-steel/15 backdrop-blur transition hover:ring-brand-blue"
           >
-            Ask ↑
-          </button>
+            <span aria-hidden="true" className="h-2.5 w-2.5 shrink-0 rounded-full bg-emerald-500" />
+            <span className="min-w-0 flex-1 truncate text-[0.95rem] text-brand-slate">
+              <span className="hidden sm:inline">People ask: </span>
+              <strong className="font-semibold text-brand-ink">{item.question}</strong>
+            </span>
+            <span className="hidden shrink-0 text-xs font-medium text-brand-slate/80 sm:inline">{item.topic}</span>
+          </Link>
         </li>
       ))}
     </ul>

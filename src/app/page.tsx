@@ -8,6 +8,7 @@ import { LicensedStatesMap } from "@/components/home/LicensedStatesMap";
 import { QuestionFeed } from "@/components/home/QuestionFeed";
 import { StorySections } from "@/components/home/StorySections";
 import { pricing, verifiedStats } from "@/lib/home";
+import { categoryLabel } from "@/lib/categories";
 import { getEntries } from "@/lib/kb";
 import { licensing, stateCodes } from "@/lib/site";
 
@@ -31,9 +32,27 @@ export default function Home() {
             HELOCs, reverse mortgages, and home loans from a direct lender licensed in California, Texas, Florida, and Colorado. Ask our AI
             mortgage assistant anything, and Ace and our team take it from there.
           </p>
+          <p className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-1.5 text-sm font-semibold text-brand-slate shadow-sm ring-1 ring-brand-steel/20">
+            <span aria-hidden="true">⚡</span> HELOCs can close in as little as 5 days*
+          </p>
           <div className="pt-4">
             <HeroChat examples={featured.map((e) => e.question)} />
           </div>
+          {/* 4.2 Questions people are asking */}
+          {featured.length > 0 && (
+            <div className="pt-6">
+              <h2 className="sr-only">Questions people are asking</h2>
+              <QuestionFeed items={featured.map((e) => ({ question: e.question, slug: e.slug, topic: categoryLabel(e.category) }))} />
+              <p className="mt-4">
+                <Link href="/answers" className="text-sm font-semibold text-brand-slate underline underline-offset-4">
+                  See all answers →
+                </Link>
+              </p>
+            </div>
+          )}
+          <p className="mx-auto max-w-2xl text-xs leading-relaxed text-brand-slate">
+            *Based on select HELOC programs. Timing varies with your application, property, and approval, and isn&apos;t guaranteed.
+          </p>
           {stat && (
             <p className="mx-auto inline-flex flex-col items-center rounded-2xl bg-white px-5 py-3 text-sm shadow-sm ring-1 ring-brand-steel/20">
               <span className="font-heading text-2xl font-bold text-brand-slate">{stat.value}</span>
@@ -49,21 +68,6 @@ export default function Home() {
           )}
         </div>
       </section>
-
-      {/* 4.2 Questions people are asking */}
-      {featured.length > 0 && (
-        <section aria-labelledby="asking-heading" className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
-          <h2 id="asking-heading" className="mb-5 text-center text-2xl font-bold sm:text-3xl">
-            Questions people are asking
-          </h2>
-          <QuestionFeed items={featured.map((e) => ({ question: e.question, slug: e.slug }))} />
-          <p className="mt-5 text-center">
-            <Link href="/answers" className="font-semibold text-brand-slate underline underline-offset-4">
-              See all answers →
-            </Link>
-          </p>
-        </section>
-      )}
 
       {/* 4.3 Equity slider + licensed states */}
       <section aria-labelledby="equity-heading" className="bg-mist">
