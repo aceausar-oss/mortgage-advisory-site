@@ -22,7 +22,7 @@ const GOALS = [
     points: ["Pre-approval you can count on", "Down payment help in all four of our states", "Loan Estimates explained line by line"],
     cta: { label: "Get pre-approved", q: "I want to get pre-approved to buy my first home" },
     related: { href: "/answers/how-much-house-can-i-afford", label: "How much house can I afford?" },
-    image: { src: "/images/first-home-couple.jpg", alt: "Young couple sitting among moving boxes in their new home" },
+    image: { src: "/images/first-home-family.jpg", alt: "Family holding the keys in front of their new home with a sold sign" },
     icon: "M3 11l9-7 9 7M5 10v10h14V10M10 20v-6h4v6",
   },
   {
@@ -42,7 +42,7 @@ const GOALS = [
     points: ["Qualify with bank statements", "Programs for 1099 and gig income", "Clear answers on what documents you need"],
     cta: { label: "Qualify with bank statements", q: "Can I get a mortgage if I'm self-employed?" },
     related: null,
-    image: { src: "/images/self-employed-owner.jpg", alt: "Small business owner standing in her coffee shop" },
+    image: { src: "/images/self-employed-cafe.jpg", alt: "Small business owner smiling at her laptop in her cafe" },
     icon: "M4 7h16v12H4zM9 7V5h6v2M4 12h16",
   },
 ];
@@ -86,7 +86,7 @@ export function StorySections() {
                   sizes="(min-width: 768px) 50vw, 100vw"
                   className="aspect-[4/3] w-full rounded-3xl object-cover shadow-lg ring-1 ring-brand-steel/20"
                 />
-                <ul className="mt-4 space-y-2 rounded-2xl bg-white/95 p-5 shadow-lg ring-1 ring-brand-blue/40 md:absolute md:-bottom-6 md:left-6 md:right-6 md:mt-0">
+                <ul className="mt-4 space-y-2 rounded-2xl bg-white/95 p-5 shadow-lg ring-1 ring-brand-blue/40 md:absolute md:-bottom-6 md:left-6 md:right-6 md:mt-0 md:bg-white/55 md:shadow-md md:ring-white/70 md:backdrop-blur-md">
                   {g.points.map((p) => (
                     <li key={p} className="flex items-start gap-3 text-brand-slate">
                       <span aria-hidden="true" className="mt-0.5 text-brand-blue-deep">
