@@ -5,7 +5,7 @@ import { fullAddress, legalNav, licensing, stateCodes } from "@/lib/site";
 // Compliance block required on every page (CLAUDE.md §8). All facts come from content/data/licensing.json.
 export function SiteFooter() {
   return (
-    <footer className="mt-auto border-t-4 border-brand-blue bg-gradient-to-b from-mist to-white text-brand-ink">
+    <footer className="mt-auto bg-gradient-to-b from-mist to-white text-brand-ink">
       <div className="mx-auto max-w-7xl space-y-8 px-4 py-12 sm:px-6">
         <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
           <div className="max-w-xl space-y-2 text-sm">
