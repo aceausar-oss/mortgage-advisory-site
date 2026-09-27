@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ChatAssistant } from "@/components/chat/ChatAssistant";
 import { categoryLabel } from "@/lib/categories";
 import { rankEntries } from "@/lib/kb";
 import { licensing } from "@/lib/site";
@@ -39,33 +40,32 @@ export default async function AskPage({ searchParams }: PageProps<"/ask">) {
 
   return (
     <div className="mx-auto max-w-3xl space-y-8 px-4 py-12 sm:px-6">
-      <form action="/ask" method="get" role="search" className="flex gap-2 rounded-3xl bg-white p-3 shadow-sm ring-1 ring-brand-steel/30">
-        <label htmlFor="ask-q" className="sr-only">
-          Your question
-        </label>
-        <input
-          id="ask-q"
-          name="q"
-          defaultValue={q}
-          placeholder="Ask anything about your mortgage or home equity…"
-          className="flex-1 rounded-full px-4 py-2 text-lg"
-        />
-        <button type="submit" className="rounded-full bg-brand-blue px-5 py-2 font-semibold text-brand-ink hover:bg-brand-blue/75">
-          Ask
-        </button>
-      </form>
+      <header className="space-y-2">
+        <h1 className="text-2xl font-bold sm:text-3xl">Ask our mortgage assistant</h1>
+        <p className="text-brand-slate">Plain-English answers about HELOCs, reverse mortgages, buying, and refinancing. Ace and our team take it from there.</p>
+      </header>
 
-      {q && (
-        <header className="space-y-2">
-          <p className="text-sm font-semibold uppercase tracking-wide text-brand-slate">Your question</p>
-          <h1 className="text-2xl font-bold sm:text-3xl">{q}</h1>
-        </header>
-      )}
+      {/* With JavaScript: the live AI chat. Without it: a simple form that shows matching answers below. */}
+      <div className="js-only">
+        <ChatAssistant initialQuestion={q || undefined} phone={licensing.phone} phoneE164={licensing.phoneE164} />
+      </div>
+      <noscript>
+        <form action="/ask" method="get" role="search" className="flex gap-2 rounded-3xl bg-white p-3 shadow-sm ring-1 ring-brand-steel/30">
+          <label htmlFor="ask-q" className="sr-only">
+            Your question
+          </label>
+          <input id="ask-q" name="q" defaultValue={q} placeholder="Ask anything about your mortgage or home equity…" className="flex-1 rounded-full px-4 py-2 text-lg" />
+          <button type="submit" className="rounded-full bg-brand-blue px-5 py-2 font-semibold text-brand-ink">
+            Ask
+          </button>
+        </form>
+        {q && <p className="mt-4 font-semibold text-brand-slate">Your question: {q}</p>}
+      </noscript>
 
       {matches.length > 0 ? (
         <section aria-labelledby="matches" className="space-y-4">
           <h2 id="matches" className="text-xl font-semibold">
-            Answers that may help
+            Related answers
           </h2>
           <ul className="space-y-4">
             {matches.map((e) => (

@@ -13,6 +13,7 @@
     "kb:new": "node scripts/new-kb-entry.mjs"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.128.0",
     "d3-geo": "^3.1.1",
     "gray-matter": "^4.0.3",
     "marked": "^18.0.14",
