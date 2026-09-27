@@ -86,7 +86,7 @@ export function StorySections() {
                   sizes="(min-width: 768px) 50vw, 100vw"
                   className="aspect-[4/3] w-full rounded-3xl object-cover shadow-lg ring-1 ring-brand-steel/20"
                 />
-                <ul className="mt-4 space-y-2 rounded-2xl bg-white/95 p-5 shadow-lg ring-1 ring-brand-blue/40 md:absolute md:-bottom-6 md:left-6 md:right-6 md:mt-0 md:bg-white/20 md:shadow-md md:ring-white/70 md:backdrop-blur-md">
+                <ul className="mt-4 space-y-2 rounded-2xl bg-white/95 p-5 shadow-lg ring-1 ring-brand-blue/40 md:absolute md:-bottom-6 md:left-6 md:right-6 md:mt-0 md:bg-white/10 md:shadow-md md:ring-white/70 md:backdrop-blur-md">
                   {g.points.map((p) => (
                     <li key={p} className="flex items-start gap-3 text-brand-ink">
                       <span aria-hidden="true" className="mt-0.5 font-bold text-brand-button">
