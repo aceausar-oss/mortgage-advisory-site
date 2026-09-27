@@ -13,10 +13,14 @@ type Mode = "heloc" | "cashOut";
 export function EquitySlider({ maxCLTV }: { maxCLTV: Record<Mode, number> }) {
   const [homeValue, setHomeValue] = useState(750_000);
   const [balance, setBalance] = useState(300_000);
+  const [cashNeeded, setCashNeeded] = useState(75_000);
   const [mode, setMode] = useState<Mode>("heloc");
   const id = useId();
   const cltv = maxCLTV[mode];
   const available = Math.max(0, Math.round(homeValue * cltv - balance));
+  const fits = cashNeeded <= available;
+  const shortBy = cashNeeded - available;
+  const combinedLtv = homeValue > 0 ? (balance + cashNeeded) / homeValue : 0;
 
   return (
     <div className="space-y-6">
@@ -55,10 +59,33 @@ export function EquitySlider({ maxCLTV }: { maxCLTV: Record<Mode, number> }) {
 
       <Slider id={`${id}-value`} label="Home value" value={homeValue} min={150_000} max={3_000_000} step={5_000} onChange={setHomeValue} />
       <Slider id={`${id}-balance`} label="Current mortgage balance" value={balance} min={0} max={2_500_000} step={5_000} onChange={setBalance} />
+      <Slider id={`${id}-cash`} label="Cash needed" value={cashNeeded} min={5_000} max={1_000_000} step={5_000} onChange={setCashNeeded} />
+
+      <div
+        aria-live="polite"
+        className={`rounded-2xl p-4 text-sm leading-relaxed ring-1 ${fits ? "bg-white ring-emerald-500/40" : "bg-white ring-amber-500/50"}`}
+      >
+        {fits ? (
+          <p>
+            <strong className="text-emerald-700">Good news:</strong> {usd(cashNeeded)} fits within your estimated {usd(available)}. Your total
+            borrowing would be about {pct(combinedLtv)} of your home&apos;s value.
+          </p>
+        ) : (
+          <p>
+            <strong className="text-amber-800">Close, but not quite:</strong> {usd(cashNeeded)} is about {usd(shortBy)} more than this estimate.
+            You still have options: a smaller amount now, a program that allows more, or, if you&apos;re 62 or older, a reverse mortgage. Let&apos;s
+            talk it through.
+          </p>
+        )}
+      </div>
 
       <div className="flex flex-wrap gap-3">
         <Link
-          href={`/ask?q=${encodeURIComponent(mode === "heloc" ? "How can I get a HELOC and keep my low first-mortgage rate?" : "Should I do a cash-out refinance?")}`}
+          href={`/ask?q=${encodeURIComponent(
+            `I need about ${usd(cashNeeded)} from my home (value ${usd(homeValue)}, balance ${usd(balance)}). ${
+              mode === "heloc" ? "How can I get a HELOC and keep my low first-mortgage rate?" : "Should I do a cash-out refinance?"
+            }`,
+          )}`}
           className="inline-flex items-center gap-2 rounded-full bg-brand-slate px-5 py-2.5 font-semibold text-white hover:bg-brand-ink"
         >
           See my {mode === "heloc" ? "HELOC" : "cash-out"} options <span aria-hidden="true">→</span>
