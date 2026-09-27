@@ -12,6 +12,7 @@ const GOALS = [
     points: ["Refinance when the numbers actually work", "Consolidate high-interest debt with a HELOC or fixed second", "See every fee before you decide"],
     cta: { label: "Lower my payments", q: "How can I lower my monthly payments?" },
     related: { href: "/answers/homeowner-credit-card-debt-options", label: "Homeowner with credit card debt? Your options" },
+    image: { src: "/images/heloc-couple.jpg", alt: "Couple at their kitchen table looking at a tablet together" },
     icon: "M4 17l6-6 4 4 6-8M14 7h6v6",
   },
   {
@@ -21,6 +22,7 @@ const GOALS = [
     points: ["Pre-approval you can count on", "Down payment help in all four of our states", "Loan Estimates explained line by line"],
     cta: { label: "Get pre-approved", q: "I want to get pre-approved to buy my first home" },
     related: { href: "/answers/how-much-house-can-i-afford", label: "How much house can I afford?" },
+    image: { src: "/images/first-home-couple.jpg", alt: "Young couple sitting among moving boxes in their new home" },
     icon: "M3 11l9-7 9 7M5 10v10h14V10M10 20v-6h4v6",
   },
   {
@@ -40,6 +42,7 @@ const GOALS = [
     points: ["Qualify with bank statements", "Programs for 1099 and gig income", "Clear answers on what documents you need"],
     cta: { label: "Qualify with bank statements", q: "Can I get a mortgage if I'm self-employed?" },
     related: null,
+    image: { src: "/images/self-employed-owner.jpg", alt: "Small business owner standing in her coffee shop" },
     icon: "M4 7h16v12H4zM9 7V5h6v2M4 12h16",
   },
 ];

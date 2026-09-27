@@ -5,15 +5,15 @@ import { fullAddress, legalNav, licensing, stateCodes } from "@/lib/site";
 // Compliance block required on every page (CLAUDE.md §8). All facts come from content/data/licensing.json.
 export function SiteFooter() {
   return (
-    <footer className="mt-auto bg-brand-slate text-white">
+    <footer className="mt-auto border-t-4 border-brand-blue bg-gradient-to-b from-mist to-white text-brand-ink">
       <div className="mx-auto max-w-7xl space-y-8 px-4 py-12 sm:px-6">
         <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
           <div className="max-w-xl space-y-2 text-sm">
-            <p className="font-heading text-lg font-semibold">{licensing.legalName}</p>
+            <p className="font-heading text-lg font-semibold text-brand-slate">{licensing.legalName}</p>
             <p>
               <a
                 href={licensing.nmlsConsumerAccessUrl}
-                className="underline underline-offset-4 hover:text-brand-blue"
+                className="font-medium text-brand-button underline underline-offset-4 hover:text-brand-slate"
                 rel="noopener"
               >
                 NMLS #{licensing.nmls}
@@ -22,17 +22,17 @@ export function SiteFooter() {
             </p>
             <address className="not-italic">
               {fullAddress} ·{" "}
-              <a href={`tel:${licensing.phoneE164}`} className="underline underline-offset-4 hover:text-brand-blue">
+              <a href={`tel:${licensing.phoneE164}`} className="font-medium text-brand-button underline underline-offset-4 hover:text-brand-slate">
                 {licensing.phone}
               </a>{" "}
               ·{" "}
-              <a href={`mailto:${licensing.email}`} className="underline underline-offset-4 hover:text-brand-blue">
+              <a href={`mailto:${licensing.email}`} className="font-medium text-brand-button underline underline-offset-4 hover:text-brand-slate">
                 {licensing.email}
               </a>
             </address>
             <p>
               Licensed in {stateCodes.join(", ")} — see{" "}
-              <Link href="/licensing" className="underline underline-offset-4 hover:text-brand-blue">
+              <Link href="/licensing" className="font-medium text-brand-button underline underline-offset-4 hover:text-brand-slate">
                 Licensing &amp; Disclosures
               </Link>
               .
@@ -40,8 +40,8 @@ export function SiteFooter() {
           </div>
 
           <div className="flex items-center gap-3">
-            <EqualHousingLenderLogo className="h-14 w-14 text-white" />
-            <span className="font-heading text-sm font-semibold uppercase tracking-wide">
+            <EqualHousingLenderLogo className="h-14 w-14 text-brand-slate" />
+            <span className="font-heading text-sm font-semibold uppercase tracking-wide text-brand-slate">
               Equal Housing Lender
             </span>
           </div>
@@ -51,7 +51,7 @@ export function SiteFooter() {
           <ul className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
             {legalNav.map((item) => (
               <li key={item.href}>
-                <Link href={item.href} className="underline underline-offset-4 hover:text-brand-blue">
+                <Link href={item.href} className="font-medium text-brand-button underline underline-offset-4 hover:text-brand-slate">
                   {item.label}
                 </Link>
               </li>
@@ -59,11 +59,11 @@ export function SiteFooter() {
           </ul>
         </nav>
 
-        <p className="border-t border-white/20 pt-6 text-xs leading-relaxed text-white/90">
+        <p className="border-t border-brand-blue/50 pt-6 text-xs leading-relaxed text-brand-slate">
           This is not a commitment to lend. All loans subject to credit approval, underwriting, and
           property valuation. Rates, terms, and programs subject to change without notice.
         </p>
-        <p className="text-xs text-white/90">
+        <p className="text-xs text-brand-slate">
           © {new Date().getFullYear()} {licensing.legalName} All rights reserved.
         </p>
       </div>
