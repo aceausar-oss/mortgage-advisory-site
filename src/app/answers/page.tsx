@@ -8,7 +8,7 @@ import { licensing } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Mortgage Questions Answered",
   description:
-    "Plain-English answers to real borrower questions about buying, refinancing, HELOCs, reverse mortgages, VA and FHA loans from a direct lender (NMLS #1549739).",
+    "Plain-English answers to real borrower questions about buying, refinancing, HELOCs, reverse mortgages, VA and FHA loans from a licensed lender and broker (NMLS #1549739).",
   alternates: { canonical: "/answers" },
 };
 
@@ -27,7 +27,7 @@ export default async function AnswersPage({ searchParams }: PageProps<"/answers"
       <header className="space-y-3">
         <h1 className="text-3xl font-bold sm:text-4xl">Mortgage questions, answered</h1>
         <p className="text-lg leading-relaxed">
-          Real questions borrowers ask, answered in plain English by {licensing.brandName}, a direct mortgage lender licensed in
+          Real questions borrowers ask, answered in plain English by {licensing.brandName}, a mortgage lender and broker licensed in
           California, Texas, Florida, and Colorado (NMLS #{licensing.nmls}).
         </p>
       </header>

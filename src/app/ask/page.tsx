@@ -9,7 +9,7 @@ import { licensing } from "@/lib/site";
 // shows the best-matching answers plus ways to reach Ace. Works with JavaScript disabled.
 export const metadata: Metadata = {
   title: "Ask a Mortgage Question",
-  description: "Get plain-English answers to your mortgage, HELOC, reverse mortgage, and home equity questions from a direct lender, NMLS #1549739.",
+  description: "Get plain-English answers to your mortgage, HELOC, reverse mortgage, and home equity questions from a licensed mortgage lender and broker, NMLS #1549739.",
   alternates: { canonical: "/ask" },
   robots: { index: false, follow: true },
 };

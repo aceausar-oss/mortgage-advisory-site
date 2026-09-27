@@ -2,7 +2,7 @@ import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { ImageResponse } from "next/og";
 
-export const alt = "The Mortgage Advisory — direct mortgage lender, NMLS #1549739";
+export const alt = "The Mortgage Advisory — mortgage lender & broker, NMLS #1549739";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 

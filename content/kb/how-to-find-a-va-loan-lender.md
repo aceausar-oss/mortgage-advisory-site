@@ -3,7 +3,7 @@ question: "How do I find a lender that really knows VA loans?"
 slug: how-to-find-a-va-loan-lender
 seoTitle: "How to Find a Lender That Really Knows VA Loans"
 description: "Ask how many VA loans they close, how they handle VA appraisals and funding fee exemptions, and compare Loan Estimates. Watch for common VA myths."
-tldr: "Interview them. Ask how many VA loans they close, how they handle your Certificate of Eligibility, VA appraisals, the funding fee exemption, and seller concessions, then compare two or three VA Loan Estimates from the same day. The Mortgage Advisory is a direct lender that closes VA loans in California, Texas, Florida, and Colorado, and we genuinely encourage veterans to compare us."
+tldr: "Interview them. Ask how many VA loans they close, how they handle your Certificate of Eligibility, VA appraisals, the funding fee exemption, and seller concessions, then compare two or three VA Loan Estimates from the same day. The Mortgage Advisory arranges VA loans in California, Texas, Florida, and Colorado through approved VA lending partners, and we genuinely encourage veterans to compare us."
 category: buying
 products: [va]
 states: [CA]
@@ -49,4 +49,4 @@ A veteran in Los Angeles asks three lenders the questions above. One isn't sure 
 
 ## Our take
 
-Interview lenders the way you'd interview anyone you trust with a big purchase. Yes, we're a lender, and I still tell every veteran to get more than one VA Loan Estimate and pick the one that explains everything clearly and costs the least over the time you'll keep the loan. If that's us, great. Either way, you'll know you got a fair deal.
+Interview lenders the way you'd interview anyone you trust with a big purchase. Yes, we arrange VA loans ourselves, and I still tell every veteran to get more than one VA Loan Estimate and pick the one that explains everything clearly and costs the least over the time you'll keep the loan. If that's us, great. Either way, you'll know you got a fair deal.

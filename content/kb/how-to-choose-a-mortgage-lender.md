@@ -3,7 +3,7 @@ question: "How do I choose a mortgage lender, and should I just use the one my a
 slug: how-to-choose-a-mortgage-lender
 seoTitle: "How to Choose a Mortgage Lender (and Why to Compare)"
 description: "Get 2-3 Loan Estimates on the same day, compare total cost and fees, and judge how clearly they explain things. A referral is a start, not a decision."
-tldr: "Get two or three Loan Estimates for the same loan on the same day, compare the total cost (not just the rate), and pay attention to who explains things clearly and answers the phone. Your agent's recommendation is a fine place to start, but it isn't the only option. At The Mortgage Advisory, we're a direct lender, and we're happy to be one of the quotes you compare."
+tldr: "Get two or three Loan Estimates for the same loan on the same day, compare the total cost (not just the rate), and pay attention to who explains things clearly and answers the phone. Your agent's recommendation is a fine place to start, but it isn't the only option. At The Mortgage Advisory, we're happy to be one of the quotes you compare, and we'll tell you upfront who your lender is and how we're paid."
 category: buying
 products: [conventional, fha, va]
 states: [CA, TX]
@@ -38,7 +38,9 @@ Each can work:
 
 - **Banks and credit unions** sometimes have special programs for their customers.
 - **Mortgage brokers** shop your loan with several wholesale lenders.
-- **Direct lenders** (like us) make the loan decisions and control the process in-house.
+- **Direct lenders** make the loan decisions and control the process in-house.
+
+We're both: a direct lender on conventional and Non-QM loans, and a broker for FHA, VA, reverse mortgages, and HELOCs, where we work with approved partner lenders. Either way, we tell you upfront who your lender is and how we're paid. It's all on your Loan Estimate.
 
 What matters more than the label is the price, the service, and whether they can actually close your loan on time.
 

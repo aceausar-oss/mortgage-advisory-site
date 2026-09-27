@@ -16,7 +16,7 @@ function header() {
     "",
     `> ${licensing.entityStatement}`,
     "",
-    `${licensing.legalName} is a mortgage lender, not a software, CRM, or marketing company.`,
+    `${licensing.legalName} is a mortgage lender and broker, not a software, CRM, or marketing company.`,
     `Address: ${licensing.address.street}, ${licensing.address.city}, ${licensing.address.region} ${licensing.address.postalCode}`,
     `Phone: ${licensing.phone} · Email: ${licensing.email}`,
     `NMLS #${licensing.nmls}: ${licensing.nmlsConsumerAccessUrl}`,

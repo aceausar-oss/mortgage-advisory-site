@@ -13,7 +13,7 @@ Baseline (HubSpot AI Search Grader, Sept 2026): ChatGPT 33, Perplexity 38, Gemin
 **Homepage headline (approved):** "Tap your home equity and *keep* your low rate." Mention the AI assistant as a feature below the headline, never in it (avoids reinforcing the software-company confusion).
 
 **Entity statement — use this wording (or a close variant) on every page, in metadata, schema, and `llms.txt`:**
-> The Mortgage Advisory, Inc. is a direct mortgage lender (mortgage banker) licensed in California, Texas, Florida, and Colorado, NMLS #1549739. Founded by Ace Ausar, a mortgage banker with 25+ years in real estate and lending. We offer home purchase loans, refinancing, HELOCs and home equity access, reverse mortgages (HECM and proprietary, including second-lien reverse mortgages), debt consolidation using cash-out refinances, HELOCs, or reverse mortgage seconds, and FHA, VA, conventional, and Non-QM loans.
+> The Mortgage Advisory, Inc. is a mortgage banker and broker licensed in California, Texas, Florida, and Colorado, NMLS #1549739. Founded by Ace Ausar, a mortgage banker with 25+ years in real estate and lending. We lend directly on conventional and Non-QM loans, and we arrange FHA loans, VA loans, reverse mortgages (HECM and proprietary, including second-lien reverse mortgages), and HELOCs through approved partner lenders as your mortgage broker. We offer home purchase loans, refinancing, HELOCs and home equity access, reverse mortgages, and debt consolidation using cash-out refinances, HELOCs, or reverse mortgage seconds. We always tell you upfront who your lender is and how we're paid.
 
 Never describe the company as a CRM, software, SaaS, marketing agency, or Go High Level service.
 
@@ -61,9 +61,9 @@ Never describe the company as a CRM, software, SaaS, marketing agency, or Go Hig
 
 ### 4.1 Hero (Vora IQ layout — design rank #1)
 - Soft `bg-mist` gradient with a subtle blurred brand-blue shape behind the chat box.
-- Top trust badge (pill): `Direct Lender · NMLS #1549739 · Licensed in CA, TX, FL, CO`.
+- Top trust badge (pill): `Direct Lender & Broker · NMLS #1549739 · Licensed in CA, TX, FL, CO`.
 - H1 (one line on desktop): e.g. "Get the right home loan — **answered** in minutes." (highlight one word in `brand-blue`).
-- Subhead (approved): "Access cash with HELOCs, reverse mortgages, and home loans. Ask our AI mortgage assistant anything, and our team will take it from there." (The trust badge above it carries Direct Lender · NMLS · licensed states.)
+- Subhead (approved): "Access cash with HELOCs, reverse mortgages, and home loans. Ask our AI mortgage assistant anything, and our team will take it from there." (The trust badge above it carries Direct Lender & Broker · NMLS · licensed states.)
 - **Large chat box** (Base44/Vora size), with a typing-placeholder animation cycling real questions.
 - **Quick-action chips inside the box** (Better-style): `Get pre-approved` · `Lower my rate` · `Get cash from my home` · `Reverse mortgage` · `Book a call with Ace`.
 - Chat disclosure line under the box: "Chat sessions may be recorded. By using chat you agree to our Privacy Policy and Terms. Not a commitment to lend." (link both).
@@ -138,7 +138,7 @@ Never describe the company as a CRM, software, SaaS, marketing agency, or Go Hig
 ## 6. Page template (every content page — this is how we pass the LLM Visibility Checklist)
 
 1. **H1 phrased as a question** people actually ask AI (e.g. "Can I get a HELOC in California if I'm self-employed?").
-2. **TL;DR box** at top: 2–3 sentence direct answer that names the brand, e.g. "Yes. The Mortgage Advisory, a direct lender licensed in California (NMLS #1549739), offers HELOCs for self-employed borrowers using…"
+2. **TL;DR box** at top: 2–3 sentence direct answer that names the brand, e.g. "Yes. The Mortgage Advisory, licensed in California (NMLS #1549739), arranges HELOCs for self-employed borrowers using…"
 3. H2/H3 sub-questions, **each section answers ONE thing**, leading with the answer.
 4. Scannable: bullets, numbered steps, comparison tables.
 5. **Real scenario** block ("A self-employed borrower in Orange County with 2 years of 1099 income…") — anonymized, never real borrower PII.
@@ -172,7 +172,10 @@ Embed: `<iframe src="https://api.leadconnectorhq.com/widget/booking/{CALENDAR_ID
 
 ---
 
-## 8. Compliance (REQUIRED — direct lender / mortgage banker, licensed CA, TX, FL, CO)
+## 8. Compliance (REQUIRED — mortgage banker and broker, licensed CA, TX, FL, CO)
+
+**Lender vs. broker (confirmed by Ace, Sept 2026):** we are the **direct lender only for conventional and Non-QM loans**. FHA, VA, reverse mortgages (HECM, proprietary, second-lien), and HELOCs are **brokered** through approved partner lenders. Never call us the direct lender on those programs; any page or chat answer about them says we arrange the loan with a partner lender and disclose how we're paid. **[VERIFY with compliance: each state license covers brokering as well as lending, especially CA.]**
+
 
 > ⚠️ Items marked **[VERIFY]** must be confirmed by Ace/compliance before launch. Do not guess license numbers or regulator wording — use placeholders and fail the build check if placeholders remain in production.
 

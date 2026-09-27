@@ -26,7 +26,7 @@ export default function Home() {
         <div aria-hidden="true" className="ai-shimmer" />
         <div className="relative mx-auto max-w-5xl space-y-6 px-4 pb-16 pt-14 text-center sm:px-6 sm:pt-20">
           <p className="inline-block rounded-full border border-brand-steel/40 bg-white px-4 py-1 text-sm font-medium text-brand-slate">
-            Direct Lender · NMLS #{licensing.nmls} · Licensed in {stateCodes.join(", ")}
+            Direct Lender & Broker · NMLS #{licensing.nmls} · Licensed in {stateCodes.join(", ")}
           </p>
           <h1 className="text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
             Tap your home equity and <em className="not-italic text-brand-blue-deep">keep</em> your low rate.

@@ -18,7 +18,7 @@ export function SiteFooter() {
               >
                 NMLS #{licensing.nmls}
               </a>{" "}
-              · Direct mortgage lender
+              · Direct lender & mortgage broker
             </p>
             <address className="not-italic">
               {fullAddress} ·{" "}

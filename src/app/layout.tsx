@@ -10,9 +10,9 @@ import "./globals.css";
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
 const montserrat = Montserrat({ variable: "--font-montserrat", subsets: ["latin"] });
 
-const defaultTitle = "The Mortgage Advisory | Direct Lender in CA, TX, FL, CO";
+const defaultTitle = "The Mortgage Advisory | Direct Lender & Broker in CA, TX, FL, CO";
 const defaultDescription =
-  "Direct mortgage lender in CA, TX, FL & CO (NMLS #1549739): purchase, refi, HELOC, reverse, FHA, VA, conventional & Non-QM loans.";
+  "Mortgage lender & broker in CA, TX, FL & CO (NMLS #1549739): purchase, refi, HELOC, reverse, FHA, VA, conventional & Non-QM loans.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
