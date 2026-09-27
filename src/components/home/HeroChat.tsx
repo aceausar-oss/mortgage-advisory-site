@@ -93,7 +93,7 @@ export function HeroChat({ examples }: { examples: string[] }) {
           <button
             type="submit"
             aria-label="Ask"
-            className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-brand-button text-white hover:bg-brand-slate"
+            className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-brand-blue text-brand-ink hover:bg-brand-blue/75"
           >
             <svg viewBox="0 0 24 24" aria-hidden="true" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M5 12h14M13 6l6 6-6 6" />
@@ -112,7 +112,7 @@ export function HeroChat({ examples }: { examples: string[] }) {
             </li>
           ))}
           <li>
-            <Link href="/book" className="inline-block rounded-full bg-brand-button px-3.5 py-1.5 text-sm font-semibold text-white hover:bg-brand-slate">
+            <Link href="/book" className="inline-block rounded-full bg-brand-blue px-3.5 py-1.5 text-sm font-semibold text-brand-ink hover:bg-brand-blue/75">
               Book a call with Ace
             </Link>
           </li>

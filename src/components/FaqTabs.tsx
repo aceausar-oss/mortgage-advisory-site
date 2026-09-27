@@ -13,7 +13,7 @@ export function FaqTabs({ entries, idPrefix = "faq" }: { entries: KbEntry[]; idP
   const css = tabs
     .map(
       (t) => `#${t.id}:checked ~ .faq-panels [data-panel="${t.id}"]{display:block}
-#${t.id}:checked ~ .faq-tablist label[for="${t.id}"]{background:var(--color-brand-button);color:#fff;border-color:var(--color-brand-button)}
+#${t.id}:checked ~ .faq-tablist label[for="${t.id}"]{background:var(--color-brand-blue);color:var(--color-brand-ink);border-color:var(--color-brand-blue)}
 #${t.id}:focus-visible ~ .faq-tablist label[for="${t.id}"]{outline:3px solid var(--color-brand-blue);outline-offset:2px}`,
     )
     .join("\n");
@@ -40,7 +40,7 @@ export function FaqTabs({ entries, idPrefix = "faq" }: { entries: KbEntry[]; idP
           <label
             key={t.id}
             htmlFor={t.id}
-            className="cursor-pointer rounded-full border-2 border-brand-blue-deep/40 bg-white px-4 py-2 text-sm font-semibold text-brand-button shadow-sm hover:border-brand-blue-deep"
+            className="cursor-pointer rounded-full border-2 border-brand-blue bg-white px-4 py-2 text-sm font-semibold text-brand-button shadow-sm hover:border-brand-blue-deep"
           >
             {t.label} <span className="font-normal">({t.items.length})</span>
           </label>
@@ -61,7 +61,7 @@ export function FaqTabs({ entries, idPrefix = "faq" }: { entries: KbEntry[]; idP
             ) : (
               <ul className="space-y-4">
                 {t.items.map((e) => (
-                  <li key={e.slug} className="rounded-2xl border-l-4 border-brand-blue-deep bg-gradient-to-r from-mist to-white p-5 shadow-sm ring-1 ring-brand-blue/30 transition hover:shadow-md">
+                  <li key={e.slug} className="rounded-2xl border-l-4 border-brand-blue bg-gradient-to-r from-mist to-white p-5 shadow-sm ring-1 ring-brand-blue/50 transition hover:shadow-md">
                     <h3 className="text-lg font-semibold">
                       {e.question}
                       {e.isDraft && <span className="ml-2 rounded bg-mist px-2 py-0.5 align-middle text-xs font-semibold">Draft</span>}

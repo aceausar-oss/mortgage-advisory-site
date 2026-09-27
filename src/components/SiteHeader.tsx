@@ -39,7 +39,7 @@ export function SiteHeader() {
           </a>
           <Link
             href="/book"
-            className="whitespace-nowrap rounded-full bg-brand-button px-3 py-2 text-sm font-semibold text-white hover:bg-brand-slate sm:px-4"
+            className="whitespace-nowrap rounded-full bg-brand-blue px-3 py-2 text-sm font-semibold text-brand-ink hover:bg-brand-blue/75 sm:px-4"
           >
             Book a call
           </Link>
