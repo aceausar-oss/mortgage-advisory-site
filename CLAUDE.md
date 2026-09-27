@@ -60,7 +60,7 @@ Never describe the company as a CRM, software, SaaS, marketing agency, or Go Hig
 - Soft `bg-mist` gradient with a subtle blurred brand-blue shape behind the chat box.
 - Top trust badge (pill): `Direct Lender · NMLS #1549739 · Licensed in CA, TX, FL, CO`.
 - H1 (one line on desktop): e.g. "Get the right home loan — **answered** in minutes." (highlight one word in `brand-blue`).
-- Subhead: entity statement in one sentence.
+- Subhead (approved): "Access cash with HELOCs, reverse mortgages, and home loans. Ask our AI mortgage assistant anything, and our team will take it from there." (The trust badge above it carries Direct Lender · NMLS · licensed states.)
 - **Large chat box** (Base44/Vora size), with a typing-placeholder animation cycling real questions.
 - **Quick-action chips inside the box** (Better-style): `Get pre-approved` · `Lower my rate` · `Get cash from my home` · `Reverse mortgage` · `Book a call with Ace`.
 - Chat disclosure line under the box: "Chat sessions may be recorded. By using chat you agree to our Privacy Policy and Terms. Not a commitment to lend." (link both).

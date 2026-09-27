@@ -29,8 +29,8 @@ export default function Home() {
             Tap your home equity and <em className="not-italic text-brand-blue-deep">keep</em> your low rate.
           </h1>
           <p className="mx-auto max-w-3xl text-lg leading-relaxed sm:text-xl">
-            HELOCs, reverse mortgages, and home loans from a direct lender licensed in California, Texas, Florida, and Colorado. Ask our AI
-            mortgage assistant anything, and Ace and our team take it from there.
+            Access cash with HELOCs, reverse mortgages, and home loans. Ask our AI mortgage assistant anything, and our team will take it from
+            there.
           </p>
           <p className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-1.5 text-sm font-semibold text-brand-slate shadow-sm ring-1 ring-brand-steel/20">
             <span aria-hidden="true">⚡</span> HELOCs can close in as little as 5 days*
