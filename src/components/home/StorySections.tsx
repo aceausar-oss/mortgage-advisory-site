@@ -101,7 +101,7 @@ export function StorySections() {
               </div>
             ) : (
               <div className={`rounded-3xl bg-gradient-to-br from-brand-blue/25 via-mist to-white p-8 shadow-md ring-1 ring-brand-blue/40 ${i % 2 === 1 ? "md:order-1" : ""}`}>
-                <span aria-hidden="true" className="flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-blue text-brand-ink shadow-md">
+                <span aria-hidden="true" className="flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-soft text-brand-ink shadow-md">
                   <svg viewBox="0 0 24 24" className="h-7 w-7" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d={g.icon} />
                   </svg>

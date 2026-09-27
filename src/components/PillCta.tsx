@@ -13,7 +13,7 @@ export function PillCta({ href, label, icon }: { href: string; label: string; ic
         </svg>
       </span>
       <span className="pr-1">{label}</span>
-      <span aria-hidden="true" className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-brand-blue text-brand-ink transition group-hover:translate-x-0.5">
+      <span aria-hidden="true" className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-brand-soft text-brand-ink transition group-hover:translate-x-0.5">
         <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
           <path d="M5 12h14M13 6l6 6-6 6" />
         </svg>

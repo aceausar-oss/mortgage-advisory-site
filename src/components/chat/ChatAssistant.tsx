@@ -76,7 +76,7 @@ export function ChatAssistant({ initialQuestion, phone, phoneE164 }: { initialQu
         )}
         {messages.map((m, i) =>
           m.role === "user" ? (
-            <div key={i} className="ml-auto max-w-[85%] rounded-2xl rounded-br-md bg-brand-blue px-4 py-2.5 text-brand-ink">
+            <div key={i} className="ml-auto max-w-[85%] rounded-2xl rounded-br-md bg-brand-soft px-4 py-2.5 text-brand-ink">
               {m.content}
             </div>
           ) : (
@@ -116,7 +116,7 @@ export function ChatAssistant({ initialQuestion, phone, phoneE164 }: { initialQu
         <button
           type="submit"
           disabled={busy || !input.trim()}
-          className="rounded-full bg-brand-blue px-5 py-2.5 font-semibold text-brand-ink hover:bg-brand-blue/75 disabled:opacity-50"
+          className="rounded-full bg-brand-soft px-5 py-2.5 font-semibold text-brand-ink hover:bg-brand-blue disabled:opacity-50"
         >
           Send
         </button>
@@ -134,7 +134,7 @@ export function ChatAssistant({ initialQuestion, phone, phoneE164 }: { initialQu
           . Not a commitment to lend. Please don&apos;t share Social Security or account numbers.
         </p>
         <span className="flex gap-2">
-          <Link href="/book" className="rounded-full bg-brand-blue px-3 py-1.5 font-semibold text-brand-ink hover:bg-brand-blue/75">
+          <Link href="/book" className="rounded-full bg-brand-soft px-3 py-1.5 font-semibold text-brand-ink hover:bg-brand-blue">
             Book a call with Ace
           </Link>
           <a href={`tel:${phoneE164}`} className="rounded-full border border-brand-blue px-3 py-1.5 font-semibold text-brand-slate">

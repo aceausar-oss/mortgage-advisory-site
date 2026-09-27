@@ -3,6 +3,10 @@
 /* Brand tokens (CLAUDE.md §3). Usage: bg-brand-blue, text-brand-slate, bg-mist, font-heading, etc. */
 @theme {
   --color-brand-blue: #88b4e0; /* sampled from the logo mark */
+  /* Soft blue for filled buttons and pills, always with dark ink text (9.5:1, WCAG AA). */
+  --color-brand-soft: #a7c8ea;
+  /* Soft blue for filled buttons and pills, always with dark ink text (9.5:1, WCAG AA). */
+  --color-brand-soft: #a7c8ea;
   /* Darker "M badge" blue for large text, icons, and outlines (3:1+ on white; large text only). */
   --color-brand-blue-deep: #3d85cc;
   /* Button blue: filled buttons with white text and small blue text (4.9:1 on white, WCAG AA). */

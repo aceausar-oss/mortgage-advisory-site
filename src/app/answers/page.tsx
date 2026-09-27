@@ -67,7 +67,7 @@ export default async function AnswersPage({ searchParams }: PageProps<"/answers"
             </option>
           ))}
         </select>
-        <button type="submit" className="rounded-full bg-brand-blue px-5 py-2 font-semibold text-brand-ink hover:bg-brand-blue/75">
+        <button type="submit" className="rounded-full bg-brand-soft px-5 py-2 font-semibold text-brand-ink hover:bg-brand-blue">
           Search
         </button>
       </form>

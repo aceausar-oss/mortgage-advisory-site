@@ -55,7 +55,7 @@ export default async function AskPage({ searchParams }: PageProps<"/ask">) {
             Your question
           </label>
           <input id="ask-q" name="q" defaultValue={q} placeholder="Ask anything about your mortgage or home equity…" className="flex-1 rounded-full px-4 py-2 text-lg" />
-          <button type="submit" className="rounded-full bg-brand-blue px-5 py-2 font-semibold text-brand-ink">
+          <button type="submit" className="rounded-full bg-brand-soft px-5 py-2 font-semibold text-brand-ink">
             Ask
           </button>
         </form>

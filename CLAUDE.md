@@ -45,6 +45,7 @@ Never describe the company as a CRM, software, SaaS, marketing agency, or Go Hig
 | `brand-blue` | `#88B4E0` | Logo blue (sampled from the M mark): map, soft backgrounds, shimmer, glows |
 | `brand-blue-deep` | `#3D85CC` | Darker "M badge" blue: highlighted headline word, icons, pill outlines, topic tags (large text/graphics only) |
 | `brand-button` | `#2F73B6` | Filled buttons with white text and small blue text/links (passes WCAG AA) |
+| `brand-soft` | `#A7C8EA` | Filled buttons and pills with dark ink text (Ace chose this over white text, Sept 2026) |
 | `brand-slate` | `#43565F` | Headings, logo text, primary buttons |
 | `brand-steel` | `#87959F` | Secondary text, contact bands, borders |
 | `brand-ink` | `#231F20` | Body text |
@@ -94,7 +95,7 @@ Never describe the company as a CRM, software, SaaS, marketing agency, or Go Hig
 
 ### 4.6 Booking section (humans + AI agents)
 - Heading: "Book a call with Ace". Three booking types as cards → GHL calendars (see §7).
-- Phone: (949) 395-9223 · Email: Ace@TheMortgageAdvisory.com.
+- Phone: (949) 649-4499 · Email: Ace@TheMortgageAdvisory.com.
 
 ### 4.7 Footer compliance block (see §8 — required on every page).
 
@@ -178,7 +179,7 @@ Embed: `<iframe src="https://api.leadconnectorhq.com/widget/booking/{CALENDAR_ID
 **Every page footer:**
 - Legal name: The Mortgage Advisory, Inc. · NMLS #1549739 · link to https://www.nmlsconsumeraccess.org (entity lookup).
 - **Equal Housing Lender** logo + text "Equal Housing Lender" (direct lender — use *Lender*, not *Opportunity*). Logo must have alt text.
-- Address: 999 Corporate Drive, Ste 100, Ladera Ranch, CA 92694 · (949) 395-9223.
+- Address: 999 Corporate Drive, Ste 100, Ladera Ranch, CA 92694 · (949) 649-4499.
 - State licensing line, e.g. "Licensed in CA, TX, FL, CO — see Licensing & Disclosures." linking to `/licensing`.
 - Links: Privacy Policy · Terms · Accessibility · Licensing · Do Not Sell or Share My Personal Information (CCPA/CPRA).
 - "This is not a commitment to lend. All loans subject to credit approval, underwriting, and property valuation. Rates, terms, and programs subject to change without notice."

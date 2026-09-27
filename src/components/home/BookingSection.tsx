@@ -19,7 +19,7 @@ export function BookingSection() {
             <p className="mt-2 flex-1 leading-relaxed">{b.blurb}</p>
             <Link
               href={`/book#${b.key}`}
-              className="mt-5 inline-flex items-center justify-center gap-2 rounded-full bg-brand-blue px-5 py-2.5 font-semibold text-brand-ink hover:bg-brand-blue/75"
+              className="mt-5 inline-flex items-center justify-center gap-2 rounded-full bg-brand-soft px-5 py-2.5 font-semibold text-brand-ink hover:bg-brand-blue"
             >
               Pick a time <span aria-hidden="true">→</span>
             </Link>

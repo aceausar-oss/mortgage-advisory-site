@@ -50,7 +50,7 @@ export function EquitySlider({ maxCLTV }: { maxCLTV: Record<Mode, number> }) {
               ["cashOut", "Cash-out refinance"],
             ] as const
           ).map(([key, label]) => (
-            <label key={key} className={`cursor-pointer rounded-full px-4 py-1.5 text-sm font-semibold ${mode === key ? "bg-brand-blue text-brand-ink" : "text-brand-slate"}`}>
+            <label key={key} className={`cursor-pointer rounded-full px-4 py-1.5 text-sm font-semibold ${mode === key ? "bg-brand-soft text-brand-ink" : "text-brand-slate"}`}>
               <input type="radio" name={`${id}-mode`} value={key} checked={mode === key} onChange={() => setMode(key)} className="sr-only" />
               {label}
             </label>
@@ -87,7 +87,7 @@ export function EquitySlider({ maxCLTV }: { maxCLTV: Record<Mode, number> }) {
               mode === "heloc" ? "How can I get a HELOC and keep my low first-mortgage rate?" : "Should I do a cash-out refinance?"
             }`,
           )}`}
-          className="inline-flex items-center gap-2 rounded-full bg-brand-blue px-5 py-2.5 font-semibold text-brand-ink hover:bg-brand-blue/75"
+          className="inline-flex items-center gap-2 rounded-full bg-brand-soft px-5 py-2.5 font-semibold text-brand-ink hover:bg-brand-blue"
         >
           See my {mode === "heloc" ? "HELOC" : "cash-out"} options <span aria-hidden="true">→</span>
         </Link>
@@ -129,7 +129,7 @@ export function EquitySlider({ maxCLTV }: { maxCLTV: Record<Mode, number> }) {
           <option>Buy a home</option>
           <option>Lower my payment</option>
         </select>
-        <button type="submit" className="rounded-full bg-brand-blue px-6 py-2 font-semibold text-brand-ink hover:bg-brand-blue/75">
+        <button type="submit" className="rounded-full bg-brand-soft px-6 py-2 font-semibold text-brand-ink hover:bg-brand-blue">
           Ask
         </button>
       </form>
