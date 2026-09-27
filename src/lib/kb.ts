@@ -34,6 +34,8 @@ const Frontmatter = z
     tldr: z.string().min(40),
     category: z.enum(CATEGORY_KEYS),
     products: z.array(z.enum(PRODUCTS)).default([]),
+    // Show the live 10-year Treasury chart after the answer body.
+    treasuryChart: z.boolean().default(false),
     states: z.array(z.enum(["CA", "TX", "FL", "CO"])).default([]),
     persona: z.string().optional(),
     featured: z.boolean().default(false),

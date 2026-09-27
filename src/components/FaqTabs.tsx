@@ -29,7 +29,7 @@ export function FaqTabs({ entries, idPrefix = "faq" }: { entries: KbEntry[]; idP
   };
 
   return (
-    <div className="faq-tabs">
+    <div className="faq-tabs relative">
       <style>{`.faq-panels [data-panel]{display:none}\n${css}`}</style>
       {entries.length > 0 && <JsonLd data={faqJsonLd} />}
       {tabs.map((t) => (

@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${siteUrl}/answers`, lastModified: latest ?? new Date().toISOString().slice(0, 10) },
     { url: `${siteUrl}/how-we-estimate` },
     { url: `${siteUrl}/book` },
+    { url: `${siteUrl}/reviews` },
     ...answers.map((e) => ({ url: `${siteUrl}/answers/${e.slug}`, lastModified: e.updated })),
   ];
 }

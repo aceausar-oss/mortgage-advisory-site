@@ -3,6 +3,7 @@ import { Inter, Montserrat } from "next/font/google";
 import { JsonLd } from "@/components/JsonLd";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import { TreasuryTicker } from "@/components/TreasuryTicker";
 import { licensing, organizationJsonLd, siteUrl } from "@/lib/site";
 import "./globals.css";
 
@@ -44,6 +45,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           Skip to content
         </a>
         <JsonLd data={organizationJsonLd()} />
+        <TreasuryTicker />
         <SiteHeader />
         <main id="main" className="flex-1">
           {children}

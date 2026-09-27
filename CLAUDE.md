@@ -212,6 +212,9 @@ Embed: `<iframe src="https://api.leadconnectorhq.com/widget/booking/{CALENDAR_ID
 - **Fee sheet:** typical lender fees, appraisal, title/escrow ranges by state, and how our compensation works — plain language, sourced where possible.
 - **Reverse mortgage cost breakdown:** upfront MIP, origination limits, servicing — cite HUD.
 - FAQ block: "How much does a mortgage cost?", "What are closing costs in Texas?", etc.
+- **10-year Treasury:** sitewide ticker bar + candle chart (`TreasuryTicker`, `TreasuryChart`), fed daily from the official U.S. Treasury yield CSV (`src/lib/treasury.ts`, refreshed every 12h). Market data only: never convert it into a displayed mortgage rate. Mortgage News Daily data is not ours to republish.
+- **Launch decision (Sept 2026):** no rate scenarios at launch; show "Call or chat for today's rates." Fees are shown as typical ranges only, never fixed numbers.
+- **Reviews:** real Google reviews in `content/data/reviews.json`, copied word for word (first name + last initial). Homepage side-scroll + `/reviews`. No AggregateRating schema (self-serving). Refresh the file when new reviews come in.
 
 ---
 

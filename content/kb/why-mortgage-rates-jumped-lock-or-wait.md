@@ -6,6 +6,7 @@ description: "Mortgage rates track the 10-year Treasury, not the Fed. Add about 
 tldr: "Mortgage rates follow the 10-year Treasury bond, not the Fed directly (add roughly 1.5% to 2.25% to the 10-year yield for a ballpark 30-year rate), so they can jump fast on inflation news or world events, and nobody can reliably call the next move. At The Mortgage Advisory, our rule of thumb is simple: if you're under contract and the payment works for your budget today, lock it and stop worrying about the headlines."
 category: costs
 products: []
+treasuryChart: true
 states: [CA]
 persona: first-time-buyer
 featured: true

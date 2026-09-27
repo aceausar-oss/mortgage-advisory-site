@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { AnswerCta, AuthorBox, Breadcrumbs, DraftBanner, SourcesList, TldrBox } from "@/components/AnswerParts";
 import { DidYouKnow } from "@/components/DidYouKnow";
 import { Disclosures } from "@/components/Disclosures";
+import { TreasuryChart } from "@/components/TreasuryChart";
 import { JsonLd } from "@/components/JsonLd";
 import { categoryLabel } from "@/lib/categories";
 import { getEntries, getEntry } from "@/lib/kb";
@@ -84,6 +85,7 @@ export default async function AnswerPage({ params }: PageProps<"/answers/[slug]"
             </div>
           )}
           <div className="answer-body" dangerouslySetInnerHTML={{ __html: entry.html }} />
+          {entry.treasuryChart && <TreasuryChart />}
           {entry.sources.length > 0 && <SourcesList sources={entry.sources} />}
           <AuthorBox entry={entry} />
           <Disclosures entry={entry} />

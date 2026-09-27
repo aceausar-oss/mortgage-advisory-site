@@ -6,6 +6,7 @@ import { EquitySlider } from "@/components/home/EquitySlider";
 import { HeroChat } from "@/components/home/HeroChat";
 import { LicensedStatesMap } from "@/components/home/LicensedStatesMap";
 import { QuestionFeed } from "@/components/home/QuestionFeed";
+import { ReviewsCarousel } from "@/components/Reviews";
 import { StorySections } from "@/components/home/StorySections";
 import { pricing, verifiedStats } from "@/lib/home";
 import { categoryLabel } from "@/lib/categories";
@@ -100,6 +101,11 @@ export default function Home() {
           </h2>
           <FaqTabs entries={entries} idPrefix="home-faq" />
         </div>
+      </section>
+
+      {/* Real Google reviews */}
+      <section aria-labelledby="reviews-heading" className="bg-mist py-16">
+        <ReviewsCarousel />
       </section>
 
       {/* 4.6 Booking */}
