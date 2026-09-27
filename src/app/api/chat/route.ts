@@ -9,14 +9,14 @@ export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
 const MODEL = process.env.CHAT_MODEL || "claude-opus-5";
-const FALLBACK = `I'm having trouble answering right now. You can reach Ace directly at ${licensing.phone} or book a call at /book.`;
+const FALLBACK = `I'm having trouble answering right now. You can reach Ace directly at ${licensing.phone} or [book a call](/book).`;
 
 const text = (body: string, status = 200) =>
   new Response(body, { status, headers: { "Content-Type": "text/plain; charset=utf-8", "Cache-Control": "no-store" } });
 
 export async function POST(req: Request) {
   if (!process.env.ANTHROPIC_API_KEY) {
-    return text(`The chat assistant isn't set up yet. Please call Ace at ${licensing.phone} or book a call at /book.`, 503);
+    return text(`The chat assistant isn't set up yet. Please call Ace at ${licensing.phone} or [book a call](/book).`, 503);
   }
 
   const ip = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "local";
@@ -57,7 +57,7 @@ export async function POST(req: Request) {
         stream.on("text", (delta) => send(delta));
         const final = await stream.finalMessage();
         if (final.stop_reason === "refusal") {
-          send(`\n\nI can't help with that one here, but Ace can. Call ${licensing.phone} or book a call at /book.`);
+          send(`\n\nI can't help with that one here, but Ace can. Call ${licensing.phone} or [book a call](/book).`);
         } else if (final.stop_reason === "max_tokens") {
           send("\n\n(That answer ran long. Ask me to continue, or book a call with Ace for the full picture.)");
         }
