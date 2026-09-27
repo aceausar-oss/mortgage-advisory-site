@@ -18,11 +18,23 @@ const one = (v: string | string[] | undefined) => (Array.isArray(v) ? v[0] : v)?
 export default async function AskPage({ searchParams }: PageProps<"/ask">) {
   const sp = await searchParams;
   const city = one(sp.city);
-  const value = one(sp.value).replace(/[^0-9]/g, "");
+  const money = (key: string) => {
+    const n = Number(one(sp[key]).replace(/[^0-9]/g, ""));
+    return n > 0 ? `$${n.toLocaleString("en-US")}` : "";
+  };
   const goal = one(sp.goal);
+  const product = one(sp.product);
+  const details = [
+    money("value") && `home value about ${money("value")}`,
+    money("balance") && `mortgage balance ${money("balance")}`,
+    money("cash") && `needs about ${money("cash")}`,
+    product && `interested in a ${product}`,
+  ].filter(Boolean);
   const q =
     one(sp.q) ||
-    [goal, city && `in ${city}`, value && `(home value about $${Number(value).toLocaleString("en-US")})`].filter(Boolean).join(" ");
+    [[goal || "Home equity options", city && `in ${city}`].filter(Boolean).join(" "), details.length ? `${details.join(", ").replace(/^./, (c) => c.toUpperCase())}.` : ""]
+      .filter(Boolean)
+      .join(". ");
   const matches = q ? rankEntries(`${q} ${goal}`, 5) : [];
 
   return (

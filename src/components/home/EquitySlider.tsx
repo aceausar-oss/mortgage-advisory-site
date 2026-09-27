@@ -15,6 +15,7 @@ export function EquitySlider({ maxCLTV }: { maxCLTV: Record<Mode, number> }) {
   const [balance, setBalance] = useState(300_000);
   const [cashNeeded, setCashNeeded] = useState(75_000);
   const [mode, setMode] = useState<Mode>("heloc");
+  const [goal, setGoal] = useState("");
   const id = useId();
   const cltv = maxCLTV[mode];
   const available = Math.max(0, Math.round(homeValue * cltv - balance));
@@ -97,6 +98,41 @@ export function EquitySlider({ maxCLTV }: { maxCLTV: Record<Mode, number> }) {
           62 or older? See your reverse mortgage options <span aria-hidden="true">→</span>
         </Link>
       </div>
+
+      {/* One "Ask" sends the sliders along with city and goal, so the next step starts with the whole picture. */}
+      <form action="/ask" method="get" className="grid gap-2 rounded-3xl bg-white p-3 shadow-sm ring-1 ring-brand-blue/40 sm:grid-cols-[1fr_1fr_auto]">
+        <input type="hidden" name="value" value={homeValue} />
+        <input type="hidden" name="balance" value={balance} />
+        <input type="hidden" name="cash" value={cashNeeded} />
+        <input type="hidden" name="product" value={mode === "heloc" ? "HELOC" : "cash-out refinance"} />
+        <label className="sr-only" htmlFor={`${id}-city`}>
+          City
+        </label>
+        <input id={`${id}-city`} name="city" placeholder="City" className="rounded-full px-4 py-2 text-brand-ink placeholder:text-brand-steel" />
+        <label className="sr-only" htmlFor={`${id}-goal`}>
+          Loan goal
+        </label>
+        <select
+          id={`${id}-goal`}
+          name="goal"
+          value={goal}
+          onChange={(e) => setGoal(e.target.value)}
+          className={`rounded-full bg-white px-4 py-2 ${goal ? "text-brand-ink" : "text-brand-steel"}`}
+        >
+          <option value="" disabled>
+            Loan goal
+          </option>
+          <option>Get cash and keep my rate</option>
+          <option>Pay off debt</option>
+          <option>Home improvements</option>
+          <option>Reverse mortgage</option>
+          <option>Buy a home</option>
+          <option>Lower my payment</option>
+        </select>
+        <button type="submit" className="rounded-full bg-brand-button px-6 py-2 font-semibold text-white hover:bg-brand-slate">
+          Ask
+        </button>
+      </form>
     </div>
   );
 }

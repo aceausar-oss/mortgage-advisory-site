@@ -79,32 +79,6 @@ export default function Home() {
               Estimate your home equity
             </h2>
             <EquitySlider maxCLTV={pricing.maxCLTV} />
-            <form action="/ask" method="get" className="mt-8 grid gap-2 rounded-3xl bg-white p-3 shadow-sm ring-1 ring-brand-steel/20 sm:grid-cols-[1fr_1fr_1fr_auto]">
-              <label className="sr-only" htmlFor="ask-city">
-                City
-              </label>
-              <input id="ask-city" name="city" placeholder="City" className="rounded-full px-4 py-2" />
-              <label className="sr-only" htmlFor="ask-value">
-                Home value
-              </label>
-              <input id="ask-value" name="value" inputMode="numeric" placeholder="Home value" className="rounded-full px-4 py-2" />
-              <label className="sr-only" htmlFor="ask-goal">
-                Loan goal
-              </label>
-              <select id="ask-goal" name="goal" defaultValue="" className="rounded-full px-4 py-2">
-                <option value="" disabled>
-                  Loan goal
-                </option>
-                <option>Get cash and keep my rate</option>
-                <option>Pay off debt</option>
-                <option>Reverse mortgage</option>
-                <option>Buy a home</option>
-                <option>Lower my payment</option>
-              </select>
-              <button type="submit" className="rounded-full bg-brand-button px-5 py-2 font-semibold text-white hover:bg-brand-slate">
-                Ask
-              </button>
-            </form>
           </div>
           <LicensedStatesMap />
         </div>
