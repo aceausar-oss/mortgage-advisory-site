@@ -6,7 +6,9 @@ import { siteUrl } from "@/lib/site";
 
 // Tabbed Q&A (CLAUDE.md §4.5). Tabs are CSS-only radio buttons, so they work with JavaScript off,
 // and every answer is in the HTML (inactive panels are hidden, not missing) for crawlers.
-export function FaqTabs({ entries, idPrefix = "faq" }: { entries: KbEntry[]; idPrefix?: string }) {
+// tiles="grey": silver tiles for use inside a white card (homepage); "white" (default) for silver pages like /answers.
+export function FaqTabs({ entries, idPrefix = "faq", tiles = "white" }: { entries: KbEntry[]; idPrefix?: string; tiles?: "white" | "grey" }) {
+  const tileClass = tiles === "grey" ? "bg-mist ring-1 ring-transparent hover:ring-brand-steel/40" : "bg-white shadow-sm ring-1 ring-brand-blue/30 hover:shadow-md hover:ring-brand-blue";
   const tabs = CATEGORIES.filter((c) => !TAB_HIDDEN.has(c.key)).map((c) => ({ ...c, id: `${idPrefix}-${c.key}`, items: entries.filter((e) => e.category === c.key) }));
   const first = tabs.find((t) => t.items.length) ?? tabs[0];
 
@@ -51,7 +53,7 @@ export function FaqTabs({ entries, idPrefix = "faq" }: { entries: KbEntry[]; idP
           <section key={t.id} data-panel={t.id} aria-label={t.long}>
             <h2 className="sr-only">{t.long}</h2>
             {t.items.length === 0 ? (
-              <p className="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-brand-blue/30">
+              <p className={`rounded-2xl p-5 ${tileClass}`}>
                 We’re writing answers for this topic now. Have a question?{" "}
                 <Link href="/book" className="font-semibold underline underline-offset-4">
                   Book a call with an advisor
@@ -61,7 +63,7 @@ export function FaqTabs({ entries, idPrefix = "faq" }: { entries: KbEntry[]; idP
             ) : (
               <ul className="grid gap-4 md:grid-cols-2">
                 {t.items.map((e) => (
-                  <li key={e.slug} className="flex flex-col rounded-2xl bg-white p-5 shadow-sm ring-1 ring-brand-blue/30 transition hover:shadow-md hover:ring-brand-blue">
+                  <li key={e.slug} className={`flex flex-col rounded-2xl p-5 transition ${tileClass}`}>
                     <h3 className="text-lg font-semibold leading-snug">
                       {e.question}
                       {e.isDraft && <span className="ml-2 rounded bg-mist px-2 py-0.5 align-middle text-xs font-semibold">Draft</span>}
