@@ -17,7 +17,7 @@ export default function HowWeEstimatePage() {
     <article className="mx-auto max-w-3xl space-y-8 px-4 py-12 sm:px-6">
       <header className="space-y-4">
         <h1 className="text-3xl font-bold sm:text-4xl">How do we estimate your home equity?</h1>
-        <div className="rounded-2xl border-l-4 border-brand-blue bg-mist p-5">
+        <div className="rounded-2xl border-l-4 border-brand-blue bg-white p-5">
           <p className="text-lg leading-relaxed">
             We multiply your home&apos;s value by the share most programs let you borrow against (currently {pct(heloc)} for a HELOC and{" "}
             {pct(cashOut)} for a cash-out refinance), then subtract what you still owe. What&apos;s left is a ballpark of the equity you could

@@ -4,7 +4,7 @@ import type { KbEntry } from "@/lib/kb";
 export function DidYouKnow({ facts }: { facts: KbEntry["didYouKnow"] }) {
   if (!facts.length) return null;
   return (
-    <aside aria-labelledby="did-you-know" className="rounded-3xl border border-brand-blue/50 bg-mist p-5 shadow-sm">
+    <aside aria-labelledby="did-you-know" className="rounded-3xl border border-brand-blue/50 bg-white p-5 shadow-sm">
       <p id="did-you-know" className="flex items-center gap-2 font-heading text-base font-bold text-brand-slate">
         <span aria-hidden="true" className="flex h-8 w-8 items-center justify-center rounded-full bg-brand-soft text-brand-ink">
           <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

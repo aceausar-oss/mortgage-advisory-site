@@ -13,7 +13,7 @@ export default function AboutPage() {
     <ContentPageView
       page={page}
       top={
-        <div className="flex flex-col items-center gap-5 rounded-3xl bg-mist p-6 ring-1 ring-brand-blue/40 sm:flex-row sm:items-center">
+        <div className="flex flex-col items-center gap-5 rounded-3xl bg-white p-6 ring-1 ring-brand-blue/40 sm:flex-row sm:items-center">
           <Image
             src={licensing.founder.image}
             alt={`${licensing.founder.name}, founder of ${licensing.brandName}`}

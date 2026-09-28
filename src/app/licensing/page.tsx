@@ -27,7 +27,7 @@ export default function LicensingPage() {
         <p className="text-lg leading-relaxed">{licensing.entityStatement}</p>
       </header>
 
-      <section aria-labelledby="company" className="space-y-2 rounded-2xl bg-mist p-5 ring-1 ring-brand-blue/40">
+      <section aria-labelledby="company" className="space-y-2 rounded-2xl bg-white p-5 ring-1 ring-brand-blue/40">
         <h2 id="company" className="font-heading text-xl font-semibold">
           Company
         </h2>
@@ -50,7 +50,7 @@ export default function LicensingPage() {
           State licenses
         </h2>
         {licensing.states.map((s) => (
-          <div key={s.code} className="space-y-1 rounded-2xl border border-brand-steel/30 p-5">
+          <div key={s.code} className="space-y-1 rounded-2xl border border-brand-steel/30 bg-white p-5">
             <h3 className="font-heading text-lg font-semibold">{s.name}</h3>
             <p>
               <span className="font-semibold">Regulator:</span> {s.regulator}
@@ -78,7 +78,7 @@ export default function LicensingPage() {
         </p>
       </section>
 
-      <section aria-labelledby="ehl" className="flex items-center gap-4 rounded-2xl border border-brand-steel/30 p-5">
+      <section aria-labelledby="ehl" className="flex items-center gap-4 rounded-2xl border border-brand-steel/30 bg-white p-5">
         <EqualHousingLenderLogo className="h-14 w-14 shrink-0 text-brand-slate" />
         <p id="ehl" className="leading-relaxed">
           <span className="font-semibold">Equal Housing Lender.</span> We do business in accordance with the Fair Housing Act and the Equal

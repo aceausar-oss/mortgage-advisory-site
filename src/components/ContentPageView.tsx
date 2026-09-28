@@ -72,7 +72,7 @@ export function ContentPageView({ page, top, bottom }: { page: ContentPage; top?
             Common questions
           </h2>
           {page.faq.map((f) => (
-            <div key={f.q} className="rounded-2xl bg-mist p-5 ring-1 ring-brand-blue/40">
+            <div key={f.q} className="rounded-2xl bg-white p-5 ring-1 ring-brand-blue/40">
               <h3 className="font-heading text-lg font-semibold">{f.q}</h3>
               <p className="mt-1 leading-relaxed">{f.a}</p>
             </div>
