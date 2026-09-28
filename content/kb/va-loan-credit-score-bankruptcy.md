@@ -17,8 +17,8 @@ didYouKnow:
     sources:
       - { title: "VA Home Loan Buyer's Guide", url: "https://www.benefits.va.gov/HOMELOANS/documents/docs/VA_Buyers_Guide.pdf" }
 updated: 2026-09-28
-reviewed_by: ""
-status: draft
+reviewed_by: "Ace Ausar, NMLS #1549739"
+status: published
 researchId: va-credit-score
 ---
 

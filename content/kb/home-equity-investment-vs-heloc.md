@@ -13,7 +13,8 @@ sources: []
 didYouKnow:
   - text: "Many home equity investment contracts end in 10 to 30 years. If you haven't sold or refinanced by then, you'll need to pay off the investor, which can mean selling the home."
 updated: 2026-09-27
-status: draft
+reviewed_by: "Ace Ausar, NMLS #1549739"
+status: published
 researchId: heloc-vs-home-equity-investment
 ---
 

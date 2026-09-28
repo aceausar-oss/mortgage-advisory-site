@@ -16,7 +16,8 @@ didYouKnow:
     sources:
       - { title: "IRS Publication 936", url: "https://www.irs.gov/publications/p936" }
 updated: 2026-09-27
-status: draft
+reviewed_by: "Ace Ausar, NMLS #1549739"
+status: published
 researchId: heloc-home-improvements
 ---
 

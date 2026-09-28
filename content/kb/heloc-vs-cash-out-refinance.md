@@ -12,7 +12,8 @@ sources: []
 didYouKnow:
   - text: "A cash-out refinance re-prices your entire mortgage, not just the cash you take. On a $400,000 balance, even a small rate increase can cost more than the whole HELOC would."
 updated: 2026-09-27
-status: draft
+reviewed_by: "Ace Ausar, NMLS #1549739"
+status: published
 researchId: heloc-vs-cash-out
 ---
 
