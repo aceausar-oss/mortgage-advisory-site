@@ -64,6 +64,7 @@ export function organizationJsonLd() {
           name: s.name,
         })),
         founder: { "@id": founderId },
+        foundingDate: licensing.foundingDate,
         sameAs: [licensing.nmlsConsumerAccessUrl, ...licensing.sameAs],
       },
       {

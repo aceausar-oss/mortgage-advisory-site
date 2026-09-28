@@ -10,7 +10,7 @@ updated: 2026-09-27
 
 [VERIFY: Ace's own story. A few sentences in his words: how he got into lending, who he loves helping, and something personal.]
 
-Ace Ausar founded The Mortgage Advisory [VERIFY: founding year, Google lists 2014] after 25+ years in real estate and lending. His clients describe the same things again and again: he's patient, he explains every step, and he treats people like family, not like a transaction.
+Ace Ausar founded The Mortgage Advisory in 2016 and has spent 25+ years in real estate and lending. His clients describe the same things again and again: he's patient, he explains every step, and he treats people like family, not like a transaction.
 
 ## What we do
 

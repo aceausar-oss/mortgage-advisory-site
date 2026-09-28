@@ -10,7 +10,7 @@ import "./globals.css";
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
 const montserrat = Montserrat({ variable: "--font-montserrat", subsets: ["latin"] });
 
-const defaultTitle = "The Mortgage Advisory | Lender & Broker in CA, TX, FL, CO";
+const defaultTitle = "The Mortgage Advisory, Inc. | Mortgage Banker";
 const defaultDescription =
   "Mortgage lender & broker in CA, TX, FL & CO (NMLS #1549739): purchase, refi, HELOC, reverse, FHA, VA, conventional & Non-QM loans.";
 
