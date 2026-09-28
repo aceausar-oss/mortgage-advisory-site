@@ -19,8 +19,9 @@ const AI_AND_SEARCH_BOTS = [
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
-      { userAgent: AI_AND_SEARCH_BOTS, allow: "/" },
-      { userAgent: "*", allow: "/" },
+      // The chat endpoint costs money per call and has nothing to index; the knowledge API is open to everyone.
+      { userAgent: AI_AND_SEARCH_BOTS, allow: "/", disallow: "/api/chat" },
+      { userAgent: "*", allow: "/", disallow: "/api/chat" },
     ],
     sitemap: `${siteUrl}/sitemap.xml`,
     host: siteUrl,
