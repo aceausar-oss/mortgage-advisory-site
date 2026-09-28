@@ -336,8 +336,8 @@
       "officialSources": [],
       "firstSeen": "2026-09-26",
       "lastSeen": "2026-09-26",
-      "status": "new",
-      "kbSlug": null
+      "status": "drafting",
+      "kbSlug": "heloc-vs-cash-out-refinance"
     },
     {
       "id": "heloc-keep-low-rate",
@@ -425,8 +425,8 @@
       "notes": "Ties directly to the homepage equity slider (§4.3).",
       "firstSeen": "2026-09-26",
       "lastSeen": "2026-09-26",
-      "status": "new",
-      "kbSlug": null
+      "status": "drafting",
+      "kbSlug": "how-much-can-i-borrow-heloc"
     },
     {
       "id": "heloc-qualify",
@@ -452,8 +452,8 @@
       "officialSources": [],
       "firstSeen": "2026-09-26",
       "lastSeen": "2026-09-26",
-      "status": "new",
-      "kbSlug": null
+      "status": "drafting",
+      "kbSlug": "heloc-credit-score-dti"
     },
     {
       "id": "heloc-unused-dti",
@@ -509,8 +509,8 @@
       "officialSources": [],
       "firstSeen": "2026-09-26",
       "lastSeen": "2026-09-26",
-      "status": "new",
-      "kbSlug": null
+      "status": "drafting",
+      "kbSlug": "heloc-vs-home-equity-loan"
     },
     {
       "id": "dc-pay-off-credit-cards",
@@ -653,7 +653,7 @@
       "officialSources": [],
       "firstSeen": "2026-09-26",
       "lastSeen": "2026-09-26",
-      "status": "drafting",
+      "status": "published",
       "kbSlug": "when-is-refinancing-worth-it",
       "notes": "Includes a borrower stuck at 8% in a non-warrantable condo (needs non-QM condo options)."
     },
@@ -700,7 +700,7 @@
       "officialSources": [],
       "firstSeen": "2026-09-26",
       "lastSeen": "2026-09-26",
-      "status": "drafting",
+      "status": "published",
       "kbSlug": "no-closing-cost-refinance"
     },
     {
@@ -750,7 +750,7 @@
       "officialSources": [],
       "firstSeen": "2026-09-26",
       "lastSeen": "2026-09-26",
-      "status": "drafting",
+      "status": "published",
       "kbSlug": "how-to-get-rid-of-fha-mortgage-insurance"
     },
     {
@@ -804,7 +804,7 @@
       "officialSources": [],
       "firstSeen": "2026-09-26",
       "lastSeen": "2026-09-26",
-      "status": "drafting",
+      "status": "published",
       "kbSlug": "va-streamline-refinance-irrrl"
     },
     {
@@ -1167,7 +1167,7 @@
       "officialSources": [],
       "firstSeen": "2026-09-26",
       "lastSeen": "2026-09-26",
-      "status": "drafting",
+      "status": "published",
       "kbSlug": "self-employed-mortgage-qualify"
     },
     {
@@ -1193,7 +1193,7 @@
       "notes": "Bank-statement / 1099 / P&L Non-QM programs are the answer for big write-offs.",
       "firstSeen": "2026-09-26",
       "lastSeen": "2026-09-26",
-      "status": "drafting",
+      "status": "published",
       "kbSlug": "self-employed-mortgage-documents"
     },
     {
@@ -1215,7 +1215,7 @@
       "officialSources": [],
       "firstSeen": "2026-09-26",
       "lastSeen": "2026-09-26",
-      "status": "drafting",
+      "status": "published",
       "kbSlug": "self-employed-less-than-two-years"
     },
     {
@@ -1238,7 +1238,7 @@
       "officialSources": [],
       "firstSeen": "2026-09-26",
       "lastSeen": "2026-09-27",
-      "status": "drafting",
+      "status": "published",
       "kbSlug": "low-rate-refinance-mailer-legit",
       "notes": "Answer should walk through Loan Estimate page 2, Section A (origination charges and discount points). Strong trust-builder. New buyers report a flood of mailers/calls after closing because mortgage records are public (88-upvote thread)."
     },
@@ -1433,8 +1433,8 @@
       "officialSources": [],
       "firstSeen": "2026-09-26",
       "lastSeen": "2026-09-26",
-      "status": "new",
-      "kbSlug": null
+      "status": "drafting",
+      "kbSlug": "heloc-for-home-improvements"
     },
     {
       "id": "heloc-vs-reverse-retirement",
@@ -1485,8 +1485,8 @@
       "officialSources": [],
       "firstSeen": "2026-09-26",
       "lastSeen": "2026-09-26",
-      "status": "new",
-      "kbSlug": null
+      "status": "drafting",
+      "kbSlug": "unused-heloc-emergency-fund"
     },
     {
       "id": "heloc-vs-401k-investments",
@@ -1514,8 +1514,8 @@
       "officialSources": [],
       "firstSeen": "2026-09-26",
       "lastSeen": "2026-09-26",
-      "status": "new",
-      "kbSlug": null
+      "status": "drafting",
+      "kbSlug": "heloc-vs-401k"
     },
     {
       "id": "heloc-buy-another-property",
@@ -1635,8 +1635,8 @@
       "officialSources": [],
       "firstSeen": "2026-09-26",
       "lastSeen": "2026-09-26",
-      "status": "new",
-      "kbSlug": null,
+      "status": "drafting",
+      "kbSlug": "why-experts-say-avoid-helocs",
       "notes": "Objection-handling page; balanced 'Our take' from Ace."
     },
     {
@@ -1683,8 +1683,8 @@
       "officialSources": [],
       "firstSeen": "2026-09-26",
       "lastSeen": "2026-09-26",
-      "status": "new",
-      "kbSlug": null,
+      "status": "drafting",
+      "kbSlug": "home-equity-investment-vs-heloc",
       "notes": "80 comments. Explain the large balloon/share-of-value payoff at the end. Also marketed as 'home equity agreements (HEA)' via affiliate posts."
     },
     {

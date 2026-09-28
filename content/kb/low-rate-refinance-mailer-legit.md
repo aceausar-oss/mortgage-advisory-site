@@ -13,7 +13,8 @@ sources: []
 didYouKnow:
   - text: "The APR includes most of the loan's costs, so a mailer with a low rate but a much higher APR is a sign of points or fees baked in."
 updated: 2026-09-27
-status: draft
+reviewed_by: "Ace Ausar, NMLS #1549739"
+status: published
 researchId: refi-mailer-rate-legit
 ---
 
