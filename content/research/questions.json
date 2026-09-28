@@ -653,8 +653,8 @@
       "officialSources": [],
       "firstSeen": "2026-09-26",
       "lastSeen": "2026-09-26",
-      "status": "new",
-      "kbSlug": null,
+      "status": "drafting",
+      "kbSlug": "when-is-refinancing-worth-it",
       "notes": "Includes a borrower stuck at 8% in a non-warrantable condo (needs non-QM condo options)."
     },
     {
@@ -700,8 +700,8 @@
       "officialSources": [],
       "firstSeen": "2026-09-26",
       "lastSeen": "2026-09-26",
-      "status": "new",
-      "kbSlug": null
+      "status": "drafting",
+      "kbSlug": "no-closing-cost-refinance"
     },
     {
       "id": "refi-might-move",
@@ -750,8 +750,8 @@
       "officialSources": [],
       "firstSeen": "2026-09-26",
       "lastSeen": "2026-09-26",
-      "status": "new",
-      "kbSlug": null
+      "status": "drafting",
+      "kbSlug": "how-to-get-rid-of-fha-mortgage-insurance"
     },
     {
       "id": "refi-fha-to-conventional",
@@ -804,8 +804,8 @@
       "officialSources": [],
       "firstSeen": "2026-09-26",
       "lastSeen": "2026-09-26",
-      "status": "new",
-      "kbSlug": null
+      "status": "drafting",
+      "kbSlug": "va-streamline-refinance-irrrl"
     },
     {
       "id": "buy-how-much-afford",
@@ -1167,8 +1167,8 @@
       "officialSources": [],
       "firstSeen": "2026-09-26",
       "lastSeen": "2026-09-26",
-      "status": "new",
-      "kbSlug": null
+      "status": "drafting",
+      "kbSlug": "self-employed-mortgage-qualify"
     },
     {
       "id": "se-documents-income",
@@ -1193,8 +1193,8 @@
       "notes": "Bank-statement / 1099 / P&L Non-QM programs are the answer for big write-offs.",
       "firstSeen": "2026-09-26",
       "lastSeen": "2026-09-26",
-      "status": "new",
-      "kbSlug": null
+      "status": "drafting",
+      "kbSlug": "self-employed-mortgage-documents"
     },
     {
       "id": "se-under-two-years",
@@ -1215,8 +1215,8 @@
       "officialSources": [],
       "firstSeen": "2026-09-26",
       "lastSeen": "2026-09-26",
-      "status": "new",
-      "kbSlug": null
+      "status": "drafting",
+      "kbSlug": "self-employed-less-than-two-years"
     },
     {
       "id": "refi-mailer-rate-legit",
@@ -1238,8 +1238,8 @@
       "officialSources": [],
       "firstSeen": "2026-09-26",
       "lastSeen": "2026-09-27",
-      "status": "new",
-      "kbSlug": null,
+      "status": "drafting",
+      "kbSlug": "low-rate-refinance-mailer-legit",
       "notes": "Answer should walk through Loan Estimate page 2, Section A (origination charges and discount points). Strong trust-builder. New buyers report a flood of mailers/calls after closing because mortgage records are public (88-upvote thread)."
     },
     {
