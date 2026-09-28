@@ -8,7 +8,9 @@ export function FloatingCard({
   title,
   intro,
   children,
+  bare = false,
 }: {
+  bare?: boolean; // true = sit on the parent's background (e.g. the hero's) instead of drawing its own
   id: string;
   eyebrow: string;
   title: ReactNode;
@@ -16,8 +18,11 @@ export function FloatingCard({
   children: ReactNode;
 }) {
   return (
-    <section aria-labelledby={id} className="relative isolate overflow-hidden bg-gradient-to-b from-mist via-mist to-white px-4 py-16 sm:px-6">
-      <div aria-hidden="true" className="ai-glow" />
+    <section
+      aria-labelledby={id}
+      className={bare ? "relative px-4 pb-20 pt-4 sm:px-6" : "relative isolate overflow-hidden bg-gradient-to-b from-mist via-mist to-white px-4 py-16 sm:px-6"}
+    >
+      {!bare && <div aria-hidden="true" className="ai-glow" />}
       <div className="relative mx-auto max-w-6xl overflow-hidden rounded-[2rem] bg-white/90 shadow-[0_24px_70px_-20px_rgba(61,133,204,0.35)] ring-1 ring-white backdrop-blur">
         <header className="px-5 pb-10 pt-12 text-center sm:px-10">
           <p className="font-heading text-sm font-semibold uppercase tracking-[0.2em] text-brand-button">{eyebrow}</p>
