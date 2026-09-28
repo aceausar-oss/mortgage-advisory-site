@@ -156,6 +156,18 @@ h4 {
   filter: blur(36px);
   animation: aurora 16s ease-in-out infinite alternate;
 }
+/* Static version of the hero glow for floating-card sections. */
+.ai-glow {
+  position: absolute;
+  inset: -10%;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(34% 40% at 18% 30%, rgba(136, 180, 224, 0.5), transparent 70%),
+    radial-gradient(30% 34% at 82% 20%, rgba(61, 133, 204, 0.22), transparent 70%),
+    radial-gradient(40% 40% at 60% 85%, rgba(136, 180, 224, 0.4), transparent 70%);
+  filter: blur(30px);
+}
 .ai-shimmer::after {
   content: "";
   position: absolute;

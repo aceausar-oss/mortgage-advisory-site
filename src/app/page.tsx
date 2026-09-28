@@ -3,6 +3,7 @@ import { Disclosures } from "@/components/Disclosures";
 import { FaqTabs } from "@/components/FaqTabs";
 import { BookingSection } from "@/components/home/BookingSection";
 import { EquitySlider } from "@/components/home/EquitySlider";
+import { FloatingCard } from "@/components/home/FloatingCard";
 import { HeroChat } from "@/components/home/HeroChat";
 import { LicensedStatesMap } from "@/components/home/LicensedStatesMap";
 import { QuestionFeed } from "@/components/home/QuestionFeed";
@@ -73,17 +74,21 @@ export default function Home() {
       </section>
 
       {/* 4.3 Equity slider + licensed states */}
-      <section aria-labelledby="equity-heading" className="bg-mist">
-        <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-16 sm:px-6 lg:grid-cols-[1.1fr_1fr]">
-          <div>
-            <h2 id="equity-heading" className="sr-only">
-              Estimate your home equity
-            </h2>
-            <EquitySlider maxCLTV={pricing.maxCLTV} />
-          </div>
+      <FloatingCard
+        id="equity-heading"
+        eyebrow="Your home equity"
+        title={
+          <>
+            See what your home could <span className="text-brand-blue-deep">unlock</span>.
+          </>
+        }
+        intro="Move the sliders for a quick estimate, then ask for your real numbers. We lend in California, Texas, Florida, and Colorado."
+      >
+        <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_1fr]">
+          <EquitySlider maxCLTV={pricing.maxCLTV} />
           <LicensedStatesMap />
         </div>
-      </section>
+      </FloatingCard>
 
       {/* 4.4 Stories */}
       <section aria-labelledby="goals-heading" className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
@@ -109,9 +114,20 @@ export default function Home() {
       </section>
 
       {/* 4.6 Booking */}
-      <section aria-labelledby="booking" id="booking" className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
-        <BookingSection />
-      </section>
+      <div id="booking" className="scroll-mt-16">
+        <FloatingCard
+          id="booking-heading"
+          eyebrow="Talk to Ace"
+          title={
+            <>
+              Book a call with <span className="text-brand-blue-deep">Ace</span>.
+            </>
+          }
+          intro="Pick the topic that fits, choose a time, and talk it through, with no pressure and plain English."
+        >
+          <BookingSection />
+        </FloatingCard>
+      </div>
 
       <section aria-label="Disclosures" className="mx-auto max-w-4xl px-4 pb-16 sm:px-6">
         <Disclosures entry={{ category: "reverse-mortgage", products: ["hecm", "reverse-second", "heloc", "va", "fha"] }} debt />
