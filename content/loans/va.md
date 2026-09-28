@@ -18,7 +18,8 @@ didYouKnow:
   - text: "If you receive VA disability compensation, you're generally exempt from the VA funding fee, which can save you thousands of dollars at closing."
   - text: "Your VA home loan benefit can be used more than once. Pay off or sell, and your entitlement can often be restored for your next home."
 updated: 2026-09-27
-status: draft
+reviewed_by: "Ace Ausar, NMLS #1549739"
+status: published
 ---
 
 ## Who can get a VA loan?
