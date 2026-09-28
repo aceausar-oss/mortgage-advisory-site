@@ -25,6 +25,13 @@ export const PRODUCTS = [
   "non-qm",
 ] as const;
 
+// Shared with the loan and location pages (src/lib/loans.ts).
+export const Source = z.object({ title: z.string(), url: z.url() });
+export const DidYouKnowList = z
+  .array(z.object({ text: z.string().min(20).max(400), sources: z.array(Source).default([]) }))
+  .max(3)
+  .default([]);
+
 const Frontmatter = z
   .object({
     question: z.string().min(10),
@@ -40,12 +47,9 @@ const Frontmatter = z
     persona: z.string().optional(),
     featured: z.boolean().default(false),
     // Optional: cite government sources only where the program is government-backed (CLAUDE.md §6.7).
-    sources: z.array(z.object({ title: z.string(), url: z.url() })).default([]),
+    sources: z.array(Source).default([]),
     // Optional "Did you know?" side pill: short fun facts with optional supporting links.
-    didYouKnow: z
-      .array(z.object({ text: z.string().min(20).max(400), sources: z.array(z.object({ title: z.string(), url: z.url() })).default([]) }))
-      .max(3)
-      .default([]),
+    didYouKnow: DidYouKnowList,
     updated: z.coerce.date(),
     reviewed_by: z.string().optional(),
     status: z.enum(["draft", "published"]),
