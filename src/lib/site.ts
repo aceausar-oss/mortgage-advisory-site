@@ -73,6 +73,7 @@ export function organizationJsonLd() {
         name: licensing.founder.name,
         jobTitle: licensing.founder.jobTitle,
         identifier: { "@type": "PropertyValue", propertyID: "NMLS", value: licensing.founder.nmls },
+        sameAs: licensing.founder.sameAs,
         image: `${siteUrl}${licensing.founder.image}`,
         worksFor: { "@id": orgId },
       },

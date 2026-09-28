@@ -18,7 +18,10 @@
     "name": "Ace Ausar",
     "jobTitle": "Mortgage Banker",
     "image": "/brand/ace-hero.png",
-    "nmls": "1143018"
+    "nmls": "1143018",
+    "sameAs": [
+      "https://www.linkedin.com/in/ace-ausar-abaa61103/"
+    ]
   },
   "states": [
     {
@@ -54,6 +57,12 @@
       "statement": "[VERIFY: Regulated by the Division of Real Estate statement]"
     }
   ],
-  "sameAs": [],
+  "sameAs": [
+    "https://share.google/qZgX0T5SsUolWltS3",
+    "https://www.facebook.com/aceausar",
+    "https://www.instagram.com/aceausar/",
+    "https://x.com/themtgadvisory",
+    "https://www.youtube.com/@aceausar"
+  ],
   "foundingDate": "2016"
 }
