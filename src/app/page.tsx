@@ -93,6 +93,11 @@ export default function Home() {
         <StorySections />
       </section>
 
+      {/* Real Google reviews */}
+      <section aria-labelledby="reviews-heading" className="bg-white py-16">
+        <ReviewsCarousel />
+      </section>
+
       {/* 4.5 Tabbed Q&A */}
       <section aria-labelledby="faq-heading" className="bg-mist">
         <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6">
@@ -101,11 +106,6 @@ export default function Home() {
           </h2>
           <FaqTabs entries={entries} idPrefix="home-faq" />
         </div>
-      </section>
-
-      {/* Real Google reviews */}
-      <section aria-labelledby="reviews-heading" className="bg-mist py-16">
-        <ReviewsCarousel />
       </section>
 
       {/* 4.6 Booking */}
