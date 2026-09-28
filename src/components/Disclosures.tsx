@@ -39,7 +39,7 @@ export function Disclosures({ entry, debt: debtTopic = false }: { entry: Pick<Kb
   items.push("This is general information, not a commitment to lend. All loans are subject to credit approval, underwriting, and property valuation.");
 
   return (
-    <aside aria-label="Important disclosures" className="rounded-2xl border border-brand-steel/40 bg-mist p-5 text-sm leading-relaxed">
+    <aside aria-label="Important disclosures" className="rounded-2xl border border-brand-steel/40 bg-white p-5 text-sm leading-relaxed">
       <h2 className="mb-2 text-base font-semibold">Important disclosures</h2>
       <ul className="list-disc space-y-1 pl-5">
         {items.map((t) => (

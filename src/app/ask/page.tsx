@@ -69,7 +69,7 @@ export default async function AskPage({ searchParams }: PageProps<"/ask">) {
           </h2>
           <ul className="space-y-4">
             {matches.map((e) => (
-              <li key={e.slug} className="rounded-2xl bg-gradient-to-r from-mist to-white p-5 shadow-sm ring-1 ring-brand-blue/50 transition hover:shadow-md">
+              <li key={e.slug} className="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-brand-blue/50 transition hover:shadow-md">
                 <p className="inline-block rounded-full bg-brand-blue/25 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wide text-brand-button">{categoryLabel(e.category)}</p>
                 <h3 className="mt-1 text-lg font-semibold">
                   <Link href={`/answers/${e.slug}`} className="hover:underline">
@@ -82,7 +82,7 @@ export default async function AskPage({ searchParams }: PageProps<"/ask">) {
           </ul>
         </section>
       ) : (
-        q && <p className="rounded-2xl bg-mist p-5">That&apos;s a great question for Ace directly. Book a time below or give us a call.</p>
+        q && <p className="rounded-2xl bg-white p-5">That&apos;s a great question for Ace directly. Book a time below or give us a call.</p>
       )}
 
       <section aria-label="Talk to our team" className="rounded-3xl bg-brand-slate p-6 text-white">

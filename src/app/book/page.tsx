@@ -35,7 +35,7 @@ export default function BookPage() {
       {calendars.map((c) => {
         const titles = bookingTypes.filter((b) => b.calendarId === c.calendarId);
         return (
-          <section key={c.calendarId} aria-labelledby={`cal-${c.key}`} className="space-y-3 rounded-3xl border border-brand-steel/30 p-4 sm:p-6">
+          <section key={c.calendarId} aria-labelledby={`cal-${c.key}`} className="space-y-3 rounded-3xl border border-brand-steel/30 bg-white p-4 sm:p-6">
             {titles.map((t) => (
               <span key={t.key} id={t.key} className="block scroll-mt-24" />
             ))}

@@ -34,7 +34,7 @@ export function Breadcrumbs({ items }: { items: { href: string; label: string }[
 
 export function TldrBox({ text }: { text: string }) {
   return (
-    <div className="rounded-2xl border-l-4 border-brand-blue bg-mist p-5">
+    <div className="rounded-2xl border-l-4 border-brand-blue bg-white p-5">
       <p className="mb-1 font-heading text-sm font-bold uppercase tracking-wide text-brand-slate">The short answer</p>
       <p className="text-lg leading-relaxed">{text}</p>
     </div>
@@ -62,7 +62,7 @@ export function SourcesList({ sources }: { sources: KbEntry["sources"] }) {
 
 export function AuthorBox({ entry }: { entry: Pick<KbEntry, "updated" | "reviewed_by"> }) {
   return (
-    <section aria-label="About the author" className="flex items-center gap-4 rounded-2xl border border-brand-steel/30 p-5">
+    <section aria-label="About the author" className="flex items-center gap-4 rounded-2xl border border-brand-steel/30 bg-white p-5">
       <Image
         src={licensing.founder.image}
         alt={licensing.founder.name}

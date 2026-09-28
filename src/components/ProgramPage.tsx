@@ -44,7 +44,7 @@ function RelatedAnswers({ slugs }: { slugs: string[] }) {
           <li key={e.slug}>
             <Link
               href={`/answers/${e.slug}`}
-              className="flex items-center justify-between gap-3 rounded-2xl bg-mist px-5 py-3.5 font-semibold text-brand-ink ring-1 ring-brand-blue/40 hover:ring-brand-blue"
+              className="flex items-center justify-between gap-3 rounded-2xl bg-white px-5 py-3.5 font-semibold text-brand-ink ring-1 ring-brand-blue/40 hover:ring-brand-blue"
             >
               {e.question}
               <span aria-hidden="true" className="text-brand-button">

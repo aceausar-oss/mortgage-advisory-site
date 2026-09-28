@@ -61,7 +61,7 @@ export function StorySections() {
               </h3>
               <p className="mt-3 text-lg leading-relaxed">{g.copy}</p>
               {story && (
-                <blockquote className="mt-4 rounded-2xl border-l-4 border-brand-blue bg-mist p-4">
+                <blockquote className="mt-4 rounded-2xl border-l-4 border-brand-blue bg-white p-4">
                   <p className="font-semibold text-brand-slate">{story.title}</p>
                   <p className="mt-1 leading-relaxed">{story.body}</p>
                 </blockquote>
