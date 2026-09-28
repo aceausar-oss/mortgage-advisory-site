@@ -42,8 +42,8 @@ export function organizationJsonLd() {
         legalName: licensing.legalName,
         description: licensing.entityStatement,
         url: siteUrl,
-        logo: `${siteUrl}/brand/logo-tma-v3.png`,
-        image: `${siteUrl}/brand/logo-tma-v3.png`,
+        logo: `${siteUrl}/brand/logo-tma-2026.png`,
+        image: `${siteUrl}/brand/logo-tma-2026.png`,
         identifier: {
           "@type": "PropertyValue",
           propertyID: "NMLS",

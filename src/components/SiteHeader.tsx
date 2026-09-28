@@ -8,10 +8,10 @@ export function SiteHeader() {
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-2 px-4 py-3 sm:gap-4 sm:px-6">
         <Link href="/" className="shrink-0" aria-label={`${licensing.brandName} home`}>
           <Image
-            src="/brand/logo-tma-v3.png"
+            src="/brand/logo-tma-2026.png"
             alt={licensing.brandName}
-            width={1200}
-            height={326}
+            width={1846}
+            height={517}
             preload
             sizes="180px"
             className="h-9 w-auto min-[360px]:h-10 sm:h-14"
