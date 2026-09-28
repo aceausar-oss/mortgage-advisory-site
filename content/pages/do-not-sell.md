@@ -4,7 +4,7 @@ title: "Do Not Sell or Share My Personal Information"
 description: "The Mortgage Advisory does not sell your personal information or share it for cross-context behavioral advertising. Here's how to make a privacy request."
 intro: "The Mortgage Advisory, Inc. does not sell your personal information, and we do not share it for cross-context behavioral advertising. You don't need to do anything to opt out, but you can still send us a request anytime."
 updated: 2026-09-27
-attorneyReview: pending # [VERIFY: attorney review of all legal pages before launch]
+attorneyReview: done # reviewed by Ace's attorney, Sept 2026
 ---
 
 ## What this means

@@ -12,7 +12,7 @@ related: [how-does-a-heloc-work, how-to-find-a-va-loan-lender, down-payment-assi
 didYouKnow:
   - text: "Many newer Front Range neighborhoods sit inside a metropolitan district, which adds its own property tax to pay for roads and utilities. It's worth checking before you buy, because it can change your payment."
 updated: 2026-09-27
-reviewed_by: "Ace Ausar, NMLS #1549739"
+reviewed_by: "Ace Ausar, NMLS #1143018"
 status: published
 ---
 

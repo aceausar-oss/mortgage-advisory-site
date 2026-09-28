@@ -13,7 +13,7 @@ sources:
   - { title: "VA — Interest rate reduction refinance loan", url: "https://www.va.gov/housing-assistance/home-loans/loan-types/interest-rate-reduction-loan/" }
   - { title: "VA — Funding fee and loan closing costs", url: "https://www.va.gov/housing-assistance/home-loans/funding-fee-and-closing-costs/" }
 updated: 2026-09-27
-reviewed_by: "Ace Ausar, NMLS #1549739"
+reviewed_by: "Ace Ausar, NMLS #1143018"
 status: published
 researchId: refi-va-irrrl
 ---

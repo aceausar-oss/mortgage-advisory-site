@@ -16,7 +16,7 @@ didYouKnow:
   - text: "You can use an FHA loan to buy a 2- to 4-unit property with as little as 3.5% down, as long as you live in one of the units. The rent from the others can help you qualify."
   - text: "Your whole down payment on an FHA loan can come from a gift from family, as long as it's documented."
 updated: 2026-09-27
-reviewed_by: "Ace Ausar, NMLS #1549739"
+reviewed_by: "Ace Ausar, NMLS #1143018"
 status: published
 ---
 

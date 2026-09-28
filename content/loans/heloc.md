@@ -14,7 +14,7 @@ didYouKnow:
   - text: "If your first mortgage is at 3% or 4%, a cash-out refinance would re-price your whole balance at today's rate. A HELOC only prices the new money, so your low rate keeps working for you."
   - text: "Some of the HELOCs we arrange can close in as little as 5 days, with a digital home valuation instead of a full appraisal on many homes. Timing varies and isn't guaranteed."
 updated: 2026-09-27
-reviewed_by: "Ace Ausar, NMLS #1549739"
+reviewed_by: "Ace Ausar, NMLS #1143018"
 status: published
 ---
 

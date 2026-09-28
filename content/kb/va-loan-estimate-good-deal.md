@@ -17,7 +17,7 @@ didYouKnow:
     sources:
       - { title: "VA funding fee", url: "https://www.va.gov/housing-assistance/home-loans/funding-fee-and-closing-costs/" }
 updated: 2026-09-27
-reviewed_by: "Ace Ausar, NMLS #1549739"
+reviewed_by: "Ace Ausar, NMLS #1143018"
 status: published
 researchId: va-rate-estimate-good
 ---

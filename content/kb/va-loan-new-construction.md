@@ -14,7 +14,7 @@ sources:
   - { title: "VA — Funding fee and loan closing costs", url: "https://www.va.gov/housing-assistance/home-loans/funding-fee-and-closing-costs/" }
   - { title: "VA — Buying a home with a VA-backed loan", url: "https://www.va.gov/housing-assistance/home-loans/home-buying-process/" }
 updated: 2026-09-27
-reviewed_by: "Ace Ausar, NMLS #1549739"
+reviewed_by: "Ace Ausar, NMLS #1143018"
 status: published
 researchId: va-new-construction
 ---

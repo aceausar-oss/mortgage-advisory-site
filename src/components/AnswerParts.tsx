@@ -73,7 +73,7 @@ export function AuthorBox({ entry }: { entry: Pick<KbEntry, "updated" | "reviewe
       />
       <div className="text-sm leading-relaxed">
         <p className="font-heading text-base font-semibold text-brand-slate">
-          {licensing.founder.name}, {licensing.founder.jobTitle}
+          {licensing.founder.name}, {licensing.founder.jobTitle} · NMLS #{licensing.founder.nmls}
         </p>
         <p>
           {licensing.legalName} · NMLS #{licensing.nmls}

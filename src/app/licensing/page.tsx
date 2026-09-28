@@ -6,7 +6,7 @@ import { EqualHousingLenderLogo } from "@/components/EqualHousingLenderLogo";
 import { fullAddress, licensing } from "@/lib/site";
 
 // Full licensing & disclosures (CLAUDE.md §8). Every fact comes from content/data/licensing.json; placeholders
-// marked [VERIFY] block a production build until Ace supplies the license numbers and regulator wording.
+// still marked for verification block a production build until Ace supplies the license numbers and wording.
 export const metadata: Metadata = {
   title: "Licensing & Disclosures",
   description: `${licensing.legalName} (NMLS #${licensing.nmls}) state licenses in California, Texas, Florida, and Colorado, plus required disclosures.`,

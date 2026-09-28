@@ -13,7 +13,7 @@ related: [how-much-house-can-i-afford, arm-vs-buydown-vs-fixed, how-to-tell-if-y
 didYouKnow:
   - text: "Private mortgage insurance on a conventional loan isn't forever. You can ask to remove it once you reach 20% equity based on your original value, and it drops off automatically at 22%."
 updated: 2026-09-27
-reviewed_by: "Ace Ausar, NMLS #1549739"
+reviewed_by: "Ace Ausar, NMLS #1143018"
 status: published
 ---
 

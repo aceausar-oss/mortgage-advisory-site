@@ -146,7 +146,7 @@ Never describe the company as a CRM, software, SaaS, marketing agency, or Go Hig
 7. **Voice: write the way Ace talks to a client** — plain, direct, practical, first person in "Our take". Do **not** quote or recommend regulators (no "the CFPB warns…", no "call your state regulator"), and keep warnings sparing; people don't talk that way. Cite a government source **only where the program itself is government-backed**: FHA/HUD for HECM reverse mortgages and FHA loans, VA for VA loans (and IRS only for a specific tax rule). Required legal disclosures (§8) go in the page's disclosures box, never in the body text. **Be openly transparent about costs and fees, including our own** (points, lender fees, funding fees, typical charges): cost transparency builds trust and is part of the brand.
 8. Optional **"Did you know?" side pill** (`didYouKnow` in the KB frontmatter, up to 3 short fun facts with optional links): a sticky side card on desktop, inline under the TL;DR on mobile. Use it for memorable facts that correct misinformation (e.g., reverse mortgages are called "housing pensions" abroad).
 8b. "Our take" — a clear position/opinion from Ace (originality pillar).
-9. Author box: Ace Ausar, Mortgage Banker, NMLS #1549739, photo, "Reviewed/Updated: [date]".
+9. Author box: Ace Ausar, Mortgage Banker, individual NMLS #1143018 (company NMLS #1549739 on the next line), photo, "Reviewed/Updated: [date]".
 10. CTA: pill to chat + book-a-call.
 11. Schema: `Article` or `FAQPage` + `BreadcrumbList` + author `Person` + publisher `Organization`.
 12. Unique `<title>` (≤60 chars, question or brand+topic) and meta description (≤155 chars, direct answer).
@@ -237,7 +237,7 @@ persona: self-employed
 featured: true               # show in hero pill feed
 sources: []   # only government-backed programs: FHA/HUD, VA (see §6.7)
 updated: 2026-09-26
-reviewed_by: "Ace Ausar, NMLS #1549739"
+reviewed_by: "Ace Ausar, NMLS #1143018"
 ---
 Full answer (markdown, question-format H2s)...
 ```

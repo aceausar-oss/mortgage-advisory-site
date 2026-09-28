@@ -12,7 +12,7 @@ related: [reverse-mortgage-keep-first-mortgage, down-payment-assistance-ca-tx-fl
 didYouKnow:
   - text: "Under California's Prop 19, homeowners 55 and older can generally move their property tax base to a replacement home anywhere in the state, up to three times. Paired with a reverse mortgage for purchase, it can make right-sizing much easier."
 updated: 2026-09-27
-reviewed_by: "Ace Ausar, NMLS #1549739"
+reviewed_by: "Ace Ausar, NMLS #1143018"
 status: published
 ---
 

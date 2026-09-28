@@ -3,7 +3,7 @@ h1: "Accessibility Statement"
 title: "Accessibility Statement"
 description: "The Mortgage Advisory is committed to a website everyone can use. We aim to meet WCAG 2.1 AA. Tell us about any barrier and we'll help right away."
 updated: 2026-09-27
-attorneyReview: pending # [VERIFY: attorney review of all legal pages before launch]
+attorneyReview: done # reviewed by Ace's attorney, Sept 2026
 ---
 
 We want everyone to be able to use this website, including people who use screen readers, keyboards, magnification, or other assistive technology.

@@ -3,7 +3,7 @@ h1: "Privacy Policy"
 title: "Privacy Policy"
 description: "How The Mortgage Advisory, Inc. collects, uses, and protects your information on this site, including AI chat, booking, and California privacy rights."
 updated: 2026-09-27
-attorneyReview: pending # [VERIFY: attorney review of all legal pages before launch]
+attorneyReview: done # reviewed by Ace's attorney, Sept 2026
 ---
 
 This policy explains how The Mortgage Advisory, Inc. (NMLS #1549739) ("we," "us") handles information collected through this website. When you apply for a loan, you'll also receive our separate **Privacy Notice** required by the Gramm-Leach-Bliley Act, which governs the financial information in your application.

@@ -12,7 +12,7 @@ sources: []
 didYouKnow:
   - text: "A 3% mortgage doesn't mean you're paying 3%. If you also carry credit cards at 22% and a solar lien at 11%, the blended rate on everything you owe, your Life Rate, can be far higher."
 updated: 2026-09-28
-reviewed_by: "Ace Ausar, NMLS #1549739"
+reviewed_by: "Ace Ausar, NMLS #1143018"
 status: published
 researchId: heloc-vs-cash-out
 ---

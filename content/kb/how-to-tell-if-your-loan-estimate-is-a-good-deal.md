@@ -13,7 +13,7 @@ sources: []
 didYouKnow:
   - text: "Dozens of homebuyers post their Loan Estimates on Reddit every month asking strangers, \"Am I getting ripped off?\" The answer is almost always hiding on page 2, in the points and lender fees."
 updated: 2026-09-27
-reviewed_by: "Ace Ausar, NMLS #1549739"
+reviewed_by: "Ace Ausar, NMLS #1143018"
 status: published
 researchId: buy-loan-estimate-good-deal
 ---

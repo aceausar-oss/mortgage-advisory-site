@@ -13,7 +13,7 @@ related: [how-much-house-can-i-afford, how-to-tell-if-your-loan-estimate-is-a-go
 didYouKnow:
   - text: "Non-QM doesn't mean subprime. It means your income is documented differently. You still have to show you can afford the loan; we just look at your real cash flow instead of your taxable income."
 updated: 2026-09-27
-reviewed_by: "Ace Ausar, NMLS #1549739"
+reviewed_by: "Ace Ausar, NMLS #1143018"
 status: published
 ---
 

@@ -11,7 +11,7 @@ featured: true
 sources:
   - { title: "HUD — FHA Reverse Mortgage for Seniors (HECM)", url: "https://www.hud.gov/hud-partners/single-family-hecmhome" }
 updated: 2026-09-27
-reviewed_by: "Ace Ausar, NMLS #1549739"
+reviewed_by: "Ace Ausar, NMLS #1143018"
 status: published
 researchId: rm-lose-home
 ---

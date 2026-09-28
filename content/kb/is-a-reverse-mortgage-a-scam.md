@@ -20,7 +20,7 @@ didYouKnow:
       - { title: "Immo-Rente (Switzerland)", url: "https://www.vermoegenszentrum.ch/wissen/immo-rente-was-ist-das" }
   - text: "So why the bad reputation here? Mostly misinformation and old-school, high-pressure sales tactics. The loan itself is FHA-insured and comes with independent counseling before you can even apply."
 updated: 2026-09-27
-reviewed_by: "Ace Ausar, NMLS #1549739"
+reviewed_by: "Ace Ausar, NMLS #1143018"
 status: published
 researchId: rm-is-it-a-scam
 ---

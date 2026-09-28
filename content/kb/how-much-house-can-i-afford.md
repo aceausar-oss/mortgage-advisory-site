@@ -12,7 +12,7 @@ sources: []
 didYouKnow:
   - text: "Lenders qualify you on your gross income, before taxes, 401(k), and health insurance come out. That's why a pre-approval can feel a lot bigger than your paycheck. Budget from your take-home pay."
 updated: 2026-09-28
-reviewed_by: "Ace Ausar, NMLS #1549739"
+reviewed_by: "Ace Ausar, NMLS #1143018"
 status: published
 researchId: buy-how-much-afford
 ---

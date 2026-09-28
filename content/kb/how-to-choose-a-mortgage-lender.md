@@ -15,7 +15,7 @@ didYouKnow:
     sources:
       - { title: "myFICO", url: "https://www.myfico.com/credit-education/blog/rate-shop" }
 updated: 2026-09-28
-reviewed_by: "Ace Ausar, NMLS #1549739"
+reviewed_by: "Ace Ausar, NMLS #1143018"
 status: published
 researchId: buy-choose-lender
 ---

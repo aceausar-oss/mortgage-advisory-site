@@ -12,7 +12,7 @@ featured: true
 sources:
   - { title: "IRS — Topic 558: Additional tax on early distributions from retirement plans", url: "https://www.irs.gov/taxtopics/tc558" }
 updated: 2026-09-27
-reviewed_by: "Ace Ausar, NMLS #1549739"
+reviewed_by: "Ace Ausar, NMLS #1143018"
 status: published
 researchId: dc-options-compared
 ---

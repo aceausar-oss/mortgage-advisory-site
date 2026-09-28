@@ -13,7 +13,7 @@ sources:
 didYouKnow:
   - text: "Rising home values can get you to 20% equity years sooner than your payments alone. A new appraisal is what counts when you refinance into a conventional loan."
 updated: 2026-09-27
-reviewed_by: "Ace Ausar, NMLS #1549739"
+reviewed_by: "Ace Ausar, NMLS #1143018"
 status: published
 researchId: refi-remove-fha-mip
 ---

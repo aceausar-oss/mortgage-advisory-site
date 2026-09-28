@@ -17,7 +17,7 @@ sources:
 didYouKnow:
   - text: "\"First-time homebuyer\" usually doesn't mean you've never owned a home. For many programs, it means you haven't owned one in the past three years."
 updated: 2026-09-28
-reviewed_by: "Ace Ausar, NMLS #1549739"
+reviewed_by: "Ace Ausar, NMLS #1143018"
 status: published
 researchId: buy-down-payment-assistance
 ---

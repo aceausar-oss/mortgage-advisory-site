@@ -16,7 +16,7 @@ didYouKnow:
     sources:
       - { title: "Freddie Mac weekly mortgage rates", url: "https://www.freddiemac.com/pmms" }
 updated: 2026-09-27
-reviewed_by: "Ace Ausar, NMLS #1549739"
+reviewed_by: "Ace Ausar, NMLS #1143018"
 status: published
 researchId: rates-jump-lock-now
 ---

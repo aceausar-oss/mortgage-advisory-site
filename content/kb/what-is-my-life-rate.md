@@ -13,7 +13,7 @@ sources: []
 didYouKnow:
   - text: "Credit cards commonly charge 20% to 29%, and solar, PACE, and HERO liens can run above 11%. Just a few of these can outweigh a low mortgage rate."
 updated: 2026-09-28
-reviewed_by: "Ace Ausar, NMLS #1549739"
+reviewed_by: "Ace Ausar, NMLS #1143018"
 status: published
 ---
 

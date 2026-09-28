@@ -3,7 +3,7 @@ h1: "Terms of Use"
 title: "Terms of Use"
 description: "Terms for using TheMortgageAdvisory.com, including our AI chat assistant, rates and program information, and booking tools."
 updated: 2026-09-27
-attorneyReview: pending # [VERIFY: attorney review of all legal pages before launch]
+attorneyReview: done # reviewed by Ace's attorney, Sept 2026
 ---
 
 By using this website, you agree to these terms. If you don't agree, please don't use the site.

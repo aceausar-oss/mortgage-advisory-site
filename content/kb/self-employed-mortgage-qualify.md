@@ -12,7 +12,7 @@ sources: []
 didYouKnow:
   - text: "Lenders can add back some non-cash write-offs, like depreciation, to your income, so your qualifying income may be higher than the bottom line on your tax return."
 updated: 2026-09-27
-reviewed_by: "Ace Ausar, NMLS #1549739"
+reviewed_by: "Ace Ausar, NMLS #1143018"
 status: published
 researchId: se-can-qualify
 ---

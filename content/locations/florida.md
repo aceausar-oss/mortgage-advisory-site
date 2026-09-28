@@ -12,7 +12,7 @@ related: [is-a-reverse-mortgage-a-scam, va-loan-new-construction, down-payment-a
 didYouKnow:
   - text: "Florida's homestead exemption can cut the taxable value of your primary home, and the Save Our Homes cap generally limits yearly increases in its assessed value to 3% or the rate of inflation, whichever is lower."
 updated: 2026-09-27
-reviewed_by: "Ace Ausar, NMLS #1549739"
+reviewed_by: "Ace Ausar, NMLS #1143018"
 status: published
 ---
 

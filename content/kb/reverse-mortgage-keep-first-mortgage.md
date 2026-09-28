@@ -17,7 +17,7 @@ didYouKnow:
       - { title: "HousingWire (2018)", url: "https://www.housingwire.com/articles/46918-finance-of-america-reverse-introduces-first-ever-second-lien-reverse-mortgage/" }
       - { title: "National Mortgage Professional", url: "https://nationalmortgageprofessional.com/news/finance-america-launches-second-lien-reverse-mortgage-amid-rate-lock-demand" }
 updated: 2026-09-27
-reviewed_by: "Ace Ausar, NMLS #1549739"
+reviewed_by: "Ace Ausar, NMLS #1143018"
 status: published
 researchId: rm-second-lien
 ---

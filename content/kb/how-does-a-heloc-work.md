@@ -13,7 +13,7 @@ sources: []
 didYouKnow:
   - text: "Today's HELOCs aren't your parents' HELOCs. Many newer ones let you choose a fixed rate and use payments that pay down principal from the start, so your payment doesn't jump when the draw period ends, which was the classic HELOC surprise."
 updated: 2026-09-27
-reviewed_by: "Ace Ausar, NMLS #1549739"
+reviewed_by: "Ace Ausar, NMLS #1143018"
 status: published
 researchId: heloc-how-it-works
 ---

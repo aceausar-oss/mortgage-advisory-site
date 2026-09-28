@@ -13,7 +13,7 @@ sources: []
 didYouKnow:
   - text: "Refinancing into a new 30-year loan restarts the clock. Your payment can drop while your total interest goes up, so we always compare total cost, not just the monthly payment."
 updated: 2026-09-27
-reviewed_by: "Ace Ausar, NMLS #1549739"
+reviewed_by: "Ace Ausar, NMLS #1143018"
 status: published
 researchId: refi-when-worth-it
 ---

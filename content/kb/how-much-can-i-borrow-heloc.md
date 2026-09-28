@@ -10,7 +10,7 @@ persona: homeowner
 featured: false
 sources: []
 updated: 2026-09-27
-reviewed_by: "Ace Ausar, NMLS #1549739"
+reviewed_by: "Ace Ausar, NMLS #1143018"
 status: published
 researchId: heloc-how-much
 ---

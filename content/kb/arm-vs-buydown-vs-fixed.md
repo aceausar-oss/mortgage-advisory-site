@@ -13,7 +13,7 @@ sources: []
 didYouKnow:
   - text: "With a temporary 2-1 buydown, you still qualify at the full note rate, not the lower first-year rate. The buydown lowers your early payments, not the loan you're approved for."
 updated: 2026-09-28
-reviewed_by: "Ace Ausar, NMLS #1549739"
+reviewed_by: "Ace Ausar, NMLS #1143018"
 status: published
 researchId: buy-arm-buydown-fixed
 ---
