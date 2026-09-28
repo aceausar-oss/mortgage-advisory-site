@@ -1,16 +1,16 @@
 ---
-h1: "Who is Ace Ausar, and what is The Mortgage Advisory?"
-title: "About Ace Ausar"
+h1: "Who is The Mortgage Advisory?"
+title: "About The Mortgage Advisory"
 description: "The Mortgage Advisory, Inc. is a mortgage banker and broker in Ladera Ranch, CA, founded by Ace Ausar. Licensed in CA, TX, FL, and CO. NMLS #1549739."
 intro: "The Mortgage Advisory, Inc. (NMLS #1549739) is a mortgage banker and broker based in Ladera Ranch, California, founded by Ace Ausar, who has spent 25+ years in real estate and lending. We help families in California, Texas, Florida, and Colorado buy homes, refinance, tap their equity, and plan retirement with reverse mortgages, with every cost shown upfront."
 updated: 2026-09-27
 ---
 
-## Meet Ace
+## Who we are
 
-[VERIFY: Ace's own story. A few sentences in his words: how he got into lending, who he loves helping, and something personal.]
+The Mortgage Advisory, Inc. was founded in 2016 by Ace Ausar, a mortgage banker with 25+ years in real estate and lending. Today our licensed team helps homeowners and buyers across four states, and every answer on this site is reviewed by a licensed mortgage professional before it's published.
 
-Ace Ausar founded The Mortgage Advisory in 2016 and has spent 25+ years in real estate and lending. His clients describe the same things again and again: he's patient, he explains every step, and he treats people like family, not like a transaction.
+Our clients describe the same things again and again: we're patient, we explain every step, and we treat people like family, not like a transaction. See [what they say on Google](/reviews).
 
 ## What we do
 
