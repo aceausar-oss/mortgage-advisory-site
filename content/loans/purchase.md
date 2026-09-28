@@ -17,7 +17,8 @@ didYouKnow:
   - text: "A pre-approval is only as strong as the paperwork behind it. When we review your income and assets upfront, your offer carries more weight with sellers, and there are fewer surprises in escrow."
   - text: "First-time buyers can put as little as 3% down on some conventional loans, and eligible veterans can often buy with no down payment at all on a VA loan."
 updated: 2026-09-27
-status: draft
+reviewed_by: "Ace Ausar, NMLS #1549739"
+status: published
 ---
 
 ## What are the steps to buying a home?
