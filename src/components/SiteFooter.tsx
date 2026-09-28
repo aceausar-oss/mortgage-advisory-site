@@ -4,8 +4,8 @@ import { getLoanPages, getLocationPages } from "@/lib/loans";
 import { fullAddress, legalNav, licensing, stateCodes } from "@/lib/site";
 
 // Compliance block required on every page (CLAUDE.md §8). All facts come from content/data/licensing.json.
-// State license numbers that differ from the NMLS ID are shown here too (e.g. CA DRE requires its number on first contact).
-const SHORT: Record<string, string> = { "60DBO": "DFPI CFL", "0": "DRE", MBR: "Mortgage Broker" };
+// State license numbers that differ from the NMLS ID are shown here too.
+const SHORT: Record<string, string> = { "60DBO": "DFPI CFL", MBR: "Mortgage Broker" };
 const stateLicenseIds = licensing.states.flatMap((s) =>
   s.licenses
     .filter((l) => !l.number.startsWith("NMLS"))

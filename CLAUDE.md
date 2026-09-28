@@ -190,7 +190,7 @@ Embed: `<iframe src="https://api.leadconnectorhq.com/widget/booking/{CALENDAR_ID
 - "This is not a commitment to lend. All loans subject to credit approval, underwriting, and property valuation. Rates, terms, and programs subject to change without notice."
 
 **`/licensing` page (state by state):**
-- California: DRE Real Estate Corporation License #02020987 with MLO endorsement, and DFPI California Financing Law (CFL) license 60DBO-157752 (confirmed by Ace, Sept 2026), with the statement "Loans made or arranged pursuant to a California Financing Law license."
+- California: DFPI California Financing Law (CFL) license 60DBO-157752 (confirmed by Ace, Sept 2026), with the statement "Loans made or arranged pursuant to a California Financing Law license."
 - Texas: SML Mortgage Company License (NMLS #1549739) + the **Mortgage Company Consumer Complaint and Recovery Fund Notice** (7 TAC §56.200(c)) — official text from SML's current figure (7 TAC §56.200(c), SML file updated Dec 6, 2024), copied exactly into licensing.json. Placement: home page or a page linked from it (footer → /licensing).
 - Florida: Office of Financial Regulation Mortgage Broker License MBR5368 (broker only in FL).
 - Colorado: Division of Real Estate Mortgage Company Registration (NMLS #1549739) + "Regulated by the Colorado Division of Real Estate."
@@ -300,7 +300,7 @@ After each step: run the site with JavaScript disabled, validate schema (Google 
 
 Decided with Ace (Sept 2026):
 - **Custom IDX build (Option B)** from the **CRMLS** data feed (RESO Web API credentials requested by Ace), not a vendor plugin. Listings are real pages on our domain at **/homes** and **/homes/[listing]**, styled like the rest of the site.
-- **Brokerage:** Ace is the broker of **The Home Advisory** (separate corporate DRE license). Every listing page shows The Home Advisory, its corporate DRE # and Ace's DRE # **[VERIFY: DRE license numbers]**, plus CRMLS attribution: listing broker name, MLS disclaimer/logo, and last-updated time.
+- **Brokerage:** Ace is the broker of **The Home Advisory** (separate corporate DRE license). Every listing page shows The Home Advisory and its corporate DRE #02020987 (confirmed by Ace; not shown on the lending pages) plus Ace's individual DRE # **[VERIFY: Ace's individual DRE #]**, plus CRMLS attribution: listing broker name, MLS disclaimer/logo, and last-updated time.
 - **Affiliated business arrangement:** The Home Advisory (real estate) and The Mortgage Advisory (lending) share ownership, so listing pages and the buyer sign-up carry a RESPA affiliated business disclosure and say buyers are free to choose any lender **[VERIFY: disclosure wording with compliance]**.
 - **Email gate:** search is open; 3 listing views free; then email required to keep browsing, save homes, or get alerts. Marketing-consent checkbox unchecked by default; phone optional with separate TCPA consent. Leads go to Go High Level with the homes they viewed.
 - **No estimated payments on listings** (trigger terms). CTA is "Get pre-approved for this home" → chat or Home Buyers calendar.
@@ -314,4 +314,5 @@ Decided with Ace (Sept 2026):
 - [ ] Profile URLs for `sameAs` (LinkedIn, Google Business Profile, BBB, Zillow, reviews)
 - [ ] GHL Private Integration token (Phase 2) — env var only
 - [ ] CRMLS IDX agreement + RESO Web API credentials (Ace) → env vars only
-- [ ] The Home Advisory corporate DRE # and Ace's individual DRE #
+- [x] The Home Advisory corporate DRE #02020987
+- [ ] Ace's individual DRE # (for /homes)

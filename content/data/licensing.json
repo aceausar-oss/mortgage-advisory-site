@@ -27,17 +27,12 @@
     {
       "code": "CA",
       "name": "California",
-      "regulator": "California Department of Financial Protection and Innovation (DFPI) and California Department of Real Estate (DRE)",
+      "regulator": "California Department of Financial Protection and Innovation (DFPI)",
       "licenses": [
         {
           "type": "DFPI California Financing Law (CFL) License",
           "number": "60DBO-157752",
           "statement": "Loans made or arranged pursuant to a California Financing Law license."
-        },
-        {
-          "type": "DRE Real Estate Corporation License with Mortgage Loan Originator (MLO) endorsement",
-          "number": "02020987",
-          "statement": ""
         }
       ]
     },
