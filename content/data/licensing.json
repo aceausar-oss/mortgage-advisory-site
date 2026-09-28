@@ -3,7 +3,7 @@
   "brandName": "The Mortgage Advisory",
   "nmls": "1549739",
   "nmlsConsumerAccessUrl": "https://www.nmlsconsumeraccess.org/EntityDetails.aspx/COMPANY/1549739",
-  "entityStatement": "The Mortgage Advisory, Inc. is a mortgage banker and broker licensed in California, Texas, Florida, and Colorado, NMLS #1549739. Founded by Ace Ausar, a mortgage banker with 25+ years in real estate and lending. We lend directly on conventional, VA, and Non-QM loans, and we arrange FHA loans, reverse mortgages (HECM and proprietary, including second-lien reverse mortgages), and HELOCs through approved partner lenders as your mortgage broker. We offer home purchase loans, refinancing, HELOCs and home equity access, reverse mortgages, and debt consolidation using cash-out refinances, HELOCs, or reverse mortgage seconds. We always tell you upfront who your lender is and how we're paid.",
+  "entityStatement": "The Mortgage Advisory, Inc. is a mortgage banker and broker licensed in California, Texas, Florida, and Colorado, NMLS #1549739. Founded by Ace Ausar, a mortgage banker with 25+ years in real estate and lending. We lend directly on conventional, VA, and Non-QM loans (in Florida, where we're licensed as a mortgage broker, all loans are arranged through approved lenders), and we arrange FHA loans, reverse mortgages (HECM and proprietary, including second-lien reverse mortgages), and HELOCs through approved partner lenders as your mortgage broker. We offer home purchase loans, refinancing, HELOCs and home equity access, reverse mortgages, and debt consolidation using cash-out refinances, HELOCs, or reverse mortgage seconds. We always tell you upfront who your lender is and how we're paid.",
   "address": {
     "street": "999 Corporate Drive, Ste 100",
     "city": "Ladera Ranch",
@@ -27,34 +27,55 @@
     {
       "code": "CA",
       "name": "California",
-      "regulator": "California Department of Financial Protection and Innovation (DFPI)",
-      "licenseType": "California Financing Law (CFL) license",
-      "licenseNumber": "60DBO-157752",
-      "statement": "Loans made or arranged pursuant to a California Financing Law license."
+      "regulator": "California Department of Financial Protection and Innovation (DFPI) and California Department of Real Estate (DRE)",
+      "licenses": [
+        {
+          "type": "DFPI California Financing Law (CFL) License",
+          "number": "60DBO-157752",
+          "statement": "Loans made or arranged pursuant to a California Financing Law license."
+        },
+        {
+          "type": "DRE Real Estate Corporation License with Mortgage Loan Originator (MLO) endorsement",
+          "number": "02020987",
+          "statement": ""
+        }
+      ]
     },
     {
       "code": "TX",
       "name": "Texas",
       "regulator": "Texas Department of Savings and Mortgage Lending (SML)",
-      "licenseType": "[VERIFY]",
-      "licenseNumber": "[VERIFY]",
-      "statement": "[VERIFY: official current Texas Consumer Complaint and Recovery Fund Notice from SML]"
+      "licenses": [
+        {
+          "type": "SML Mortgage Company License",
+          "number": "NMLS #1549739",
+          "statement": "[VERIFY: official current Texas Mortgage Company Consumer Complaint and Recovery Fund Notice from SML (7 TAC §56.200(c))]"
+        }
+      ]
     },
     {
       "code": "FL",
       "name": "Florida",
       "regulator": "Florida Office of Financial Regulation (OFR)",
-      "licenseType": "[VERIFY]",
-      "licenseNumber": "[VERIFY]",
-      "statement": "[VERIFY]"
+      "licenses": [
+        {
+          "type": "Mortgage Broker License",
+          "number": "MBR5368",
+          "statement": "In Florida, The Mortgage Advisory, Inc. is licensed as a mortgage broker and arranges loans through approved lenders."
+        }
+      ]
     },
     {
       "code": "CO",
       "name": "Colorado",
       "regulator": "Colorado Division of Real Estate",
-      "licenseType": "[VERIFY]",
-      "licenseNumber": "[VERIFY]",
-      "statement": "[VERIFY: Regulated by the Division of Real Estate statement]"
+      "licenses": [
+        {
+          "type": "Mortgage Company Registration",
+          "number": "NMLS #1549739",
+          "statement": "Regulated by the Colorado Division of Real Estate."
+        }
+      ]
     }
   ],
   "sameAs": [

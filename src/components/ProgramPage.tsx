@@ -11,11 +11,12 @@ import { licensing, siteUrl, stateCodes } from "@/lib/site";
 // Shared layout for loan program pages (/loans/*) and state pages (/locations/*), per the page template (CLAUDE.md §6).
 // "Who funds your loan?" (CLAUDE.md §8): say plainly whether we're the lender or the broker.
 const FUNDING: Record<LoanPage["funding"], string> = {
-  direct: "We're the direct lender on this loan. We make the loan decision and fund it ourselves.",
+  direct:
+    "We're the direct lender on this loan. We make the loan decision and fund it ourselves. (In Florida, where we're licensed as a mortgage broker, we arrange it through an approved lender and tell you upfront who your lender is and how we're paid.)",
   broker:
     "We arrange this loan through approved partner lenders and act as your mortgage broker. The partner lender funds the loan. We'll tell you upfront who your lender is and exactly how we're paid; it's all on your Loan Estimate.",
   mixed:
-    "It depends on the loan. We're the direct lender on conventional, VA, and Non-QM loans. FHA loans, reverse mortgages, and HELOCs are arranged through approved partner lenders, with us as your mortgage broker. Either way, we tell you upfront who your lender is and how we're paid; it's all on your Loan Estimate.",
+    "It depends on the loan. We're the direct lender on conventional, VA, and Non-QM loans (in Florida, where we're licensed as a mortgage broker, every loan is arranged through an approved lender). FHA loans, reverse mortgages, and HELOCs are arranged through approved partner lenders, with us as your mortgage broker. Either way, we tell you upfront who your lender is and how we're paid; it's all on your Loan Estimate.",
 };
 
 function WhoFunds({ funding }: { funding: LoanPage["funding"] }) {

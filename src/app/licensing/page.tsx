@@ -55,10 +55,14 @@ export default function LicensingPage() {
             <p>
               <span className="font-semibold">Regulator:</span> {s.regulator}
             </p>
-            <p>
-              <span className="font-semibold">License:</span> {s.licenseType} · #{s.licenseNumber}
-            </p>
-            <p className="text-sm leading-relaxed text-brand-slate">{s.statement}</p>
+            {s.licenses.map((l) => (
+              <div key={l.number} className="space-y-1">
+                <p>
+                  <span className="font-semibold">License:</span> {l.type} · {l.number.startsWith("NMLS") ? l.number : `#${l.number}`}
+                </p>
+                {l.statement && <p className="text-sm leading-relaxed text-brand-slate">{l.statement}</p>}
+              </div>
+            ))}
           </div>
         ))}
       </section>
@@ -68,7 +72,7 @@ export default function LicensingPage() {
           Lender or broker?
         </h2>
         <p className="leading-relaxed">
-          We are the direct lender on conventional, VA, and Non-QM loans. FHA loans, reverse mortgages, and HELOCs are arranged through
+          We are the direct lender on conventional, VA, and Non-QM loans, except in Florida, where we are licensed as a mortgage broker and arrange all loans through approved lenders. FHA loans, reverse mortgages, and HELOCs are arranged through
           approved partner lenders, with {licensing.brandName} acting as mortgage broker. Your Loan Estimate shows who your lender is and how we
           are paid. See <Link href="/costs" className="underline underline-offset-4">costs and how we&apos;re paid</Link>.
         </p>

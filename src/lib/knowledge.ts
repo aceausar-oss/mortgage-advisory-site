@@ -8,9 +8,9 @@ import { fullAddress, licensing, siteUrl } from "@/lib/site";
 // Published content only: drafts never leave the building.
 
 const FUNDING_TEXT: Record<LoanPage["funding"], string> = {
-  direct: "The Mortgage Advisory is the direct lender.",
+  direct: "The Mortgage Advisory is the direct lender (in Florida, licensed as a mortgage broker: arranged through approved lenders).",
   broker: "Arranged through approved partner lenders; The Mortgage Advisory acts as mortgage broker.",
-  mixed: "Direct lender on conventional, VA, and Non-QM loans; broker (through approved partner lenders) on FHA, reverse mortgages, and HELOCs.",
+  mixed: "Direct lender on conventional, VA, and Non-QM loans (broker only in Florida); broker (through approved partner lenders) on FHA, reverse mortgages, and HELOCs.",
 };
 
 export function company() {
@@ -26,7 +26,7 @@ export function company() {
     phone: licensing.phone,
     email: licensing.email,
     url: siteUrl,
-    licensedStates: licensing.states.map((s) => ({ code: s.code, name: s.name, regulator: s.regulator })),
+    licensedStates: licensing.states.map((s) => ({ code: s.code, name: s.name, regulator: s.regulator, licenses: s.licenses.map((l) => ({ type: l.type, number: l.number })) })),
     licensingPage: `${siteUrl}/licensing`,
     equalHousingLender: true,
     notice: "General information, not a commitment to lend. All loans are subject to credit approval, underwriting, and property valuation.",

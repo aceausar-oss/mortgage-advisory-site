@@ -176,7 +176,7 @@ Embed: `<iframe src="https://api.leadconnectorhq.com/widget/booking/{CALENDAR_ID
 
 ## 8. Compliance (REQUIRED — mortgage banker and broker, licensed CA, TX, FL, CO)
 
-**Lender vs. broker (confirmed by Ace, Sept 2026):** we are the **direct lender for conventional, VA, and Non-QM loans** (VA corrected by Ace, Sept 2026). FHA, reverse mortgages (HECM, proprietary, second-lien), and HELOCs are **brokered** through approved partner lenders. Never call us the direct lender on those programs; any page or chat answer about them says we arrange the loan with a partner lender and disclose how we're paid. **[VERIFY with compliance: each state license covers brokering as well as lending, especially CA.]**
+**Lender vs. broker (confirmed by Ace, Sept 2026):** we are the **direct lender for conventional, VA, and Non-QM loans** (VA corrected by Ace, Sept 2026), **except in Florida**, where the license is a Mortgage Broker License (MBR5368), so every Florida loan is brokered. FHA, reverse mortgages (HECM, proprietary, second-lien), and HELOCs are **brokered** through approved partner lenders. Never call us the direct lender on those programs; any page or chat answer about them says we arrange the loan with a partner lender and disclose how we're paid. **[VERIFY with compliance: each state license covers brokering as well as lending, especially CA.]**
 
 
 > ⚠️ Items marked **[VERIFY]** must be confirmed by Ace/compliance before launch. Do not guess license numbers or regulator wording — use placeholders and fail the build check if placeholders remain in production.
@@ -190,10 +190,10 @@ Embed: `<iframe src="https://api.leadconnectorhq.com/widget/booking/{CALENDAR_ID
 - "This is not a commitment to lend. All loans subject to credit approval, underwriting, and property valuation. Rates, terms, and programs subject to change without notice."
 
 **`/licensing` page (state by state):**
-- California: DFPI California Financing Law (CFL) license 60DBO-157752 (confirmed by Ace, Sept 2026), with the statement "Loans made or arranged pursuant to a California Financing Law license."
-- Texas: Texas Department of Savings and Mortgage Lending (SML) license **[VERIFY #]** + the **Texas Consumer Complaint and Recovery Fund Notice** — paste the official current text from SML exactly **[VERIFY]**.
-- Florida: Office of Financial Regulation license **[VERIFY type and #]**.
-- Colorado: Division of Real Estate registration/license **[VERIFY #]** + "Regulated by the Division of Real Estate" statement **[VERIFY]**.
+- California: DRE Real Estate Corporation License #02020987 with MLO endorsement, and DFPI California Financing Law (CFL) license 60DBO-157752 (confirmed by Ace, Sept 2026), with the statement "Loans made or arranged pursuant to a California Financing Law license."
+- Texas: SML Mortgage Company License (NMLS #1549739) + the **Mortgage Company Consumer Complaint and Recovery Fund Notice** (7 TAC §56.200(c)) — official current text from SML **[VERIFY: pending download]**. Placement: home page or a page linked from it (footer → /licensing).
+- Florida: Office of Financial Regulation Mortgage Broker License MBR5368 (broker only in FL).
+- Colorado: Division of Real Estate Mortgage Company Registration (NMLS #1549739) + "Regulated by the Colorado Division of Real Estate."
 - Store all of this in `content/data/licensing.json`; the footer, `/licensing`, schema, and `llms.txt` read from that one file.
 
 **Advertising rules baked into components:**

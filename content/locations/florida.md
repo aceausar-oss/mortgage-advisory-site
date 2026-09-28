@@ -5,9 +5,10 @@ state: FL
 question: "Who can help me with a mortgage, HELOC, or reverse mortgage in Florida?"
 seoTitle: "Florida Mortgage Lender: Reverse, HELOC, FHA, VA Loans"
 description: "Licensed in Florida: reverse mortgages, HELOCs, home purchase, refinance, FHA, VA, and Non-QM loans, plus Florida closing costs explained."
-tldr: "The Mortgage Advisory is licensed in Florida (NMLS #1549739) and helps Floridians buy, refinance, tap equity, and use reverse mortgages, including HECM for Purchase for retirees relocating to Florida. We explain Florida-specific costs like documentary stamp taxes, homestead savings, and insurance before you commit."
+tldr: "The Mortgage Advisory is licensed in Florida as a mortgage broker (NMLS #1549739, Florida license MBR5368) and helps Floridians buy, refinance, tap equity, and use reverse mortgages, including HECM for Purchase for retirees relocating to Florida. We explain Florida-specific costs like documentary stamp taxes, homestead savings, and insurance before you commit."
 category: buying
 products: [conventional, fha, va, heloc, hecm, reverse-second, non-qm]
+funding: broker
 related: [is-a-reverse-mortgage-a-scam, va-loan-new-construction, down-payment-assistance-ca-tx-fl-co, how-to-choose-a-mortgage-lender]
 didYouKnow:
   - text: "Florida's homestead exemption can cut the taxable value of your primary home, and the Save Our Homes cap generally limits yearly increases in its assessed value to 3% or the rate of inflation, whichever is lower."
