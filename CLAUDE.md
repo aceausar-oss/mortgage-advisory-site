@@ -300,7 +300,7 @@ After each step: run the site with JavaScript disabled, validate schema (Google 
 
 Decided with Ace (Sept 2026):
 - **Custom IDX build (Option B)** from the **CRMLS** data feed (RESO Web API credentials requested by Ace), not a vendor plugin. Listings are real pages on our domain at **/homes** and **/homes/[listing]**, styled like the rest of the site.
-- **Brokerage:** Ace is the broker of **The Home Advisory** (separate corporate DRE license). Every listing page shows The Home Advisory and its corporate DRE #02020987 (confirmed by Ace; not shown on the lending pages) plus Ace's individual DRE # **[VERIFY: Ace's individual DRE #]**, plus CRMLS attribution: listing broker name, MLS disclaimer/logo, and last-updated time.
+- **Brokerage:** Ace is the broker of **The Home Advisory** (separate corporate DRE license). Every listing page shows The Home Advisory and its corporate DRE #02020987 (confirmed by Ace; not shown on the lending pages) plus Ace's individual DRE broker license #01354506, plus CRMLS attribution: listing broker name, MLS disclaimer/logo, and last-updated time.
 - **Affiliated business arrangement:** The Home Advisory (real estate) and The Mortgage Advisory (lending) share ownership, so listing pages and the buyer sign-up carry a RESPA affiliated business disclosure and say buyers are free to choose any lender **[VERIFY: disclosure wording with compliance]**.
 - **Email gate:** search is open; 3 listing views free; then email required to keep browsing, save homes, or get alerts. Marketing-consent checkbox unchecked by default; phone optional with separate TCPA consent. Leads go to Go High Level with the homes they viewed.
 - **No estimated payments on listings** (trigger terms). CTA is "Get pre-approved for this home" → chat or Home Buyers calendar.
@@ -315,4 +315,4 @@ Decided with Ace (Sept 2026):
 - [ ] GHL Private Integration token (Phase 2) — env var only
 - [ ] CRMLS IDX agreement + RESO Web API credentials (Ace) → env vars only
 - [x] The Home Advisory corporate DRE #02020987
-- [ ] Ace's individual DRE # (for /homes)
+- [x] Ace's individual DRE broker license #01354506 (for /homes)
