@@ -14,7 +14,8 @@ sources:
 didYouKnow:
   - text: "If there's equity left after the loan is paid off, it goes to the heirs, just like with any other home. The lender doesn't get the house."
 updated: 2026-09-27
-status: draft
+reviewed_by: "Ace Ausar, NMLS #1549739"
+status: published
 researchId: rm-heirs-owe
 ---
 

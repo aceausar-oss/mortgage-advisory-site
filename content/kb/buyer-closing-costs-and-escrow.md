@@ -11,7 +11,8 @@ persona: first-time-buyer
 featured: false
 sources: []
 updated: 2026-09-27
-status: draft
+reviewed_by: "Ace Ausar, NMLS #1549739"
+status: published
 researchId: buy-closing-costs
 ---
 

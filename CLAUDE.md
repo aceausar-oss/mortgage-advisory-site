@@ -296,6 +296,16 @@ After each step: run the site with JavaScript disabled, validate schema (Google 
 
 ---
 
+## 13b. Buyer home search (/homes) — planned, after launch
+
+Decided with Ace (Sept 2026):
+- **Custom IDX build (Option B)** from the **CRMLS** data feed (RESO Web API credentials requested by Ace), not a vendor plugin. Listings are real pages on our domain at **/homes** and **/homes/[listing]**, styled like the rest of the site.
+- **Brokerage:** Ace is the broker of **The Home Advisory** (separate corporate DRE license). Every listing page shows The Home Advisory, its corporate DRE # and Ace's DRE # **[VERIFY: DRE license numbers]**, plus CRMLS attribution: listing broker name, MLS disclaimer/logo, and last-updated time.
+- **Affiliated business arrangement:** The Home Advisory (real estate) and The Mortgage Advisory (lending) share ownership, so listing pages and the buyer sign-up carry a RESPA affiliated business disclosure and say buyers are free to choose any lender **[VERIFY: disclosure wording with compliance]**.
+- **Email gate:** search is open; 3 listing views free; then email required to keep browsing, save homes, or get alerts. Marketing-consent checkbox unchecked by default; phone optional with separate TCPA consent. Leads go to Go High Level with the homes they viewed.
+- **No estimated payments on listings** (trigger terms). CTA is "Get pre-approved for this home" → chat or Home Buyers calendar.
+- **Placement:** "Find a Home" first in the main menu; links from /loans/purchase, homepage chips, and state pages (California first; TX/FL/CO need their own MLS memberships).
+
 ## 14. Open items (fill before launch)
 - [ ] State license numbers + exact regulator wording (CA, TX, FL, CO) → `content/data/licensing.json`
 - [x] Purchase calendar ID (LuDajKl5AlreCcwVzXd2, added Sept 2026)
@@ -303,3 +313,5 @@ After each step: run the site with JavaScript disabled, validate schema (Google 
 - [ ] Real sourced stats → `content/data/stats.json`; current rate scenarios → `content/data/pricing.json`
 - [ ] Profile URLs for `sameAs` (LinkedIn, Google Business Profile, BBB, Zillow, reviews)
 - [ ] GHL Private Integration token (Phase 2) — env var only
+- [ ] CRMLS IDX agreement + RESO Web API credentials (Ace) → env vars only
+- [ ] The Home Advisory corporate DRE # and Ace's individual DRE #
