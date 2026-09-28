@@ -51,7 +51,7 @@ export function FaqTabs({ entries, idPrefix = "faq" }: { entries: KbEntry[]; idP
           <section key={t.id} data-panel={t.id} aria-label={t.long}>
             <h2 className="sr-only">{t.long}</h2>
             {t.items.length === 0 ? (
-              <p className="rounded-2xl border-l-4 border-brand-blue bg-mist p-5">
+              <p className="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-brand-blue/30">
                 We’re writing answers for this topic now. Have a question?{" "}
                 <Link href="/book" className="font-semibold underline underline-offset-4">
                   Book a call with an advisor
@@ -59,15 +59,15 @@ export function FaqTabs({ entries, idPrefix = "faq" }: { entries: KbEntry[]; idP
                 .
               </p>
             ) : (
-              <ul className="space-y-4">
+              <ul className="grid gap-4 md:grid-cols-2">
                 {t.items.map((e) => (
-                  <li key={e.slug} className="rounded-2xl border-l-4 border-brand-blue bg-gradient-to-r from-mist to-white p-5 shadow-sm ring-1 ring-brand-blue/50 transition hover:shadow-md">
-                    <h3 className="text-lg font-semibold">
+                  <li key={e.slug} className="flex flex-col rounded-2xl bg-white p-5 shadow-sm ring-1 ring-brand-blue/30 transition hover:shadow-md hover:ring-brand-blue">
+                    <h3 className="text-lg font-semibold leading-snug">
                       {e.question}
                       {e.isDraft && <span className="ml-2 rounded bg-mist px-2 py-0.5 align-middle text-xs font-semibold">Draft</span>}
                     </h3>
-                    <p className="mt-2 leading-relaxed">{e.tldr}</p>
-                    <Link href={`/answers/${e.slug}`} className="mt-2 inline-block font-semibold text-brand-button underline underline-offset-4">
+                    <p className="mt-2 line-clamp-4 flex-1 leading-relaxed text-brand-ink">{e.tldr}</p>
+                    <Link href={`/answers/${e.slug}`} className="mt-3 inline-block font-semibold text-brand-button underline underline-offset-4">
                       Read the full answer →
                     </Link>
                   </li>

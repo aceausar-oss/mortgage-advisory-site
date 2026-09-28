@@ -99,14 +99,19 @@ export default function Home() {
       </section>
 
       {/* 4.5 Tabbed Q&A */}
-      <section aria-labelledby="faq-heading" className="bg-mist">
-        <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6">
-          <h2 id="faq-heading" className="mb-8 text-center text-3xl font-bold sm:text-4xl">
-            Answers to common questions
-          </h2>
-          <FaqTabs entries={entries} idPrefix="home-faq" />
-        </div>
-      </section>
+      <FloatingCard
+        tone="blue"
+        id="faq-heading"
+        eyebrow="Common questions"
+        title={
+          <>
+            Real questions, <span className="text-brand-blue-deep">plain-English answers</span>.
+          </>
+        }
+        intro="Pick a topic. Every answer is reviewed by a licensed mortgage banker."
+      >
+        <FaqTabs entries={entries} idPrefix="home-faq" />
+      </FloatingCard>
 
       {/* 4.6 Booking */}
       <div id="booking" className="scroll-mt-16">
