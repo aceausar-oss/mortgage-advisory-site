@@ -1,4 +1,6 @@
 import Link from "next/link";
+import type { ReactNode } from "react";
+import { CarouselAutoplay } from "@/components/CarouselAutoplay";
 import data from "../../content/data/reviews.json";
 
 // Real Google reviews (content/data/reviews.json), shown word for word. No AggregateRating schema:
@@ -33,7 +35,7 @@ export function ReviewCard({ review, compact = false }: { review: Review; compac
   );
 }
 
-export function ReviewsSummary() {
+export function ReviewsSummary({ extra }: { extra?: ReactNode }) {
   return (
     <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-3">
       <p className="flex items-center gap-2 font-heading text-lg font-semibold text-brand-ink">
@@ -49,6 +51,7 @@ export function ReviewsSummary() {
       >
         Read all reviews on Google ↗
       </a>
+      {extra}
     </div>
   );
 }
@@ -65,10 +68,11 @@ export function ReviewsCarousel() {
         Real reviews from real homeowners
       </h2>
       <div className="mt-4">
-        <ReviewsSummary />
+        <ReviewsSummary extra={<CarouselAutoplay targetId="reviews-row" />} />
       </div>
       <div className="relative mt-8">
         <ul
+          id="reviews-row"
           tabIndex={0}
           aria-label="Google reviews, scroll sideways for more"
           className="flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth scroll-px-4 px-4 pb-8 pt-3 [scrollbar-width:thin] sm:scroll-px-[max(1.5rem,calc((100vw-72rem)/2))] sm:px-[max(1.5rem,calc((100vw-72rem)/2))]"
@@ -87,7 +91,7 @@ export function ReviewsCarousel() {
         <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 left-0 w-8 bg-gradient-to-r from-white sm:w-16" />
         <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 right-0 w-8 bg-gradient-to-l from-white sm:w-16" />
       </div>
-      <p className="px-4 text-center text-xs text-brand-slate">Swipe or scroll sideways for more. {reviewsFootnote}</p>
+      <p className="px-4 text-center text-xs text-brand-slate">Swipe or scroll sideways for more; the row pauses while you read. {reviewsFootnote}</p>
     </div>
   );
 }
