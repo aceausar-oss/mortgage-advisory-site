@@ -1,6 +1,6 @@
 ---
 h1: "Who is The Mortgage Advisory?"
-title: "About The Mortgage Advisory"
+title: "About Us"
 description: "The Mortgage Advisory, Inc. is a mortgage banker and broker in Ladera Ranch, CA, founded by Ace Ausar. Licensed in CA, TX, FL, and CO. NMLS #1549739."
 intro: "The Mortgage Advisory, Inc. (NMLS #1549739) is a mortgage banker and broker based in Ladera Ranch, California, founded by Ace Ausar, who has spent 25+ years in real estate and lending. We help families in California, Texas, Florida, and Colorado buy homes, refinance, tap their equity, and plan retirement with reverse mortgages, with every cost shown upfront."
 updated: 2026-09-27
