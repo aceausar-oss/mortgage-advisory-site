@@ -1,13 +1,13 @@
 import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
-import { CATEGORIES } from "@/lib/categories";
+import { CATEGORIES, TAB_HIDDEN } from "@/lib/categories";
 import type { KbEntry } from "@/lib/kb";
 import { siteUrl } from "@/lib/site";
 
 // Tabbed Q&A (CLAUDE.md §4.5). Tabs are CSS-only radio buttons, so they work with JavaScript off,
 // and every answer is in the HTML (inactive panels are hidden, not missing) for crawlers.
 export function FaqTabs({ entries, idPrefix = "faq" }: { entries: KbEntry[]; idPrefix?: string }) {
-  const tabs = CATEGORIES.map((c) => ({ ...c, id: `${idPrefix}-${c.key}`, items: entries.filter((e) => e.category === c.key) }));
+  const tabs = CATEGORIES.filter((c) => !TAB_HIDDEN.has(c.key)).map((c) => ({ ...c, id: `${idPrefix}-${c.key}`, items: entries.filter((e) => e.category === c.key) }));
   const first = tabs.find((t) => t.items.length) ?? tabs[0];
 
   const css = tabs

@@ -28,15 +28,15 @@ export function FloatingCard({
           ? "relative px-4 pb-20 pt-4 sm:px-6"
           : tone === "blue"
             ? "relative bg-white px-4 py-16 sm:px-6"
-            : "relative isolate overflow-hidden bg-gradient-to-b from-mist via-mist to-white px-4 py-16 sm:px-6"
+            : "relative isolate overflow-hidden bg-gradient-to-b from-white via-mist to-white px-4 py-16 sm:px-6"
       }
     >
       {!bare && tone === "white" && <div aria-hidden="true" className="ai-glow" />}
       <div
         className={`relative mx-auto max-w-6xl overflow-hidden rounded-[2rem] ${
           tone === "blue"
-            ? "bg-gradient-to-b from-[#e6f0fa] to-mist shadow-[0_24px_70px_-24px_rgba(61,133,204,0.4)] ring-1 ring-brand-blue/30"
-            : "bg-white/90 shadow-[0_24px_70px_-20px_rgba(61,133,204,0.35)] ring-1 ring-white backdrop-blur"
+            ? "bg-gradient-to-b from-[#e6f0fa] to-mist shadow-[0_20px_50px_-28px_rgba(61,133,204,0.25)] ring-1 ring-brand-blue/30"
+            : "bg-white/90 shadow-[0_20px_50px_-24px_rgba(61,133,204,0.22)] ring-1 ring-white backdrop-blur"
         }`}
       >
         <header className="px-5 pb-10 pt-12 text-center sm:px-10">
