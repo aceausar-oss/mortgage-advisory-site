@@ -12,7 +12,8 @@ related: [down-payment-assistance-ca-tx-fl-co, how-much-house-can-i-afford, home
 didYouKnow:
   - text: "Texas limits home equity borrowing on your homestead: all your loans combined generally can't exceed 80% of your home's value when you take cash out, which is one of the strongest homeowner protections in the country."
 updated: 2026-09-27
-status: draft
+reviewed_by: "Ace Ausar, NMLS #1549739"
+status: published
 ---
 
 ## What loans can I get in Texas?
