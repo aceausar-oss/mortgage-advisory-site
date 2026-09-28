@@ -21,7 +21,7 @@ Ace Ausar founded The Mortgage Advisory in 2016 and has spent 25+ years in real 
 
 ## Lender or broker?
 
-Both, and we'll always tell you which. We're the **direct lender** on conventional and Non-QM loans. For FHA loans, VA loans, reverse mortgages, and HELOCs, we work with **approved partner lenders** as your mortgage broker. Either way, you'll know upfront who your lender is and how we're paid. See [how we're paid](/costs).
+Both, and we'll always tell you which. We're the **direct lender** on conventional, VA, and Non-QM loans. For FHA loans, reverse mortgages, and HELOCs, we work with **approved partner lenders** as your mortgage broker. Either way, you'll know upfront who your lender is and how we're paid. See [how we're paid](/costs).
 
 ## What we believe
 

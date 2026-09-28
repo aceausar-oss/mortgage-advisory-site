@@ -39,8 +39,8 @@ Every loan is different, so these are typical ranges, not a quote. Your Loan Est
 
 We believe you should know exactly what we make:
 
-- **When we're the direct lender** (conventional and Non-QM loans), we're paid through the lender fees and pricing on your loan.
-- **When we're your mortgage broker** (FHA, VA, reverse mortgages, and HELOCs through approved partner lenders), we're paid **either** by the lender **or** by you, never both on the same loan. Either way, it's disclosed on your Loan Estimate.
+- **When we're the direct lender** (conventional, VA, and Non-QM loans), we're paid through the lender fees and pricing on your loan.
+- **When we're your mortgage broker** (FHA, reverse mortgages, and HELOCs through approved partner lenders), we're paid **either** by the lender **or** by you, never both on the same loan. Either way, it's disclosed on your Loan Estimate.
 - **No hidden fees.** If a fee isn't on your Loan Estimate, you shouldn't pay it.
 
 ## What about FHA, VA, and reverse mortgage fees?

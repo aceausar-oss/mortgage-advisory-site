@@ -10,7 +10,7 @@ import { fullAddress, licensing, siteUrl } from "@/lib/site";
 const FUNDING_TEXT: Record<LoanPage["funding"], string> = {
   direct: "The Mortgage Advisory is the direct lender.",
   broker: "Arranged through approved partner lenders; The Mortgage Advisory acts as mortgage broker.",
-  mixed: "Direct lender on conventional and Non-QM loans; broker (through approved partner lenders) on FHA, VA, reverse mortgages, and HELOCs.",
+  mixed: "Direct lender on conventional, VA, and Non-QM loans; broker (through approved partner lenders) on FHA, reverse mortgages, and HELOCs.",
 };
 
 export function company() {

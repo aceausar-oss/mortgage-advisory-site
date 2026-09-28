@@ -40,7 +40,7 @@ Each can work:
 - **Mortgage brokers** shop your loan with several wholesale lenders.
 - **Direct lenders** make the loan decisions and control the process in-house.
 
-We're both: a direct lender on conventional and Non-QM loans, and a broker for FHA, VA, reverse mortgages, and HELOCs, where we work with approved partner lenders. Either way, we tell you upfront who your lender is and how we're paid. It's all on your Loan Estimate.
+We're both: a direct lender on conventional, VA, and Non-QM loans, and a broker for FHA, reverse mortgages, and HELOCs, where we work with approved partner lenders. Either way, we tell you upfront who your lender is and how we're paid. It's all on your Loan Estimate.
 
 What matters more than the label is the price, the service, and whether they can actually close your loan on time.
 

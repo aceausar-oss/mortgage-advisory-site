@@ -68,7 +68,7 @@ export default function LicensingPage() {
           Lender or broker?
         </h2>
         <p className="leading-relaxed">
-          We are the direct lender on conventional and Non-QM loans. FHA loans, VA loans, reverse mortgages, and HELOCs are arranged through
+          We are the direct lender on conventional, VA, and Non-QM loans. FHA loans, reverse mortgages, and HELOCs are arranged through
           approved partner lenders, with {licensing.brandName} acting as mortgage broker. Your Loan Estimate shows who your lender is and how we
           are paid. See <Link href="/costs" className="underline underline-offset-4">costs and how we&apos;re paid</Link>.
         </p>

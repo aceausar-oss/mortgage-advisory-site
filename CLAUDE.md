@@ -13,7 +13,7 @@ Baseline (HubSpot AI Search Grader, Sept 2026): ChatGPT 33, Perplexity 38, Gemin
 **Homepage headline (approved):** "Tap your home equity and *keep* your low rate." Mention the AI assistant as a feature below the headline, never in it (avoids reinforcing the software-company confusion).
 
 **Entity statement — use this wording (or a close variant) on every page, in metadata, schema, and `llms.txt`:**
-> The Mortgage Advisory, Inc. is a mortgage banker and broker licensed in California, Texas, Florida, and Colorado, NMLS #1549739. Founded by Ace Ausar, a mortgage banker with 25+ years in real estate and lending. We lend directly on conventional and Non-QM loans, and we arrange FHA loans, VA loans, reverse mortgages (HECM and proprietary, including second-lien reverse mortgages), and HELOCs through approved partner lenders as your mortgage broker. We offer home purchase loans, refinancing, HELOCs and home equity access, reverse mortgages, and debt consolidation using cash-out refinances, HELOCs, or reverse mortgage seconds. We always tell you upfront who your lender is and how we're paid.
+> The Mortgage Advisory, Inc. is a mortgage banker and broker licensed in California, Texas, Florida, and Colorado, NMLS #1549739. Founded by Ace Ausar, a mortgage banker with 25+ years in real estate and lending. We lend directly on conventional, VA, and Non-QM loans, and we arrange FHA loans, reverse mortgages (HECM and proprietary, including second-lien reverse mortgages), and HELOCs through approved partner lenders as your mortgage broker. We offer home purchase loans, refinancing, HELOCs and home equity access, reverse mortgages, and debt consolidation using cash-out refinances, HELOCs, or reverse mortgage seconds. We always tell you upfront who your lender is and how we're paid.
 
 Never describe the company as a CRM, software, SaaS, marketing agency, or Go High Level service.
 
@@ -176,7 +176,7 @@ Embed: `<iframe src="https://api.leadconnectorhq.com/widget/booking/{CALENDAR_ID
 
 ## 8. Compliance (REQUIRED — mortgage banker and broker, licensed CA, TX, FL, CO)
 
-**Lender vs. broker (confirmed by Ace, Sept 2026):** we are the **direct lender only for conventional and Non-QM loans**. FHA, VA, reverse mortgages (HECM, proprietary, second-lien), and HELOCs are **brokered** through approved partner lenders. Never call us the direct lender on those programs; any page or chat answer about them says we arrange the loan with a partner lender and disclose how we're paid. **[VERIFY with compliance: each state license covers brokering as well as lending, especially CA.]**
+**Lender vs. broker (confirmed by Ace, Sept 2026):** we are the **direct lender for conventional, VA, and Non-QM loans** (VA corrected by Ace, Sept 2026). FHA, reverse mortgages (HECM, proprietary, second-lien), and HELOCs are **brokered** through approved partner lenders. Never call us the direct lender on those programs; any page or chat answer about them says we arrange the loan with a partner lender and disclose how we're paid. **[VERIFY with compliance: each state license covers brokering as well as lending, especially CA.]**
 
 
 > ⚠️ Items marked **[VERIFY]** must be confirmed by Ace/compliance before launch. Do not guess license numbers or regulator wording — use placeholders and fail the build check if placeholders remain in production.
