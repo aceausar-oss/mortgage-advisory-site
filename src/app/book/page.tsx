@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { Metadata } from "next";
 import Script from "next/script";
 import { bookingEmbedUrl, bookingTypes } from "@/lib/home";
@@ -27,6 +28,9 @@ export default function BookPage() {
           .
         </p>
       </header>
+      <div className="relative aspect-[3/2] overflow-hidden rounded-3xl sm:aspect-[21/9]">
+        <Image src="/images/pages/book-call.jpg" alt="Friendly advisor on a phone call" fill preload sizes="(min-width: 1024px) 1024px, 100vw" className="object-cover" />
+      </div>
 
       {calendars.map((c) => {
         const titles = bookingTypes.filter((b) => b.calendarId === c.calendarId);

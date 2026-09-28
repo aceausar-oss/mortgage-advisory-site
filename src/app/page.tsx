@@ -4,6 +4,7 @@ import { FaqTabs } from "@/components/FaqTabs";
 import { BookingSection } from "@/components/home/BookingSection";
 import { EquitySlider } from "@/components/home/EquitySlider";
 import { FloatingCard } from "@/components/home/FloatingCard";
+import { GoalCards } from "@/components/home/GoalCards";
 import { HeroChat } from "@/components/home/HeroChat";
 import { LicensedStatesMap } from "@/components/home/LicensedStatesMap";
 import { QuestionFeed } from "@/components/home/QuestionFeed";
@@ -61,6 +62,9 @@ export default function Home() {
 
         {/* Market reality in three numbers (sourced, content/data/stats.json): the big picture before "check yours". */}
         <StatsBand stats={verifiedStats} />
+
+        {/* Amex-style photo cards by goal */}
+        <GoalCards />
 
         {/* 4.3 Equity slider + licensed states */}
         <FloatingCard

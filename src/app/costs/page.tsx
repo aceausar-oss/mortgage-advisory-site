@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ContentPageView, contentPageMetadata } from "@/components/ContentPageView";
 import { AnswerCta } from "@/components/AnswerParts";
 import { TreasuryChart } from "@/components/TreasuryChart";
@@ -11,6 +12,11 @@ export default function CostsPage() {
   return (
     <ContentPageView
       page={page}
+      top={
+        <div className="relative aspect-[3/2] overflow-hidden rounded-2xl sm:aspect-[21/9]">
+          <Image src="/images/pages/costs.jpg" alt="Desk with a Loan Estimate, calculator, and coffee" fill preload sizes="(min-width: 768px) 768px, 100vw" className="object-cover" />
+        </div>
+      }
       bottom={
         <>
           <TreasuryChart idPrefix="costs-tsy" />

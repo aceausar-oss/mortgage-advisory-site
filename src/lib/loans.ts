@@ -41,6 +41,9 @@ const Frontmatter = z
     booking: z.enum(["reverse", "equity", "purchase"]).optional(), // omit to link the general /book page
     state: z.enum(["CA", "TX", "FL", "CO"]).optional(), // location pages only
     related: z.array(z.string()).default([]), // answer slugs, checked at load time
+    // Header photo (public/ path) and its description; illustration only, never presented as a real client.
+    image: z.string().startsWith("/images/").optional(),
+    imageAlt: z.string().optional(),
     sources: z.array(Source).default([]),
     didYouKnow: DidYouKnowList,
     updated: z.coerce.date(),
