@@ -190,7 +190,7 @@ Embed: `<iframe src="https://api.leadconnectorhq.com/widget/booking/{CALENDAR_ID
 - "This is not a commitment to lend. All loans subject to credit approval, underwriting, and property valuation. Rates, terms, and programs subject to change without notice."
 
 **`/licensing` page (state by state):**
-- California: DFPI license type and number **[VERIFY: CRMLA vs. CFL license #]** with the regulator-required licensing statement.
+- California: DFPI California Financing Law (CFL) license 60DBO-157752 (confirmed by Ace, Sept 2026), with the statement "Loans made or arranged pursuant to a California Financing Law license."
 - Texas: Texas Department of Savings and Mortgage Lending (SML) license **[VERIFY #]** + the **Texas Consumer Complaint and Recovery Fund Notice** — paste the official current text from SML exactly **[VERIFY]**.
 - Florida: Office of Financial Regulation license **[VERIFY type and #]**.
 - Colorado: Division of Real Estate registration/license **[VERIFY #]** + "Regulated by the Division of Real Estate" statement **[VERIFY]**.

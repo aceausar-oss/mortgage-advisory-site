@@ -24,9 +24,9 @@
       "code": "CA",
       "name": "California",
       "regulator": "California Department of Financial Protection and Innovation (DFPI)",
-      "licenseType": "[VERIFY: confirm license type. DFPI numbers starting 60DBO are usually California Financing Law (CFL) licenses]",
+      "licenseType": "California Financing Law (CFL) license",
       "licenseNumber": "60DBO-157752",
-      "statement": "[VERIFY: DFPI-required licensing statement]"
+      "statement": "Loans made or arranged pursuant to a California Financing Law license."
     },
     {
       "code": "TX",
