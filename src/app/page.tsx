@@ -123,7 +123,7 @@ export default function Home() {
         }
         intro="Pick a topic. Every answer is reviewed by a licensed mortgage banker."
       >
-        <FaqTabs entries={entries} idPrefix="home-faq" />
+        <FaqTabs entries={entries} idPrefix="home-faq" tiles="grey" />
       </FloatingCard>
 
       {/* 4.6 Booking */}
