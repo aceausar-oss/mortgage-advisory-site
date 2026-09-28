@@ -10,6 +10,8 @@ products: [rate-term-refi, cash-out-refi, conventional, fha, va]
 funding: mixed
 booking: equity
 related: [how-to-tell-if-your-loan-estimate-is-a-good-deal, why-mortgage-rates-jumped-lock-or-wait, arm-vs-buydown-vs-fixed, va-loan-estimate-good-deal]
+image: "/images/loans/loan-refinance.jpg"
+imageAlt: "Couple at the dining table reviewing their numbers"
 didYouKnow:
   - text: "There's no magic '1% rule' for refinancing. What matters is your break-even: closing costs divided by monthly savings. If you'll stay past that point, the refinance pays for itself."
   - text: "A VA streamline refinance (IRRRL) usually needs no appraisal and lighter paperwork, and VA requires the costs to be recouped within 36 months."

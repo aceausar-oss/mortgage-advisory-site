@@ -10,6 +10,8 @@ products: [hecm, proprietary-reverse, reverse-second]
 funding: broker
 booking: reverse
 related: [is-a-reverse-mortgage-a-scam, can-you-lose-your-home-with-a-reverse-mortgage, reverse-mortgage-keep-first-mortgage]
+image: "/images/loans/loan-reverse-mortgage.jpg"
+imageAlt: "Grandparents playing with their grandkids in the backyard"
 sources:
   - { title: "HUD — FHA Reverse Mortgage for Seniors (HECM)", url: "https://www.hud.gov/hud-partners/single-family-hecmhome" }
   - { title: "HUD — HECM counselor roster", url: "https://entp.hud.gov/idapp/html/hecm_cnslr_look.cfm" }

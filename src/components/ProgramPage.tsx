@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { AuthorBox, Breadcrumbs, DraftBanner, SourcesList, TldrBox } from "@/components/AnswerParts";
 import { DidYouKnow } from "@/components/DidYouKnow";
@@ -133,6 +134,11 @@ export function ProgramPage({ page }: { page: LoanPage }) {
           <header className="space-y-5">
             <p className="font-heading text-sm font-semibold uppercase tracking-[0.2em] text-brand-button">{page.name}</p>
             <h1 className="text-3xl font-bold leading-tight sm:text-4xl">{page.question}</h1>
+            {page.image && (
+              <div className="relative aspect-[3/2] overflow-hidden rounded-2xl sm:aspect-[21/9]">
+                <Image src={page.image} alt={page.imageAlt ?? ""} fill preload sizes="(min-width: 768px) 768px, 100vw" className="object-cover" />
+              </div>
+            )}
             <TldrBox text={page.tldr} />
           </header>
           {page.didYouKnow.length > 0 && (
