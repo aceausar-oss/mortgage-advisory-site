@@ -8,6 +8,7 @@ import { HeroChat } from "@/components/home/HeroChat";
 import { LicensedStatesMap } from "@/components/home/LicensedStatesMap";
 import { QuestionFeed } from "@/components/home/QuestionFeed";
 import { ReviewsCarousel } from "@/components/Reviews";
+import { StatsBand } from "@/components/home/StatsBand";
 import { StorySections } from "@/components/home/StorySections";
 import { pricing, verifiedStats } from "@/lib/home";
 import { categoryLabel } from "@/lib/categories";
@@ -17,7 +18,6 @@ import { licensing, stateCodes } from "@/lib/site";
 export default function Home() {
   const entries = getEntries();
   const featured = entries.filter((e) => e.featured);
-  const stat = verifiedStats[0];
 
   return (
     <>
@@ -60,19 +60,6 @@ export default function Home() {
             <p className="mx-auto max-w-2xl text-xs leading-relaxed text-brand-slate">
               *Based on select HELOC programs. Timing varies with your application, property, and approval, and isn&apos;t guaranteed.
             </p>
-            {stat && (
-              <p className="mx-auto inline-flex flex-col items-center rounded-2xl bg-white px-5 py-3 text-sm shadow-sm ring-1 ring-brand-steel/20">
-                <span className="font-heading text-2xl font-bold text-brand-slate">{stat.value}</span>
-                <span>{stat.label}</span>
-                <span className="mt-1 text-xs">
-                  Source:{" "}
-                  <a href={stat.sourceUrl} rel="noopener" className="underline">
-                    {stat.source}
-                  </a>{" "}
-                  ({stat.asOf})
-                </span>
-              </p>
-            )}
           </div>
         </section>
 
@@ -94,6 +81,9 @@ export default function Home() {
           </div>
         </FloatingCard>
       </div>
+
+      {/* Market reality in three numbers (sourced, content/data/stats.json) */}
+      <StatsBand stats={verifiedStats} />
 
       {/* 4.4 Stories */}
       <section aria-labelledby="goals-heading" className="mx-auto max-w-6xl px-4 py-16 sm:px-6">

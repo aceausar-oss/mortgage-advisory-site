@@ -6,8 +6,8 @@ import stats from "../../content/data/stats.json";
 
 export { pricing };
 
-// Homepage stat badge (CLAUDE.md §4.1): only real, sourced numbers. Empty file = badge hidden.
-export type Stat = { value: string; label: string; source: string; sourceUrl: string; asOf: string };
+// Homepage stats band (CLAUDE.md §4.1): only real, sourced numbers. Empty file = band hidden.
+export type Stat = { value: string; label: string; detail?: string; source: string; sourceUrl: string; asOf: string };
 export const verifiedStats = (stats.stats as Stat[]).filter((s) => s.value && s.source && s.sourceUrl && s.asOf);
 
 // Go High Level booking calendars (CLAUDE.md §7).

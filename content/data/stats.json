@@ -1,4 +1,29 @@
 {
-  "_note": "Real, sourced housing statistics for our markets. Each needs value, label, source, sourceUrl, asOf. Never invent a number; if empty, the homepage stat badge is hidden.",
-  "stats": []
+  "_note": "Real, sourced housing statistics shown in the homepage stats band. Each needs value, label, source, sourceUrl, asOf. Never invent a number; refresh when the source publishes a new quarter. If empty, the band is hidden.",
+  "stats": [
+    {
+      "value": "$11.7T",
+      "label": "Tappable home equity",
+      "detail": "held by 47.5 million U.S. mortgage holders, about $212,000 each",
+      "source": "ICE Mortgage Monitor",
+      "sourceUrl": "https://mortgagetech.ice.com/resources/data-reports/august-2026-mortgage-monitor",
+      "asOf": "Q2 2026"
+    },
+    {
+      "value": "$1.26T",
+      "label": "Credit card debt",
+      "detail": "owed by U.S. households, up from a year earlier",
+      "source": "Federal Reserve Bank of New York",
+      "sourceUrl": "https://www.newyorkfed.org/newsevents/news/research/2026/20260811",
+      "asOf": "Q2 2026"
+    },
+    {
+      "value": "$14.9T",
+      "label": "Home equity at 62+",
+      "detail": "held by U.S. homeowners 62 and older, a record high",
+      "source": "NRMLA/RiskSpan Reverse Mortgage Market Index",
+      "sourceUrl": "https://www.nrmlaonline.org/about/press-releases/17828",
+      "asOf": "Q1 2026"
+    }
+  ]
 }
