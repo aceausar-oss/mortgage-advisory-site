@@ -160,7 +160,7 @@ Never describe the company as a CRM, software, SaaS, marketing agency, or Go Hig
 |---|---|---|
 | Reverse Mortgage | `8HkkWeAMaZ5lJbiZDK70` | https://api.leadconnectorhq.com/widget/bookings/reversemortgagerelief |
 | HELOC / Refi (Equity Access) | `4Ah4Rs8f6GtPS2YwvIpS` | https://api.leadconnectorhq.com/widget/bookings/heloc_refi |
-| Home Buyers (Purchase) | TODO — currently shares HELOC/Refi calendar; replace when a Purchase calendar exists | same as above |
+| Home Buyers (Purchase) | `LuDajKl5AlreCcwVzXd2` | https://api.leadconnectorhq.com/widget/bookings/thaconsultation |
 
 Embed: `<iframe src="https://api.leadconnectorhq.com/widget/booking/{CALENDAR_ID}" style="width:100%;border:none;overflow:hidden" scrolling="no">` + `https://link.msgsndr.com/js/form_embed.js` (load with `next/script`, `strategy="lazyOnload"`).
 
@@ -296,7 +296,7 @@ After each step: run the site with JavaScript disabled, validate schema (Google 
 
 ## 14. Open items (fill before launch)
 - [ ] State license numbers + exact regulator wording (CA, TX, FL, CO) → `content/data/licensing.json`
-- [ ] Purchase calendar ID (or confirm sharing HELOC/Refi calendar)
+- [x] Purchase calendar ID (LuDajKl5AlreCcwVzXd2, added Sept 2026)
 - [ ] 2–4 client stories with written consent → `content/stories/`
 - [ ] Real sourced stats → `content/data/stats.json`; current rate scenarios → `content/data/pricing.json`
 - [ ] Profile URLs for `sameAs` (LinkedIn, Google Business Profile, BBB, Zillow, reviews)

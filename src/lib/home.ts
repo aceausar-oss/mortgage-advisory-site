@@ -27,12 +27,11 @@ export const bookingTypes = [
     url: "https://api.leadconnectorhq.com/widget/bookings/heloc_refi",
   },
   {
-    // Shares the HELOC/Refi calendar until a Purchase calendar exists (CLAUDE.md §7).
     key: "purchase",
     title: "Home Buyers",
     blurb: "Get pre-approved, compare FHA, VA, and conventional loans, and find down payment help.",
-    calendarId: "4Ah4Rs8f6GtPS2YwvIpS",
-    url: "https://api.leadconnectorhq.com/widget/bookings/heloc_refi",
+    calendarId: "LuDajKl5AlreCcwVzXd2",
+    url: "https://api.leadconnectorhq.com/widget/bookings/thaconsultation",
   },
 ] as const;
 
