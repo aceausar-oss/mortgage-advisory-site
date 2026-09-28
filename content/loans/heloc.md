@@ -68,4 +68,4 @@ A couple in Orange County has a home worth about $900,000 and owes $350,000 at 3
 
 ## Our take
 
-If you've got a great first-mortgage rate, **protect it**. For most homeowners who need cash today, a HELOC is the cleanest way to get it without giving up that rate. I'd rather show you a fixed payment you can plan around than a teaser that jumps later, and I'll lay out every fee before you decide.
+If you've got a great first-mortgage rate and your other debts are manageable, a HELOC is the cleanest way to get cash without giving up that rate. If you're carrying a lot of high-interest debt, let's check your [Life Rate](/answers/what-is-my-life-rate) first; sometimes a cash-out refinance lowers what your money really costs, even at a higher mortgage rate. I'd rather show you a fixed payment you can plan around than a teaser that jumps later, and I'll lay out every fee before you decide.

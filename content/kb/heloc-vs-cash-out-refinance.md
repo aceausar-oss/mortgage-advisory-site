@@ -1,8 +1,8 @@
 ---
 question: "HELOC or cash-out refinance: which is better?"
 slug: heloc-vs-cash-out-refinance
-description: "If your mortgage rate is low, a HELOC usually wins because it leaves that rate alone. If your rate is high, a cash-out refinance can make more sense."
-tldr: "It mostly comes down to your current mortgage rate. If it's lower than today's rates, a HELOC usually wins, because it only prices the new money and leaves your low-rate first mortgage alone. If your current rate is at or above today's rates, a cash-out refinance can give you one loan and one payment. The Mortgage Advisory runs both side by side, with total cost, before you decide."
+description: "It depends on how much other debt you have and the interest on it. Compare your Life Rate, the blended rate on everything you owe, before and after."
+tldr: "It depends on how much debt you're carrying and the interest tied to it, not just your mortgage rate. If your other debts are small, a HELOC usually wins because it leaves your low first mortgage alone. If you're carrying a lot of high-interest debt (credit cards, car loans, solar or PACE liens), a cash-out refinance can lower your Life Rate, the blended rate on everything you owe, even if your mortgage rate goes up. The Mortgage Advisory calculates your Life Rate both ways before you decide."
 category: heloc
 products: [heloc, cash-out-refi]
 states: []
@@ -10,45 +10,43 @@ persona: homeowner
 featured: true
 sources: []
 didYouKnow:
-  - text: "A cash-out refinance re-prices your entire mortgage, not just the cash you take. On a $400,000 balance, even a small rate increase can cost more than the whole HELOC would."
-updated: 2026-09-27
+  - text: "A 3% mortgage doesn't mean you're paying 3%. If you also carry credit cards at 22% and a solar lien at 11%, the blended rate on everything you owe, your Life Rate, can be far higher."
+updated: 2026-09-28
 reviewed_by: "Ace Ausar, NMLS #1549739"
 status: published
 researchId: heloc-vs-cash-out
 ---
 
-## What's the real difference?
+## So which one is better?
 
-- **HELOC:** a second loan behind your first mortgage. Your first mortgage stays exactly as it is.
-- **Cash-out refinance:** a brand-new, bigger first mortgage that pays off the old one, and you get the difference in cash.
+**It depends on how much debt you're carrying and the interest tied to it.** Most people only look at their mortgage rate. I look at your **Life Rate**: the blended interest rate on everything you owe, from your mortgage to credit cards, car loans, and solar or PACE liens. See [what your Life Rate is and how to figure it](/answers/what-is-my-life-rate).
 
-The key question: **what happens to your current rate?** A HELOC keeps it. A cash-out refinance replaces it.
+The better option is the one that **lowers your Life Rate and your total monthly payments** without stretching debt out longer than it needs to be.
 
-## When is a HELOC better?
+## When does a HELOC win?
 
-- Your current rate is **lower than today's rates** (common if you bought or refinanced in 2020 or 2021).
-- You need a **smaller amount** compared with your mortgage balance.
-- You want the money **fast**, with lower closing costs. Some of the HELOCs we arrange close in days.
-- You might want to **draw again later** as you pay it down.
+- Your **other debts are small** compared with your mortgage.
+- Your first mortgage rate is **low**, and re-pricing the whole balance would raise your Life Rate.
+- You need a **set amount** for a project or a few debts, and you want your first mortgage untouched.
 
-## When is a cash-out refinance better?
+**Example:** $420,000 left on a 3% mortgage and $15,000 on credit cards at 22%. Your Life Rate is about **3.7%**. Refinancing everything at today's rates would raise it, so a HELOC for the $15,000 is the smarter move.
 
-- Your current rate is **at or above today's rates**, so replacing it doesn't cost you anything.
-- You want **one loan and one payment**.
-- You want to **change your loan** at the same time, like dropping FHA mortgage insurance or moving from an adjustable to a fixed rate.
-- You need a **large amount** relative to your balance.
+## When does a cash-out refinance win?
 
-## How do I compare them fairly?
+- You're carrying a **lot of high-interest debt**: credit cards at 20% to 29%, car loans, personal loans, or solar and PACE liens that can run 11% or more.
+- Your **mortgage balance is modest** compared with that debt, so the high-interest balances drive your Life Rate.
+- You want **one loan and one payment** instead of five or six.
+- You also want to **change your loan**, like dropping FHA mortgage insurance or paying off a PACE lien that has to be cleared anyway.
 
-Compare the **total cost** over the years you'll keep the money, not just the monthly payment:
+**Example:** $180,000 left on a 3.25% mortgage, plus $38,000 in cards at 24%, a $30,000 car loan at 9%, and a $25,000 solar lien at 11%. Their Life Rate is about **7.5%**, and those debts take a big bite out of every paycheck. A cash-out refinance at a rate below 7.5% that pays everything off **lowers the Life Rate** and can free up hundreds of dollars a month, even though the mortgage rate itself goes up.
 
-- **HELOC:** the HELOC's rate on the cash you take, plus its costs. Your first mortgage payment doesn't change.
-- **Cash-out:** the new rate on your **whole balance**, plus closing costs, minus what you're paying now.
+## What should I watch for either way?
 
-## Example scenario (illustrative)
-
-A couple in Fort Worth owes $320,000 at 3.1% and needs $70,000 to replace their roof and pay off a car. A cash-out refinance would move all $390,000 to today's rate, raising their total interest by tens of thousands of dollars. A fixed-rate HELOC for $70,000 keeps the 3.1% loan intact and costs far less overall.
+- **Total cost, not just the payment.** Stretching car and card debt over 30 years can raise total interest. We set a payoff plan, like paying extra toward principal, so you get the lower payment **and** get out of debt faster.
+- **Your home secures the debt.** Consolidating turns unsecured debt into debt secured by your home, so the payment has to fit your budget.
+- **Closing costs.** Build them into the comparison.
+- **Don't run the cards back up.** That's the one mistake that undoes everything.
 
 ## Our take
 
-If you've got a great first-mortgage rate, **protect it**. For most homeowners today, that means a HELOC. If your rate is already high, a cash-out refinance can be the cleaner move. I'll show you both, in writing, with the total cost of each.
+Wealthy families don't marry their mortgage rate; they do the math. A 3% mortgage doesn't help much if you're drowning in 24% credit card interest. I'll calculate your Life Rate today, then show you the HELOC route and the cash-out route side by side, with the payment, the total cost, and the payoff date for each. Pick the one that lowers what your money actually costs you.

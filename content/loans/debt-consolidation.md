@@ -29,7 +29,7 @@ You borrow against your home's equity and use that money to pay the cards off in
 | **Cash-out refinance** | Replaced by a new, larger loan | One payment for everything | Your current rate is at or above today's rates |
 | **Reverse mortgage second** | Stays as is | No required monthly payment on the reverse loan | You're an older homeowner who wants to free up monthly cash flow |
 
-For most people with a low first-mortgage rate, a **HELOC** is the cleanest fit. More on each in [your options as a homeowner with credit card debt](/answers/homeowner-credit-card-debt-options).
+The right one depends on **how much debt you have and the interest on it**. Start with your [Life Rate](/answers/what-is-my-life-rate), the blended rate on everything you owe. With a small amount of card debt and a low first mortgage, a **HELOC** is usually the cleanest fit. With a lot of high-interest debt, a **cash-out refinance** can lower your Life Rate even at a higher mortgage rate. More on each in [your options as a homeowner with credit card debt](/answers/homeowner-credit-card-debt-options).
 
 ## What are the risks, honestly?
 

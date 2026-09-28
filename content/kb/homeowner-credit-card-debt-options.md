@@ -3,7 +3,7 @@ question: "I'm a homeowner with credit card debt. What are my options to pay it 
 slug: homeowner-credit-card-debt-options
 seoTitle: "Homeowner With Credit Card Debt? Your Options Compared"
 description: "Balance transfers, personal loans, debt management plans, your 401(k), home equity, or bankruptcy: how each one works for homeowners, compared."
-tldr: "As a homeowner, you have more options than most people: balance transfer cards, a personal loan, a debt management plan, and your home equity through a HELOC, home equity loan, cash-out refinance, or, if you're 62 or older, a reverse mortgage. At The Mortgage Advisory, we usually steer people toward the option that lowers their total cost without giving up a low first-mortgage rate."
+tldr: "As a homeowner, you have more options than most people: balance transfer cards, a personal loan, a debt management plan, and your home equity through a HELOC, home equity loan, cash-out refinance, or, if you're 62 or older, a reverse mortgage. At The Mortgage Advisory, we steer people toward the option that lowers their Life Rate, the blended rate on everything they owe, and their total cost."
 category: debt-consolidation
 products: [heloc, home-equity-loan, cash-out-refi, hecm, reverse-second]
 states: []
@@ -55,4 +55,4 @@ A homeowner in their 40s has $28,000 spread across four credit cards and a first
 
 ## Our take
 
-If you have a low first-mortgage rate, protect it. Compare the total cost of each option, not just the monthly payment, and pick the one you can pay off on a clear timeline. Call me and we'll lay your options side by side with real numbers. It takes about 15 minutes.
+Don't judge your options by your mortgage rate alone. Look at your [Life Rate](/answers/what-is-my-life-rate), the blended rate on everything you owe. If your card debt is small, keep your low first mortgage and use a second. If high-interest debt is large, a cash-out refinance can lower your Life Rate even at a higher mortgage rate. Compare the total cost, and pick the one you can pay off on a clear timeline. Call me and we'll lay your options side by side with real numbers. It takes about 15 minutes.
