@@ -85,12 +85,12 @@ export default async function AskPage({ searchParams }: PageProps<"/ask">) {
         q && <p className="rounded-2xl bg-mist p-5">That&apos;s a great question for Ace directly. Book a time below or give us a call.</p>
       )}
 
-      <section aria-label="Talk to Ace" className="rounded-3xl bg-brand-slate p-6 text-white">
+      <section aria-label="Talk to our team" className="rounded-3xl bg-brand-slate p-6 text-white">
         <p className="font-heading text-xl font-semibold text-white">Want a straight answer for your situation?</p>
         <p className="mt-1 text-white/90">Ace and our team will walk you through your options with real numbers.</p>
         <div className="mt-4 flex flex-wrap gap-3">
           <Link href="/book" className="rounded-full bg-white px-5 py-2.5 font-semibold text-brand-slate hover:bg-mist">
-            Book a call with Ace
+            Book a call with an advisor
           </Link>
           <a href={`tel:${licensing.phoneE164}`} className="rounded-full border border-white px-5 py-2.5 font-semibold text-white hover:bg-white/10">
             Call {licensing.phone}

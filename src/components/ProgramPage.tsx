@@ -59,12 +59,12 @@ function RelatedAnswers({ slugs }: { slugs: string[] }) {
 function LoanCta({ page }: { page: LoanPage }) {
   const booking = bookingTypes.find((b) => b.key === page.booking);
   return (
-    <section aria-label="Talk to Ace" className="rounded-2xl bg-brand-slate p-6 text-white">
+    <section aria-label="Talk to our team" className="rounded-2xl bg-brand-slate p-6 text-white">
       <p className="font-heading text-xl font-semibold text-white">Want to see your numbers?</p>
-      <p className="mt-1 text-white/90">Ask the AI assistant, or book a {booking ? `${booking.title.toLowerCase()} ` : ""}call with Ace. No pressure, plain English.</p>
+      <p className="mt-1 text-white/90">Ask the AI assistant, or book a {booking ? `${booking.title.toLowerCase()} ` : ""}call with an advisor. No pressure, plain English.</p>
       <div className="mt-4 flex flex-wrap gap-3">
         <Link href={booking ? `/book#${booking.key}` : "/book"} className="rounded-full bg-white px-5 py-2.5 font-semibold text-brand-slate hover:bg-mist">
-          Book a call with Ace
+          Book a call with an advisor
         </Link>
         <Link
           href={`/ask?q=${encodeURIComponent(page.state ? `What are my home loan options in ${page.name}?` : `Tell me about ${page.name.toLowerCase()} options for my situation`)}`}

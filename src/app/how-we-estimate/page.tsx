@@ -81,7 +81,7 @@ export default function HowWeEstimatePage() {
           Try the estimate
         </Link>
         <Link href="/book" className="rounded-full border border-brand-slate px-5 py-2.5 font-semibold text-brand-slate hover:bg-mist">
-          Book a call with Ace
+          Book a call with an advisor
         </Link>
       </div>
     </article>

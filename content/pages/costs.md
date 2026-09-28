@@ -17,7 +17,7 @@ faq:
 
 ## What are today's rates?
 
-Rates change daily, so **call or chat with Ace for today's rates**. We don't post teaser rates. Any rate we quote you comes with the APR and every assumption behind it, in writing.
+Rates change daily, so **call or chat with our team for today's rates**. We don't post teaser rates. Any rate we quote you comes with the APR and every assumption behind it, in writing.
 
 Want to see what's moving rates? The [10-year Treasury chart](#treasury-chart) below updates every business day.
 

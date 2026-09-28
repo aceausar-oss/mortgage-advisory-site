@@ -113,7 +113,7 @@ export function HeroChat({ examples }: { examples: string[] }) {
           ))}
           <li>
             <Link href="/book" className="inline-block rounded-full bg-brand-soft px-3.5 py-1.5 text-sm font-semibold text-brand-ink hover:bg-brand-blue">
-              Book a call with Ace
+              Book a call with an advisor
             </Link>
           </li>
         </ul>

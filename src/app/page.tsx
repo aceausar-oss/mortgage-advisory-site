@@ -112,10 +112,10 @@ export default function Home() {
       <div id="booking" className="scroll-mt-16">
         <FloatingCard
           id="booking-heading"
-          eyebrow="Talk to Ace"
+          eyebrow="Talk to our team"
           title={
             <>
-              Book a call with <span className="text-brand-blue-deep">Ace</span>.
+              Book a call with an <span className="text-brand-blue-deep">advisor</span>.
             </>
           }
           intro="Pick the topic that fits, choose a time, and talk it through, with no pressure and plain English."

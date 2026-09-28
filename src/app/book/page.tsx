@@ -4,9 +4,9 @@ import { bookingEmbedUrl, bookingTypes } from "@/lib/home";
 import { licensing } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Book a Call With Ace Ausar",
+  title: "Book a Call With an Advisor",
   description:
-    "Schedule a call with Ace Ausar, mortgage banker (NMLS #1549739), about reverse mortgages, HELOCs, refinancing, or buying a home in CA, TX, FL, or CO.",
+    "Schedule a call with a licensed advisor at The Mortgage Advisory (NMLS #1549739) about reverse mortgages, HELOCs, refinancing, or buying a home in CA, TX, FL, or CO.",
   alternates: { canonical: "/book" },
 };
 
@@ -18,7 +18,7 @@ export default function BookPage() {
   return (
     <div className="mx-auto max-w-5xl space-y-10 px-4 py-12 sm:px-6">
       <header className="space-y-3 text-center">
-        <h1 className="text-3xl font-bold sm:text-4xl">Book a call with Ace</h1>
+        <h1 className="text-3xl font-bold sm:text-4xl">Book a call with an advisor</h1>
         <p className="mx-auto max-w-2xl text-lg leading-relaxed">
           Pick the topic that fits and choose a time. Prefer to talk now? Call{" "}
           <a href={`tel:${licensing.phoneE164}`} className="font-semibold underline underline-offset-4">

@@ -135,7 +135,7 @@ export function ChatAssistant({ initialQuestion, phone, phoneE164 }: { initialQu
         </p>
         <span className="flex gap-2">
           <Link href="/book" className="rounded-full bg-brand-soft px-3 py-1.5 font-semibold text-brand-ink hover:bg-brand-blue">
-            Book a call with Ace
+            Book a call with an advisor
           </Link>
           <a href={`tel:${phoneE164}`} className="rounded-full border border-brand-blue px-3 py-1.5 font-semibold text-brand-slate">
             {phone}

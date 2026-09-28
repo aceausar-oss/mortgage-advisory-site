@@ -54,7 +54,7 @@ export function FaqTabs({ entries, idPrefix = "faq" }: { entries: KbEntry[]; idP
               <p className="rounded-2xl border-l-4 border-brand-blue bg-mist p-5">
                 We’re writing answers for this topic now. Have a question?{" "}
                 <Link href="/book" className="font-semibold underline underline-offset-4">
-                  Book a call with Ace
+                  Book a call with an advisor
                 </Link>
                 .
               </p>

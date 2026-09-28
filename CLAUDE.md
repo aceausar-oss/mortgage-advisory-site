@@ -153,6 +153,8 @@ Never describe the company as a CRM, software, SaaS, marketing agency, or Go Hig
 
 ---
 
+**Booking wording (Ace, Sept 2026):** calls to action reference the team, never Ace alone: "Book a call with an advisor" / "Talk to our team". Ace stays the author voice ("Our take", author box, bio).
+
 ## 7. Booking (Go High Level = single source of truth; Google Calendar synced)
 
 **Phase 1 (launch):** embed GHL booking widgets on `/book` and inside the chat.

@@ -16,12 +16,12 @@ const text = (body: string, status = 200) =>
 
 export async function POST(req: Request) {
   if (!process.env.ANTHROPIC_API_KEY) {
-    return text(`The chat assistant isn't set up yet. Please call Ace at ${licensing.phone} or [book a call](/book).`, 503);
+    return text(`The chat assistant isn't set up yet. Please call us at ${licensing.phone} or [book a call](/book).`, 503);
   }
 
   const ip = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "local";
   if (rateLimited(ip)) {
-    return text(`You've sent a lot of messages in a short time. Please try again in a few minutes, or call Ace at ${licensing.phone}.`, 429);
+    return text(`You've sent a lot of messages in a short time. Please try again in a few minutes, or call us at ${licensing.phone}.`, 429);
   }
 
   const parsed = ChatRequest.safeParse(await req.json().catch(() => null));
@@ -59,7 +59,7 @@ export async function POST(req: Request) {
         if (final.stop_reason === "refusal") {
           send(`\n\nI can't help with that one here, but Ace can. Call ${licensing.phone} or [book a call](/book).`);
         } else if (final.stop_reason === "max_tokens") {
-          send("\n\n(That answer ran long. Ask me to continue, or book a call with Ace for the full picture.)");
+          send("\n\n(That answer ran long. Ask me to continue, or book a call with an advisor for the full picture.)");
         }
       } catch (err) {
         if (err instanceof Anthropic.APIError) console.error("chat API error", err.status, err.message);

@@ -89,12 +89,12 @@ export function AuthorBox({ entry }: { entry: Pick<KbEntry, "updated" | "reviewe
 
 export function AnswerCta() {
   return (
-    <section aria-label="Talk to Ace" className="rounded-2xl bg-brand-slate p-6 text-white">
+    <section aria-label="Talk to our team" className="rounded-2xl bg-brand-slate p-6 text-white">
       <p className="font-heading text-xl font-semibold text-white">Have a question about your situation?</p>
-      <p className="mt-1 text-white/90">Talk it through with Ace — no pressure, plain English.</p>
+      <p className="mt-1 text-white/90">Talk it through with our team — no pressure, plain English.</p>
       <div className="mt-4 flex flex-wrap gap-3">
         <Link href="/book" className="rounded-full bg-white px-5 py-2.5 font-semibold text-brand-slate hover:bg-mist">
-          Book a call with Ace
+          Book a call with an advisor
         </Link>
         <a href={`tel:${licensing.phoneE164}`} className="rounded-full border border-white px-5 py-2.5 font-semibold text-white hover:bg-white/10">
           Call {licensing.phone}

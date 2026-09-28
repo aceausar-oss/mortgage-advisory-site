@@ -2,7 +2,7 @@ import Link from "next/link";
 import { bookingTypes } from "@/lib/home";
 import { licensing } from "@/lib/site";
 
-// "Book a call with Ace" (CLAUDE.md §4.6) booking boxes; the heading lives in the homepage FloatingCard.
+// "Book a call with an advisor" (CLAUDE.md §4.6) booking boxes; the heading lives in the homepage FloatingCard.
 // Cards link to the Go High Level calendars; /book embeds them.
 export function BookingSection() {
   return (
