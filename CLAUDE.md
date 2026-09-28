@@ -191,7 +191,7 @@ Embed: `<iframe src="https://api.leadconnectorhq.com/widget/booking/{CALENDAR_ID
 
 **`/licensing` page (state by state):**
 - California: DRE Real Estate Corporation License #02020987 with MLO endorsement, and DFPI California Financing Law (CFL) license 60DBO-157752 (confirmed by Ace, Sept 2026), with the statement "Loans made or arranged pursuant to a California Financing Law license."
-- Texas: SML Mortgage Company License (NMLS #1549739) + the **Mortgage Company Consumer Complaint and Recovery Fund Notice** (7 TAC §56.200(c)) — official current text from SML **[VERIFY: pending download]**. Placement: home page or a page linked from it (footer → /licensing).
+- Texas: SML Mortgage Company License (NMLS #1549739) + the **Mortgage Company Consumer Complaint and Recovery Fund Notice** (7 TAC §56.200(c)) — official text from SML's current figure (7 TAC §56.200(c), SML file updated Dec 6, 2024), copied exactly into licensing.json. Placement: home page or a page linked from it (footer → /licensing).
 - Florida: Office of Financial Regulation Mortgage Broker License MBR5368 (broker only in FL).
 - Colorado: Division of Real Estate Mortgage Company Registration (NMLS #1549739) + "Regulated by the Colorado Division of Real Estate."
 - Store all of this in `content/data/licensing.json`; the footer, `/licensing`, schema, and `llms.txt` read from that one file.
