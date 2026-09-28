@@ -13,7 +13,8 @@ related: [homeowner-credit-card-debt-options, how-does-a-heloc-work, reverse-mor
 didYouKnow:
   - text: "Credit cards commonly charge over 20% interest. Home equity loans are secured by your house, so their rates are usually far lower, which is why consolidating can save real money if you don't run the cards back up."
 updated: 2026-09-27
-status: draft
+reviewed_by: "Ace Ausar, NMLS #1549739"
+status: published
 ---
 
 ## How does paying off credit cards with home equity work?

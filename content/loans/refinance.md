@@ -14,7 +14,8 @@ didYouKnow:
   - text: "There's no magic '1% rule' for refinancing. What matters is your break-even: closing costs divided by monthly savings. If you'll stay past that point, the refinance pays for itself."
   - text: "A VA streamline refinance (IRRRL) usually needs no appraisal and lighter paperwork, and VA requires the costs to be recouped within 36 months."
 updated: 2026-09-27
-status: draft
+reviewed_by: "Ace Ausar, NMLS #1549739"
+status: published
 ---
 
 ## When does refinancing make sense?
