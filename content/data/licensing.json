@@ -24,8 +24,8 @@
       "code": "CA",
       "name": "California",
       "regulator": "California Department of Financial Protection and Innovation (DFPI)",
-      "licenseType": "[VERIFY: CRMLA vs. CFL]",
-      "licenseNumber": "[VERIFY]",
+      "licenseType": "[VERIFY: confirm license type. DFPI numbers starting 60DBO are usually California Financing Law (CFL) licenses]",
+      "licenseNumber": "60DBO-157752",
       "statement": "[VERIFY: DFPI-required licensing statement]"
     },
     {
