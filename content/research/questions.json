@@ -29,8 +29,8 @@
       ],
       "firstSeen": "2026-09-26",
       "lastSeen": "2026-09-26",
-      "status": "new",
-      "kbSlug": null,
+      "status": "drafting",
+      "kbSlug": "reverse-mortgage-when-borrower-dies",
       "notes": "Reddit 'People also search for': 'negotiating a reverse mortgage payoff' (HECM heirs can pay the lesser of balance or 95% of appraised value)."
     },
     {
@@ -135,8 +135,8 @@
       "officialSources": [],
       "firstSeen": "2026-09-26",
       "lastSeen": "2026-09-26",
-      "status": "new",
-      "kbSlug": null
+      "status": "drafting",
+      "kbSlug": "reverse-mortgage-assisted-living"
     },
     {
       "id": "rm-benefits-impact",
@@ -158,8 +158,8 @@
       "officialSources": [],
       "firstSeen": "2026-09-26",
       "lastSeen": "2026-09-26",
-      "status": "new",
-      "kbSlug": null
+      "status": "drafting",
+      "kbSlug": "reverse-mortgage-medicaid-social-security"
     },
     {
       "id": "rm-costs",
@@ -567,8 +567,8 @@
       "officialSources": [],
       "firstSeen": "2026-09-26",
       "lastSeen": "2026-09-26",
-      "status": "new",
-      "kbSlug": null
+      "status": "drafting",
+      "kbSlug": "consolidate-debt-bad-credit-high-dti"
     },
     {
       "id": "dc-risks",
@@ -597,8 +597,8 @@
       "notes": "Required disclosure topic under CLAUDE.md §8 debt consolidation rule. Real examples this week: people who consolidated, then maxed their cards again (debt doubled).",
       "firstSeen": "2026-09-26",
       "lastSeen": "2026-09-26",
-      "status": "new",
-      "kbSlug": null
+      "status": "drafting",
+      "kbSlug": "risks-of-secured-debt-consolidation"
     },
     {
       "id": "dc-reverse-pay-debt",
@@ -622,8 +622,8 @@
       "officialSources": [],
       "firstSeen": "2026-09-26",
       "lastSeen": "2026-09-26",
-      "status": "new",
-      "kbSlug": null
+      "status": "drafting",
+      "kbSlug": "reverse-mortgage-pay-off-debt"
     },
     {
       "id": "refi-when-worth-it",
@@ -2444,8 +2444,8 @@
       "officialSources": [],
       "firstSeen": "2026-09-26",
       "lastSeen": "2026-09-27",
-      "status": "new",
-      "kbSlug": null,
+      "status": "drafting",
+      "kbSlug": "buyer-closing-costs-and-escrow",
       "notes": "First question in the Costs & Pricing tab; feeds /costs fee sheet (§9)."
     },
     {
@@ -2813,8 +2813,8 @@
       "officialSources": [],
       "firstSeen": "2026-09-26",
       "lastSeen": "2026-09-26",
-      "status": "new",
-      "kbSlug": null
+      "status": "drafting",
+      "kbSlug": "personal-loan-vs-home-equity-debt"
     },
     {
       "id": "facing-foreclosure",
@@ -2971,8 +2971,8 @@
       "officialSources": [],
       "firstSeen": "2026-09-26",
       "lastSeen": "2026-09-26",
-      "status": "new",
-      "kbSlug": null,
+      "status": "drafting",
+      "kbSlug": "escrow-shortage-payment-went-up",
       "notes": "Property tax and insurance increases; NJ example. Good Costs & Pricing tab entry."
     },
     {
@@ -2991,8 +2991,8 @@
       "officialSources": [],
       "firstSeen": "2026-09-26",
       "lastSeen": "2026-09-26",
-      "status": "new",
-      "kbSlug": null,
+      "status": "drafting",
+      "kbSlug": "mortgage-sold-new-servicer",
       "notes": "PennyMac complaint thread cross-posted to 4 subreddits (counted once). Confirm whether we service our own loans before writing."
     },
     {
@@ -3120,8 +3120,8 @@
       "officialSources": [],
       "firstSeen": "2026-09-27",
       "lastSeen": "2026-09-27",
-      "status": "new",
-      "kbSlug": null,
+      "status": "drafting",
+      "kbSlug": "extra-mortgage-payments-to-principal",
       "notes": "232- and 279-upvote threads (payments placed in 'paid-ahead' or 'unapplied funds')."
     },
     {
