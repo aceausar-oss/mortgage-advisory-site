@@ -35,7 +35,7 @@ const FUNDING: Record<LoanPage["funding"], string> = {
   broker:
     "We arrange this loan through approved partner lenders and act as your mortgage broker. The partner lender funds the loan. We'll tell you upfront who your lender is and exactly how we're paid; it's all on your Loan Estimate.",
   mixed:
-    "It depends on the loan. We're the direct lender on conventional and Non-QM loans. FHA and VA loans are arranged through approved partner lenders, with us as your mortgage broker. Either way, we tell you upfront who your lender is and how we're paid; it's all on your Loan Estimate.",
+    "It depends on the loan. We're the direct lender on conventional and Non-QM loans. FHA loans, VA loans, reverse mortgages, and HELOCs are arranged through approved partner lenders, with us as your mortgage broker. Either way, we tell you upfront who your lender is and how we're paid; it's all on your Loan Estimate.",
 };
 
 function WhoFunds({ funding }: { funding: LoanPage["funding"] }) {
