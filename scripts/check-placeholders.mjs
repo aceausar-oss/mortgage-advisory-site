@@ -1,5 +1,5 @@
 // Fails a production build while unverified placeholder text remains (CLAUDE.md §8, §12).
-// Production = Vercel production deploys, or STRICT_PLACEHOLDERS=1. Everywhere else it only warns.
+// Production = Vercel production deploys on the real domain, or STRICT_PLACEHOLDERS=1. Everywhere else it only warns.
 import { readdir, readFile } from "node:fs/promises";
 import { join } from "node:path";
 
@@ -25,7 +25,11 @@ for (const root of ROOTS) {
   }
 }
 
-const strict = process.env.VERCEL_ENV === "production" || process.env.STRICT_PLACEHOLDERS === "1";
+// Strict only once the real domain is attached: before launch, Vercel's "production" is just the private
+// *.vercel.app test address, so the site can be tested there while placeholders are still being filled.
+const productionHost = process.env.VERCEL_PROJECT_PRODUCTION_URL ?? "";
+const onRealDomain = process.env.VERCEL_ENV === "production" && productionHost !== "" && !productionHost.endsWith(".vercel.app");
+const strict = onRealDomain || process.env.STRICT_PLACEHOLDERS === "1";
 
 if (hits.length === 0) {
   console.log("Placeholder check: none found.");
