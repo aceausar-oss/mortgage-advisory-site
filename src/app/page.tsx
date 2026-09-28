@@ -63,6 +63,9 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Market reality in three numbers (sourced, content/data/stats.json): the big picture before "check yours". */}
+        <StatsBand stats={verifiedStats} />
+
         {/* 4.3 Equity slider + licensed states */}
         <FloatingCard
           bare
@@ -81,9 +84,6 @@ export default function Home() {
           </div>
         </FloatingCard>
       </div>
-
-      {/* Market reality in three numbers (sourced, content/data/stats.json) */}
-      <StatsBand stats={verifiedStats} />
 
       {/* 4.4 Stories */}
       <section aria-labelledby="goals-heading" className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
