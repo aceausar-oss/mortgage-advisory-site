@@ -6,10 +6,10 @@ import { z } from "zod";
 import { CATEGORY_KEYS } from "@/lib/categories";
 import { DidYouKnowList, PRODUCTS, Source, showDrafts } from "@/lib/kb";
 
-// Loan program pages (CLAUDE.md §5 /loans/*, page template §6). One markdown file per program in content/loans/.
-// Same editorial rules as the answers: question H1, TL;DR naming the brand, Ace's review before publishing.
+// Loan program pages (/loans/*, content/loans/) and state pages (/locations/*, content/locations/), both on the
+// page template (CLAUDE.md §6). Same editorial rules as the answers: question H1, TL;DR naming the brand,
+// Ace's review before publishing.
 
-const LOANS_DIR = path.join(process.cwd(), "content", "loans");
 const BRAND = "The Mortgage Advisory";
 
 export const LOAN_SLUGS = [
@@ -24,9 +24,11 @@ export const LOAN_SLUGS = [
   "non-qm",
 ] as const;
 
+export const LOCATION_SLUGS = ["california", "texas", "florida", "colorado"] as const;
+
 const Frontmatter = z
   .object({
-    slug: z.enum(LOAN_SLUGS),
+    slug: z.string().regex(/^[a-z0-9-]+$/),
     name: z.string().min(3), // short program name for breadcrumbs, nav, and schema
     question: z.string().min(10),
     seoTitle: z.string().max(60).optional(),
@@ -35,8 +37,9 @@ const Frontmatter = z
     category: z.enum(CATEGORY_KEYS), // drives disclosures and the "more answers" link
     products: z.array(z.enum(PRODUCTS)).default([]),
     // Who funds the loan (CLAUDE.md §8): we lend directly on conventional and Non-QM; everything else is brokered.
-    funding: z.enum(["direct", "broker", "mixed"]),
-    booking: z.enum(["reverse", "equity", "purchase"]),
+    funding: z.enum(["direct", "broker", "mixed"]).default("mixed"),
+    booking: z.enum(["reverse", "equity", "purchase"]).optional(), // omit to link the general /book page
+    state: z.enum(["CA", "TX", "FL", "CO"]).optional(), // location pages only
     related: z.array(z.string()).default([]), // answer slugs, checked at load time
     sources: z.array(Source).default([]),
     didYouKnow: DidYouKnowList,
@@ -48,23 +51,33 @@ const Frontmatter = z
   .refine((d) => d.tldr.includes(BRAND), { message: `tldr must name the brand ("${BRAND}")` })
   .refine((d) => d.status !== "published" || !!d.reviewed_by?.trim(), { message: "published pages need reviewed_by (Ace's review)" });
 
-export type LoanPage = Omit<z.infer<typeof Frontmatter>, "updated"> & { updated: string; html: string; body: string; isDraft: boolean };
+export type LoanPage = Omit<z.infer<typeof Frontmatter>, "updated"> & {
+  updated: string;
+  html: string;
+  body: string;
+  isDraft: boolean;
+  basePath: "/loans" | "/locations";
+};
 
-let cache: LoanPage[] | null = null;
+const cache = new Map<string, LoanPage[]>();
 
-function loadAll(): LoanPage[] {
-  if (cache) return cache;
-  if (!fs.existsSync(LOANS_DIR)) return (cache = []);
+function loadAll(kind: "loans" | "locations"): LoanPage[] {
+  const hit = cache.get(kind);
+  if (hit) return hit;
+  const dir = path.join(process.cwd(), "content", kind);
+  const allowed: readonly string[] = kind === "loans" ? LOAN_SLUGS : LOCATION_SLUGS;
+  if (!fs.existsSync(dir)) return [];
   const pages: LoanPage[] = [];
   const errors: string[] = [];
-  for (const file of fs.readdirSync(LOANS_DIR).filter((f) => f.endsWith(".md")).sort()) {
-    const { data, content } = matter(fs.readFileSync(path.join(LOANS_DIR, file), "utf8"));
+  for (const file of fs.readdirSync(dir).filter((f) => f.endsWith(".md")).sort()) {
+    const { data, content } = matter(fs.readFileSync(path.join(dir, file), "utf8"));
     const parsed = Frontmatter.safeParse(data);
     if (!parsed.success) {
       errors.push(`${file}: ${parsed.error.issues.map((i) => `${i.path.join(".") || "file"} — ${i.message}`).join("; ")}`);
       continue;
     }
     if (`${parsed.data.slug}.md` !== file) errors.push(`${file}: slug "${parsed.data.slug}" must match the file name`);
+    if (!allowed.includes(parsed.data.slug)) errors.push(`${file}: slug must be one of ${allowed.join(", ")}`);
     for (const r of parsed.data.related) {
       if (!fs.existsSync(path.join(process.cwd(), "content", "kb", `${r}.md`))) errors.push(`${file}: related answer "${r}" not found`);
     }
@@ -74,16 +87,27 @@ function loadAll(): LoanPage[] {
       body: content.trim(),
       html: marked.parse(content, { async: false }),
       isDraft: parsed.data.status === "draft",
+      basePath: `/${kind}`,
     });
   }
-  if (errors.length) throw new Error(`content/loans has ${errors.length} problem(s):\n${errors.join("\n")}`);
-  return (cache = pages);
+  if (errors.length) throw new Error(`content/${kind} has ${errors.length} problem(s):\n${errors.join("\n")}`);
+  pages.sort((a, b) => allowed.indexOf(a.slug) - allowed.indexOf(b.slug)); // menu order, not file order
+  cache.set(kind, pages);
+  return pages;
 }
 
 export function getLoanPages(): LoanPage[] {
-  return loadAll().filter((p) => showDrafts || !p.isDraft);
+  return loadAll("loans").filter((p) => showDrafts || !p.isDraft);
 }
 
 export function getLoanPage(slug: string): LoanPage | undefined {
   return getLoanPages().find((p) => p.slug === slug);
+}
+
+export function getLocationPages(): LoanPage[] {
+  return loadAll("locations").filter((p) => showDrafts || !p.isDraft);
+}
+
+export function getLocationPage(slug: string): LoanPage | undefined {
+  return getLocationPages().find((p) => p.slug === slug);
 }

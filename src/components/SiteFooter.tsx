@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { EqualHousingLenderLogo } from "@/components/EqualHousingLenderLogo";
+import { getLoanPages, getLocationPages } from "@/lib/loans";
 import { fullAddress, legalNav, licensing, stateCodes } from "@/lib/site";
 
 // Compliance block required on every page (CLAUDE.md §8). All facts come from content/data/licensing.json.
@@ -45,6 +46,26 @@ export function SiteFooter() {
               Equal Housing Lender
             </span>
           </div>
+        </div>
+
+        <div className="grid gap-6 sm:grid-cols-2">
+          {[
+            { label: "Loans", pages: getLoanPages() },
+            { label: "Where we lend", pages: getLocationPages() },
+          ].map((group) => (
+            <nav key={group.label} aria-label={group.label}>
+              <p className="font-heading text-sm font-semibold uppercase tracking-wide text-brand-slate">{group.label}</p>
+              <ul className="mt-2 flex flex-wrap gap-x-5 gap-y-1.5 text-sm">
+                {group.pages.map((p) => (
+                  <li key={p.slug}>
+                    <Link href={`${p.basePath}/${p.slug}`} className="text-brand-ink hover:text-brand-button hover:underline underline-offset-4">
+                      {p.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          ))}
         </div>
 
         <nav aria-label="Legal">
