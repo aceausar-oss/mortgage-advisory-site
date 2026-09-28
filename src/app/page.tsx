@@ -13,7 +13,6 @@ import { StorySections } from "@/components/home/StorySections";
 import { pricing, verifiedStats } from "@/lib/home";
 import { categoryLabel } from "@/lib/categories";
 import { getEntries } from "@/lib/kb";
-import { licensing, stateCodes } from "@/lib/site";
 
 export default function Home() {
   const entries = getEntries();
@@ -29,9 +28,6 @@ export default function Home() {
         <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 bottom-0 h-48 bg-gradient-to-b from-transparent to-white" />
         <section aria-label="Introduction">
           <div className="relative mx-auto max-w-5xl space-y-6 px-4 pb-16 pt-14 text-center sm:px-6 sm:pt-20">
-            <p className="inline-block rounded-full border border-brand-steel/40 bg-white px-4 py-1 text-sm font-medium text-brand-slate">
-              Direct Lender & Broker · NMLS #{licensing.nmls} · Licensed in {stateCodes.join(", ")}
-            </p>
             <h1 className="text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
               Tap your home equity and <em className="not-italic text-brand-blue-deep">keep</em> your low rate.
             </h1>

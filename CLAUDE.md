@@ -61,7 +61,7 @@ Never describe the company as a CRM, software, SaaS, marketing agency, or Go Hig
 
 ### 4.1 Hero (Vora IQ layout — design rank #1)
 - Soft `bg-mist` gradient with a subtle blurred brand-blue shape behind the chat box.
-- Top trust badge (pill): `Direct Lender & Broker · NMLS #1549739 · Licensed in CA, TX, FL, CO`.
+- No trust badge in the hero (removed by Ace, Sept 2026): NMLS, lender/broker status, and licensed states live in the footer compliance block.
 - H1 (one line on desktop): e.g. "Get the right home loan — **answered** in minutes." (highlight one word in `brand-blue`).
 - Subhead (approved): "Access cash with HELOCs, reverse mortgages, and home loans. Ask our AI mortgage assistant anything, and our team will take it from there." (The trust badge above it carries Direct Lender & Broker · NMLS · licensed states.)
 - **Large chat box** (Base44/Vora size), with a typing-placeholder animation cycling real questions.
