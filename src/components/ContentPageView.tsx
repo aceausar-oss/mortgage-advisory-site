@@ -7,7 +7,8 @@ import { siteUrl } from "@/lib/site";
 
 export function contentPageMetadata(page: ContentPage): Metadata {
   return {
-    title: page.title,
+    // Long legal titles (e.g. Do Not Sell or Share…) skip the brand suffix to stay near 60 characters.
+    title: page.title.length > 35 ? { absolute: page.title } : page.title,
     description: page.description,
     alternates: { canonical: `/${page.slug}` },
     openGraph: { title: page.title, description: page.description, url: `/${page.slug}` },

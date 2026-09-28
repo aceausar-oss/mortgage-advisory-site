@@ -75,7 +75,7 @@ export function ReviewsCarousel() {
           id="reviews-row"
           tabIndex={0}
           aria-label="Google reviews, scroll sideways for more"
-          className="flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth scroll-px-4 px-4 pb-8 pt-3 [scrollbar-width:thin] sm:scroll-px-[max(1.5rem,calc((100vw-72rem)/2))] sm:px-[max(1.5rem,calc((100vw-72rem)/2))]"
+          className="relative flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth scroll-px-4 px-4 pb-8 pt-3 [scrollbar-width:thin] sm:scroll-px-[max(1.5rem,calc((100vw-72rem)/2))] sm:px-[max(1.5rem,calc((100vw-72rem)/2))]"
         >
           {featured.map((r) => (
             <li key={r.name} className="w-[80%] shrink-0 snap-start sm:w-[calc((100vw-4.25rem)/2)] lg:w-[calc((min(100vw,72rem)-6.75rem)/4)]">

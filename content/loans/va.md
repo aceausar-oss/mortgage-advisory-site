@@ -4,7 +4,7 @@ name: "VA Loans"
 question: "Can I buy a home with no money down using my VA loan?"
 seoTitle: "VA Loans: Can I Buy a Home With No Money Down?"
 description: "Often, yes. Eligible veterans and service members can buy with 0% down and no monthly mortgage insurance. VA funding fee, eligibility, and costs explained."
-tldr: "Often, yes. With full VA entitlement, eligible veterans, service members, and some surviving spouses can buy a home with no down payment and no monthly mortgage insurance. The Mortgage Advisory is a direct VA lender for purchase and refinance loans in California, Texas, Florida, and Colorado, pulls your Certificate of Eligibility, and shows you every cost, including the VA funding fee or your exemption from it."
+tldr: "Often, yes. With full VA entitlement, eligible veterans, service members, and some surviving spouses can buy a home with no down payment and no monthly mortgage insurance. The Mortgage Advisory is a direct VA lender for purchase and refinance loans in California, Texas, and Colorado (and arranges VA loans in Florida as a licensed mortgage broker), pulls your Certificate of Eligibility, and shows you every cost, including the VA funding fee or your exemption from it."
 category: buying
 products: [va]
 funding: direct

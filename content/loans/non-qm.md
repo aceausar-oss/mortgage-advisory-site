@@ -4,7 +4,7 @@ name: "Self-Employed & Non-QM"
 question: "Can I get a mortgage if I'm self-employed and my tax returns show low income?"
 seoTitle: "Self-Employed Mortgage: Qualify Without Tax Returns?"
 description: "Yes. Non-QM loans use bank statements, 1099s, or rental income instead of tax returns. How bank statement and DSCR loans work, and what they cost."
-tldr: "Yes. Non-QM loans let self-employed borrowers and investors qualify using bank statements, 1099s, or a property's rental income instead of tax returns full of write-offs. The Mortgage Advisory is the direct lender on Non-QM loans in California, Texas, Florida, and Colorado, and we're upfront that they usually cost more than conventional loans and need a bigger down payment."
+tldr: "Yes. Non-QM loans let self-employed borrowers and investors qualify using bank statements, 1099s, or a property's rental income instead of tax returns full of write-offs. The Mortgage Advisory is the direct lender on Non-QM loans in California, Texas, and Colorado (in Florida, we arrange them as a licensed mortgage broker), and we're upfront that they usually cost more than conventional loans and need a bigger down payment."
 category: self-employed
 products: [non-qm]
 funding: direct

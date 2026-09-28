@@ -1,6 +1,6 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { chatSystemPrompt } from "@/lib/chat/prompt";
-import { ChatRequest, rateLimited, scrubPii } from "@/lib/chat/guard";
+import { ChatRequest, MAX_BODY_BYTES, rateLimited, scrubPii } from "@/lib/chat/guard";
 import { licensing } from "@/lib/site";
 
 // AI assistant endpoint (CLAUDE.md §11). Server-only: the API key never reaches the browser.
@@ -19,12 +19,20 @@ export async function POST(req: Request) {
     return text(`The chat assistant isn't set up yet. Please call us at ${licensing.phone} or [book a call](/book).`, 503);
   }
 
-  const ip = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "local";
+  // On Vercel, x-real-ip is set by the platform (visitors can't spoof it); x-forwarded-for is the fallback elsewhere.
+  const ip = req.headers.get("x-real-ip")?.trim() || req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "local";
   if (rateLimited(ip)) {
     return text(`You've sent a lot of messages in a short time. Please try again in a few minutes, or call us at ${licensing.phone}.`, 429);
   }
 
-  const parsed = ChatRequest.safeParse(await req.json().catch(() => null));
+  if (Number(req.headers.get("content-length") ?? 0) > MAX_BODY_BYTES) return text("That message is too long. Please shorten it and try again.", 413);
+  const raw = await req.text().catch(() => "");
+  if (raw.length > MAX_BODY_BYTES) return text("That message is too long. Please shorten it and try again.", 413);
+  let payload: unknown = null;
+  try {
+    payload = JSON.parse(raw);
+  } catch {}
+  const parsed = ChatRequest.safeParse(payload);
   if (!parsed.success) return text("Sorry, I couldn't read that message. Please try again.", 400);
 
   let scrubbed = false;

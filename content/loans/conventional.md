@@ -4,7 +4,7 @@ name: "Conventional Loans"
 question: "What do I need to qualify for a conventional loan?"
 seoTitle: "Conventional Loan Requirements: What Do I Need?"
 description: "Conventional loans allow 3% down for first-time buyers, and mortgage insurance comes off as you build equity. Requirements and costs explained."
-tldr: "Usually a credit score of 620 or higher, steady documented income, and as little as 3% down for first-time buyers (5% otherwise). The Mortgage Advisory is the direct lender on conventional loans in California, Texas, Florida, and Colorado, for primary homes, second homes, and investment properties, and mortgage insurance can come off once you reach 20% equity."
+tldr: "Usually a credit score of 620 or higher, steady documented income, and as little as 3% down for first-time buyers (5% otherwise). The Mortgage Advisory is the direct lender on conventional loans in California, Texas, and Colorado (in Florida, we arrange them as a licensed mortgage broker), for primary homes, second homes, and investment properties, and mortgage insurance can come off once you reach 20% equity."
 category: buying
 products: [conventional]
 funding: direct

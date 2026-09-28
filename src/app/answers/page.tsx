@@ -8,7 +8,7 @@ import { licensing } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Mortgage Questions Answered",
   description:
-    "Plain-English answers to real borrower questions about buying, refinancing, HELOCs, reverse mortgages, VA and FHA loans from a licensed lender and broker (NMLS #1549739).",
+    "Plain-English answers to real questions about buying, refinancing, HELOCs, reverse mortgages, VA and FHA loans. Licensed lender and broker, NMLS #1549739.",
   alternates: { canonical: "/answers" },
 };
 

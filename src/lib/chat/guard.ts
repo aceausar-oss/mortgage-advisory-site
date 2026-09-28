@@ -4,13 +4,15 @@ import { z } from "zod";
 
 export const MAX_MESSAGES = 20;
 export const MAX_CHARS = 2000;
+// Largest request body we'll read (20 messages × 8,000 chars leaves plenty of room); bigger bodies get a 413 unread.
+export const MAX_BODY_BYTES = 200_000;
 
 export const ChatRequest = z.object({
   messages: z
     .array(z.object({ role: z.enum(["user", "assistant"]), content: z.string().min(1).max(MAX_CHARS * 4) }))
     .min(1)
     .max(MAX_MESSAGES)
-    .refine((m) => m[0].role === "user" && m[m.length - 1].role === "user", "conversation must start and end with the user")
+    .refine((m) => m.length > 0 && m[0].role === "user" && m[m.length - 1].role === "user", "conversation must start and end with the user")
     .refine((m) => m.every((x, i) => i === 0 || x.role !== m[i - 1].role), "roles must alternate")
     .refine((m) => m.filter((x) => x.role === "user").every((x) => x.content.length <= MAX_CHARS), "message too long"),
 });

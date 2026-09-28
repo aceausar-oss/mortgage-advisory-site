@@ -6,7 +6,7 @@ import { licensing } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Book a Call With an Advisor",
   description:
-    "Schedule a call with a licensed advisor at The Mortgage Advisory (NMLS #1549739) about reverse mortgages, HELOCs, refinancing, or buying a home in CA, TX, FL, or CO.",
+    "Schedule a call with a licensed advisor at The Mortgage Advisory (NMLS #1549739) about reverse mortgages, HELOCs, refinancing, or buying a home.",
   alternates: { canonical: "/book" },
 };
 

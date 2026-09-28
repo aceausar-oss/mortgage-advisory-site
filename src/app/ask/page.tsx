@@ -5,8 +5,8 @@ import { categoryLabel } from "@/lib/categories";
 import { rankEntries } from "@/lib/kb";
 import { licensing } from "@/lib/site";
 
-// Destination for the hero question box, chips, and slider (until the AI chat arrives in Build Order step 4):
-// shows the best-matching answers plus ways to reach Ace. Works with JavaScript disabled.
+// Destination for the hero question box, chips, and slider: starts the AI chat with the question, and lists the
+// best-matching answers plus ways to reach us. Without JavaScript, the answers list and a plain form still work.
 export const metadata: Metadata = {
   title: "Ask a Mortgage Question",
   description: "Get plain-English answers to your mortgage, HELOC, reverse mortgage, and home equity questions from a licensed mortgage lender and broker, NMLS #1549739.",

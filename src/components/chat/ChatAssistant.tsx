@@ -197,10 +197,12 @@ function inline(s: string): ReactNode[] {
     if (m.index > last) out.push(s.slice(last, m.index));
     if (m[1]) {
       const href = m[2];
-      const safe = href.startsWith("/") || href.startsWith("https://");
+      // Only our own pages ("/path", never protocol-relative "//host") or https links become clickable.
+      const internal = href.startsWith("/") && !href.startsWith("//");
+      const safe = internal || href.startsWith("https://");
       out.push(
         safe ? (
-          href.startsWith("/") ? (
+          internal ? (
             <Link key={m.index} href={href} className="font-semibold text-brand-button underline underline-offset-2">
               {m[1]}
             </Link>

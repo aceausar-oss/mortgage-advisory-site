@@ -2,7 +2,7 @@
 question: "What is a DSCR loan, and how do I qualify for one?"
 slug: what-is-a-dscr-loan
 description: "A DSCR loan qualifies you on a rental property's income instead of your personal income. Usually 20% to 25% down, and prepayment penalties are common."
-tldr: "A DSCR loan is for rental properties: you qualify based on whether the property's rent covers its payment, not on your personal income or tax returns. Most programs look for rent at or above the full monthly payment and ask for about 20% to 25% down. The Mortgage Advisory is the direct lender on DSCR loans in California, Texas, Florida, and Colorado, and we're upfront about the prepayment penalties that often come with them."
+tldr: "A DSCR loan is for rental properties: you qualify based on whether the property's rent covers its payment, not on your personal income or tax returns. Most programs look for rent at or above the full monthly payment and ask for about 20% to 25% down. The Mortgage Advisory is the direct lender on DSCR loans in California, Texas, and Colorado (in Florida, we arrange them as a licensed mortgage broker), and we're upfront about the prepayment penalties that often come with them."
 category: self-employed
 products: [non-qm]
 states: []
