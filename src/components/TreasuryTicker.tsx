@@ -17,7 +17,7 @@ export async function TreasuryTicker() {
   const prev = data[data.length - 2];
 
   return (
-    <div className="bg-brand-slate text-white">
+    <div className="bg-charcoal text-white">
       <div className="relative mx-auto flex max-w-7xl items-center gap-5 overflow-x-auto whitespace-nowrap px-4 py-1.5 text-xs sm:px-6">
         {ITEMS.map(({ key, label }) => {
           const change = today[key] - prev[key];
