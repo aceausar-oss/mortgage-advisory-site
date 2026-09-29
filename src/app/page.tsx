@@ -24,11 +24,10 @@ export default function Home() {
     <>
       {/* 4.1 Hero + 4.3 equity card share one continuous background (no seam between them). */}
       <div className="relative isolate overflow-hidden bg-mist">
-        {/* "AI shimmer": slow-moving light-blue glow behind the hero (static when reduced motion is on). */}
-        <div aria-hidden="true" className="ai-shimmer" />
-        {/* Fade the glow to white at the bottom so it melts into the stories section with no edge. */}
-        <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 bottom-0 h-48 bg-gradient-to-b from-transparent to-mist" />
-        <section aria-label="Introduction">
+        {/* Silver theme: the hero wears a brushed-platinum finish that fades into the silver page below it. */}
+        <section aria-label="Introduction" className="relative isolate overflow-hidden">
+          <div aria-hidden="true" className="platinum" />
+          <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-mist" />
           <div className="relative mx-auto max-w-5xl space-y-6 px-4 pb-16 pt-14 text-center sm:px-6 sm:pt-20">
             <h1 className="text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
               Tap your home equity and <em className="not-italic text-brand-blue-deep">keep</em> your low rate.
