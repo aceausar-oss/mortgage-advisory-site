@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { licensing, mainNav } from "@/lib/site";
+import { licensing, mainNav, resourcesNav } from "@/lib/site";
 
 export function SiteHeader() {
   return (
@@ -18,7 +18,7 @@ export function SiteHeader() {
           />
         </Link>
 
-        <nav aria-label="Main" className="hidden xl:block">
+        <nav aria-label="Main" className="hidden lg:block">
           <ul className="flex items-center gap-6 text-sm font-medium text-brand-slate">
             {mainNav.map((item) => (
               <li key={item.href}>
@@ -27,6 +27,26 @@ export function SiteHeader() {
                 </Link>
               </li>
             ))}
+            {/* "Resources" dropdown: opens on hover and on keyboard focus (focus-within), so it needs no JavaScript. */}
+            <li className="group relative">
+              <button type="button" aria-haspopup="true" className="flex items-center gap-1 whitespace-nowrap hover:underline underline-offset-4">
+                Resources
+                <svg viewBox="0 0 20 20" aria-hidden="true" className="h-4 w-4 transition group-hover:rotate-180 group-focus-within:rotate-180" fill="currentColor">
+                  <path d="M5.2 7.2a.75.75 0 0 1 1.06 0L10 10.94l3.74-3.74a.75.75 0 1 1 1.06 1.06l-4.27 4.27a.75.75 0 0 1-1.06 0L5.2 8.26a.75.75 0 0 1 0-1.06z" />
+                </svg>
+              </button>
+              <div className="invisible absolute right-0 top-full z-50 pt-3 opacity-0 transition group-focus-within:visible group-focus-within:opacity-100 group-hover:visible group-hover:opacity-100">
+                <ul className="w-56 rounded-2xl bg-white p-2 shadow-lg ring-1 ring-black/5">
+                  {resourcesNav.map((item) => (
+                    <li key={item.href}>
+                      <Link href={item.href} className="block rounded-lg px-3 py-2 hover:bg-mist">
+                        {item.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </li>
           </ul>
         </nav>
 
@@ -45,7 +65,7 @@ export function SiteHeader() {
           </Link>
 
           {/* Mobile menu: <details> works with JavaScript disabled. */}
-          <details className="group relative xl:hidden">
+          <details className="group relative lg:hidden">
             <summary className="flex h-10 w-10 cursor-pointer list-none items-center justify-center rounded-full border border-brand-steel/50 text-brand-slate [&::-webkit-details-marker]:hidden">
               <span className="sr-only">Menu</span>
               <svg viewBox="0 0 24 24" aria-hidden="true" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
@@ -65,7 +85,15 @@ export function SiteHeader() {
                     </Link>
                   </li>
                 ))}
-                <li>
+                <li className="mt-1 border-t border-brand-steel/20 px-3 pb-1 pt-3 text-xs font-semibold uppercase tracking-wide text-brand-steel">Resources</li>
+                {resourcesNav.map((item) => (
+                  <li key={item.href}>
+                    <Link href={item.href} className="block rounded-lg px-3 py-2 hover:bg-mist">
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+                <li className="mt-1 border-t border-brand-steel/20 pt-1">
                   <a href={`tel:${licensing.phoneE164}`} className="block rounded-lg px-3 py-2 font-semibold hover:bg-mist">
                     Call {licensing.phone}
                   </a>
