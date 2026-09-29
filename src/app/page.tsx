@@ -86,7 +86,8 @@ export default function Home() {
       </div>
 
       {/* 4.4 Stories, introduced Amex-style: wide home photo, icon, section title */}
-      <section aria-labelledby="goals-heading" className="mx-auto max-w-6xl px-4 pb-16 sm:px-6">
+      <section aria-labelledby="goals-heading" className="px-4 pb-16 sm:px-6">
+        <div className="mx-auto max-w-6xl">
         <ParallaxImage
           src="/images/pages/home-banner-photo.jpg"
           alt="Craftsman-style home with a stone porch and garden in warm evening light"
@@ -105,6 +106,7 @@ export default function Home() {
         </div>
         <div className="mt-10">
           <StorySections />
+        </div>
         </div>
       </section>
 
