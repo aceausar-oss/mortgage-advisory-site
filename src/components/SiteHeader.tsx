@@ -5,7 +5,7 @@ import { licensing, mainNav } from "@/lib/site";
 export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-brand-steel/30 bg-white/95 backdrop-blur">
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-2 px-4 py-3 sm:gap-4 sm:px-6">
+      <div className="mx-auto flex max-w-[75rem] items-center justify-between gap-2 px-4 py-3 sm:gap-4 sm:px-6">
         <Link href="/" className="shrink-0" aria-label={`${licensing.brandName} home`}>
           <Image
             src="/brand/logo-tma-2026.png"
