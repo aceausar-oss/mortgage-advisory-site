@@ -15,7 +15,7 @@
   --color-brand-steel: #87959f;
   --color-brand-ink: #231f20;
   --color-mist: #f3f8fc;
-  --color-charcoal: #43565f; /* dark panels and photo labels (blue theme: brand slate), white text 7.6:1 */
+  --color-charcoal: #414246; /* Amex charcoal (same as Silver): Life Rate panel, callouts, photo labels; white text 10:1 */
 
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-heading: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
