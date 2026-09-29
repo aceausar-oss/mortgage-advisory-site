@@ -67,7 +67,7 @@ export function HeroChat({ examples }: { examples: string[] }) {
         method="get"
         role="search"
         aria-label="Ask a mortgage question"
-        className="rounded-3xl border border-brand-steel/30 bg-white p-4 shadow-xl sm:p-5"
+        className="silver-frame rounded-3xl p-4 sm:p-5"
       >
         <label htmlFor="hero-q" className="sr-only">
           Ask a mortgage question
