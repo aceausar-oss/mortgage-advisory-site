@@ -30,7 +30,7 @@ const GOALS = [
   },
   {
     href: "/answers/what-is-my-life-rate",
-    image: "/images/goals/goal-debt.jpg",
+    image: "/images/goals/goal-debt-photo.jpg",
     alt: "Relieved couple at the kitchen table with a laptop and paperwork",
     label: "Lower your Life Rate",
     title: "Get out from under high-interest debt",
