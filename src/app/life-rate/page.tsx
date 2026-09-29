@@ -50,7 +50,7 @@ export default async function LifeRatePage({ searchParams }: PageProps<"/life-ra
   };
 
   return (
-    <div className="mx-auto max-w-6xl space-y-8 px-4 py-10 sm:px-6">
+    <div className="mx-auto max-w-[75rem] space-y-8 px-4 py-10 sm:px-6">
       <JsonLd data={jsonLd} />
       <Breadcrumbs
         items={[

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function ReviewsPage() {
   return (
-    <div className="mx-auto max-w-6xl space-y-8 px-4 py-12 sm:px-6">
+    <div className="mx-auto max-w-[75rem] space-y-8 px-4 py-12 sm:px-6">
       <Breadcrumbs items={[{ href: "/", label: "Home" }, { href: "/reviews", label: "Reviews" }]} />
       <header className="space-y-4 text-center">
         <h1 className="text-3xl font-bold sm:text-4xl">What do clients say about The Mortgage Advisory?</h1>

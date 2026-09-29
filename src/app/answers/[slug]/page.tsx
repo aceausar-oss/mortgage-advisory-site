@@ -68,7 +68,7 @@ export default async function AnswerPage({ params }: PageProps<"/answers/[slug]"
   };
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
+    <div className="mx-auto max-w-[75rem] px-4 py-10 sm:px-6">
       <JsonLd data={jsonLd} />
       {/* Side-pill layout: answer column + sticky "Did you know?" rail on large screens. */}
       <div className={entry.didYouKnow.length ? "lg:grid lg:grid-cols-[minmax(0,1fr)_18rem] lg:gap-10" : "mx-auto max-w-3xl"}>

@@ -125,7 +125,7 @@ export function ProgramPage({ page }: { page: LoanPage }) {
   };
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
+    <div className="mx-auto max-w-[75rem] px-4 py-10 sm:px-6">
       <JsonLd data={jsonLd} />
       <div className={page.didYouKnow.length ? "lg:grid lg:grid-cols-[minmax(0,1fr)_18rem] lg:gap-10" : "mx-auto max-w-3xl"}>
         <article className="min-w-0 max-w-3xl space-y-8">

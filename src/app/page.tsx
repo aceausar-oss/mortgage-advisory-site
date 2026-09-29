@@ -146,7 +146,7 @@ export default function Home() {
         </FloatingCard>
       </div>
 
-      <section aria-label="Disclosures" className="mx-auto max-w-4xl px-4 pb-16 sm:px-6">
+      <section aria-label="Disclosures" className="mx-auto max-w-[75rem] px-4 pb-16 sm:px-6">
         <Disclosures entry={{ category: "reverse-mortgage", products: ["hecm", "reverse-second", "heloc", "va", "fha"] }} debt />
       </section>
     </>
