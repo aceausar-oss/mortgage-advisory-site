@@ -14,9 +14,11 @@ const stateLicenseIds = licensing.states.flatMap((s) =>
 export function SiteFooter() {
   return (
     <footer className="mt-auto px-4 pb-10 pt-6 text-brand-ink sm:px-6">
-      {/* Same large rounded card shape as the homepage sections, but no fill or shadow: it matches the page
-          background and is marked only by a thin white outline (Ace, Sept 2026). */}
-      <div className="mx-auto max-w-6xl space-y-8 rounded-[2rem] border border-white p-6 sm:p-10">
+      {/* Rounded card with no fill or shadow: it matches the page background and is marked only by a thin white
+          outline (Ace, Sept 2026). The outline stretches to the page gutter; the content inside stays on the same
+          frame as every other section. */}
+      <div className="rounded-[2rem] border border-white p-6 sm:p-10">
+      <div className="mx-auto max-w-6xl space-y-8">
         <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
           <div className="max-w-xl space-y-2 text-sm">
             <p className="font-heading text-lg font-semibold text-brand-slate">{licensing.legalName}</p>
@@ -98,6 +100,7 @@ export function SiteFooter() {
         <p className="text-xs text-brand-slate">
           © {new Date().getFullYear()} {licensing.legalName} All rights reserved.
         </p>
+      </div>
       </div>
     </footer>
   );
