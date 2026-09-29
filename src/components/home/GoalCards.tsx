@@ -6,7 +6,7 @@ import Link from "next/link";
 const GOALS = [
   {
     href: "/loans/heloc",
-    image: "/images/goals/goal-heloc.jpg",
+    image: "/images/goals/goal-heloc-photo.jpg",
     alt: "Couple reviewing remodel plans in a bright kitchen",
     label: "Keep your low rate",
     title: "Tap your equity",
@@ -14,7 +14,7 @@ const GOALS = [
   },
   {
     href: "/loans/reverse-mortgage",
-    image: "/images/goals/goal-reverse.jpg",
+    image: "/images/goals/goal-reverse-photo.jpg",
     alt: "Retired couple relaxing on their porch",
     label: "For homeowners 62+",
     title: "Retire in the home you love",
@@ -22,7 +22,7 @@ const GOALS = [
   },
   {
     href: "/loans/purchase",
-    image: "/images/goals/goal-buy.jpg",
+    image: "/images/goals/goal-buy-photo.jpg",
     alt: "Young family at their front door holding house keys",
     label: "FHA · VA · Conventional",
     title: "Buy your next home",
