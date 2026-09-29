@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { EqualHousingLenderLogo } from "@/components/EqualHousingLenderLogo";
 import { getLoanPages, getLocationPages } from "@/lib/loans";
-import { fullAddress, legalNav, licensing, stateCodes } from "@/lib/site";
+import { fullAddress, legalNav, licensing, resourcesNav, stateCodes } from "@/lib/site";
 
 // Compliance block required on every page (CLAUDE.md §8). All facts come from content/data/licensing.json.
 // State license numbers that differ from the NMLS ID are shown here too.
@@ -57,18 +57,19 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="grid gap-6 sm:grid-cols-2">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr]">
           {[
-            { label: "Loans", pages: getLoanPages() },
-            { label: "Where we lend", pages: getLocationPages() },
+            { label: "Loans", links: getLoanPages().map((p) => ({ href: `${p.basePath}/${p.slug}`, label: p.name })) },
+            { label: "Where we lend", links: getLocationPages().map((p) => ({ href: `${p.basePath}/${p.slug}`, label: p.name })) },
+            { label: "Company & tools", links: resourcesNav },
           ].map((group) => (
             <nav key={group.label} aria-label={group.label}>
               <p className="font-heading text-sm font-semibold uppercase tracking-wide text-brand-slate">{group.label}</p>
               <ul className="mt-2 flex flex-wrap gap-x-5 gap-y-1.5 text-sm">
-                {group.pages.map((p) => (
-                  <li key={p.slug}>
-                    <Link href={`${p.basePath}/${p.slug}`} className="text-brand-ink hover:text-brand-button hover:underline underline-offset-4">
-                      {p.name}
+                {group.links.map((l) => (
+                  <li key={l.href}>
+                    <Link href={l.href} className="text-brand-ink hover:text-brand-button hover:underline underline-offset-4">
+                      {l.label}
                     </Link>
                   </li>
                 ))}

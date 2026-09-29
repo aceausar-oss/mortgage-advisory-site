@@ -15,10 +15,15 @@ export const mainNav = [
   { href: "/loans/refinance", label: "Refinance" },
   { href: "/loans/heloc", label: "HELOC & Equity" },
   { href: "/loans/reverse-mortgage", label: "Reverse Mortgage" },
+];
+
+// Grouped under "Resources" in the header and "Company & tools" in the footer (Ace, Sept 2026: nothing removed).
+export const resourcesNav = [
   { href: "/answers", label: "Answers" },
-  { href: "/life-rate", label: "Life Rate" },
-  { href: "/costs", label: "Costs" },
-  { href: "/about", label: "About" },
+  { href: "/life-rate", label: "Life Rate Calculator" },
+  { href: "/costs", label: "Costs & Fees" },
+  { href: "/reviews", label: "Reviews" },
+  { href: "/about", label: "About Us" },
 ];
 
 export const legalNav = [
