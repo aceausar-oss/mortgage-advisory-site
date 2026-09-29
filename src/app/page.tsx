@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Disclosures } from "@/components/Disclosures";
 import { FaqTabs } from "@/components/FaqTabs";
@@ -85,12 +86,24 @@ export default function Home() {
         </FloatingCard>
       </div>
 
-      {/* 4.4 Stories */}
-      <section aria-labelledby="goals-heading" className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
-        <h2 id="goals-heading" className="sr-only">
-          How we help
-        </h2>
-        <StorySections />
+      {/* 4.4 Stories, introduced Amex-style: wide home photo, icon, section title */}
+      <section aria-labelledby="goals-heading" className="mx-auto max-w-6xl px-4 pb-16 sm:px-6">
+        <div className="relative aspect-[3/2] overflow-hidden rounded-2xl sm:aspect-[3/1]">
+          <Image src="/images/pages/home-banner.jpg" alt="A beautiful home in warm evening light" fill sizes="(min-width: 1152px) 1152px, 100vw" className="object-cover" />
+        </div>
+        <div className="mt-8 flex flex-col items-center text-center">
+          <span aria-hidden="true" className="flex h-12 w-12 items-center justify-center rounded-xl bg-charcoal text-white">
+            <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z" />
+            </svg>
+          </span>
+          <h2 id="goals-heading" className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">
+            How we help
+          </h2>
+        </div>
+        <div className="mt-10">
+          <StorySections />
+        </div>
       </section>
 
       {/* Real Google reviews */}
