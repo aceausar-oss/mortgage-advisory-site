@@ -18,7 +18,9 @@ export async function TreasuryTicker() {
 
   return (
     <div className="bg-charcoal text-white">
-      <div className="relative mx-auto flex max-w-7xl items-center gap-5 overflow-x-auto whitespace-nowrap px-4 py-1.5 text-xs sm:px-6">
+      {/* Outer row scrolls on narrow screens; the inner row is only as wide as its content, so it sits centered when it fits. */}
+      <div className="relative mx-auto max-w-7xl overflow-x-auto px-4 py-1.5 text-xs sm:px-6">
+        <div className="mx-auto flex w-max items-center gap-5 whitespace-nowrap">
         {ITEMS.map(({ key, label }) => {
           const change = today[key] - prev[key];
           const down = change < 0;
@@ -37,6 +39,7 @@ export async function TreasuryTicker() {
         <Link href="/answers/why-mortgage-rates-jumped-lock-or-wait#treasury-chart" className="font-semibold underline underline-offset-2">
           How this moves mortgage rates →
         </Link>
+        </div>
       </div>
     </div>
   );
