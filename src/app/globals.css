@@ -171,18 +171,29 @@ h4 {
   background:
     url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27180%27%20height%3D%2756%27%20viewBox%3D%270%200%20180%2056%27%3E%3Cpath%20d%3D%27M0%2010%20C%2030%203%2C%2060%2017%2C%2090%2010%20S%20150%203%2C%20180%2010%27%20fill%3D%27none%27%20stroke%3D%27rgb%2892%2C97%2C106%29%27%20stroke-opacity%3D%270.16%27%20stroke-width%3D%270.8%27/%3E%3Cpath%20d%3D%27M0%2022%20C%2030%2015%2C%2060%2029%2C%2090%2022%20S%20150%2015%2C%20180%2022%27%20fill%3D%27none%27%20stroke%3D%27rgb%2892%2C97%2C106%29%27%20stroke-opacity%3D%270.12%27%20stroke-width%3D%270.8%27/%3E%3Cpath%20d%3D%27M0%2034%20C%2030%2027%2C%2060%2041%2C%2090%2034%20S%20150%2027%2C%20180%2034%27%20fill%3D%27none%27%20stroke%3D%27rgb%2892%2C97%2C106%29%27%20stroke-opacity%3D%270.16%27%20stroke-width%3D%270.8%27/%3E%3Cpath%20d%3D%27M0%2046%20C%2030%2039%2C%2060%2053%2C%2090%2046%20S%20150%2039%2C%20180%2046%27%20fill%3D%27none%27%20stroke%3D%27rgb%2892%2C97%2C106%29%27%20stroke-opacity%3D%270.12%27%20stroke-width%3D%270.8%27/%3E%3C/svg%3E") repeat,
     repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.07) 0 1px, rgba(0, 0, 0, 0.018) 1px 3px),
-    radial-gradient(120% 90% at 50% 40%, rgba(255, 255, 255, 0.75), transparent 60%),
-    linear-gradient(118deg, #cfd2d6 0%, #eef0f2 22%, #c6cad0 42%, #f3f4f5 58%, #cdd1d6 78%, #e9ebed 100%);
+    radial-gradient(120% 90% at 50% 40%, rgba(255, 255, 255, 0.9), transparent 62%),
+    radial-gradient(45% 60% at 12% 20%, rgba(255, 255, 255, 0.8), transparent 70%),
+    radial-gradient(45% 60% at 88% 75%, rgba(255, 255, 255, 0.7), transparent 70%),
+    linear-gradient(118deg, #d4d7db 0%, #ffffff 16%, #cdd1d6 32%, #fbfbfc 48%, #d2d5da 64%, #ffffff 80%, #dcdfe2 100%);
 }
+.platinum::before,
 .platinum::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(110deg, transparent 35%, rgba(255, 255, 255, 0.55) 50%, transparent 65%);
   background-size: 250% 100%;
-  animation: shimmer-sweep 9s linear infinite;
+}
+/* Two white sheens at different speeds and angles, so the shine keeps shifting like tilted metal. */
+.platinum::before {
+  background-image: linear-gradient(100deg, transparent 38%, rgba(255, 255, 255, 0.55) 46%, rgba(255, 255, 255, 0.9) 50%, rgba(255, 255, 255, 0.55) 54%, transparent 62%);
+  animation: shimmer-sweep 7s linear infinite;
+}
+.platinum::after {
+  background-image: linear-gradient(125deg, transparent 30%, rgba(255, 255, 255, 0.45) 50%, transparent 70%);
+  animation: shimmer-sweep 11s linear infinite reverse;
 }
 @media (prefers-reduced-motion: reduce) {
+  .platinum::before,
   .platinum::after {
     animation: none;
     opacity: 0;
