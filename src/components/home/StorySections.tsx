@@ -7,11 +7,11 @@ import { consentedStories } from "@/lib/home";
 const GOALS = [
   {
     goal: "lower-payments",
-    headline: "Want lower payments?",
-    copy: "If your rate is higher than what's available today, or high-interest cards are eating your budget, there may be a way to lower what you pay each month, without touching a low first-mortgage rate you already have.",
-    points: ["Refinance when the numbers actually work", "Consolidate high-interest debt with a HELOC or fixed second", "See every fee before you decide"],
-    cta: { label: "Lower my payments", q: "How can I lower my monthly payments?" },
-    related: { href: "/answers/homeowner-credit-card-debt-options", label: "Homeowner with credit card debt? Your options" },
+    headline: "Struggling with high-interest debt?",
+    copy: "When credit cards, car loans, and solar or PACE liens add up, your mortgage rate isn't the whole story. We'll calculate your Life Rate, the blended rate on everything you owe, and show you whether a HELOC, a cash-out refinance, or a reverse mortgage second can lower it, with the total cost on paper first.",
+    points: ["See your Life Rate in one number", "Compare a HELOC, cash-out refi, or reverse second side by side", "See every fee before you decide"],
+    cta: { label: "Lower my Life Rate", q: "Can you help me lower my Life Rate and pay off high-interest debt?" },
+    related: { href: "/answers/what-is-my-life-rate", label: "What is my Life Rate?" },
     image: { src: "/images/heloc-couple.jpg", alt: "Couple at their kitchen table looking at a tablet together" },
     icon: "M4 17l6-6 4 4 6-8M14 7h6v6",
   },
