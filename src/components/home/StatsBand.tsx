@@ -4,7 +4,7 @@ import type { Stat } from "@/lib/home";
 export function StatsBand({ stats }: { stats: Stat[] }) {
   if (!stats.length) return null;
   return (
-    <section aria-labelledby="stats-heading" className="relative mx-auto max-w-6xl px-4 pb-14 pt-4 sm:px-6">
+    <section aria-labelledby="stats-heading" className="relative mx-auto max-w-[75rem] px-4 pb-14 pt-4 sm:px-6">
       <h2 id="stats-heading" className="mx-auto max-w-3xl text-center text-2xl font-bold leading-snug sm:text-3xl">
         Homeowners have never had more equity, <span className="text-brand-blue-deep">or more card debt</span>.
       </h2>
