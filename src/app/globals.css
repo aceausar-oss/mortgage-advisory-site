@@ -7,13 +7,13 @@
   --color-brand-soft: #a7c8ea;
   /* Darker "M badge" blue for large text, icons, and outlines (3:1+ on white; large text only). */
   --color-brand-blue-deep: #3d85cc;
-  /* SILVER THEME (test branch): Amex-style silver pages, charcoal banners, one dark grey for all text. */
-  /* Link/button blue, darkened so small text passes on silver (4.9:1) and white (5.9:1). */
-  --color-brand-button: #0b64b3;
-  --color-brand-slate: #393a3e; /* all headings and text: one dark grey (9.3:1 on silver) */
-  --color-brand-steel: #8a8d93;
-  --color-brand-ink: #393a3e;
-  --color-mist: #e6e8ea; /* silver page and panel background */
+  /* BLUE-SILVER THEME: cool blue-silver pages with white cards, platinum hero, blue-theme text colors. */
+  /* Link/button blue, darkened so small text passes on blue-silver (5.1:1) and white (6.1:1). */
+  --color-brand-button: #1f64ad;
+  --color-brand-slate: #43565f; /* headings (6.5:1 on blue-silver) */
+  --color-brand-steel: #87959f;
+  --color-brand-ink: #231f20; /* body text (13.7:1 on blue-silver) */
+  --color-mist: #e6ecf3; /* blue-silver page and panel background */
   --color-charcoal: #414246; /* dark banners, with white text (10:1) */
 
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
@@ -150,7 +150,7 @@ h4 {
   filter: blur(36px);
   animation: aurora 16s ease-in-out infinite alternate;
 }
-/* SILVER THEME: brushed-platinum hero finish (metallic bands + fine brushed grain + engraved wave lines + slow sheen).
+/* Brushed-platinum hero finish (blue-silver tint) (metallic bands + fine brushed grain + engraved wave lines + slow sheen).
    Generic metal texture only; no card artwork. */
 .platinum {
   position: absolute;
@@ -158,12 +158,12 @@ h4 {
   z-index: -1;
   pointer-events: none;
   background:
-    url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27180%27%20height%3D%2756%27%20viewBox%3D%270%200%20180%2056%27%3E%3Cpath%20d%3D%27M0%2010%20C%2030%203%2C%2060%2017%2C%2090%2010%20S%20150%203%2C%20180%2010%27%20fill%3D%27none%27%20stroke%3D%27rgb%2892%2C97%2C106%29%27%20stroke-opacity%3D%270.07%27%20stroke-width%3D%270.8%27/%3E%3Cpath%20d%3D%27M0%2022%20C%2030%2015%2C%2060%2029%2C%2090%2022%20S%20150%2015%2C%20180%2022%27%20fill%3D%27none%27%20stroke%3D%27rgb%2892%2C97%2C106%29%27%20stroke-opacity%3D%270.05%27%20stroke-width%3D%270.8%27/%3E%3Cpath%20d%3D%27M0%2034%20C%2030%2027%2C%2060%2041%2C%2090%2034%20S%20150%2027%2C%20180%2034%27%20fill%3D%27none%27%20stroke%3D%27rgb%2892%2C97%2C106%29%27%20stroke-opacity%3D%270.07%27%20stroke-width%3D%270.8%27/%3E%3Cpath%20d%3D%27M0%2046%20C%2030%2039%2C%2060%2053%2C%2090%2046%20S%20150%2039%2C%20180%2046%27%20fill%3D%27none%27%20stroke%3D%27rgb%2892%2C97%2C106%29%27%20stroke-opacity%3D%270.05%27%20stroke-width%3D%270.8%27/%3E%3C/svg%3E") repeat,
+    url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27180%27%20height%3D%2756%27%20viewBox%3D%270%200%20180%2056%27%3E%3Cpath%20d%3D%27M0%2010%20C%2030%203%2C%2060%2017%2C%2090%2010%20S%20150%203%2C%20180%2010%27%20fill%3D%27none%27%20stroke%3D%27rgb%2870%2C95%2C125%29%27%20stroke-opacity%3D%270.07%27%20stroke-width%3D%270.8%27/%3E%3Cpath%20d%3D%27M0%2022%20C%2030%2015%2C%2060%2029%2C%2090%2022%20S%20150%2015%2C%20180%2022%27%20fill%3D%27none%27%20stroke%3D%27rgb%2870%2C95%2C125%29%27%20stroke-opacity%3D%270.05%27%20stroke-width%3D%270.8%27/%3E%3Cpath%20d%3D%27M0%2034%20C%2030%2027%2C%2060%2041%2C%2090%2034%20S%20150%2027%2C%20180%2034%27%20fill%3D%27none%27%20stroke%3D%27rgb%2870%2C95%2C125%29%27%20stroke-opacity%3D%270.07%27%20stroke-width%3D%270.8%27/%3E%3Cpath%20d%3D%27M0%2046%20C%2030%2039%2C%2060%2053%2C%2090%2046%20S%20150%2039%2C%20180%2046%27%20fill%3D%27none%27%20stroke%3D%27rgb%2870%2C95%2C125%29%27%20stroke-opacity%3D%270.05%27%20stroke-width%3D%270.8%27/%3E%3C/svg%3E") repeat,
     repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.035) 0 1px, rgba(0, 0, 0, 0.008) 1px 3px),
     radial-gradient(70% 55% at 50% 38%, rgba(255, 255, 255, 0.55), transparent 65%),
     radial-gradient(40% 55% at 10% 18%, rgba(255, 255, 255, 0.6), transparent 70%),
     radial-gradient(40% 55% at 90% 78%, rgba(255, 255, 255, 0.5), transparent 70%),
-    linear-gradient(118deg, #c1c5ca 0%, #ffffff 15%, #b3b7bd 31%, #f4f5f6 47%, #bcc0c5 63%, #ffffff 79%, #b8bcc1 100%);
+    linear-gradient(118deg, #c9d4e0 0%, #ffffff 15%, #bccadb 31%, #f3f6fa 47%, #c4cfdc 63%, #ffffff 79%, #c0ccd9 100%);
 }
 .platinum::before,
 .platinum::after {
@@ -189,12 +189,12 @@ h4 {
   }
 }
 
-/* SILVER THEME: chat windows get a polished-silver edge (metallic gradient border) with a soft silver-blue glow. */
+/* Chat windows get a polished blue-silver edge (metallic gradient border) with a soft silver-blue glow. */
 .silver-frame {
   border: 2px solid transparent;
   background:
     linear-gradient(#ffffff, #ffffff) padding-box,
-    linear-gradient(135deg, #c9cdd2 0%, #9aa0a8 22%, #d6d9dd 45%, #8e949c 68%, #cfd2d6 85%, #a3a8b0 100%) border-box;
+    linear-gradient(135deg, #c8d3df 0%, #8fa3b9 22%, #d7dfe8 45%, #8397ae 68%, #cdd7e2 85%, #9aadc2 100%) border-box;
   box-shadow:
     0 0 12px 2px rgba(136, 180, 224, 0.55), /* silver-blue glow (logo blue) */
     0 12px 32px -12px rgba(57, 58, 62, 0.28);
