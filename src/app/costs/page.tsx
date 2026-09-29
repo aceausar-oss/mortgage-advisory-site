@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { ContentPageView, contentPageMetadata } from "@/components/ContentPageView";
 import { AnswerCta } from "@/components/AnswerParts";
+import { LifeRateCallout } from "@/components/life-rate/LifeRateCallout";
 import { TreasuryChart } from "@/components/TreasuryChart";
 import { getContentPage } from "@/lib/pages";
 
@@ -19,6 +20,7 @@ export default function CostsPage() {
       }
       bottom={
         <>
+          <LifeRateCallout />
           <TreasuryChart idPrefix="costs-tsy" />
           <AnswerCta />
         </>

@@ -23,6 +23,9 @@ It's the **real average interest rate you're paying on all your debt**, not just
 
 ## How do I calculate it?
 
+The fastest way: use our free [Life Rate calculator](/life-rate). Or do it by hand:
+
+
 1. **List every debt:** the balance and interest rate for your mortgage, each credit card, car loans, personal loans, and any solar, PACE, or HERO lien.
 2. **Multiply each balance by its rate** to get the yearly interest on that debt.
 3. **Add up the yearly interest** on everything.
