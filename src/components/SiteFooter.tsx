@@ -14,8 +14,9 @@ const stateLicenseIds = licensing.states.flatMap((s) =>
 export function SiteFooter() {
   return (
     <footer className="mt-auto px-4 pb-10 pt-6 text-brand-ink sm:px-6">
-      {/* Same large contrasting card as the homepage sections, on the same frame as every other section. */}
-      <div className="mx-auto max-w-6xl space-y-8 rounded-[2rem] bg-white p-6 shadow-[0_20px_50px_-24px_rgba(57,58,62,0.22)] ring-1 ring-black/5 sm:p-10">
+      {/* Same large rounded card shape as the homepage sections, but no fill or shadow: it matches the page
+          background and is marked only by a thin outline (Ace, Sept 2026). */}
+      <div className="mx-auto max-w-6xl space-y-8 rounded-[2rem] border border-brand-steel/40 p-6 sm:p-10">
         <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
           <div className="max-w-xl space-y-2 text-sm">
             <p className="font-heading text-lg font-semibold text-brand-slate">{licensing.legalName}</p>
