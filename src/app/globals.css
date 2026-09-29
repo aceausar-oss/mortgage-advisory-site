@@ -189,14 +189,14 @@ h4 {
   }
 }
 
-/* SILVER THEME: chat windows get a polished-silver edge (metallic gradient border) with a small, bright white glow. */
+/* SILVER THEME: chat windows get a polished-silver edge (metallic gradient border) with a soft silver-blue glow. */
 .silver-frame {
   border: 2px solid transparent;
   background:
     linear-gradient(#ffffff, #ffffff) padding-box,
     linear-gradient(135deg, #c9cdd2 0%, #9aa0a8 22%, #d6d9dd 45%, #8e949c 68%, #cfd2d6 85%, #a3a8b0 100%) border-box;
   box-shadow:
-    0 0 6px 1px rgba(255, 255, 255, 0.7),
+    0 0 12px 2px rgba(136, 180, 224, 0.55), /* silver-blue glow (logo blue) */
     0 12px 32px -12px rgba(57, 58, 62, 0.28);
 }
 
