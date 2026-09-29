@@ -15,8 +15,8 @@ export function SiteFooter() {
   return (
     <footer className="mt-auto px-4 pb-10 pt-6 text-brand-ink sm:px-6">
       {/* Same large rounded card shape as the homepage sections, but no fill or shadow: it matches the page
-          background and is marked only by a thin outline (Ace, Sept 2026). */}
-      <div className="mx-auto max-w-6xl space-y-8 rounded-[2rem] border border-brand-steel/40 p-6 sm:p-10">
+          background and is marked only by a thin white outline (Ace, Sept 2026). */}
+      <div className="mx-auto max-w-6xl space-y-8 rounded-[2rem] border border-white p-6 sm:p-10">
         <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
           <div className="max-w-xl space-y-2 text-sm">
             <p className="font-heading text-lg font-semibold text-brand-slate">{licensing.legalName}</p>
