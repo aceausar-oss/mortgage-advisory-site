@@ -15,10 +15,10 @@ export function SiteFooter() {
   return (
     <footer className="mt-auto px-4 pb-10 pt-6 text-brand-ink sm:px-6">
       {/* Rounded card with no fill or shadow: it matches the page background and is marked only by a thin white
-          outline (Ace, Sept 2026). The outline stretches to the page gutter; the content inside stays on the same
-          frame as every other section. */}
-      <div className="rounded-[2rem] border border-white p-6 sm:p-10">
-      <div className="mx-auto max-w-6xl space-y-8">
+          outline (Ace, Sept 2026). The outline stretches to the page gutter; the text inside keeps the positions it
+          had when the card was the width of the other sections (the section frame plus the card's inner padding). */}
+      <div className="rounded-[2rem] border border-white p-6 sm:px-0 sm:py-10">
+      <div className="mx-auto max-w-6xl space-y-8 sm:px-10">
         <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
           <div className="max-w-xl space-y-2 text-sm">
             <p className="font-heading text-lg font-semibold text-brand-slate">{licensing.legalName}</p>
