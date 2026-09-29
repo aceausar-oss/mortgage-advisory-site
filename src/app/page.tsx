@@ -89,7 +89,7 @@ export default function Home() {
       {/* 4.4 Stories, introduced Amex-style: wide home photo, icon, section title */}
       <section aria-labelledby="goals-heading" className="mx-auto max-w-6xl px-4 pb-16 sm:px-6">
         <div className="relative aspect-[3/2] overflow-hidden rounded-2xl sm:aspect-[3/1]">
-          <Image src="/images/pages/home-banner.jpg" alt="A beautiful home in warm evening light" fill sizes="(min-width: 1152px) 1152px, 100vw" className="object-cover" />
+          <Image src="/images/pages/home-banner-photo.jpg" alt="Craftsman-style home with a stone porch and garden in warm evening light" fill sizes="(min-width: 1152px) 1152px, 100vw" className="object-cover object-[50%_65%]" />
         </div>
         <div className="mt-8 flex flex-col items-center text-center">
           <span aria-hidden="true" className="flex h-12 w-12 items-center justify-center rounded-xl bg-charcoal text-white">
