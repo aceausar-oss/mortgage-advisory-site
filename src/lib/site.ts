@@ -16,6 +16,7 @@ export const mainNav = [
   { href: "/loans/heloc", label: "HELOC & Equity" },
   { href: "/loans/reverse-mortgage", label: "Reverse Mortgage" },
   { href: "/answers", label: "Answers" },
+  { href: "/life-rate", label: "Life Rate" },
   { href: "/costs", label: "Costs" },
   { href: "/about", label: "About" },
 ];

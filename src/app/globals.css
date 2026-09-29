@@ -24,6 +24,11 @@
   color-scheme: light;
 }
 
+/* Shown only when JavaScript is off (the layout's <noscript> style reveals it). */
+.no-js-only {
+  display: none;
+}
+
 body {
   background: var(--color-mist);
   color: var(--color-brand-ink);

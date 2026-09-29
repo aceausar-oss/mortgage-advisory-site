@@ -218,6 +218,7 @@ Embed: `<iframe src="https://api.leadconnectorhq.com/widget/booking/{CALENDAR_ID
 - **Reverse mortgage cost breakdown:** upfront MIP, origination limits, servicing — cite HUD.
 - FAQ block: "How much does a mortgage cost?", "What are closing costs in Texas?", etc.
 - **10-year Treasury:** sitewide ticker bar + candle chart (`TreasuryTicker`, `TreasuryChart`), fed daily from the official U.S. Treasury yield CSV (`src/lib/treasury.ts`, refreshed every 12h). Market data only: never convert it into a displayed mortgage rate. Mortgage News Daily data is not ours to republish.
+- **Life Rate calculator (/life-rate):** Ace's signature tool. Shows only the visitor's CURRENT blended rate ((yearly interest ÷ total debt) × 100), dollars of interest, and a share-of-debt vs share-of-interest chart. Never shows a new loan rate or payment; the lower number comes from a real quote on a call. Math runs in the browser; nothing is sent or saved. Linked from the main menu, /costs, /answers, the Life Rate answer, the homepage goal card and debt story, and the chat.
 - **Launch decision (Sept 2026):** no rate scenarios at launch; show "Call or chat for today's rates." Fees are shown as typical ranges only, never fixed numbers.
 - **Reviews:** real Google reviews in `content/data/reviews.json`, copied word for word (first name + last initial). Homepage side-scroll + `/reviews`. No AggregateRating schema (self-serving). Refresh the file when new reviews come in.
 

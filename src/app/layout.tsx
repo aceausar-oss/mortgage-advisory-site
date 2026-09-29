@@ -36,7 +36,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html lang="en" className={`${inter.variable} ${montserrat.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col font-sans">
         <noscript>
-          <style>{".js-only{display:none!important}"}</style>
+          <style>{".js-only{display:none!important}.no-js-only{display:inline-flex!important}"}</style>
         </noscript>
         <a
           href="#main"

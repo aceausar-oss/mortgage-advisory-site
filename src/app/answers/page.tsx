@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { FaqTabs } from "@/components/FaqTabs";
+import { LifeRateCallout } from "@/components/life-rate/LifeRateCallout";
 import { CATEGORIES, categoryLabel, type CategoryKey } from "@/lib/categories";
 import { getEntries, searchEntries } from "@/lib/kb";
 import { licensing } from "@/lib/site";
@@ -33,6 +34,7 @@ export default async function AnswersPage({ searchParams }: PageProps<"/answers"
       </header>
 
       {/* Plain GET form: works without JavaScript and gives each search a shareable URL. */}
+      <LifeRateCallout />
       <form action="/answers" method="get" role="search" className="grid gap-3 rounded-2xl bg-white p-4 sm:grid-cols-[1fr_auto_auto_auto]">
         <label className="sr-only" htmlFor="q">
           Search questions

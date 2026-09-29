@@ -29,7 +29,7 @@ const GOALS = [
     text: "Get pre-approved and compare conventional, FHA, and VA loans side by side, with every cost upfront.",
   },
   {
-    href: "/answers/what-is-my-life-rate",
+    href: "/life-rate",
     image: "/images/goals/goal-debt-photo.jpg",
     alt: "Relieved couple at the kitchen table with a laptop and paperwork",
     label: "Lower your Life Rate",

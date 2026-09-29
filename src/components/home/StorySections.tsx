@@ -11,7 +11,7 @@ const GOALS = [
     copy: "When credit cards, car loans, and solar or PACE liens add up, your mortgage rate isn't the whole story. We'll calculate your Life Rate, the blended rate on everything you owe, and show you whether a HELOC, a cash-out refinance, or a reverse mortgage second can lower it, with the total cost on paper first.",
     points: ["See your Life Rate in one number", "Compare a HELOC, cash-out refi, or reverse second side by side", "See every fee before you decide"],
     cta: { label: "Lower my Life Rate", q: "Can you help me lower my Life Rate and pay off high-interest debt?" },
-    related: { href: "/answers/what-is-my-life-rate", label: "What is my Life Rate?" },
+    related: { href: "/life-rate", label: "Calculate my Life Rate" },
     image: { src: "/images/heloc-couple.jpg", alt: "Couple at their kitchen table looking at a tablet together" },
     icon: "M4 17l6-6 4 4 6-8M14 7h6v6",
   },
