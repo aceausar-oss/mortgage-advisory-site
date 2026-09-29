@@ -9,7 +9,7 @@ category: reverse-mortgage
 products: [hecm, proprietary-reverse, reverse-second]
 funding: broker
 booking: reverse
-related: [is-a-reverse-mortgage-a-scam, can-you-lose-your-home-with-a-reverse-mortgage, reverse-mortgage-keep-first-mortgage]
+related: [is-a-reverse-mortgage-a-scam, can-you-lose-your-home-with-a-reverse-mortgage, reverse-mortgage-keep-first-mortgage, reverse-mortgage-line-of-credit-growth, who-qualifies-for-a-reverse-mortgage, when-is-a-reverse-mortgage-a-bad-idea]
 image: "/images/loans/loan-reverse-mortgage.jpg"
 imageAlt: "Grandparents playing with their grandkids in the backyard"
 sources:
@@ -55,8 +55,8 @@ Jumbo reverse mortgages and reverse mortgage seconds are **not** FHA-insured HEC
 
 With a HECM, you can mix and match:
 
-- **Line of credit** that you draw from when you need it (the unused part grows over time).
-- **Monthly payments** for life while you live in the home, or for a set number of years.
+- **Line of credit** that you draw from when you need it (the unused part grows over time). See [how the line of credit grows](/answers/reverse-mortgage-line-of-credit-growth).
+- **Monthly payments** for life while you live in the home, or for a set number of years. See [monthly income for life](/answers/reverse-mortgage-monthly-income-for-life).
 - **Lump sum** at closing (fixed-rate option).
 - **HECM for Purchase:** use a reverse mortgage to buy your next home, often a right-sized one, with no monthly mortgage payment afterward.
 

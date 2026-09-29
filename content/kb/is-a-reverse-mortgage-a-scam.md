@@ -45,7 +45,7 @@ There are also private (non-FHA) reverse mortgages, often for higher-value homes
 ## What does a real scam look like?
 
 - Someone rushing you to sign, or telling you to skip counseling or leave the kids out of it
-- Being told to put the money into an annuity, insurance policy, or investment they happen to sell
+- Being told to put the money into an annuity, insurance policy, or investment they happen to sell. In California, no one can require you to buy an annuity to get a reverse mortgage, and your lender can't refer you to buy insurance or annuities before closing or while you can still cancel.
 - Promises like "free money" or "no payments ever"
 - A contractor offering to "set up the loan" to pay for their own work
 - Anyone asking you to sign over your deed
