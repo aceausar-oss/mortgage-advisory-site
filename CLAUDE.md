@@ -317,3 +317,7 @@ Decided with Ace (Sept 2026):
 - [ ] CRMLS IDX agreement + RESO Web API credentials (Ace) → env vars only
 - [x] The Home Advisory corporate DRE #02020987
 - [x] Ace's individual DRE broker license #01354506 (for /homes)
+
+## 15. Future ideas (after launch)
+
+- **Video explainers (Ace, Sept 2026):** one REAL 60–90s "Meet Ace" video (About page, near booking) plus 3–4 AI-avatar explainers (Life Rate, HELOC keeps your low rate, reverse mortgage "housing pension", lender vs broker/how we're paid). Click-to-play facades (no autoplay), YouTube/Vimeo hosted, captions + on-page transcript + VideoObject schema. AI videos labeled "AI-generated presentation of Ace Ausar"; scripts reviewed like site content (no rates/payments, required disclosures, NMLS end card); keep final videos and scripts on file.
