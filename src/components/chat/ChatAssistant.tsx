@@ -58,7 +58,7 @@ export function ChatAssistant({ initialQuestion, phone, phoneE164 }: { initialQu
   }, [messages]);
 
   return (
-    <section aria-label="Chat with our AI mortgage assistant" className="rounded-3xl bg-white p-4 shadow-lg ring-1 ring-brand-blue/50 sm:p-6">
+    <section aria-label="Chat with our AI mortgage assistant" className="silver-frame rounded-3xl p-4 sm:p-6">
       <header className="flex items-center gap-3 border-b border-brand-blue/30 pb-4">
         <span className="relative">
           <Image src="/brand/ace-polo.jpg" alt="" width={48} height={48} className="h-12 w-12 rounded-full object-cover object-top" />
