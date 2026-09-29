@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Disclosures } from "@/components/Disclosures";
 import { FaqTabs } from "@/components/FaqTabs";
@@ -11,6 +10,7 @@ import { LicensedStatesMap } from "@/components/home/LicensedStatesMap";
 import { QuestionFeed } from "@/components/home/QuestionFeed";
 import { ReviewsCarousel } from "@/components/Reviews";
 import { StatsBand } from "@/components/home/StatsBand";
+import { ParallaxImage } from "@/components/ParallaxImage";
 import { StorySections } from "@/components/home/StorySections";
 import { pricing, verifiedStats } from "@/lib/home";
 import { categoryLabel } from "@/lib/categories";
@@ -87,9 +87,12 @@ export default function Home() {
 
       {/* 4.4 Stories, introduced Amex-style: wide home photo, icon, section title */}
       <section aria-labelledby="goals-heading" className="mx-auto max-w-6xl px-4 pb-16 sm:px-6">
-        <div className="relative aspect-[3/2] overflow-hidden rounded-2xl sm:aspect-[3/1]">
-          <Image src="/images/pages/home-banner-photo.jpg" alt="Craftsman-style home with a stone porch and garden in warm evening light" fill sizes="(min-width: 1152px) 1152px, 100vw" className="object-cover object-[50%_65%]" />
-        </div>
+        <ParallaxImage
+          src="/images/pages/home-banner-photo.jpg"
+          alt="Craftsman-style home with a stone porch and garden in warm evening light"
+          sizes="(min-width: 1152px) 1152px, 100vw"
+          className="aspect-[3/2] rounded-2xl sm:aspect-[3/1]"
+        />
         <div className="mt-8 flex flex-col items-center text-center">
           <span aria-hidden="true" className="flex h-12 w-12 items-center justify-center rounded-xl bg-charcoal text-white">
             <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
