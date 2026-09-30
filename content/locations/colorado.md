@@ -9,8 +9,6 @@ tldr: "The Mortgage Advisory is licensed in Colorado (NMLS #1549739) and helps C
 category: buying
 products: [conventional, fha, va, heloc, hecm, reverse-second, non-qm]
 related: [how-does-a-heloc-work, how-to-find-a-va-loan-lender, down-payment-assistance-ca-tx-fl-co, how-to-choose-a-mortgage-lender]
-image: "/images/states/state-colorado.jpg"
-imageAlt: "Home with a mountain view in Colorado"
 didYouKnow:
   - text: "Many newer Front Range neighborhoods sit inside a metropolitan district, which adds its own property tax to pay for roads and utilities. It's worth checking before you buy, because it can change your payment."
 updated: 2026-09-27

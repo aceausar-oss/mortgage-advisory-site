@@ -9,8 +9,6 @@ tldr: "The Mortgage Advisory is licensed in Texas (NMLS #1549739) and helps Texa
 category: buying
 products: [conventional, fha, va, heloc, hecm, reverse-second, non-qm]
 related: [down-payment-assistance-ca-tx-fl-co, how-much-house-can-i-afford, homeowner-credit-card-debt-options, how-to-choose-a-mortgage-lender]
-image: "/images/states/state-texas.jpg"
-imageAlt: "Brick ranch home under a big blue sky in Texas"
 didYouKnow:
   - text: "Texas limits home equity borrowing on your homestead: all your loans combined generally can't exceed 80% of your home's value when you take cash out, which is one of the strongest homeowner protections in the country."
 updated: 2026-09-27

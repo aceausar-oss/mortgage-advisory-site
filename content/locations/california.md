@@ -9,8 +9,6 @@ tldr: "The Mortgage Advisory is based in Ladera Ranch in Orange County and licen
 category: buying
 products: [conventional, fha, va, heloc, hecm, proprietary-reverse, reverse-second, non-qm]
 related: [reverse-mortgage-keep-first-mortgage, down-payment-assistance-ca-tx-fl-co, how-much-house-can-i-afford, how-to-choose-a-mortgage-lender]
-image: "/images/states/state-california.jpg"
-imageAlt: "Spanish-style home with rolling hills in California"
 didYouKnow:
   - text: "Under California's Prop 19, homeowners 55 and older can generally move their property tax base to a replacement home anywhere in the state, up to three times. Paired with a reverse mortgage for purchase, it can make right-sizing much easier."
 updated: 2026-09-27
