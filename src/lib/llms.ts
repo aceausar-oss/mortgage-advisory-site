@@ -31,6 +31,7 @@ export function llmsTxt() {
     `- [Mortgage questions answered](${siteUrl}/answers): plain-English answers to real borrower questions, searchable by topic and state`,
     `- [Full answer text](${siteUrl}/llms-full.txt): every published answer as plain text`,
     `- [Costs and how we're paid](${siteUrl}/costs): typical closing costs, fees, and how we're compensated`,
+    `- [Reverse mortgage calculator](${siteUrl}/reverse-calculator): estimates what a HECM could provide, using HUD's Principal Limit Factor tables`,
     `- [How we estimate home equity](${siteUrl}/how-we-estimate): the formula behind our equity estimate`,
     `- [About Ace Ausar and the company](${siteUrl}/about)`,
     `- [Resources for financial professionals](${siteUrl}/pros): resources for financial planners, CFPs, CPAs, and estate planners whose clients could use a reverse mortgage, HELOC, or refinance`,

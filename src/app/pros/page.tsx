@@ -13,6 +13,12 @@ export const metadata = contentPageMetadata(page);
 
 const TOOLS = [
   {
+    title: "Reverse Mortgage Calculator",
+    body: "Four numbers, an estimated range, and an honest fit rating, built on HUD's official tables. Share the link with clients: TheMortgageAdvisory.com/reverse-calculator.",
+    href: "/reverse-calculator",
+    cta: "Open the calculator",
+  },
+  {
     title: "Life Rate Calculator",
     body: "A client's blended rate on everything they owe: mortgage, cards, car loans, and solar or PACE liens. Runs in the browser; nothing is saved.",
     href: "/life-rate",
@@ -55,7 +61,7 @@ export default function ProsPage() {
           </h2>
           <ul className="grid gap-4 sm:grid-cols-2">
             {TOOLS.map((t) => (
-              <li key={t.title} className="flex flex-col rounded-2xl bg-white p-5 ring-1 ring-brand-blue/40">
+              <li key={t.title} className="flex flex-col rounded-2xl bg-white p-5 ring-1 ring-brand-blue/40 first:sm:col-span-2">
                 <h3 className="font-heading text-lg font-semibold">{t.title}</h3>
                 <p className="mt-1 flex-1 leading-relaxed">{t.body}</p>
                 <Link href={t.href} className="mt-3 font-semibold text-brand-button underline underline-offset-4">

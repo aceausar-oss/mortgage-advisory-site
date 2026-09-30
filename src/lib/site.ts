@@ -21,6 +21,7 @@ export const mainNav = [
 export const resourcesNav = [
   { href: "/answers", label: "Answers" },
   { href: "/life-rate", label: "Life Rate Calculator" },
+  { href: "/reverse-calculator", label: "Reverse Mortgage Calculator" },
   { href: "/costs", label: "Costs & Fees" },
   { href: "/reviews", label: "Reviews" },
   { href: "/about", label: "About Us" },

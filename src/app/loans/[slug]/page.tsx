@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ProgramPage } from "@/components/ProgramPage";
+import { ReverseCalculator } from "@/components/reverse/ReverseCalculator";
+import { HECM } from "@/lib/reverseCalc";
+import { formatYieldDate, getTreasuryYields } from "@/lib/treasury";
 import { getLoanPages, getLoanPage } from "@/lib/loans";
 
 export const dynamicParams = false;
@@ -25,5 +28,14 @@ export async function generateMetadata({ params }: PageProps<"/loans/[slug]">): 
 export default async function LoanProgramPage({ params }: PageProps<"/loans/[slug]">) {
   const page = getLoanPage((await params).slug);
   if (!page) notFound();
+  if (page.slug === "reverse-mortgage") {
+    const latest = (await getTreasuryYields())?.at(-1) ?? null;
+    return (
+      <ProgramPage
+        page={page}
+        extra={<ReverseCalculator stacked treasury10y={latest?.y10 ?? HECM.fallbackTreasury10y} asOf={latest ? formatYieldDate(latest.date) : null} />}
+      />
+    );
+  }
   return <ProgramPage page={page} />;
 }
