@@ -17,27 +17,27 @@ Priority = times asked + 1 per thread from the past year + 3 if asked about CA, 
 | 23 | 10 | CA | published | How do I find a lender that really knows VA loans? |
 | 21 | 9 | CA | published | What credit score do I need for a VA loan, and can I qualify after collections or bankruptcy? |
 | 21 | 9 | CA | published | With rates above 7%, should I pick an adjustable-rate mortgage, a seller or builder rate buydown, or a 30-year fixed? |
-| 20 | 10 |  | drafting | How does assuming a VA loan work: can a non-veteran assume it, what does it cost, and how do I cover the seller's equity? |
+| 20 | 10 |  | published | How does assuming a VA loan work: can a non-veteran assume it, what does it cost, and how do I cover the seller's equity? |
 | 19 | 13 |  | new | How does a VA home loan work, and what should first-time VA buyers know? |
 | 17 | 7 | TX | new | Should I buy now or wait for mortgage rates to come down? |
-| 16 | 8 |  | drafting | Am I eligible for a VA loan, and how do I get my Certificate of Eligibility (COE)? |
+| 16 | 8 |  | published | Am I eligible for a VA loan, and how do I get my Certificate of Eligibility (COE)? |
 | 14 | 7 |  | new | What are the first steps to buying a home? |
-| 13 | 8 |  | drafting | FHA or conventional: which is better when I have a small down payment? |
+| 13 | 8 |  | published | FHA or conventional: which is better when I have a small down payment? |
 | 9 | 5 | FL | new | What is an FHA loan, what are the requirements, and is it right for me? |
 | 9 | 3 | CA | new | Can I assume a seller's low-rate FHA (or VA) mortgage when I buy? |
 | 9 | 3 | TX | new | Should a first-time buyer buy new construction from a big builder, and what can go wrong? |
 | 9 | 3 | CA FL | new | Should my first home be a condo or a house, and how do HOA fees and special assessments affect my loan? |
-| 8 | 4 |  | drafting | Why do sellers turn down VA offers, and how can I make my VA offer stronger? |
-| 8 | 4 |  | drafting | How do I buy a home from a family member, and how does a gift of equity work? |
+| 8 | 4 |  | published | Why do sellers turn down VA offers, and how can I make my VA offer stronger? |
+| 8 | 4 |  | published | How do I buy a home from a family member, and how does a gift of equity work? |
 | 7 | 2 | CA | new | CalVet home loan vs VA loan: which is better, and can I use both? |
 | 7 | 2 | CA TX | new | Can I have a co-signer or my spouse on a VA loan, and how do community property states like California and Texas affect it? |
-| 6 | 4 |  | drafting | What credit score do I need to buy a house, and can I buy with bad credit? |
+| 6 | 4 |  | published | What credit score do I need to buy a house, and can I buy with bad credit? |
 | 6 | 4 |  | new | Can I use a VA loan to buy a multi-unit property or keep my home as a rental later? |
-| 6 | 3 |  | drafting | If someone assumes my VA loan, do I get my entitlement back? |
+| 6 | 3 |  | published | If someone assumes my VA loan, do I get my entitlement back? |
 | 6 | 3 |  | new | How do seller credits and concessions work on a VA loan, and can the seller buy down my rate? |
 | 6 | 3 |  | new | I can't afford my VA-financed home anymore. What are my options (sell, rent it out, short sale)? |
-| 6 | 3 |  | drafting | How strict are FHA appraisal and property requirements, and could they kill my deal? |
-| 6 | 3 |  | drafting | How much should a first-time buyer put down, and do I really need 20%? |
+| 6 | 3 |  | published | How strict are FHA appraisal and property requirements, and could they kill my deal? |
+| 6 | 3 |  | published | How much should a first-time buyer put down, and do I really need 20%? |
 | 6 | 3 |  | new | Why won't my lender fund the loan until the seller fixes something (like an electrical panel)? |
 | 5 | 1 | CO | new | Is there a halal (interest-free) way to finance a home? |
 | 4 | 3 |  | new | How does mortgage pre-approval work, and when should I get pre-approved? |
@@ -47,10 +47,10 @@ Priority = times asked + 1 per thread from the past year + 3 if asked about CA, 
 | 4 | 2 |  | new | Does a condo need to be VA-approved before I can buy it with a VA loan? |
 | 4 | 2 |  | new | Can I use my VA loan benefit again or have two VA loans at once? |
 | 4 | 2 |  | new | VA loan or conventional loan: which is better for me? |
-| 4 | 2 |  | drafting | How much is FHA mortgage insurance, and how long do I have to pay it? |
+| 4 | 2 |  | published | How much is FHA mortgage insurance, and how long do I have to pay it? |
 | 4 | 2 |  | new | How do I finance a second home or a small multifamily investment property? |
-| 3 | 3 |  | drafting | Can I get an FHA loan if I already own a home? |
-| 3 | 2 |  | drafting | What is the VA funding fee, and who is exempt from paying it? |
+| 3 | 3 |  | published | Can I get an FHA loan if I already own a home? |
+| 3 | 2 |  | published | What is the VA funding fee, and who is exempt from paying it? |
 | 2 | 1 |  | new | What counts as a first-time homebuyer, and can my lender change my locked rate if I don't qualify? |
 | 2 | 1 |  | new | How much can a seller pay toward my closing costs, and can I get cash back? |
 | 2 | 1 |  | new | Can DACA recipients get a mortgage? |
@@ -58,7 +58,7 @@ Priority = times asked + 1 per thread from the past year + 3 if asked about CA, 
 | 2 | 1 |  | new | What loan options and rates are available for manufactured homes (chattel loan vs mortgage)? |
 | 2 | 1 |  | new | Should I make a very large down payment to offset today's high mortgage rates? |
 | 2 | 1 |  | new | Are there downsides to down payment assistance programs? |
-| 2 | 1 |  | drafting | Can family help with my down payment, and how do gift funds work? |
+| 2 | 1 |  | published | Can family help with my down payment, and how do gift funds work? |
 | 2 | 1 |  | new | How do lenders calculate my income (including VA disability, bonuses, or side work)? |
 | 1 | 1 |  | new | VA loan or FHA loan: what are the trade-offs for a first-time buyer? |
 | 1 | 1 |  | new | Can I combine a VA loan with first-time buyer grants or down payment assistance? |
@@ -76,7 +76,7 @@ Priority = times asked + 1 per thread from the past year + 3 if asked about CA, 
 | 6 | 3 |  | new | Can I take over the mortgage on a parent's home I inherited? |
 | 5 | 3 |  | published | I got a mailer offering a very low cash-out refinance rate. Is it real, and how do I spot hidden points or an adjustable rate? |
 | 4 | 4 |  | new | How do I figure the break-even on refinance closing costs, and should I roll them into the loan or pay cash? |
-| 4 | 4 |  | drafting | How do I refinance from an FHA loan to a conventional loan, and is it worth it? |
+| 4 | 4 |  | published | How do I refinance from an FHA loan to a conventional loan, and is it worth it? |
 | 4 | 2 |  | new | Can I recast a VA loan, or should I pay it off early? |
 | 4 | 2 |  | new | I owe more than my home is worth. Should I sell, rent it out, or keep paying? |
 | 2 | 2 |  | published | What is a no-closing-cost refinance, and is it really free? |

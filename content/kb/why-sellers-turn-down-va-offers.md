@@ -11,7 +11,7 @@ sources:
   - { title: "VA — Purchase loan", url: "https://www.va.gov/housing-assistance/home-loans/loan-types/purchase-loan/" }
 updated: 2026-09-30
 reviewed_by: "Ace Ausar, NMLS #1143018"
-status: draft
+status: published
 researchId: va-offer-sellers
 ---
 

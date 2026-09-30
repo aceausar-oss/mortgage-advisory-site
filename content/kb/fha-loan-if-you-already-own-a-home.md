@@ -10,7 +10,7 @@ sources:
   - { title: "HUD Single Family Housing Policy Handbook 4000.1", url: "https://www.hud.gov/hud-partners/single-family-handbook-4000-1" }
 updated: 2026-09-30
 reviewed_by: "Ace Ausar, NMLS #1143018"
-status: draft
+status: published
 researchId: fha-already-own-home
 ---
 

@@ -10,7 +10,7 @@ persona: first-time-buyer
 featured: true
 updated: 2026-09-30
 reviewed_by: "Ace Ausar, NMLS #1143018"
-status: draft
+status: published
 researchId: down-payment-20-percent
 ---
 
