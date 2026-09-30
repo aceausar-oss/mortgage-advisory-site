@@ -1,4 +1,4 @@
-// "In other countries, it's called a pension" cards with big flags (Ace's "Hidden Pension" webinar slide).
+// "In other countries, it's called a housing pension" cards with big flags (Ace's "Hidden Pension" webinar slide).
 // Same markup and styles (.country-grid in globals.css) as the cards inside answers, so they look identical everywhere.
 export const COUNTRIES = [
   { code: "kr", name: "South Korea", flagWidth: 36, term: "Jutaek Yeongeum", meaning: "“Home Pension,” a government-backed program, age 55+" },
@@ -14,7 +14,7 @@ export function CountryPensionCards({ heading = true }: { heading?: boolean }) {
         <header className="space-y-1">
           <p className="font-heading text-sm font-semibold uppercase tracking-[0.2em] text-brand-button">Around the world</p>
           <h2 id="around-the-world" className="text-2xl font-bold sm:text-3xl">
-            In other countries, it&apos;s called a <em>pension</em>
+            In other countries, it&apos;s called a <em>housing pension</em>
           </h2>
         </header>
       )}

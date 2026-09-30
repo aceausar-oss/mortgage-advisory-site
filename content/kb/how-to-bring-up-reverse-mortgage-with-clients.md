@@ -3,7 +3,7 @@ question: "How do I bring up a reverse mortgage with a client without it soundin
 slug: how-to-bring-up-reverse-mortgage-with-clients
 seoTitle: "How to Bring Up a Reverse Mortgage With a Client"
 description: "Start with the client's goal, not the product. Plain-English openers, questions to ask, and how to bring in a lender while you stay in control."
-tldr: "Start with the client's goal, not the product, and with what the rest of the world already knows: in South Korea, Switzerland, and Sweden, a reverse mortgage is called a pension. Ask how they feel about their mortgage payment, a down market, or staying in the home, and introduce home equity as one more resource in the plan. Share a plain-English article first, then bring in a lender for the numbers, with you in the room. The Mortgage Advisory offers financial professionals free case reviews and never offers or accepts referral fees."
+tldr: "Start with the client's goal, not the product, and with what the rest of the world already knows: in South Korea, Switzerland, and Sweden, a reverse mortgage is called a housing pension. Ask how they feel about their mortgage payment, a down market, or staying in the home, and introduce home equity as one more resource in the plan. Share a plain-English article first, then bring in a lender for the numbers, with you in the room. The Mortgage Advisory offers financial professionals free case reviews and never offers or accepts referral fees."
 category: pros
 products: [hecm, proprietary-reverse, reverse-second]
 persona: financial-professional
@@ -18,7 +18,7 @@ Most clients have heard the old stories: "the bank takes the house," "the kids g
 
 ## What's the strongest way to open?
 
-Start with what the rest of the world already knows. In many countries, a reverse mortgage isn't a last resort; it's called a **pension**:
+Start with what the rest of the world already knows. In many countries, a reverse mortgage isn't a last resort; it's called a **housing pension**:
 
 <div class="country-grid">
 <div class="country-card"><p class="country"><img src="/flags/kr.svg" alt="Flag of South Korea" width="36" height="24">South Korea</p><p class="term">Jutaek Yeongeum</p><p class="meaning">"Home Pension," a government-backed program, age 55+</p></div>

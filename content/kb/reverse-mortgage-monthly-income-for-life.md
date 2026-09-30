@@ -27,7 +27,7 @@ A HECM offers two monthly options:
 
 You can also combine either one with a line of credit. Monthly payments come with the adjustable-rate HECM.
 
-## Why do other countries call it a pension?
+## Why do other countries call it a housing pension?
 
 Because it works like one:
 
@@ -40,7 +40,7 @@ Because it works like one:
 
 **Same idea, different name.** In the U.S., it's a loan, and we'll show you exactly how it works.
 
-Why the pension name fits:
+Why the housing pension name fits:
 
 - **It can pay you for life,** through the tenure option.
 - **There's a guarantee behind it.** In the U.S., FHA insurance keeps payments flowing and keeps the loan non-recourse.
