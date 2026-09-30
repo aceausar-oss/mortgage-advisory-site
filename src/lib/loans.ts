@@ -44,6 +44,8 @@ const Frontmatter = z
     // Header photo (public/ path) and its description; illustration only, never presented as a real client.
     image: z.string().startsWith("/images/").optional(),
     imageAlt: z.string().optional(),
+    // Which part of a wide photo stays in view when the frame crops it, e.g. "20% center" (CSS object-position).
+    imagePosition: z.string().regex(/^[0-9a-z% ]+$/).optional(),
     sources: z.array(Source).default([]),
     didYouKnow: DidYouKnowList,
     updated: z.coerce.date(),

@@ -136,7 +136,15 @@ export function ProgramPage({ page }: { page: LoanPage }) {
             <h1 className="text-3xl font-bold leading-tight sm:text-4xl">{page.question}</h1>
             {page.image && (
               <div className="relative aspect-[3/2] overflow-hidden rounded-2xl sm:aspect-[21/9]">
-                <Image src={page.image} alt={page.imageAlt ?? ""} fill preload sizes="(min-width: 768px) 768px, 100vw" className="object-cover" />
+                <Image
+                  src={page.image}
+                  alt={page.imageAlt ?? ""}
+                  fill
+                  preload
+                  sizes="(min-width: 768px) 768px, 100vw"
+                  className="object-cover"
+                  style={page.imagePosition ? { objectPosition: page.imagePosition } : undefined}
+                />
               </div>
             )}
             <TldrBox text={page.tldr} />
