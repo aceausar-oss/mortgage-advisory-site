@@ -3,7 +3,7 @@ question: "How do I bring up a reverse mortgage with a client without it soundin
 slug: how-to-bring-up-reverse-mortgage-with-clients
 seoTitle: "How to Bring Up a Reverse Mortgage With a Client"
 description: "Start with the client's goal, not the product. Plain-English openers, questions to ask, and how to bring in a lender while you stay in control."
-tldr: "Start with the client's goal, not the product. Ask how they feel about their mortgage payment, a down market, or staying in the home, and introduce home equity as one more resource in the plan. Share a plain-English article first, then bring in a lender for the numbers, with you in the room. The Mortgage Advisory offers financial professionals free case reviews and never offers or accepts referral fees."
+tldr: "Start with the client's goal, not the product, and with what the rest of the world already knows: in South Korea, Switzerland, and Sweden, a reverse mortgage is called a pension. Ask how they feel about their mortgage payment, a down market, or staying in the home, and introduce home equity as one more resource in the plan. Share a plain-English article first, then bring in a lender for the numbers, with you in the room. The Mortgage Advisory offers financial professionals free case reviews and never offers or accepts referral fees."
 category: pros
 products: [hecm, proprietary-reverse, reverse-second]
 persona: financial-professional
@@ -16,7 +16,22 @@ status: draft
 
 Most clients have heard the old stories: "the bank takes the house," "the kids get nothing." Lead with the product name and many will shut down before you explain anything. Lead with **their goal** and it becomes a planning conversation.
 
-## What are good ways to open the conversation?
+## What's the strongest way to open?
+
+Start with what the rest of the world already knows. In many countries, a reverse mortgage isn't a last resort; it's called a **pension**:
+
+<div class="country-grid">
+<div class="country-card"><p class="country"><img src="/flags/kr.svg" alt="Flag of South Korea" width="36" height="24">South Korea</p><p class="term">Jutaek Yeongeum</p><p class="meaning">"Home Pension," a government-backed program, age 55+</p></div>
+<div class="country-card"><p class="country"><img src="/flags/ch.svg" alt="Flag of Switzerland" width="24" height="24">Switzerland</p><p class="term">Immobilienrente</p><p class="meaning">"Real estate pension," also called a reverse mortgage</p></div>
+<div class="country-card"><p class="country"><img src="/flags/se.svg" alt="Flag of Sweden" width="38" height="24">Sweden</p><p class="term">Hypotekspension</p><p class="meaning">A leading provider's name: "Swedish Mortgage Pension"</p></div>
+<div class="country-card home"><p class="country"><img src="/flags/us.svg" alt="Flag of the United States" width="46" height="24">United States</p><p class="term">HECM</p><p class="meaning">A federally insured loan, or "reverse mortgage"</p></div>
+</div>
+
+**Same idea, different name.** In the U.S., it's a loan, and we'll show you exactly how it works.
+
+Try: *"Did you know that in South Korea, the government's reverse mortgage program is literally called the Home Pension? In Switzerland it's a 'real estate pension.' Your home could play that same role in your plan."* It reframes the conversation in one sentence, and it shows the client you've looked beyond the headlines.
+
+## What are other good ways to open the conversation?
 
 Pick the one that matches the client:
 

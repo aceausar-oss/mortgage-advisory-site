@@ -125,56 +125,61 @@ h4 {
   padding: 1rem 1.25rem;
 }
 
-/* "Around the world" country cards with flags (Ace's "Hidden Pension" webinar slide). */
-.answer-body .country-grid {
+/* "Around the world" country cards with flags (Ace's "Hidden Pension" webinar slide). Used in answers (markdown)
+   and by <CountryPensionCards>. Flags are big on purpose (Ace, Sept 2026). */
+.country-grid {
   display: grid;
   gap: 0.75rem;
-  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  /* 4 across on wide layouts, 2×2 in article columns, 1 on phones (never 3 + 1). */
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
 }
-.answer-body .country-card {
+.country-card {
   border-radius: 1rem;
   background: #fff;
   padding: 1rem 1.25rem;
   line-height: 1.5;
   box-shadow: 0 0 0 1px color-mix(in srgb, var(--color-brand-steel) 30%, transparent);
 }
-.answer-body .country-card .country {
+.country-card .country {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.75rem;
+  margin: 0;
   font-family: var(--font-heading);
-  font-size: 0.85rem;
+  font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--color-brand-blue-deep);
 }
-.answer-body .country-card img {
-  height: 1.6rem;
+.country-card img {
+  height: 2.5rem;
   width: auto;
-  border-radius: 3px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.08),
+    0 2px 6px rgba(0, 0, 0, 0.18);
 }
-.answer-body .country-card .term {
-  margin-top: 0.5rem;
+.country-card .term {
+  margin: 0.75rem 0 0;
   font-family: var(--font-heading);
   font-size: 1.15rem;
   font-style: italic;
   font-weight: 700;
   color: var(--color-brand-ink);
 }
-.answer-body .country-card .meaning {
-  margin-top: 0.25rem;
+.country-card .meaning {
+  margin: 0.25rem 0 0;
   font-size: 0.95rem;
   color: var(--color-brand-slate);
 }
-.answer-body .country-card.home {
+.country-card.home {
   background: var(--color-brand-button);
   box-shadow: none;
 }
-.answer-body .country-card.home .country,
-.answer-body .country-card.home .term,
-.answer-body .country-card.home .meaning {
+.country-card.home .country,
+.country-card.home .term,
+.country-card.home .meaning {
   color: #fff;
 }
 
