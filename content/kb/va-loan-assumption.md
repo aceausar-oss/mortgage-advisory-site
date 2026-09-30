@@ -12,7 +12,7 @@ sources:
   - { title: "VA Lender's Handbook — Loan assumptions", url: "https://www.benefits.va.gov/WARMS/docs/admin26/pamphlet/pam26_7/ch05.pdf" }
 updated: 2026-09-30
 reviewed_by: "Ace Ausar, NMLS #1143018"
-status: draft
+status: published
 researchId: va-assumption
 ---
 

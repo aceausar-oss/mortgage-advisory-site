@@ -9,7 +9,7 @@ products: [fha, conventional, rate-term-refi]
 persona: homeowner
 updated: 2026-09-30
 reviewed_by: "Ace Ausar, NMLS #1143018"
-status: draft
+status: published
 researchId: fha-to-conventional-refi
 ---
 

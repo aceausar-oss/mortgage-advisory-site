@@ -12,7 +12,7 @@ sources:
   - { title: "VA — How to request a COE", url: "https://www.va.gov/housing-assistance/home-loans/how-to-request-coe/" }
 updated: 2026-09-30
 reviewed_by: "Ace Ausar, NMLS #1143018"
-status: draft
+status: published
 researchId: va-eligibility-coe
 ---
 

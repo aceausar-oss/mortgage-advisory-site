@@ -12,7 +12,7 @@ sources:
   - { title: "HUD — Let FHA loans help you", url: "https://www.hud.gov/buying/loans" }
 updated: 2026-09-30
 reviewed_by: "Ace Ausar, NMLS #1143018"
-status: draft
+status: published
 researchId: fha-vs-conventional
 ---
 
