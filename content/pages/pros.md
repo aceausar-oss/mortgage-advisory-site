@@ -66,6 +66,7 @@ Flag a conversation when a client:
 - [Protecting a spouse under 62](/answers/reverse-mortgage-spouse-under-62)
 - [What happens when the borrower dies](/answers/reverse-mortgage-when-borrower-dies)
 - [When a reverse mortgage is a bad idea](/answers/when-is-a-reverse-mortgage-a-bad-idea)
+- [Alternatives to a reverse mortgage](/answers/reverse-mortgage-alternatives), [downsizing vs. staying put](/answers/sell-and-downsize-vs-reverse-mortgage), and [senior property tax deferral](/answers/senior-property-tax-deferral-ca-tx-fl-co)
 
 **High-value homes and keeping a low first mortgage**
 
