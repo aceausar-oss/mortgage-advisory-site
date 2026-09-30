@@ -11,7 +11,8 @@ funding: broker
 booking: reverse
 related: [is-a-reverse-mortgage-a-scam, can-you-lose-your-home-with-a-reverse-mortgage, reverse-mortgage-keep-first-mortgage, reverse-mortgage-line-of-credit-growth, who-qualifies-for-a-reverse-mortgage, when-is-a-reverse-mortgage-a-bad-idea]
 image: "/images/loans/loan-reverse-mortgage.jpg"
-imageAlt: "Grandparents playing with their grandkids in the backyard"
+imageAlt: "Retired couple relaxing in their backyard while their grandkids play and a contractor builds a new deck"
+imagePosition: "20% center"
 sources:
   - { title: "HUD — FHA Reverse Mortgage for Seniors (HECM)", url: "https://www.hud.gov/hud-partners/single-family-hecmhome" }
   - { title: "HUD — HECM counselor roster", url: "https://entp.hud.gov/idapp/html/hecm_cnslr_look.cfm" }
