@@ -10,10 +10,10 @@ export function SiteHeader() {
           <Image
             src="/brand/logo-tma-2026.png"
             alt={licensing.brandName}
-            width={1846}
-            height={517}
+            width={1837}
+            height={497}
             preload
-            sizes="180px"
+            sizes="(min-width: 640px) 220px, 160px"
             className="h-9 w-auto min-[360px]:h-10 sm:h-14"
           />
         </Link>
