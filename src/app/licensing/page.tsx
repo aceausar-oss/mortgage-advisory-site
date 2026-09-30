@@ -67,6 +67,21 @@ export default function LicensingPage() {
         ))}
       </section>
 
+      <section aria-labelledby="affiliates" className="space-y-2">
+        <h2 id="affiliates" className="font-heading text-2xl font-semibold">
+          Affiliated businesses
+        </h2>
+        {licensing.affiliates.map((a) => (
+          <div key={a.name} className="space-y-1 rounded-2xl border border-brand-steel/30 bg-white p-5">
+            <h3 className="font-heading text-lg font-semibold">{a.name}</h3>
+            <p>
+              {a.business[0].toUpperCase() + a.business.slice(1)} · {a.license} · Broker: {a.broker} · Serves: {a.areas}
+            </p>
+            <p className="text-sm leading-relaxed text-brand-slate">{a.disclosure}</p>
+          </div>
+        ))}
+      </section>
+
       <section aria-labelledby="lender-broker" className="space-y-2">
         <h2 id="lender-broker" className="font-heading text-2xl font-semibold">
           Lender or broker?

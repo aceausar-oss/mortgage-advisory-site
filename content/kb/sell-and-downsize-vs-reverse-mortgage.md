@@ -7,12 +7,13 @@ tldr: "It comes down to whether this home still fits your life. Selling and down
 category: reverse-mortgage
 products: [hecm]
 persona: retiree
+affiliate: true
 sources:
   - { title: "HUD — FHA Reverse Mortgage for Seniors (HECM)", url: "https://www.hud.gov/hud-partners/single-family-hecmhome" }
   - { title: "IRS Publication 523 — Selling Your Home", url: "https://www.irs.gov/publications/p523" }
 updated: 2026-09-30
 reviewed_by: "Ace Ausar, NMLS #1143018"
-status: draft
+status: published
 ---
 
 ## How do the three paths compare?
@@ -51,6 +52,10 @@ It's a way to right-size **without** spending all your equity on the new home, a
 - **Florida:** "Save Our Homes" portability can let you carry part of your homestead tax savings to a new Florida home.
 
 Rules have limits and deadlines, so confirm with your county assessor.
+
+## Can you help me sell and buy?
+
+Yes, in California. Our affiliated real estate brokerage, **The Home Advisory** (California DRE #02020987, Ace Ausar, broker), can help you sell your current home and find the next one, while we handle the financing. Having one team coordinate the sale, the purchase, and the loan makes the timing much easier. You're always free to choose any real estate agent; see the affiliated business disclosure below.
 
 ## Example scenario (illustrative)
 

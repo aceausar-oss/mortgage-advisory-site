@@ -14,7 +14,7 @@ sources:
   - { title: "Colorado Department of the Treasury — Property Tax Deferral Program", url: "https://treasury.colorado.gov/property-tax-deferral-programs" }
 updated: 2026-09-30
 reviewed_by: "Ace Ausar, NMLS #1143018"
-status: draft
+status: published
 ---
 
 ## How does property tax deferral work?

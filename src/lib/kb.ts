@@ -55,6 +55,8 @@ const Frontmatter = z
     reviewed_by: z.string().optional(),
     status: z.enum(["draft", "published"]),
     researchId: z.string().optional(),
+    // Mentions our affiliated real estate brokerage, The Home Advisory: adds the affiliated business disclosure.
+    affiliate: z.boolean().default(false),
   })
   .refine((d) => (d.seoTitle ?? d.question).length <= 60, {
     message: "question is over 60 characters: add a seoTitle of 60 characters or fewer",

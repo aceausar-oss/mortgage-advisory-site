@@ -7,10 +7,11 @@ tldr: "There are a dozen of them. You can defer property taxes through a state p
 category: reverse-mortgage
 products: [hecm, reverse-second, homesafe, heloc, home-equity-loan, cash-out-refi]
 persona: retiree
+affiliate: true
 featured: true
 updated: 2026-09-30
 reviewed_by: "Ace Ausar, NMLS #1143018"
-status: draft
+status: published
 ---
 
 ## Why look at alternatives first?
@@ -34,6 +35,8 @@ You've spent 30 or 40 years building equity, and the decision about how to use i
 | **Help from family** | Yes | Maybe | Short-term needs | Put it in writing to protect relationships |
 | **Sale-leaseback** | As a renter | Rent | Rarely the best choice | You give up ownership; read every term |
 | **[Reverse mortgage (HECM)](/loans/reverse-mortgage)** | Yes | No | Staying put long term with no mortgage payment | Balance grows; costs up front |
+
+**Thinking about selling?** In California, our affiliated real estate brokerage, **The Home Advisory** (DRE #02020987), can help you sell and buy while we handle the financing. You're free to choose any agent; see the disclosure below.
 
 ## Which one fits me?
 
