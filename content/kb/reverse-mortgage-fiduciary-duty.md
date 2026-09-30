@@ -3,7 +3,7 @@ question: "Does suggesting a reverse mortgage conflict with my fiduciary duty to
 slug: reverse-mortgage-fiduciary-duty
 seoTitle: "Reverse Mortgages and an Advisor's Fiduciary Duty"
 description: "Looking at every asset, including home equity, can be part of a client's best interest. How to document it and keep the process conflict-free."
-tldr: "Generally, no. Acting in a client's best interest means looking at every resource they have, and for most retirees the home is the biggest one. What matters is how you do it: document the analysis, compare alternatives, avoid any compensation from the lender, and let the client decide. The Mortgage Advisory never pays referral fees and provides written numbers you can keep in your file. Check your own firm's policies too."
+tldr: "Generally, no. Acting in a client's best interest means looking at every resource they have, and for most retirees the home is the biggest one. What matters is how you do it: document the analysis, compare alternatives, avoid any compensation from the lender, and let the client decide. The Mortgage Advisory never offers or accepts referral fees and provides written numbers you can keep in your file. Check your own firm's policies too."
 category: pros
 products: [hecm, proprietary-reverse, reverse-second]
 persona: financial-professional
@@ -18,7 +18,7 @@ A retirement plan that ignores the client's largest asset may be incomplete. For
 
 ## What would create a conflict?
 
-- **Getting paid for the referral.** We never pay referral fees or give anything of value for referrals, so there's nothing to disclose from our side.
+- **Getting paid for the referral.** We never offer or accept referral fees, or anything else of value for referrals, so there's nothing to disclose from our side.
 - **Using loan proceeds to buy a product you sell.** We never recommend using reverse mortgage proceeds to buy annuities, insurance, or investments, and some states restrict it.
 - **Steering the decision.** The client and family decide, after independent counseling for a HECM.
 

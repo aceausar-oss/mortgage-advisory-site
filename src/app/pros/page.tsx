@@ -109,7 +109,7 @@ export default function ProsPage() {
         <>
           <section aria-label="Talk to our team" className="rounded-2xl bg-brand-slate p-6 text-white">
             <p className="font-heading text-xl font-semibold text-white">Have a client in mind?</p>
-            <p className="mt-1 text-white/90">Book a 15-minute case review with our team. No names needed, and no referral fees, ever.</p>
+            <p className="mt-1 text-white/90">Book a 15-minute case review with our team. No names needed. We never offer or accept referral fees.</p>
             <div className="mt-4 flex flex-wrap gap-3">
               <Link href="/book" className="rounded-full bg-white px-5 py-2.5 font-semibold text-brand-slate hover:bg-mist">
                 Book a case review
