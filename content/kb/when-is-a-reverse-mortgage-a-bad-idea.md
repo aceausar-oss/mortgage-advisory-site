@@ -32,6 +32,10 @@ This is a real loan with real terms. If declining health is affecting someone's 
 
 Some families want the home to pass on with no loan against it, and that's a real and valid priority. A reverse mortgage uses some of that equity. One middle ground: with a properly drafted living trust, your heirs can still choose to **keep the home** by refinancing or paying off the loan, **sell it** and keep what's left, or walk away. See [what happens when the borrower dies](/answers/reverse-mortgage-when-borrower-dies).
 
+## What are the alternatives?
+
+Property tax deferral, downsizing, a HELOC, a home equity loan, a reverse mortgage second, and more. See [alternatives to a reverse mortgage](/answers/reverse-mortgage-alternatives).
+
 ## What if none of these apply?
 
 Then it's worth a serious look, especially if most of your wealth is in your home, you'd like to stop making a mortgage payment, or you want a [growing line of credit](/answers/reverse-mortgage-line-of-credit-growth) as a safety net.

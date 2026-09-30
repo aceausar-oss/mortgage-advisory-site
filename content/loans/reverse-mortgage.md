@@ -9,7 +9,7 @@ category: reverse-mortgage
 products: [hecm, proprietary-reverse, reverse-second, homesafe]
 funding: broker
 booking: reverse
-related: [is-a-reverse-mortgage-a-scam, can-you-lose-your-home-with-a-reverse-mortgage, reverse-mortgage-keep-first-mortgage, reverse-mortgage-second-vs-heloc, reverse-mortgage-line-of-credit-growth, who-qualifies-for-a-reverse-mortgage, when-is-a-reverse-mortgage-a-bad-idea]
+related: [reverse-mortgage-alternatives, is-a-reverse-mortgage-a-scam, can-you-lose-your-home-with-a-reverse-mortgage, reverse-mortgage-keep-first-mortgage, reverse-mortgage-second-vs-heloc, reverse-mortgage-line-of-credit-growth, who-qualifies-for-a-reverse-mortgage, when-is-a-reverse-mortgage-a-bad-idea]
 image: "/images/loans/loan-reverse-mortgage.jpg"
 imageAlt: "Retired couple relaxing in their backyard while their grandkids play and a contractor builds a new deck"
 imagePosition: "20% center"
@@ -50,7 +50,7 @@ What you **do** still pay: property taxes, homeowners insurance, HOA dues if you
 - Retirees who want a **safety net**: a growing line of credit for health care, home repairs, or a market downturn.
 - People who want to **age in place** instead of selling and moving.
 
-It's usually **not** the right fit if you plan to move in the next few years, or if paying taxes and insurance would still be a stretch.
+It's usually **not** the right fit if you plan to move in the next few years, or if paying taxes and insurance would still be a stretch. See [alternatives to a reverse mortgage](/answers/reverse-mortgage-alternatives).
 
 ## What are my options?
 
