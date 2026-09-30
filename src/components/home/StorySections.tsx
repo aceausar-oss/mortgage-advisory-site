@@ -1,3 +1,4 @@
+import { FlagRow } from "@/components/CountryPensionCards";
 import Image from "next/image";
 import Link from "next/link";
 import { PillCta } from "@/components/PillCta";
@@ -60,6 +61,11 @@ export function StorySections() {
                 {g.headline}
               </h3>
               <p className="mt-3 text-lg leading-relaxed">{g.copy}</p>
+              {g.goal === "retirement-equity" && (
+                <div className="mt-3">
+                  <FlagRow />
+                </div>
+              )}
               {story && (
                 <blockquote className="mt-4 rounded-2xl border-l-4 border-brand-blue bg-white p-4">
                   <p className="font-semibold text-brand-slate">{story.title}</p>

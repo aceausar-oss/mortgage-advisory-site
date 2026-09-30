@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { CountryPensionCards } from "@/components/CountryPensionCards";
 import { Disclosures } from "@/components/Disclosures";
 import { ContentPageView, contentPageMetadata } from "@/components/ContentPageView";
 import { getHandouts } from "@/lib/handouts";
@@ -55,6 +56,19 @@ export default function ProsPage() {
     <ContentPageView
       page={page}
       top={
+        <>
+        <div className="space-y-3">
+          <CountryPensionCards />
+          <p className="text-brand-slate">
+            Many of the planners we work with open the conversation this way. It reframes a reverse mortgage in one sentence, from
+            &ldquo;last resort&rdquo; to a planning tool the rest of the world already uses, and it shows clients you&apos;ve looked beyond the
+            headlines. See{" "}
+            <Link href="/answers/how-to-bring-up-reverse-mortgage-with-clients" className="font-semibold text-brand-button underline underline-offset-4">
+              how to bring it up with a client
+            </Link>
+            .
+          </p>
+        </div>
         <section aria-labelledby="pro-tools" className="space-y-4">
           <h2 id="pro-tools" className="font-heading text-2xl font-semibold">
             Free tools and resources
@@ -104,6 +118,7 @@ export default function ProsPage() {
             </div>
           )}
         </section>
+        </>
       }
       bottom={
         <>

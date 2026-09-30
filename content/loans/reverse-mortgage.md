@@ -32,6 +32,17 @@ It's a loan against your home's equity where **you don't make a monthly mortgage
 
 What you **do** still pay: property taxes, homeowners insurance, HOA dues if you have them, and basic upkeep. That's the deal, and it's how you keep the loan in good standing.
 
+## What do other countries call it?
+
+<div class="country-grid">
+<div class="country-card"><p class="country"><img src="/flags/kr.svg" alt="Flag of South Korea" width="36" height="24">South Korea</p><p class="term">Jutaek Yeongeum</p><p class="meaning">"Home Pension," a government-backed program, age 55+</p></div>
+<div class="country-card"><p class="country"><img src="/flags/ch.svg" alt="Flag of Switzerland" width="24" height="24">Switzerland</p><p class="term">Immobilienrente</p><p class="meaning">"Real estate pension," also called a reverse mortgage</p></div>
+<div class="country-card"><p class="country"><img src="/flags/se.svg" alt="Flag of Sweden" width="38" height="24">Sweden</p><p class="term">Hypotekspension</p><p class="meaning">A leading provider's name: "Swedish Mortgage Pension"</p></div>
+<div class="country-card home"><p class="country"><img src="/flags/us.svg" alt="Flag of the United States" width="46" height="24">United States</p><p class="term">HECM</p><p class="meaning">A federally insured loan, or "reverse mortgage"</p></div>
+</div>
+
+**Same idea, different name.** In the U.S., it's a loan, and we'll show you exactly how it works.
+
 ## Who is a reverse mortgage a good fit for?
 
 - **Homeowners 62 or older** (some proprietary programs start younger, depending on state and program) with solid equity.
