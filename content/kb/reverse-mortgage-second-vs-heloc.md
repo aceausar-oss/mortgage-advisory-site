@@ -1,11 +1,11 @@
 ---
-question: "Reverse mortgage second vs. HELOC: which is better if I'm 55 or older?"
+question: "HomeSafe Second (reverse mortgage second) vs. HELOC: which is better if I'm 55 or older?"
 slug: reverse-mortgage-second-vs-heloc
-seoTitle: "Reverse Mortgage Second vs. HELOC for Homeowners 55+"
+seoTitle: "HomeSafe Second vs. HELOC for Homeowners 55+"
 description: "Both keep your first mortgage. A reverse mortgage second is fixed-rate with no required monthly payment; a HELOC is variable and must be paid monthly."
-tldr: "Both let you keep your current first mortgage. A HELOC is usually a variable-rate line of credit with monthly payments and stricter credit and income rules. A reverse mortgage second is a fixed-rate lump sum with no required monthly payment, for homeowners 55 and older (62 in Texas), with a minimum credit score around 640. The trade-off: its balance grows over time. The Mortgage Advisory arranges both and compares them with your real numbers."
+tldr: "Both let you keep your current first mortgage. A HELOC is usually a variable-rate line of credit with monthly payments and stricter credit and income rules. A reverse mortgage second, like HomeSafe Second from Finance of America, is a fixed-rate lump sum with no required monthly payment, for homeowners 55 and older (62 in Texas), with a minimum credit score around 640. The trade-off: its balance grows over time. The Mortgage Advisory arranges both and compares them with your real numbers."
 category: heloc
-products: [reverse-second, heloc]
+products: [reverse-second, homesafe, heloc]
 persona: retiree
 featured: true
 updated: 2026-09-30
@@ -15,7 +15,9 @@ status: draft
 
 ## How do they compare side by side?
 
-| | Reverse mortgage second | HELOC |
+The reverse mortgage second we offer is **HomeSafe Second**, from Finance of America. It's the program this comparison describes.
+
+| | HomeSafe Second (reverse mortgage second) | HELOC |
 |---|---|---|
 | Keeps your first mortgage | Yes | Yes |
 | Rate | **Fixed** | Usually **variable** |
@@ -45,7 +47,7 @@ HELOC terms vary by lender; the column shows a typical HELOC.
 - You want **flexible access**: draw only what you need, when you need it.
 - The payment fits comfortably in your budget, even if the rate rises.
 
-## What do I need to qualify for a reverse mortgage second?
+## What do I need to qualify for HomeSafe Second?
 
 - Age 55 or older (62 in Texas)
 - Current on your first mortgage

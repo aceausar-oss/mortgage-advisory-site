@@ -5,7 +5,7 @@ seoTitle: "Reverse Mortgage Without Paying Off Your First Mortgage?"
 description: "Yes, with the right program. A standard HECM pays off your existing mortgage, but a reverse mortgage second lets you keep your low-rate first loan."
 tldr: "Yes, with a reverse mortgage second. A standard FHA-insured HECM has to pay off your current mortgage, but a second-lien reverse mortgage sits behind it, so you keep your low rate and your payment exactly as they are. The Mortgage Advisory offers reverse mortgage seconds for homeowners who want to tap their equity without giving up a great first-mortgage rate."
 category: reverse-mortgage
-products: [hecm, proprietary-reverse, reverse-second]
+products: [hecm, proprietary-reverse, reverse-second, homesafe]
 states: []
 persona: retiree
 featured: true
@@ -28,7 +28,7 @@ A HECM has to be the only loan on your home, so your existing mortgage gets paid
 
 ## What is a reverse mortgage second?
 
-It's a private (non-FHA) reverse mortgage that sits **behind** the mortgage you already have. Here's how it works:
+It's a private (non-FHA) reverse mortgage that sits **behind** the mortgage you already have. The one we offer is **HomeSafe Second**, from Finance of America. Here's how it works:
 
 - **Your first mortgage stays exactly as it is:** same rate, same payment.
 - **You get your money as a lump sum** at closing, at a **fixed rate**.
