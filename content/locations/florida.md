@@ -10,8 +10,6 @@ category: buying
 products: [conventional, fha, va, heloc, hecm, reverse-second, non-qm]
 funding: broker
 related: [is-a-reverse-mortgage-a-scam, va-loan-new-construction, down-payment-assistance-ca-tx-fl-co, how-to-choose-a-mortgage-lender]
-image: "/images/states/state-florida.jpg"
-imageAlt: "Home with palm trees in Florida"
 didYouKnow:
   - text: "Florida's homestead exemption can cut the taxable value of your primary home, and the Save Our Homes cap generally limits yearly increases in its assessed value to 3% or the rate of inflation, whichever is lower."
 updated: 2026-09-27

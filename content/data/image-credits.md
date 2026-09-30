@@ -15,4 +15,4 @@ All homepage photos are illustrative only. They are never presented as clients (
 
 ## Placeholder photos (theme-silver test)
 
-Files in public/images/goals, loans, states, and pages are temporary labeled placeholders. Ace will replace each with his own AI-created photo using the same file name. Photos are illustrations only, never presented as real clients.
+Files in public/images/goals, loans, and pages are temporary labeled placeholders. Ace will replace each with his own AI-created photo using the same file name. Photos are illustrations only, never presented as real clients.
