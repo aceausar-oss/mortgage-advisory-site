@@ -11,7 +11,7 @@ funding: direct
 booking: purchase
 related: [how-to-find-a-va-loan-lender, va-loan-estimate-good-deal, va-loan-credit-score-bankruptcy, va-loan-new-construction]
 image: "/images/loans/loan-va.jpg"
-imageAlt: "Veteran and family at home"
+imageAlt: "Service member and her family in front of their new home with a sold sign"
 sources:
   - { title: "VA — Home loans", url: "https://www.va.gov/housing-assistance/home-loans/" }
   - { title: "VA — Funding fee and loan closing costs", url: "https://www.va.gov/housing-assistance/home-loans/funding-fee-and-closing-costs/" }

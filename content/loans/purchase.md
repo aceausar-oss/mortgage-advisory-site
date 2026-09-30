@@ -11,7 +11,7 @@ funding: mixed
 booking: purchase
 related: [how-much-house-can-i-afford, down-payment-assistance-ca-tx-fl-co, arm-vs-buydown-vs-fixed, how-to-choose-a-mortgage-lender]
 image: "/images/loans/loan-purchase.jpg"
-imageAlt: "Couple carrying moving boxes into their new home"
+imageAlt: "Family carrying moving boxes into their new home while the kids run ahead"
 sources:
   - { title: "HUD — Let FHA loans help you", url: "https://www.hud.gov/buying/loans" }
   - { title: "VA — Home loans", url: "https://www.va.gov/housing-assistance/home-loans/" }
