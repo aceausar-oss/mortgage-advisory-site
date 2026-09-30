@@ -4,7 +4,7 @@ slug: va-loan-credit-score-bankruptcy
 seoTitle: "VA Loan Credit Score, Collections & Bankruptcy"
 description: "VA sets no minimum credit score; lenders do. You may qualify 2 years after a Chapter 7, or after 12 months of Chapter 13 payments with trustee approval."
 tldr: "VA doesn't set a minimum credit score; each lender sets its own, often somewhere around 580 to 620. After bankruptcy, VA generally looks for 2 years since a Chapter 7 discharge, or 12 months of on-time Chapter 13 plan payments with the trustee's permission. Collections don't automatically disqualify you. At The Mortgage Advisory, we look at your whole credit story, not just the score."
-category: buying
+category: va
 products: [va]
 states: [CA]
 persona: veteran

@@ -4,7 +4,7 @@ slug: va-loan-estimate-good-deal
 seoTitle: "Is My VA Loan Estimate a Good Deal? What to Check"
 description: "Check the rate lock, points, the 1% fee, the VA funding fee and disability exemption, and seller concessions, then compare VA quotes the same day."
 tldr: "Read it like any Loan Estimate, then check the VA-specific items: the funding fee (and whether you're exempt), no monthly mortgage insurance, what you're paying in points or a flat lender fee, and how seller concessions are applied. At The Mortgage Advisory, we help veterans compare VA offers side by side, same day, same loan."
-category: buying
+category: va
 products: [va]
 states: [CA, FL]
 persona: veteran

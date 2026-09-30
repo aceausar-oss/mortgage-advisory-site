@@ -1,6 +1,8 @@
 // FAQ tabs / knowledge-base categories (CLAUDE.md §4.5). Keys match `category` in content/kb and content/research.
 export const CATEGORIES = [
-  { key: "buying", label: "Buying", long: "Buying a home (incl. FHA & VA)" },
+  { key: "buying", label: "Buying", long: "Buying a home" },
+  { key: "va", label: "VA Loans", long: "VA home loans" },
+  { key: "fha-conventional", label: "FHA & Conventional", long: "FHA and conventional loans" },
   { key: "refinancing", label: "Refinancing", long: "Refinancing" },
   { key: "heloc", label: "HELOC & Equity", long: "HELOCs & home equity" },
   { key: "debt-consolidation", label: "Debt Consolidation", long: "Debt consolidation with home equity" },

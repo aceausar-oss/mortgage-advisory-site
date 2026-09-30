@@ -3,7 +3,7 @@ question: "How do I get rid of FHA mortgage insurance?"
 slug: how-to-get-rid-of-fha-mortgage-insurance
 description: "If you put less than 10% down, FHA insurance lasts the life of the loan. The usual way out is refinancing into a conventional loan once you have equity."
 tldr: "It depends on your down payment. For most FHA loans since mid-2013, if you put less than 10% down, the mortgage insurance lasts for the life of the loan; with 10% or more down, it ends after 11 years. The most common way out is refinancing into a conventional loan once you have about 20% equity, and The Mortgage Advisory will show you when that makes sense."
-category: refinancing
+category: fha-conventional
 products: [fha, conventional, rate-term-refi]
 states: [CA]
 persona: homeowner
