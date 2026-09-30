@@ -4,7 +4,7 @@ description: "A one-page summary of how a reverse mortgage may turn decades of h
 audience: client
 order: 2
 updated: 2026-09-30
-status: draft
+status: published
 ---
 
 <div class="country-grid">

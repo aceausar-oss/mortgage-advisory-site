@@ -4,7 +4,7 @@ description: "Ten questions every homeowner, and their family and financial prof
 audience: client
 order: 3
 updated: 2026-09-30
-status: draft
+status: published
 ---
 
 Ask any lender these questions, including us. A good lender will answer every one in plain English and in writing.
