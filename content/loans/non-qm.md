@@ -10,8 +10,9 @@ products: [non-qm]
 funding: direct
 booking: purchase
 related: [how-much-house-can-i-afford, how-to-tell-if-your-loan-estimate-is-a-good-deal, how-to-choose-a-mortgage-lender]
-image: "/images/loans/loan-non-qm.jpg"
-imageAlt: "Self-employed business owner in their workspace"
+# Same photo as the homepage self-employed story (Ace, Sept 2026).
+image: "/images/self-employed-cafe.jpg"
+imageAlt: "Small business owner smiling at her laptop in her cafe"
 didYouKnow:
   - text: "Non-QM doesn't mean subprime. It means your income is documented differently. You still have to show you can afford the loan; we just look at your real cash flow instead of your taxable income."
 updated: 2026-09-27
