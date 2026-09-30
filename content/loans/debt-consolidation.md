@@ -11,7 +11,7 @@ funding: mixed
 booking: equity
 related: [homeowner-credit-card-debt-options, how-does-a-heloc-work, reverse-mortgage-keep-first-mortgage]
 image: "/images/loans/loan-debt-consolidation.jpg"
-imageAlt: "Person cutting up a credit card"
+imageAlt: "Woman smiling as she cuts up a credit card at her desk"
 didYouKnow:
   - text: "Credit cards commonly charge over 20% interest. Home equity loans are secured by your house, so their rates are usually far lower, which is why consolidating can save real money if you don't run the cards back up."
 updated: 2026-09-27
