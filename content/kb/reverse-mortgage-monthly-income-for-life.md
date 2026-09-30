@@ -15,7 +15,7 @@ didYouKnow:
       - { title: "NRMLA/RiskSpan Reverse Mortgage Market Index, Q1 2026", url: "https://www.nrmlaonline.org/about/press-releases/17828" }
 updated: 2026-09-29
 reviewed_by: "Ace Ausar, NMLS #1143018"
-status: draft
+status: published
 ---
 
 ## How do the monthly payments work?

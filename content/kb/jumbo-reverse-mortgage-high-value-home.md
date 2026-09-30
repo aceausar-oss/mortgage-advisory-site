@@ -12,7 +12,7 @@ sources:
   - { title: "HUD Mortgagee Letter 2025-22 — 2026 HECM limit", url: "https://www.hud.gov/sites/dfiles/hudclips/documents/2025-22hsgml.pdf" }
 updated: 2026-09-29
 reviewed_by: "Ace Ausar, NMLS #1143018"
-status: draft
+status: published
 ---
 
 ## What's the HECM limit?

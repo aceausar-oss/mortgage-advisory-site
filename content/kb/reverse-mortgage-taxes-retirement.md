@@ -13,7 +13,7 @@ sources:
   - { title: "IRS Publication 551 — Basis of Assets", url: "https://www.irs.gov/publications/p551" }
 updated: 2026-09-29
 reviewed_by: "Ace Ausar, NMLS #1143018"
-status: draft
+status: published
 ---
 
 ## Is the money taxable?
