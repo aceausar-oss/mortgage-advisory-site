@@ -4,5 +4,15 @@
     "heloc": 0.8,
     "cashOut": 0.8
   },
-  "scenarios": []
+  "scenarios": [],
+  "hecm": {
+    "_note": "Reverse mortgage calculator assumptions. Margin range confirmed by Ace (Sept 2026: industry standard 2.5% to 2.625%). Closing costs are third-party costs (appraisal, title, escrow, recording, counseling); FHA insurance and origination are calculated from HUD rules.",
+    "marginLow": 2.5,
+    "marginHigh": 2.625,
+    "thirdPartyCostsLow": 3000,
+    "thirdPartyCostsHigh": 6000,
+    "maxClaimAmount": 1249125,
+    "maxClaimYear": 2026,
+    "fallbackTreasury10y": 5.5
+  }
 }

@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { AuthorBox, Breadcrumbs, DraftBanner, SourcesList, TldrBox } from "@/components/AnswerParts";
@@ -82,7 +83,7 @@ function LoanCta({ page }: { page: LoanPage }) {
   );
 }
 
-export function ProgramPage({ page }: { page: LoanPage }) {
+export function ProgramPage({ page, extra }: { page: LoanPage; extra?: ReactNode }) {
   const url = `${siteUrl}${page.basePath}/${page.slug}`;
   const crumbs = [
     { href: "/", label: "Home" },
@@ -155,6 +156,7 @@ export function ProgramPage({ page }: { page: LoanPage }) {
             </div>
           )}
           <div className="answer-body" dangerouslySetInnerHTML={{ __html: page.html }} />
+          {extra}
           <WhoFunds funding={page.funding} />
           <RelatedAnswers slugs={page.related} />
           {page.sources.length > 0 && <SourcesList sources={page.sources} />}
