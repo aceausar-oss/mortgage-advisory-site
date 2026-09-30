@@ -9,7 +9,7 @@ products: [hecm, proprietary-reverse]
 persona: financial-professional
 updated: 2026-09-30
 reviewed_by: "Ace Ausar, NMLS #1143018"
-status: draft
+status: published
 ---
 
 All three scenarios are illustrative. Amounts are rounded, and actual numbers depend on age, home value, interest rates, and costs at the time.

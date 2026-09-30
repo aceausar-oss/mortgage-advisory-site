@@ -4,7 +4,7 @@ description: "A ready-to-edit email financial professionals can send a client to
 audience: professional
 order: 4
 updated: 2026-09-30
-status: draft
+status: published
 ---
 
 Copy, edit, and send from your own email. Replace the parts in [brackets]. Your firm may need to approve it before use; we're happy to send it to your compliance team.

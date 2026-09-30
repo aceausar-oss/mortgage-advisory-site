@@ -9,7 +9,7 @@ products: [hecm, proprietary-reverse, reverse-second, heloc]
 persona: financial-professional
 updated: 2026-09-30
 reviewed_by: "Ace Ausar, NMLS #1143018"
-status: draft
+status: published
 ---
 
 ## What do you need for a first look?

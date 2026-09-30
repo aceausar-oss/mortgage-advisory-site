@@ -4,7 +4,7 @@ description: "A one-page checklist homeowners and their financial professionals 
 audience: client
 order: 1
 updated: 2026-09-30
-status: draft
+status: published
 ---
 
 For most retirees, the home is the biggest asset they own, and it's often left out of the plan. Check any that apply, then talk them through with your financial professional.
