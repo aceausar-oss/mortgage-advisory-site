@@ -14,6 +14,7 @@ All homepage photos are illustrative only. They are never presented as clients (
 | loans/loan-purchase.jpg | Provided by Ace Ausar (replaced placeholder, Sept 2026) | Owned by The Mortgage Advisory |
 | loans/loan-debt-consolidation.jpg | Provided by Ace Ausar (replaced placeholder, Sept 2026) | Owned by The Mortgage Advisory |
 | loans/loan-va.jpg | Provided by Ace Ausar (replaced placeholder, Sept 2026) | Owned by The Mortgage Advisory |
+| loans/loan-fha.jpg | Provided by Ace Ausar (replaced placeholder, Sept 2026) | Owned by The Mortgage Advisory |
 | pages/costs.jpg | Provided by Ace Ausar (replaced placeholder, Sept 2026); sample rate, payment and down payment figures blurred (no rate shown without APR and terms) | Owned by The Mortgage Advisory |
 | pages/book-call.jpg | Provided by Ace Ausar (replaced placeholder, Sept 2026) | Owned by The Mortgage Advisory |
 

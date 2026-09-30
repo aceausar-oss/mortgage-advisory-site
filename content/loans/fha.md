@@ -11,7 +11,8 @@ funding: broker
 booking: purchase
 related: [how-much-house-can-i-afford, down-payment-assistance-ca-tx-fl-co, arm-vs-buydown-vs-fixed, how-to-choose-a-mortgage-lender]
 image: "/images/loans/loan-fha.jpg"
-imageAlt: "First-time buyer decorating their first home"
+imageAlt: "First-time buyers settling into their new living room among moving boxes"
+imagePosition: "center 10%"
 sources:
   - { title: "HUD — Let FHA loans help you", url: "https://www.hud.gov/buying/loans" }
 didYouKnow:
