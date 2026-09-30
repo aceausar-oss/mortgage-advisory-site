@@ -29,7 +29,14 @@ export default function BookPage() {
         </p>
       </header>
       <div className="relative aspect-[3/2] overflow-hidden rounded-3xl sm:aspect-[21/9]">
-        <Image src="/images/pages/book-call.jpg" alt="Friendly advisor on a phone call" fill preload sizes="(min-width: 1024px) 1024px, 100vw" className="object-cover" />
+        <Image
+          src="/images/pages/book-call.jpg"
+          alt="Friendly advisor smiling on a headset call at her desk"
+          fill
+          preload
+          sizes="(min-width: 1024px) 1024px, 100vw"
+          className="object-cover object-[center_25%]"
+        />
       </div>
 
       {calendars.map((c) => {
