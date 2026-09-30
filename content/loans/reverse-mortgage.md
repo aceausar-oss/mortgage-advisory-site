@@ -9,7 +9,7 @@ category: reverse-mortgage
 products: [hecm, proprietary-reverse, reverse-second]
 funding: broker
 booking: reverse
-related: [is-a-reverse-mortgage-a-scam, can-you-lose-your-home-with-a-reverse-mortgage, reverse-mortgage-keep-first-mortgage, reverse-mortgage-line-of-credit-growth, who-qualifies-for-a-reverse-mortgage, when-is-a-reverse-mortgage-a-bad-idea]
+related: [is-a-reverse-mortgage-a-scam, can-you-lose-your-home-with-a-reverse-mortgage, reverse-mortgage-keep-first-mortgage, reverse-mortgage-second-vs-heloc, reverse-mortgage-line-of-credit-growth, who-qualifies-for-a-reverse-mortgage, when-is-a-reverse-mortgage-a-bad-idea]
 image: "/images/loans/loan-reverse-mortgage.jpg"
 imageAlt: "Retired couple relaxing in their backyard while their grandkids play and a contractor builds a new deck"
 imagePosition: "20% center"
@@ -59,7 +59,9 @@ It's usually **not** the right fit if you plan to move in the next few years, or
 | Who backs it | FHA insurance | Private lender | Private lender |
 | Best for | Most homes up to FHA's national limit | Higher-value homes above FHA's limit | Keeping your current first mortgage |
 | Your first mortgage | Paid off at closing | Paid off at closing | Stays in place |
-| Counseling | Required (HUD-approved counselor) | Varies by program | Varies by program |
+| Minimum age | 62 | 62, or 55 in some states | 55 (62 in Texas) |
+| Rate | Fixed or adjustable | Varies by program | Fixed |
+| Counseling | Required (HUD-approved counselor) | Varies by program | Independent counselor |
 
 Jumbo reverse mortgages and reverse mortgage seconds are **not** FHA-insured HECMs. Terms, ages, and availability vary by program and state.
 

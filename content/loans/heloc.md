@@ -9,7 +9,7 @@ category: heloc
 products: [heloc, home-equity-loan]
 funding: broker
 booking: equity
-related: [how-does-a-heloc-work, heloc-vs-cash-out-refinance, how-much-can-i-borrow-heloc, heloc-credit-score-dti, heloc-for-home-improvements, why-experts-say-avoid-helocs]
+related: [how-does-a-heloc-work, reverse-mortgage-second-vs-heloc, heloc-vs-cash-out-refinance, how-much-can-i-borrow-heloc, heloc-credit-score-dti, heloc-for-home-improvements, why-experts-say-avoid-helocs]
 image: "/images/loans/loan-heloc.jpg"
 imageAlt: "Homeowner and contractor reviewing plans for a new backyard addition"
 didYouKnow:
@@ -26,7 +26,9 @@ A HELOC works best when you have **real equity** and a **first mortgage you don'
 
 - **Homeowners with a low first-mortgage rate** who need cash for a remodel, an ADU, college, or a cushion, and don't want to refinance into a higher rate.
 - **Families paying down high-interest credit cards** who want one lower payment. (It turns card debt into debt secured by your home, so we'll make sure the plan actually saves you money.)
-- **Retirees under 62**, or anyone who wants a regular loan they pay down, not a reverse mortgage.
+- **Anyone who wants a regular loan they pay down**, not a reverse mortgage.
+
+**55 or older (62 in Texas)?** Compare a HELOC with a [reverse mortgage second](/answers/reverse-mortgage-second-vs-heloc): it also keeps your first mortgage, but at a fixed rate with no required monthly payment.
 
 ## How is a HELOC different from a cash-out refinance or a home equity loan?
 
