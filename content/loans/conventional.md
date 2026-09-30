@@ -11,7 +11,8 @@ funding: direct
 booking: purchase
 related: [how-much-house-can-i-afford, arm-vs-buydown-vs-fixed, how-to-tell-if-your-loan-estimate-is-a-good-deal, how-to-choose-a-mortgage-lender]
 image: "/images/loans/loan-conventional.jpg"
-imageAlt: "Family in a bright, newly furnished living room"
+imageAlt: "Smiling family with their golden retriever on the couch in their bright living room"
+imagePosition: "center 20%"
 didYouKnow:
   - text: "Private mortgage insurance on a conventional loan isn't forever. You can ask to remove it once you reach 20% equity based on your original value, and it drops off automatically at 22%."
 updated: 2026-09-27
