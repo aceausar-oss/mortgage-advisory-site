@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { getHandouts } from "@/lib/handouts";
 import { getEntries } from "@/lib/kb";
 import { getLoanPages, getLocationPages } from "@/lib/loans";
 import { siteUrl } from "@/lib/site";
@@ -18,5 +19,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...["life-rate", "costs", "pros", "about", "licensing", "privacy", "terms", "accessibility", "do-not-sell"].map((p) => ({ url: `${siteUrl}/${p}` })),
     ...loans.map((p) => ({ url: `${siteUrl}${p.basePath}/${p.slug}`, lastModified: p.updated })),
     ...answers.map((e) => ({ url: `${siteUrl}/answers/${e.slug}`, lastModified: e.updated })),
+    ...getHandouts()
+      .filter((h) => !h.isDraft)
+      .map((h) => ({ url: `${siteUrl}/pros/handouts/${h.slug}`, lastModified: h.updated })),
   ];
 }

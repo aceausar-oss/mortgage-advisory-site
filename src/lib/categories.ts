@@ -10,10 +10,11 @@ export const CATEGORIES = [
   { key: "self-employed", label: "Self-Employed / Non-QM", long: "Self-employed & Non-QM loans" },
   { key: "costs", label: "Common Fees", long: "Common fees, costs & rates" },
   { key: "about", label: "About Us", long: "About The Mortgage Advisory" },
+  { key: "pros", label: "For Financial Pros", long: "For financial professionals" },
 ] as const;
 
 // Topics hidden from the Q&A tabs (Ace, Sept 2026). The category stays valid for answers.
-export const TAB_HIDDEN = new Set<string>(["about"]);
+export const TAB_HIDDEN = new Set<string>(["about", "pros"]); // "pros" answers are listed on /pros instead
 
 export type CategoryKey = (typeof CATEGORIES)[number]["key"];
 

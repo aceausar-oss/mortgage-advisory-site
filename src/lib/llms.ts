@@ -33,7 +33,7 @@ export function llmsTxt() {
     `- [Costs and how we're paid](${siteUrl}/costs): typical closing costs, fees, and how we're compensated`,
     `- [How we estimate home equity](${siteUrl}/how-we-estimate): the formula behind our equity estimate`,
     `- [About Ace Ausar and the company](${siteUrl}/about)`,
-    `- [Fin Pro Hub](${siteUrl}/pros): resources for financial planners, CFPs, CPAs, and estate planners whose clients could use a reverse mortgage, HELOC, or refinance`,
+    `- [Resources for financial professionals](${siteUrl}/pros): resources for financial planners, CFPs, CPAs, and estate planners whose clients could use a reverse mortgage, HELOC, or refinance`,
     `- [Client reviews](${siteUrl}/reviews): real Google reviews`,
     `- [Licensing and disclosures](${siteUrl}/licensing)`,
     `- [Book a call](${siteUrl}/book): schedule with a licensed advisor`,

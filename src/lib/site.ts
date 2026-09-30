@@ -24,7 +24,7 @@ export const resourcesNav = [
   { href: "/costs", label: "Costs & Fees" },
   { href: "/reviews", label: "Reviews" },
   { href: "/about", label: "About Us" },
-  { href: "/pros", label: "Fin Pro Hub" },
+  { href: "/pros", label: "For Financial Pros" },
 ];
 
 export const legalNav = [
