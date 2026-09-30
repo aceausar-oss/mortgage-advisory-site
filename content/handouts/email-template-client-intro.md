@@ -37,4 +37,4 @@ Copy, edit, and send from your own email. Replace the parts in [brackets]. Your 
 
 ## A note on compensation
 
-We don't pay referral fees or anything else of value for referrals, and we never recommend using loan proceeds to buy annuities, insurance, or investments.
+The Mortgage Advisory never offers or accepts referral fees, or anything else of value for referrals, and we never recommend using loan proceeds to buy annuities, insurance, or investments.

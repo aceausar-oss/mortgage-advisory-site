@@ -2,11 +2,11 @@
 h1: "How can home equity strengthen your clients' retirement plans?"
 title: "Resources for Financial Professionals"
 description: "Free tools and plain-English resources for CFPs, advisors, CPAs, and estate planners whose clients could use a reverse mortgage, HELOC, or refinance."
-intro: "For most retirees, the home is the biggest asset on the balance sheet, and it's usually left out of the plan. The Mortgage Advisory helps financial professionals put it to work for their clients with reverse mortgages, HELOCs, and refinances. We never touch your clients' investments, never sell annuities or insurance, and never pay or accept referral fees."
+intro: "For most retirees, the home is the biggest asset on the balance sheet, and it's usually left out of the plan. The Mortgage Advisory helps financial professionals put it to work for their clients with reverse mortgages, HELOCs, and refinances. We never touch your clients' investments, never sell annuities or insurance, and never offer or accept referral fees."
 updated: 2026-09-30
 faq:
-  - q: "Do you pay referral fees?"
-    a: "No. We don't pay or accept referral fees or anything else of value for referrals, in either direction. Everything in this hub is free to any financial professional, whether or not you ever send us a client."
+  - q: "Do you offer or accept referral fees?"
+    a: "No. The Mortgage Advisory never offers or accepts referral fees, or anything else of value for referrals. Everything in this hub is free to any financial professional, whether or not you ever send us a client."
   - q: "Will you recommend annuities, insurance, or other investments to my client?"
     a: "Never. We don't sell them, and we don't recommend using loan proceeds to buy them. Your client's investments stay with you."
   - q: "Can I join my client's calls with you?"
@@ -30,7 +30,7 @@ Financial professionals whose clients own homes, especially clients 62 and older
 ## What do we promise your clients, and you?
 
 - **We don't touch the portfolio.** No annuities, no insurance, no investment products, ever.
-- **No referral fees, either way.** Our resources are free to everyone, with no strings attached.
+- **We never offer or accept referral fees.** Our resources are free to everyone, with no strings attached.
 - **Independent counseling first.** Every HECM borrower meets with an independent HUD-approved counselor before applying. Family members and advisors are welcome.
 - **You stay in the loop.** With your client's permission, we'll include you from the first call to closing.
 - **Every cost on paper.** Full costs up front, including how we're paid. See [costs and how we're paid](/costs).

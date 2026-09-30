@@ -3,7 +3,7 @@ question: "How do I bring up a reverse mortgage with a client without it soundin
 slug: how-to-bring-up-reverse-mortgage-with-clients
 seoTitle: "How to Bring Up a Reverse Mortgage With a Client"
 description: "Start with the client's goal, not the product. Plain-English openers, questions to ask, and how to bring in a lender while you stay in control."
-tldr: "Start with the client's goal, not the product. Ask how they feel about their mortgage payment, a down market, or staying in the home, and introduce home equity as one more resource in the plan. Share a plain-English article first, then bring in a lender for the numbers, with you in the room. The Mortgage Advisory offers financial professionals free case reviews and never pays referral fees."
+tldr: "Start with the client's goal, not the product. Ask how they feel about their mortgage payment, a down market, or staying in the home, and introduce home equity as one more resource in the plan. Share a plain-English article first, then bring in a lender for the numbers, with you in the room. The Mortgage Advisory offers financial professionals free case reviews and never offers or accepts referral fees."
 category: pros
 products: [hecm, proprietary-reverse, reverse-second]
 persona: financial-professional
@@ -47,4 +47,4 @@ Start with something short they can read on their own time, like [Is a reverse m
 
 ## Our take
 
-The best referrals I get from planners start with "My client isn't sure this is for them." Perfect. I'll explain it plainly, show the numbers against other options, and tell your client honestly if it doesn't fit. You stay the quarterback of the plan. And for the record: we don't pay referral fees, and we don't accept them.
+The best referrals I get from planners start with "My client isn't sure this is for them." Perfect. I'll explain it plainly, show the numbers against other options, and tell your client honestly if it doesn't fit. You stay the quarterback of the plan. And for the record: we never offer or accept referral fees.
