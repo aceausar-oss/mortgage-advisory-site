@@ -14,7 +14,7 @@ didYouKnow:
   - text: "The unused part of a HECM line of credit grows whether or not you ever draw from it. It's one of the few places in retirement where money you don't touch keeps growing without market risk."
 updated: 2026-09-29
 reviewed_by: "Ace Ausar, NMLS #1143018"
-status: draft
+status: published
 ---
 
 ## How does the line of credit grow?

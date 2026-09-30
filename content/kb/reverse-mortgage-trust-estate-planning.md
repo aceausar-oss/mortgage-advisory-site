@@ -12,7 +12,7 @@ sources:
   - { title: "California State Board of Equalization — Proposition 19", url: "https://www.boe.ca.gov/prop19/" }
 updated: 2026-09-29
 reviewed_by: "Ace Ausar, NMLS #1143018"
-status: draft
+status: published
 ---
 
 ## Which trusts work with a reverse mortgage?
