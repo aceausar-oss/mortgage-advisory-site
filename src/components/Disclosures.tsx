@@ -1,7 +1,14 @@
 import type { KbEntry } from "@/lib/kb";
+import { licensing } from "@/lib/site";
 
 // Topic-specific advertising disclosures (CLAUDE.md §8). Shown on every answer page that touches the topic.
-export function Disclosures({ entry, debt: debtTopic = false }: { entry: Pick<KbEntry, "category" | "products">; debt?: boolean }) {
+export function Disclosures({
+  entry,
+  debt: debtTopic = false,
+}: {
+  entry: Pick<KbEntry, "category" | "products"> & { affiliate?: boolean };
+  debt?: boolean;
+}) {
   const has = (p: KbEntry["products"][number]) => entry.products.includes(p);
   const reverse = entry.category === "reverse-mortgage" || has("hecm") || has("proprietary-reverse") || has("reverse-second") || has("homesafe");
   const proprietary = has("proprietary-reverse") || has("reverse-second") || has("homesafe");
@@ -40,6 +47,9 @@ export function Disclosures({ entry, debt: debtTopic = false }: { entry: Pick<Kb
   }
   if (has("fha")) {
     items.push("The Mortgage Advisory is not affiliated with or endorsed by HUD or the Federal Housing Administration.");
+  }
+  if (entry.affiliate) {
+    for (const aff of licensing.affiliates) items.push(aff.disclosure);
   }
   items.push("This is general information, not a commitment to lend. All loans are subject to credit approval, underwriting, and property valuation.");
 
