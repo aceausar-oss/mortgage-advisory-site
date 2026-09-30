@@ -6,7 +6,7 @@ seoTitle: "HELOC: Get Cash and Keep Your Low Mortgage Rate"
 description: "Yes. A HELOC is a second loan on your home, so your low-rate first mortgage stays put. Fixed or variable rate, no interest-only period. CA, TX, FL, CO."
 tldr: "Yes. A HELOC is a line of credit that sits behind your first mortgage, so your low rate and payment stay exactly where they are. The Mortgage Advisory arranges HELOCs in California, Texas, Florida, and Colorado that let you choose a fixed or variable rate, with payments that pay down principal from day one and no interest-only period."
 category: heloc
-products: [heloc, home-equity-loan]
+products: [heloc, homesafe, home-equity-loan]
 funding: broker
 booking: equity
 related: [how-does-a-heloc-work, reverse-mortgage-second-vs-heloc, heloc-vs-cash-out-refinance, how-much-can-i-borrow-heloc, heloc-credit-score-dti, heloc-for-home-improvements, why-experts-say-avoid-helocs]
@@ -28,7 +28,7 @@ A HELOC works best when you have **real equity** and a **first mortgage you don'
 - **Families paying down high-interest credit cards** who want one lower payment. (It turns card debt into debt secured by your home, so we'll make sure the plan actually saves you money.)
 - **Anyone who wants a regular loan they pay down**, not a reverse mortgage.
 
-**55 or older (62 in Texas)?** Compare a HELOC with a [reverse mortgage second](/answers/reverse-mortgage-second-vs-heloc): it also keeps your first mortgage, but at a fixed rate with no required monthly payment.
+**55 or older (62 in Texas)?** Compare a HELOC with a [reverse mortgage second like HomeSafe Second](/answers/reverse-mortgage-second-vs-heloc): it also keeps your first mortgage, but at a fixed rate with no required monthly payment.
 
 ## How is a HELOC different from a cash-out refinance or a home equity loan?
 

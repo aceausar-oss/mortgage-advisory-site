@@ -6,7 +6,7 @@ seoTitle: "How Does a Reverse Mortgage Work? Is It Right for Me?"
 description: "A reverse mortgage lets homeowners 62+ turn home equity into cash with no required monthly mortgage payment. How it works, costs, and who it fits."
 tldr: "A reverse mortgage lets homeowners 62 and older turn part of their home equity into cash, monthly income, or a growing line of credit, with no required monthly mortgage payment, while they keep living in and owning the home. You still pay property taxes, insurance, and upkeep. The Mortgage Advisory arranges FHA-insured HECMs, jumbo (proprietary) reverse mortgages, and reverse mortgage seconds in California, Texas, Florida, and Colorado."
 category: reverse-mortgage
-products: [hecm, proprietary-reverse, reverse-second]
+products: [hecm, proprietary-reverse, reverse-second, homesafe]
 funding: broker
 booking: reverse
 related: [is-a-reverse-mortgage-a-scam, can-you-lose-your-home-with-a-reverse-mortgage, reverse-mortgage-keep-first-mortgage, reverse-mortgage-second-vs-heloc, reverse-mortgage-line-of-credit-growth, who-qualifies-for-a-reverse-mortgage, when-is-a-reverse-mortgage-a-bad-idea]
@@ -54,7 +54,7 @@ It's usually **not** the right fit if you plan to move in the next few years, or
 
 ## What are my options?
 
-| | FHA-insured HECM | Jumbo (proprietary) reverse | Reverse mortgage second |
+| | FHA-insured HECM | Jumbo (proprietary) reverse | Reverse mortgage second (HomeSafe Second) |
 |---|---|---|---|
 | Who backs it | FHA insurance | Private lender | Private lender |
 | Best for | Most homes up to FHA's national limit | Higher-value homes above FHA's limit | Keeping your current first mortgage |

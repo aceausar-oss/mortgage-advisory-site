@@ -3,8 +3,8 @@ import type { KbEntry } from "@/lib/kb";
 // Topic-specific advertising disclosures (CLAUDE.md §8). Shown on every answer page that touches the topic.
 export function Disclosures({ entry, debt: debtTopic = false }: { entry: Pick<KbEntry, "category" | "products">; debt?: boolean }) {
   const has = (p: KbEntry["products"][number]) => entry.products.includes(p);
-  const reverse = entry.category === "reverse-mortgage" || has("hecm") || has("proprietary-reverse") || has("reverse-second");
-  const proprietary = has("proprietary-reverse") || has("reverse-second");
+  const reverse = entry.category === "reverse-mortgage" || has("hecm") || has("proprietary-reverse") || has("reverse-second") || has("homesafe");
+  const proprietary = has("proprietary-reverse") || has("reverse-second") || has("homesafe");
   const heloc = has("heloc");
   const debt = debtTopic || entry.category === "debt-consolidation";
   const items: string[] = [];
@@ -18,6 +18,11 @@ export function Disclosures({ entry, debt: debtTopic = false }: { entry: Pick<Kb
   if (proprietary) {
     items.push(
       "Proprietary reverse mortgages, including second-lien reverse mortgages, are not FHA-insured Home Equity Conversion Mortgages (HECMs). Terms, eligibility, and availability vary by program and state.",
+    );
+  }
+  if (has("homesafe")) {
+    items.push(
+      "The HomeSafe reverse mortgage is a proprietary product of Finance of America Reverse LLC and is not related to the Home Equity Conversion Mortgage (HECM) program. HomeSafe products are only available in certain states.",
     );
   }
   if (heloc) {

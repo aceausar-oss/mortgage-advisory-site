@@ -22,6 +22,7 @@ export const PRODUCTS = [
   "hecm",
   "proprietary-reverse",
   "reverse-second",
+  "homesafe", // Finance of America's HomeSafe Second (reverse-mortgage second); Ace may use the name and logo (Sept 2026)
   "non-qm",
 ] as const;
 
