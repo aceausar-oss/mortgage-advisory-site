@@ -7,13 +7,13 @@
   --color-brand-soft: #a7c8ea;
   /* Darker "M badge" blue for large text, icons, and outlines (3:1+ on white; large text only). */
   --color-brand-blue-deep: #3d85cc;
-  /* BLUE THEME: soft blue pages with white cards, a satin-blue hero, blue-theme text colors. */
-  /* Link/button blue, darkened so small text passes on the blue page (4.8:1) and white (6.1:1). */
+  /* BLUE THEME: blue-silver pages with white cards, a satin-blue hero, blue-theme text colors. */
+  /* Link/button blue, darkened so small text passes on the page background (5.1:1) and white (6.1:1). */
   --color-brand-button: #1f64ad;
-  --color-brand-slate: #43565f; /* headings (6.1:1 on the blue page) */
+  --color-brand-slate: #43565f; /* headings (6.5:1 on the page background) */
   --color-brand-steel: #87959f;
-  --color-brand-ink: #231f20; /* body text (13:1 on the blue page) */
-  --color-mist: #dbe7f5; /* soft blue page and panel background (Ace, Sept 2026: less metallic, more blue) */
+  --color-brand-ink: #231f20; /* body text (13.7:1 on the page background) */
+  --color-mist: #e6ecf3; /* blue-silver page and panel background (Ace kept this one, Sept 2026) */
   --color-charcoal: #414246; /* dark banners, with white text (10:1) */
 
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
