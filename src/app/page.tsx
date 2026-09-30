@@ -89,8 +89,9 @@ export default function Home() {
       <section aria-labelledby="goals-heading" className="px-4 pb-16 sm:px-6">
         <div className="mx-auto max-w-6xl">
         <ParallaxImage
-          src="/images/pages/home-banner-photo.jpg"
-          alt="Craftsman-style home with a stone porch and garden in warm evening light"
+          src="/images/pages/home-banner-photo-silver.jpg"
+          alt="Modern two-story home with solar panels and a gated front yard at dusk"
+          position="50% 45%"
           sizes="(min-width: 1152px) 1152px, 100vw"
           className="aspect-[3/2] rounded-2xl sm:aspect-[3/1]"
         />

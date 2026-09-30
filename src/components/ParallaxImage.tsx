@@ -11,12 +11,14 @@ export function ParallaxImage({
   sizes,
   className = "",
   strength = 0.12, // share of the frame height the photo can travel either way
+  position = "50% 65%", // which part of the photo stays in view when the frame crops it (CSS object-position)
 }: {
   src: string;
   alt: string;
   sizes: string;
   className?: string;
   strength?: number;
+  position?: string;
 }) {
   const frame = useRef<HTMLDivElement>(null);
   const layer = useRef<HTMLDivElement>(null);
@@ -56,7 +58,7 @@ export function ParallaxImage({
   return (
     <div ref={frame} className={`relative overflow-hidden ${className}`}>
       <div ref={layer} className="absolute inset-x-0 will-change-transform" style={{ top: `-${strength * 100}%`, bottom: `-${strength * 100}%` }}>
-        <Image src={src} alt={alt} fill sizes={sizes} className="object-cover object-[50%_65%]" />
+        <Image src={src} alt={alt} fill sizes={sizes} className="object-cover" style={{ objectPosition: position }} />
       </div>
     </div>
   );
