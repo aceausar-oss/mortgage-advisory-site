@@ -16,7 +16,7 @@ didYouKnow:
     sources:
       - { title: "HousingWire (2018)", url: "https://www.housingwire.com/articles/46918-finance-of-america-reverse-introduces-first-ever-second-lien-reverse-mortgage/" }
       - { title: "National Mortgage Professional", url: "https://nationalmortgageprofessional.com/news/finance-america-launches-second-lien-reverse-mortgage-amid-rate-lock-demand" }
-updated: 2026-09-27
+updated: 2026-09-30
 reviewed_by: "Ace Ausar, NMLS #1143018"
 status: published
 researchId: rm-second-lien
@@ -31,21 +31,34 @@ A HECM has to be the only loan on your home, so your existing mortgage gets paid
 It's a private (non-FHA) reverse mortgage that sits **behind** the mortgage you already have. Here's how it works:
 
 - **Your first mortgage stays exactly as it is:** same rate, same payment.
-- **You get your money as a lump sum** at closing.
-- **There's no monthly payment on the reverse second.** Interest is added to its balance instead.
-- **You keep paying your first mortgage,** plus property taxes, insurance, and upkeep, just like today.
+- **You get your money as a lump sum** at closing, at a **fixed rate**.
+- **There's no required monthly payment on the reverse second.** Interest is added to its balance instead, and you can make payments any time, with no prepayment penalty, to preserve equity.
+- **You keep paying your first mortgage,** plus property taxes, insurance, HOA dues, and upkeep, just like today.
 
-Age requirements and loan amounts vary by program and state, and some programs start younger than 62.
+## Who qualifies?
+
+- **Age:** 55 or older in California, Florida, and Colorado; **62 in Texas**
+- **Current on your first mortgage**
+- **The home is your primary residence**
+- **Credit score of about 640 or higher**, with a financial assessment
+- **Keep up** with property taxes, insurance, HOA dues, and maintenance
+
+You'll also meet with an **independent third-party counselor** and have the home appraised before closing. Program availability varies by state.
 
 ## How does it compare with a HELOC or a HECM?
 
 | | Reverse mortgage second | HELOC | HECM |
 |---|---|---|---|
 | Keeps your first mortgage | Yes | Yes | No, pays it off |
-| Monthly payment on the new money | No | Yes | No |
-| Qualifying | Focuses on whether you can keep up your first mortgage and property costs | Full income and credit review | Financial assessment |
+| Rate | Fixed | Usually variable | Fixed (lump sum) or adjustable |
+| How you get the money | Lump sum | Line of credit | Lump sum, monthly payments, or a line of credit |
+| Monthly payment on the new money | Not required | Yes | Not required |
+| Minimum age | 55 (62 in Texas) | None | 62 |
+| Typical minimum credit score | About 640, with a financial assessment | Often about 680 | No set minimum; financial assessment |
 | FHA-insured | No | No | Yes |
 | Balance over time | Grows | Goes down as you pay | Grows |
+
+See the full [reverse mortgage second vs. HELOC comparison](/answers/reverse-mortgage-second-vs-heloc).
 
 ## Who is it a good fit for?
 
@@ -57,4 +70,4 @@ A 66-year-old homeowner in Colorado has a first mortgage at a rate well below to
 
 ## Our take
 
-If you have a mortgage rate you'll never see again, protect it. A reverse mortgage second is one of the best new tools for retirees who want to use their equity without starting over. I'll lay it side by side with a HELOC and a HECM using your real numbers, so you can see exactly what each one costs over the years you plan to stay.
+Whether to keep a low first mortgage depends on the debt you're carrying. Check your [Life Rate](/answers/what-is-my-life-rate), the blended rate on everything you owe, before you decide. If keeping the first mortgage makes sense, a reverse mortgage second is one of the best new tools for retirees who want to use their equity without starting over. I'll lay it side by side with a HELOC and a HECM using your real numbers, so you can see exactly what each one costs over the years you plan to stay.
