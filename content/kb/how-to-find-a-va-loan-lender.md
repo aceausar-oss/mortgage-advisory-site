@@ -4,7 +4,7 @@ slug: how-to-find-a-va-loan-lender
 seoTitle: "How to Find a Lender That Really Knows VA Loans"
 description: "Ask how many VA loans they close, how they handle VA appraisals and funding fee exemptions, and compare Loan Estimates. Watch for common VA myths."
 tldr: "Interview them. Ask how many VA loans they close, how they handle your Certificate of Eligibility, VA appraisals, the funding fee exemption, and seller concessions, then compare two or three VA Loan Estimates from the same day. The Mortgage Advisory is a direct VA lender in California, Texas, and Colorado (a licensed mortgage broker in Florida), and we genuinely encourage veterans to compare us."
-category: buying
+category: va
 products: [va]
 states: [CA]
 persona: veteran

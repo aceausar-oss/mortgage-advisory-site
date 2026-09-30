@@ -4,7 +4,7 @@ slug: va-streamline-refinance-irrrl
 seoTitle: "VA Streamline Refinance (IRRRL): Do I Qualify?"
 description: "An IRRRL lowers the rate on your VA loan with less paperwork and usually no appraisal. It must give you a real benefit and recoup costs in 36 months."
 tldr: "A VA IRRRL is a streamlined refinance that lowers the rate on your existing VA loan, usually with no appraisal and less paperwork. You generally qualify if you already have a VA loan, you've made at least six payments, and the new loan gives you a real benefit, with costs recouped within 36 months. The Mortgage Advisory is a direct VA lender offering IRRRLs in California, Texas, and Colorado, and arranges them in Florida as a licensed mortgage broker."
-category: refinancing
+category: va
 products: [va, rate-term-refi]
 states: []
 persona: veteran

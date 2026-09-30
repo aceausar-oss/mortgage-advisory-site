@@ -4,7 +4,7 @@ slug: va-loan-new-construction
 seoTitle: "Can You Use a VA Loan for New Construction?"
 description: "Yes. VA-backed loans can buy a new builder home or finance construction. The builder, appraisal, and warranty rules add steps, so plan ahead."
 tldr: "Yes. You can use your VA loan to buy a brand-new home from a builder, and some lenders offer VA construction-to-permanent loans to build one. There are a few extra steps (a builder VA can work with, a VA appraisal, and inspection and warranty requirements), so work with someone who does VA new construction regularly. At The Mortgage Advisory, we'll put your builder's incentive package side by side with an outside VA offer so you can see which one really costs less."
-category: buying
+category: va
 products: [va]
 states: [FL]
 persona: veteran
