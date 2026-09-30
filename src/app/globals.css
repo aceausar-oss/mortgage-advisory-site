@@ -125,6 +125,59 @@ h4 {
   padding: 1rem 1.25rem;
 }
 
+/* "Around the world" country cards with flags (Ace's "Hidden Pension" webinar slide). */
+.answer-body .country-grid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+}
+.answer-body .country-card {
+  border-radius: 1rem;
+  background: #fff;
+  padding: 1rem 1.25rem;
+  line-height: 1.5;
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--color-brand-steel) 30%, transparent);
+}
+.answer-body .country-card .country {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-brand-blue-deep);
+}
+.answer-body .country-card img {
+  height: 1.6rem;
+  width: auto;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+.answer-body .country-card .term {
+  margin-top: 0.5rem;
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-style: italic;
+  font-weight: 700;
+  color: var(--color-brand-ink);
+}
+.answer-body .country-card .meaning {
+  margin-top: 0.25rem;
+  font-size: 0.95rem;
+  color: var(--color-brand-slate);
+}
+.answer-body .country-card.home {
+  background: var(--color-brand-button);
+  box-shadow: none;
+}
+.answer-body .country-card.home .country,
+.answer-body .country-card.home .term,
+.answer-body .country-card.home .meaning {
+  color: #fff;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;

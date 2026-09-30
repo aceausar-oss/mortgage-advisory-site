@@ -29,7 +29,18 @@ You can also combine either one with a line of credit. Monthly payments come wit
 
 ## Why do other countries call it a pension?
 
-Because it works like one. In South Korea, the government-guaranteed program is called the **Home Pension**. In Switzerland it's a "real estate pension," and in Sweden one leading provider calls it a "mortgage pension." Same idea, different name:
+Because it works like one:
+
+<div class="country-grid">
+<div class="country-card"><p class="country"><img src="/flags/kr.svg" alt="Flag of South Korea" width="36" height="24">South Korea</p><p class="term">Jutaek Yeongeum</p><p class="meaning">"Home Pension," a government-backed program, age 55+</p></div>
+<div class="country-card"><p class="country"><img src="/flags/ch.svg" alt="Flag of Switzerland" width="24" height="24">Switzerland</p><p class="term">Immobilienrente</p><p class="meaning">"Real estate pension," also called a reverse mortgage</p></div>
+<div class="country-card"><p class="country"><img src="/flags/se.svg" alt="Flag of Sweden" width="38" height="24">Sweden</p><p class="term">Hypotekspension</p><p class="meaning">A leading provider's name: "Swedish Mortgage Pension"</p></div>
+<div class="country-card home"><p class="country"><img src="/flags/us.svg" alt="Flag of the United States" width="46" height="24">United States</p><p class="term">HECM</p><p class="meaning">A federally insured loan, or "reverse mortgage"</p></div>
+</div>
+
+**Same idea, different name.** In the U.S., it's a loan, and we'll show you exactly how it works.
+
+Why the pension name fits:
 
 - **It can pay you for life,** through the tenure option.
 - **There's a guarantee behind it.** In the U.S., FHA insurance keeps payments flowing and keeps the loan non-recourse.

@@ -33,6 +33,15 @@ Honestly, a lot of it comes from how some of them were sold years ago, plus stor
 
 Very differently. In some countries, a reverse mortgage is seen as a housing pension, a goal to reach in retirement, rather than a last resort. The idea is simple: you spend decades putting money into your home, and in retirement you get to use that money while you age in place. In South Korea, for example, the government-guaranteed reverse mortgage program is officially called the **Korean Home Pension**, and it can pay homeowners a monthly income for life. That's how I'd like more families here to think about it.
 
+<div class="country-grid">
+<div class="country-card"><p class="country"><img src="/flags/kr.svg" alt="Flag of South Korea" width="36" height="24">South Korea</p><p class="term">Jutaek Yeongeum</p><p class="meaning">"Home Pension," a government-backed program, age 55+</p></div>
+<div class="country-card"><p class="country"><img src="/flags/ch.svg" alt="Flag of Switzerland" width="24" height="24">Switzerland</p><p class="term">Immobilienrente</p><p class="meaning">"Real estate pension," also called a reverse mortgage</p></div>
+<div class="country-card"><p class="country"><img src="/flags/se.svg" alt="Flag of Sweden" width="38" height="24">Sweden</p><p class="term">Hypotekspension</p><p class="meaning">A leading provider's name: "Swedish Mortgage Pension"</p></div>
+<div class="country-card home"><p class="country"><img src="/flags/us.svg" alt="Flag of the United States" width="46" height="24">United States</p><p class="term">HECM</p><p class="meaning">A federally insured loan, or "reverse mortgage"</p></div>
+</div>
+
+**Same idea, different name.** In the U.S., it's a loan, and we'll show you exactly how it works.
+
 ## What keeps a HECM safe?
 
 - **It's FHA-insured.** Most reverse mortgages are HECMs, backed by the Federal Housing Administration.
