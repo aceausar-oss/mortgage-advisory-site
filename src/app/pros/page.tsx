@@ -1,10 +1,12 @@
 import Link from "next/link";
 import { Disclosures } from "@/components/Disclosures";
 import { ContentPageView, contentPageMetadata } from "@/components/ContentPageView";
+import { getHandouts } from "@/lib/handouts";
+import { getEntries } from "@/lib/kb";
 import { getContentPage } from "@/lib/pages";
 import { licensing } from "@/lib/site";
 
-// Fin Pro Hub (Ace, Sept 2026): resources for financial professionals whose clients could use a reverse mortgage,
+// For Financial Pros (/pros; Ace's "Fin Pro Hub", Sept 2026): resources for financial professionals whose clients could use a reverse mortgage,
 // HELOC, or refinance. Everything here is free to any professional and never tied to referrals.
 const page = getContentPage("pros");
 export const metadata = contentPageMetadata(page);
@@ -36,7 +38,13 @@ const TOOLS = [
   },
 ];
 
+function DraftTag({ show }: { show: boolean }) {
+  return show ? <span className="ml-2 rounded bg-mist px-2 py-0.5 align-middle text-xs font-semibold">Draft</span> : null;
+}
+
 export default function ProsPage() {
+  const answers = getEntries().filter((e) => e.category === "pros");
+  const handouts = getHandouts();
   return (
     <ContentPageView
       page={page}
@@ -56,6 +64,39 @@ export default function ProsPage() {
               </li>
             ))}
           </ul>
+          {answers.length > 0 && (
+            <div className="space-y-3 pt-4">
+              <h2 className="font-heading text-2xl font-semibold">Questions planners ask us</h2>
+              <ul className="space-y-2">
+                {answers.map((e) => (
+                  <li key={e.slug} className="rounded-2xl bg-white p-4 ring-1 ring-brand-blue/40">
+                    <Link href={`/answers/${e.slug}`} className="font-semibold text-brand-button underline underline-offset-4">
+                      {e.question}
+                    </Link>
+                    <DraftTag show={e.isDraft} />
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+          {handouts.length > 0 && (
+            <div className="space-y-3 pt-4">
+              <h2 className="font-heading text-2xl font-semibold">Printable handouts</h2>
+              <p className="text-brand-slate">One page each. Open one, then print it or save it as a PDF to share with a client or your compliance team.</p>
+              <ul className="grid gap-3 sm:grid-cols-2">
+                {handouts.map((h) => (
+                  <li key={h.slug} className="flex flex-col rounded-2xl bg-white p-4 ring-1 ring-brand-blue/40">
+                    <p className="text-xs font-semibold uppercase tracking-wider text-brand-slate">{h.audience === "client" ? "For clients" : "For you"}</p>
+                    <Link href={`/pros/handouts/${h.slug}`} className="mt-1 font-semibold text-brand-button underline underline-offset-4">
+                      {h.title}
+                    </Link>
+                    <DraftTag show={h.isDraft} />
+                    <p className="mt-1 text-sm text-brand-slate">{h.description}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </section>
       }
       bottom={

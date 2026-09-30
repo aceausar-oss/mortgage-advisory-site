@@ -1,6 +1,6 @@
 ---
 h1: "How can home equity strengthen your clients' retirement plans?"
-title: "Fin Pro Hub: For Financial Professionals"
+title: "Resources for Financial Professionals"
 description: "Free tools and plain-English resources for CFPs, advisors, CPAs, and estate planners whose clients could use a reverse mortgage, HELOC, or refinance."
 intro: "For most retirees, the home is the biggest asset on the balance sheet, and it's usually left out of the plan. The Mortgage Advisory helps financial professionals put it to work for their clients with reverse mortgages, HELOCs, and refinances. We never touch your clients' investments, never sell annuities or insurance, and never pay or accept referral fees."
 updated: 2026-09-30
