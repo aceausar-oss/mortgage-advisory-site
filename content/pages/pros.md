@@ -89,6 +89,8 @@ Flag a conversation when a client:
 
 ## Can we hold a workshop for your clients?
 
+<img src="/images/pages/pros-workshop.jpg" alt="Advisor presenting a reverse mortgage workshop to a small group of homeowners" width="1536" height="1024" class="answer-photo" loading="lazy">
+
 Yes, two ways, both built to keep your firm and ours in compliance:
 
 - **Our free educational workshops.** We host plain-English homeowner workshops, like *Is Your Home a Hidden Pension?*, open to the public. You're welcome to invite your clients and attend. They're our events, at our cost, and aren't offered in exchange for referrals.
