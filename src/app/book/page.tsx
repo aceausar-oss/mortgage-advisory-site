@@ -18,12 +18,12 @@ export default function BookPage() {
     <div className="mx-auto max-w-5xl space-y-10 px-4 py-12 sm:px-6">
       <header className="space-y-3 text-center">
         <h1 className="text-3xl font-bold sm:text-4xl">Book a call with an advisor</h1>
-        <p className="mx-auto max-w-2xl text-lg leading-relaxed">
-          Pick the topic that fits, then choose a time. Prefer to talk now? Call{" "}
-          <a href={`tel:${licensing.phoneE164}`} className="font-semibold underline underline-offset-4">
+        <p className="mx-auto max-w-2xl text-lg leading-relaxed">Pick the topic that fits, then choose a time.</p>
+        <p className="text-lg">
+          Prefer to talk now? Call{" "}
+          <a href={`tel:${licensing.phoneE164}`} className="whitespace-nowrap font-semibold underline underline-offset-4">
             {licensing.phone}
           </a>
-          .
         </p>
       </header>
       <div className="relative aspect-[3/2] overflow-hidden rounded-3xl sm:aspect-[21/9]">

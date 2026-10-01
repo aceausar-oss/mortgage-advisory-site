@@ -34,7 +34,7 @@ export function SiteFooter() {
             </p>
             <address className="not-italic">
               {fullAddress} ·{" "}
-              <a href={`tel:${licensing.phoneE164}`} className="font-medium text-brand-button underline underline-offset-4 hover:text-brand-slate">
+              <a href={`tel:${licensing.phoneE164}`} className="whitespace-nowrap font-medium text-brand-button underline underline-offset-4 hover:text-brand-slate">
                 {licensing.phone}
               </a>{" "}
               ·{" "}
