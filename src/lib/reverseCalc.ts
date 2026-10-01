@@ -7,7 +7,7 @@ import pricing from "../../content/data/pricing.json";
 // are priced off the 10-year SOFR swap, which usually runs below the Treasury, so this errs on the low side.
 // We never display a rate or payment here, only estimated dollar amounts.
 
-export const HECM = pricing.hecm;
+export const HECM = pricing.hecm as typeof pricing.hecm & { expectedRate: number | null; expectedRateAsOf: string | null };
 export const MIN_AGE = 62;
 
 export type ReverseInput = { zip: string; value: number; balance: number; age: number };
@@ -59,8 +59,12 @@ export function estimateReverse({ zip, value, balance, age }: ReverseInput, trea
   if (age < MIN_AGE) return { ...base, fit: "too-young", principalLimit: zero, costs: zero, available: zero, firstYearCap: null };
 
   const fixed = 0.02 * countedValue + originationCap(countedValue); // upfront FHA insurance + origination
-  const plLow = plf(age, treasury10y + HECM.marginHigh) * countedValue;
-  const plHigh = plf(age, treasury10y + HECM.marginLow) * countedValue;
+  // A lender's quoted expected rate (pricing.json) wins; otherwise estimate it from the 10-year Treasury + margin.
+  const [rateHigh, rateLow] = HECM.expectedRate
+    ? [HECM.expectedRate + 0.125, HECM.expectedRate]
+    : [treasury10y + HECM.marginHigh, treasury10y + HECM.marginLow];
+  const plLow = plf(age, rateHigh) * countedValue;
+  const plHigh = plf(age, rateLow) * countedValue;
   const costsLow = fixed + HECM.thirdPartyCostsLow;
   const costsHigh = fixed + HECM.thirdPartyCostsHigh;
   const availLow = plLow - costsHigh - balance;
