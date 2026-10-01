@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { FaqTabs } from "@/components/FaqTabs";
+import { LifeRateCallout } from "@/components/life-rate/LifeRateCallout";
 import { CATEGORIES, categoryLabel, type CategoryKey } from "@/lib/categories";
 import { getEntries, searchEntries } from "@/lib/kb";
 import { licensing } from "@/lib/site";
