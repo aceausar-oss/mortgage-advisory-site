@@ -15,8 +15,15 @@ const defaultDescription =
   "Mortgage lender & broker in CA, TX, FL & CO (NMLS #1549739): purchase, refi, HELOC, reverse, FHA, VA, conventional & Non-QM loans.";
 
 export const metadata: Metadata = {
-  // Preview (test) deployments point share images at themselves, so link previews work before launch.
-  metadataBase: new URL(process.env.VERCEL_ENV === "preview" && process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : siteUrl),
+  // Share images (and other relative URLs) point at the address this build is served from: a test link's own address,
+  // the project's production address on Vercel (themortgageadvisory.com once the domain is connected), or siteUrl locally.
+  metadataBase: new URL(
+    process.env.VERCEL_ENV === "preview" && process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}`
+      : process.env.VERCEL_PROJECT_PRODUCTION_URL
+        ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+        : siteUrl,
+  ),
   title: { default: defaultTitle, template: `%s | ${licensing.brandName}` },
   description: defaultDescription,
   applicationName: licensing.brandName,
