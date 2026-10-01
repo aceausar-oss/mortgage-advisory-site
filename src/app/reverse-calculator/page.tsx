@@ -4,9 +4,7 @@ import { Breadcrumbs, TldrBox } from "@/components/AnswerParts";
 import { Disclosures } from "@/components/Disclosures";
 import { JsonLd } from "@/components/JsonLd";
 import { ReverseCalculator } from "@/components/reverse/ReverseCalculator";
-import { HECM } from "@/lib/reverseCalc";
 import { siteUrl } from "@/lib/site";
-import { formatYieldDate, getTreasuryYields } from "@/lib/treasury";
 
 // Shareable reverse mortgage calculator (Ace, Sept 2026): TheMortgageAdvisory.com/reverse-calculator.
 // For homeowners and for financial professionals sizing up a client. Shows dollar ranges only, never a rate or payment.
@@ -16,11 +14,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/reverse-calculator" },
 };
 
-export default async function ReverseCalculatorPage() {
-  const yields = await getTreasuryYields();
-  const latest = yields?.at(-1) ?? null;
-  const treasury10y = latest?.y10 ?? HECM.fallbackTreasury10y;
-
+export default function ReverseCalculatorPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
@@ -53,7 +47,7 @@ export default async function ReverseCalculatorPage() {
         <TldrBox text="Enter your ZIP code, home value, mortgage balance, and the youngest borrower's age to see an estimated range of what an FHA-insured reverse mortgage (HECM) could provide after paying off your current mortgage and costs. The Mortgage Advisory built this calculator on HUD's official tables, and nothing you enter is sent or saved." />
       </header>
 
-      <ReverseCalculator treasury10y={treasury10y} asOf={latest ? formatYieldDate(latest.date) : null} />
+      <ReverseCalculator />
 
       <div className="grid gap-4">
         <h2 className="font-heading text-2xl font-semibold">What should I know about this estimate?</h2>

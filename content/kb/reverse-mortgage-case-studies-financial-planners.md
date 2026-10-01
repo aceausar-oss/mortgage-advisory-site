@@ -20,7 +20,7 @@ All three scenarios are illustrative. Amounts are rounded, and actual numbers de
 
 **The worry:** a big market drop in the first few years of retirement, forcing them to sell low.
 
-**The plan:** open a HECM line of credit (about $250,000 available after costs at recent rates) and leave it untouched. Keep a normal cash reserve for everyday surprises.
+**The plan:** open a HECM line of credit (about $335,000 available after costs at recent pricing) and leave it untouched. Keep a normal cash reserve for everyday surprises.
 
 **What happens:** in year three, the market falls sharply. For 18 months they draw living expenses from the line instead of selling investments. When the portfolio recovers, they repay part of the line from gains, and that credit becomes available again.
 
