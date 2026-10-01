@@ -93,8 +93,12 @@ export function ReverseCalculator({
   const hint = "mt-1 block text-sm text-brand-slate";
 
   return (
-    <section aria-labelledby={`${id}-h`} className={`grid gap-6 ${stacked ? "" : "lg:grid-cols-[1fr_1.1fr]"}`}>
-      <form onSubmit={calculate} className="space-y-4 rounded-2xl bg-white p-5 shadow-sm ring-1 ring-black/5 sm:p-6" noValidate>
+    <section aria-labelledby={`${id}-h`} className={`grid gap-6 ${!stacked && result ? "lg:grid-cols-[1fr_1.1fr]" : ""}`}>
+      <form
+        onSubmit={calculate}
+        className={`space-y-4 rounded-2xl bg-white p-5 shadow-sm ring-1 ring-black/5 sm:p-6 ${!stacked && !result ? "lg:max-w-2xl" : ""}`}
+        noValidate
+      >
         <div className="flex items-center gap-3">
           <span aria-hidden="true" className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-soft text-brand-ink">
             <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -139,11 +143,7 @@ export function ReverseCalculator({
       </form>
 
       <div aria-live="polite" className="space-y-4">
-        {!result ? (
-          <div className="flex min-h-48 items-center rounded-2xl border-2 border-dashed border-brand-steel/40 p-6 text-brand-slate">
-            Enter four numbers to see an estimated range and whether a reverse mortgage looks like a fit.
-          </div>
-        ) : (
+        {result && (
           <div className="space-y-4 rounded-2xl bg-white p-5 shadow-sm ring-1 ring-black/5 sm:p-6">
             <div className={`rounded-xl p-4 ring-1 ${FIT_TEXT[result.fit].tone}`}>
               <p className="font-heading text-lg font-semibold">{FIT_TEXT[result.fit].label}</p>
@@ -187,16 +187,16 @@ export function ReverseCalculator({
                 {copied ? "Copied" : "Copy summary"}
               </button>
             </div>
-          </div>
-        )}
-        <p className="text-xs leading-relaxed text-brand-slate">
+            <p className="text-xs leading-relaxed text-brand-slate">
           How we estimate: HUD&apos;s Principal Limit Factor tables for an adjustable-rate HECM, based on the youngest borrower&apos;s age and{" "}
           {HECM.expectedRate
             ? `current lender pricing${HECM.expectedRateAsOf ? ` (as of ${HECM.expectedRateAsOf})` : ""}`
             : `an expected rate built from the 10-year Treasury${asOf ? ` (close ${asOf})` : ""} plus a typical lender margin`}
           ; FHA&apos;s 2% upfront insurance, HUD&apos;s
           origination fee cap, and typical third-party costs. FHA counts home value up to $1,249,125 in 2026.
-        </p>
+            </p>
+          </div>
+        )}
       </div>
     </section>
   );
