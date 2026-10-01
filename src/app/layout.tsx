@@ -15,7 +15,8 @@ const defaultDescription =
   "Mortgage lender & broker in CA, TX, FL & CO (NMLS #1549739): purchase, refi, HELOC, reverse, FHA, VA, conventional & Non-QM loans.";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  // Preview (test) deployments point share images at themselves, so link previews work before launch.
+  metadataBase: new URL(process.env.VERCEL_ENV === "preview" && process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : siteUrl),
   title: { default: defaultTitle, template: `%s | ${licensing.brandName}` },
   description: defaultDescription,
   applicationName: licensing.brandName,
