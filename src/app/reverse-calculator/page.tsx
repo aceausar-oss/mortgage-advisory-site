@@ -48,14 +48,14 @@ export default async function ReverseCalculatorPage() {
     <article className="mx-auto max-w-[75rem] space-y-8 px-4 py-12 sm:px-6">
       <JsonLd data={jsonLd} />
       <Breadcrumbs items={[{ href: "/", label: "Home" }, { href: "/reverse-calculator", label: "Reverse Mortgage Calculator" }]} />
-      <header className="max-w-3xl space-y-5">
+      <header className="space-y-5">
         <h1 className="text-3xl font-bold leading-tight sm:text-4xl">How much could a reverse mortgage give you?</h1>
         <TldrBox text="Enter your ZIP code, home value, mortgage balance, and the youngest borrower's age to see an estimated range of what an FHA-insured reverse mortgage (HECM) could provide after paying off your current mortgage and costs. The Mortgage Advisory built this calculator on HUD's official tables, and nothing you enter is sent or saved." />
       </header>
 
       <ReverseCalculator treasury10y={treasury10y} asOf={latest ? formatYieldDate(latest.date) : null} />
 
-      <div className="grid max-w-3xl gap-4">
+      <div className="grid gap-4">
         <h2 className="font-heading text-2xl font-semibold">What should I know about this estimate?</h2>
         <ul className="list-disc space-y-2 pl-5 leading-relaxed">
           <li>
@@ -85,7 +85,7 @@ export default async function ReverseCalculatorPage() {
         </ul>
       </div>
 
-      <div className="max-w-3xl">
+      <div>
         <Disclosures entry={{ category: "reverse-mortgage", products: ["hecm"] }} />
       </div>
     </article>

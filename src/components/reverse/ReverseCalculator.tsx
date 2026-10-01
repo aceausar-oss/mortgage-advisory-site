@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useId, useState } from "react";
-import { MIN_AGE, estimateReverse, usd, type ReverseEstimate } from "@/lib/reverseCalc";
+import { HECM, MIN_AGE, estimateReverse, usd, type ReverseEstimate } from "@/lib/reverseCalc";
 
 // Reverse mortgage calculator (shared by /reverse-calculator, the Reverse Mortgage page, and /pros).
 // Four inputs, an estimated range, and a plain-English fit rating. Math runs on the device; nothing is sent or saved.
@@ -125,7 +125,7 @@ export function ReverseCalculator({
         <label className="block">
           <span className={labelCls}>Age of youngest borrower</span>
           <input value={age} onChange={(e) => setAge(e.target.value.replace(/\D/g, "").slice(0, 3))} inputMode="numeric" className={field} />
-          <span className={hint}>If a spouse is younger, use the spouse&apos;s age, even if they won&apos;t be on the loan.</span>
+          <span className={hint}>Age at the nearest birthday: if the next birthday is within 6 months, use that age. If a spouse is younger, use the spouse&apos;s age, even if they won&apos;t be on the loan.</span>
         </label>
         {error && (
           <p role="alert" className="font-semibold text-rose-700">
@@ -140,7 +140,7 @@ export function ReverseCalculator({
 
       <div aria-live="polite" className="space-y-4">
         {!result ? (
-          <div className="flex h-full min-h-48 items-center rounded-2xl border-2 border-dashed border-brand-steel/40 p-6 text-brand-slate">
+          <div className="flex min-h-48 items-center rounded-2xl border-2 border-dashed border-brand-steel/40 p-6 text-brand-slate">
             Enter four numbers to see an estimated range and whether a reverse mortgage looks like a fit.
           </div>
         ) : (
@@ -190,8 +190,11 @@ export function ReverseCalculator({
           </div>
         )}
         <p className="text-xs leading-relaxed text-brand-slate">
-          How we estimate: HUD&apos;s Principal Limit Factor tables for an adjustable-rate HECM, based on the youngest borrower&apos;s age and an expected
-          rate built from the 10-year Treasury{asOf ? ` (close ${asOf})` : ""} plus a typical lender margin; FHA&apos;s 2% upfront insurance, HUD&apos;s
+          How we estimate: HUD&apos;s Principal Limit Factor tables for an adjustable-rate HECM, based on the youngest borrower&apos;s age and{" "}
+          {HECM.expectedRate
+            ? `current lender pricing${HECM.expectedRateAsOf ? ` (as of ${HECM.expectedRateAsOf})` : ""}`
+            : `an expected rate built from the 10-year Treasury${asOf ? ` (close ${asOf})` : ""} plus a typical lender margin`}
+          ; FHA&apos;s 2% upfront insurance, HUD&apos;s
           origination fee cap, and typical third-party costs. FHA counts home value up to $1,249,125 in 2026.
         </p>
       </div>
