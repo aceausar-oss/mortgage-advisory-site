@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { CountryPensionCards } from "@/components/CountryPensionCards";
 import { Disclosures } from "@/components/Disclosures";
@@ -12,7 +13,7 @@ import { licensing } from "@/lib/site";
 const page = getContentPage("pros");
 export const metadata = contentPageMetadata(page);
 
-const TOOLS = [
+const TOOLS: { title: string; body: string; href: string; cta: string; image?: { src: string; alt: string } }[] = [
   {
     title: "Reverse Mortgage Calculator",
     body: "Four numbers, an estimated range, and an honest fit rating, built on HUD's official tables. Share the link with clients: TheMortgageAdvisory.com/reverse-calculator.",
@@ -42,6 +43,7 @@ const TOOLS = [
     body: "Invite clients to our free homeowner workshops, or co-host one with us at fair, shared cost. Materials sent early for compliance review.",
     href: "/book",
     cta: "Ask about a workshop",
+    image: { src: "/images/pages/pros-workshop.jpg", alt: "Advisor presenting a reverse mortgage workshop to a small group of homeowners" },
   },
 ];
 
@@ -57,6 +59,17 @@ export default function ProsPage() {
       page={page}
       top={
         <>
+        <div className="relative aspect-[3/2] overflow-hidden rounded-2xl sm:aspect-[21/9]">
+          <Image
+            src="/images/pages/pros-planner-meeting.jpg"
+            alt="Financial planner reviewing a retirement plan with a retired couple at their dining table"
+            fill
+            preload
+            sizes="(min-width: 768px) 768px, 100vw"
+            className="object-cover"
+            style={{ objectPosition: "center 30%" }}
+          />
+        </div>
         <div className="space-y-3">
           <CountryPensionCards />
           <p className="text-brand-slate">
@@ -75,12 +88,22 @@ export default function ProsPage() {
           </h2>
           <ul className="grid gap-4 sm:grid-cols-2">
             {TOOLS.map((t) => (
-              <li key={t.title} className="flex flex-col rounded-2xl bg-white p-5 ring-1 ring-brand-blue/40 first:sm:col-span-2">
-                <h3 className="font-heading text-lg font-semibold">{t.title}</h3>
-                <p className="mt-1 flex-1 leading-relaxed">{t.body}</p>
-                <Link href={t.href} className="mt-3 font-semibold text-brand-button underline underline-offset-4">
-                  {t.cta} →
-                </Link>
+              <li
+                key={t.title}
+                className="flex flex-col overflow-hidden rounded-2xl bg-white ring-1 ring-brand-blue/40 first:sm:col-span-2"
+              >
+                {t.image && (
+                  <div className="relative aspect-[3/2]">
+                    <Image src={t.image.src} alt={t.image.alt} fill sizes="(min-width: 768px) 360px, 100vw" className="object-cover" />
+                  </div>
+                )}
+                <div className="flex flex-1 flex-col p-5">
+                  <h3 className="font-heading text-lg font-semibold">{t.title}</h3>
+                  <p className="mt-1 flex-1 leading-relaxed">{t.body}</p>
+                  <Link href={t.href} className="mt-3 font-semibold text-brand-button underline underline-offset-4">
+                    {t.cta} →
+                  </Link>
+                </div>
               </li>
             ))}
           </ul>
