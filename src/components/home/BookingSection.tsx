@@ -23,7 +23,7 @@ export function BookingSection() {
       </ul>
       <p className="text-center text-brand-slate">
         Prefer to talk now? Call{" "}
-        <a href={`tel:${licensing.phoneE164}`} className="font-semibold underline underline-offset-4">
+        <a href={`tel:${licensing.phoneE164}`} className="whitespace-nowrap font-semibold underline underline-offset-4">
           {licensing.phone}
         </a>{" "}
         or email{" "}

@@ -38,7 +38,7 @@ export default function LicensingPage() {
           </a>
         </p>
         <p>
-          {fullAddress} · <a href={`tel:${licensing.phoneE164}`} className="underline underline-offset-4">{licensing.phone}</a> ·{" "}
+          {fullAddress} · <a href={`tel:${licensing.phoneE164}`} className="whitespace-nowrap underline underline-offset-4">{licensing.phone}</a> ·{" "}
           <a href={`mailto:${licensing.email}`} className="underline underline-offset-4">
             {licensing.email}
           </a>
