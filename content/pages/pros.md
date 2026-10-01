@@ -89,7 +89,7 @@ Flag a conversation when a client:
 
 ## Can we hold a workshop for your clients?
 
-<img src="/images/pages/pros-workshop.jpg" alt="Advisor presenting a reverse mortgage workshop to a small group of homeowners" width="1536" height="1024" class="answer-photo" loading="lazy">
+<img src="/images/pages/pros-family-review.jpg" alt="Retired couple and their adult children reviewing reverse mortgage information together" width="1536" height="1024" class="answer-photo" loading="lazy">
 
 Yes, two ways, both built to keep your firm and ours in compliance:
 

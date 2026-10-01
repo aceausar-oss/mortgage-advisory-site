@@ -43,7 +43,7 @@ const TOOLS: { title: string; body: string; href: string; cta: string; image?: {
     body: "Invite clients to our free homeowner workshops, or co-host one with us at fair, shared cost. Materials sent early for compliance review.",
     href: "/book",
     cta: "Ask about a workshop",
-    image: { src: "/images/pages/pros-family-review.jpg", alt: "Retired couple and their adult children reviewing reverse mortgage information together" },
+    image: { src: "/images/pages/pros-workshop.jpg", alt: "Ace Ausar presenting a reverse mortgage workshop to a small group of homeowners" },
   },
 ];
 
