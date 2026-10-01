@@ -36,13 +36,9 @@ const FIT_TEXT: Record<ReverseEstimate["fit"], { label: string; tone: string; bo
 };
 
 export function ReverseCalculator({
-  treasury10y,
-  asOf,
   cta = "book",
   stacked = false,
 }: {
-  treasury10y: number;
-  asOf: string | null;
   cta?: "book" | "pros";
   stacked?: boolean; // one column, for narrow spots like the Reverse Mortgage page
 }) {
@@ -66,7 +62,7 @@ export function ReverseCalculator({
     if (!Number.isFinite(a) || a < 18 || a > 120) return setError("Enter the age of the youngest borrower.");
     setError("");
     setCopied(false);
-    setResult(estimateReverse({ zip, value: v, balance: b, age: a }, treasury10y));
+    setResult(estimateReverse({ zip, value: v, balance: b, age: a }));
   }
 
   const range = (r: [number, number]) => (r[0] === r[1] ? usd(r[0]) : `${usd(r[0])} – ${usd(r[1])}`);
@@ -77,8 +73,10 @@ export function ReverseCalculator({
       "Reverse mortgage estimate (The Mortgage Advisory)",
       `Youngest borrower: ${digits(age)} · Home value: ${usd(digits(value))} · Mortgage balance: ${usd(Number.isFinite(digits(balance)) ? digits(balance) : 0)} · ZIP: ${zip}`,
       `Fit: ${FIT_TEXT[result.fit].label}`,
-      ...(result.fit === "strong" || result.fit === "possible" ? [`Estimated available after payoff and costs: ${range(result.available)}`] : []),
-      "Estimate only, not an offer to lend. TheMortgageAdvisory.com/reverse-calculator",
+      ...(result.fit === "strong" || result.fit === "possible"
+        ? [`Adjustable-rate (line of credit or monthly payments): ${range(result.arm.available)}`, `Fixed-rate (one lump sum): ${range(result.fixed.available)}`]
+        : []),
+      "Estimate only. A loan officer's quote is more accurate. TheMortgageAdvisory.com/reverse-calculator",
     ];
     try {
       await navigator.clipboard.writeText(lines.join("\n"));
@@ -153,13 +151,18 @@ export function ReverseCalculator({
             {(result.fit === "strong" || result.fit === "possible") && (
               <dl className="grid gap-3 sm:grid-cols-2">
                 <div className="rounded-xl bg-mist p-4 sm:col-span-2">
-                  <dt className="text-sm font-semibold text-brand-slate">Estimated available after paying off the mortgage and costs</dt>
-                  <dd className="mt-1 font-heading text-3xl font-bold text-brand-ink">{range(result.available)}</dd>
-                  <dd className="mt-1 text-sm text-brand-slate">As cash, monthly payments, a line of credit that grows, or a mix.</dd>
+                  <dt className="text-sm font-semibold text-brand-slate">Adjustable-rate: estimated available after paying off the mortgage and costs</dt>
+                  <dd className="mt-1 font-heading text-3xl font-bold text-brand-ink">{range(result.arm.available)}</dd>
+                  <dd className="mt-1 text-sm text-brand-slate">As a line of credit that grows, monthly payments, or a mix.</dd>
+                </div>
+                <div className="rounded-xl bg-mist p-4 sm:col-span-2">
+                  <dt className="text-sm font-semibold text-brand-slate">Fixed-rate: estimated lump sum at closing</dt>
+                  <dd className="mt-1 text-xl font-bold">{result.fixed.available[1] > 0 ? range(result.fixed.available) : "Not enough after payoff and costs"}</dd>
+                  <dd className="mt-1 text-sm text-brand-slate">One payout at closing, limited by HUD&apos;s first-year rules.</dd>
                 </div>
                 <div className="rounded-xl bg-mist p-4">
-                  <dt className="text-sm font-semibold text-brand-slate">Estimated total loan limit</dt>
-                  <dd className="mt-1 text-xl font-bold">{range(result.principalLimit)}</dd>
+                  <dt className="text-sm font-semibold text-brand-slate">Estimated total loan limit (adjustable)</dt>
+                  <dd className="mt-1 text-xl font-bold">{range(result.arm.principalLimit)}</dd>
                 </div>
                 <div className="rounded-xl bg-mist p-4">
                   <dt className="text-sm font-semibold text-brand-slate">Estimated upfront costs (can be paid from the loan)</dt>
@@ -169,18 +172,26 @@ export function ReverseCalculator({
             )}
 
             <ul className="list-disc space-y-1 pl-5 text-sm text-brand-slate">
-              {result.firstYearCap !== null && (
-                <li>In the first 12 months, about {usd(result.firstYearCap)} of that is available; the rest opens up after year one.</li>
+              {result.arm.firstYearCap !== null && (
+                <li>Adjustable-rate: in the first 12 months, about {usd(result.arm.firstYearCap)} is available; the rest opens up after year one.</li>
               )}
               {result.aboveLimit && (
                 <li>Your home is worth more than FHA&apos;s limit, so a HECM only counts {usd(result.countedValue)}. A jumbo reverse mortgage may provide more.</li>
               )}
               {result.state === null && <li>That ZIP code looks outside California, Texas, Florida, and Colorado, where we lend.</li>}
-              <li>Estimate only, not an offer or commitment to lend. Actual amounts depend on the appraisal, interest rates, and costs at the time.</li>
+              <li>Not an offer or commitment to lend. Actual amounts depend on the appraisal, interest rates, and costs at the time.</li>
             </ul>
 
+            <p className="rounded-xl border-l-4 border-brand-blue bg-mist p-4 font-semibold text-brand-ink">
+              These numbers are estimates only. A quote from a licensed loan officer is more accurate.{" "}
+              <Link href="/book#reverse" className="text-brand-button underline underline-offset-4">
+                Book a call for an accurate quote
+              </Link>
+              .
+            </p>
+
             <div className="flex flex-wrap gap-3">
-              <Link href="/book" className="rounded-full bg-brand-soft px-5 py-2.5 font-semibold text-brand-ink hover:bg-brand-blue">
+              <Link href="/book#reverse" className="rounded-full bg-brand-soft px-5 py-2.5 font-semibold text-brand-ink hover:bg-brand-blue">
                 {cta === "pros" ? "Book a case review" : "Book a call with an advisor"}
               </Link>
               <button type="button" onClick={copySummary} className="rounded-full border border-brand-blue px-5 py-2.5 font-semibold text-brand-slate hover:bg-mist">
@@ -188,12 +199,9 @@ export function ReverseCalculator({
               </button>
             </div>
             <p className="text-xs leading-relaxed text-brand-slate">
-          How we estimate: HUD&apos;s Principal Limit Factor tables for an adjustable-rate HECM, based on the youngest borrower&apos;s age and{" "}
-          {HECM.expectedRate
-            ? `current lender pricing${HECM.expectedRateAsOf ? ` (as of ${HECM.expectedRateAsOf})` : ""}`
-            : `an expected rate built from the 10-year Treasury${asOf ? ` (close ${asOf})` : ""} plus a typical lender margin`}
-          ; FHA&apos;s 2% upfront insurance, HUD&apos;s
-          origination fee cap, and typical third-party costs. FHA counts home value up to $1,249,125 in 2026.
+              How we estimate: HUD&apos;s Principal Limit Factor tables for adjustable- and fixed-rate HECMs, based on the youngest
+              borrower&apos;s age and typical current lender pricing; FHA&apos;s 2% upfront insurance, HUD&apos;s origination fee cap, and
+              typical third-party costs. FHA counts home value up to {usd(HECM.maxClaimAmount)} in {HECM.maxClaimYear}.
             </p>
           </div>
         )}
