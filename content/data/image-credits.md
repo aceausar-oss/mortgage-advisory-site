@@ -21,6 +21,7 @@ All homepage photos are illustrative only. They are never presented as clients (
 | pages/book-call.jpg | Provided by Ace Ausar (replaced placeholder, Sept 2026) | Owned by The Mortgage Advisory |
 | pages/pros-planner-meeting.jpg | Provided by Ace Ausar (For Financial Pros page, Sept 2026) | Owned by The Mortgage Advisory |
 | pages/pros-workshop.jpg | Provided by Ace Ausar (For Financial Pros page, Sept 2026); illustrative, not a specific advisor | Owned by The Mortgage Advisory |
+| pages/pros-family-review.jpg | Provided by Ace Ausar (For Financial Pros workshop card, Sept 2026) | Owned by The Mortgage Advisory |
 
 
 ## Placeholder photos (theme-silver test)
