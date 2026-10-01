@@ -78,18 +78,18 @@ export function ReviewsCarousel() {
           className="relative flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth scroll-px-4 px-4 pb-8 pt-3 [scrollbar-width:thin] sm:scroll-px-[max(1.5rem,calc((100vw-72rem)/2))] sm:px-[max(1.5rem,calc((100vw-72rem)/2))]"
         >
           {featured.map((r) => (
-            <li key={r.name} className="w-[80%] shrink-0 snap-start sm:w-[calc((100vw-4.25rem)/2)] lg:w-[calc((min(100vw,72rem)-6.75rem)/4)]">
+            <li key={r.name} className="w-[calc(100vw-2rem)] shrink-0 snap-center sm:w-[calc((100vw-4.25rem)/2)] sm:snap-start lg:w-[calc((min(100vw,72rem)-6.75rem)/4)]">
               <ReviewCard review={r} compact />
             </li>
           ))}
-          <li className="flex w-[60%] shrink-0 snap-start items-center justify-center sm:w-56">
+          <li className="flex w-[calc(100vw-2rem)] shrink-0 snap-center items-center justify-center sm:w-56 sm:snap-start">
             <Link href="/reviews" className="rounded-full bg-brand-soft px-5 py-2.5 font-semibold text-brand-ink hover:bg-brand-blue">
               See all {reviewsData.reviews.length} reviews →
             </Link>
           </li>
         </ul>
-        <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 left-0 w-8 bg-gradient-to-r from-mist sm:w-16" />
-        <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 right-0 w-8 bg-gradient-to-l from-mist sm:w-16" />
+        <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 left-0 hidden w-16 bg-gradient-to-r from-mist sm:block" />
+        <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 right-0 hidden w-16 bg-gradient-to-l from-mist sm:block" />
       </div>
       <p className="px-4 text-center text-xs text-brand-slate">Swipe or scroll sideways for more; the row pauses while you read. {reviewsFootnote}</p>
     </div>
