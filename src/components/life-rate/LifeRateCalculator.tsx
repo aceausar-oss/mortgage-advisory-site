@@ -171,7 +171,10 @@ export function LifeRateCalculator({ initial }: { initial: Debt[] }) {
               Show me how to lower it
             </Link>
           </div>
-          <p className="text-xs text-white/75">Your numbers stay on your device. Nothing you type here is sent or saved.</p>
+          <p className="text-xs text-white/75">
+            Your numbers stay on your device and aren&apos;t saved. &ldquo;Show me how to lower it&rdquo; shares them (no names) with our AI
+            assistant so it can answer.
+          </p>
         </div>
       </section>
     </form>
