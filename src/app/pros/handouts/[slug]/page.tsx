@@ -17,7 +17,8 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps<"/pros/handouts/[slug]">): Promise<Metadata> {
   const h = getHandout((await params).slug);
   if (!h) return {};
-  return { title: h.title, description: h.description, alternates: { canonical: `/pros/handouts/${h.slug}` } };
+  // Long handout titles skip the brand suffix to stay near 60 characters, like content pages.
+  return { title: h.title.length > 35 ? { absolute: h.title } : h.title, description: h.description, alternates: { canonical: `/pros/handouts/${h.slug}` } };
 }
 
 export default async function HandoutPage({ params }: PageProps<"/pros/handouts/[slug]">) {

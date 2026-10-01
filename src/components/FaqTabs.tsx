@@ -23,7 +23,8 @@ export function FaqTabs({ entries, idPrefix = "faq", tiles = "white" }: { entrie
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: entries.map((e) => ({
+    // Only the answers shown in the tabs; hidden topics (About, For Financial Pros) aren't on this page.
+    mainEntity: tabs.flatMap((t) => t.items).map((e) => ({
       "@type": "Question",
       name: e.question,
       acceptedAnswer: { "@type": "Answer", text: e.tldr, url: `${siteUrl}/answers/${e.slug}` },
@@ -33,7 +34,7 @@ export function FaqTabs({ entries, idPrefix = "faq", tiles = "white" }: { entrie
   return (
     <div className="faq-tabs relative">
       <style>{`.faq-panels [data-panel]{display:none}\n${css}`}</style>
-      {entries.length > 0 && <JsonLd data={faqJsonLd} />}
+      {faqJsonLd.mainEntity.length > 0 && <JsonLd data={faqJsonLd} />}
       {tabs.map((t) => (
         <input key={t.id} type="radio" name={`${idPrefix}-tabs`} id={t.id} defaultChecked={t.id === first.id} className="sr-only" />
       ))}

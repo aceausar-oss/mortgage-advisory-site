@@ -43,4 +43,4 @@ A homeowner in Aurora bought with FHA four years ago. The home has risen in valu
 
 ## Our take
 
-This is one of the most common "free money on the table" situations I see, but only when the numbers really work. I'll lay out the numbers honestly: your savings, your costs, and your break-even month, and I'll tell you if waiting is the better move.
+This is one of the most common "money left on the table" situations I see, but only when the numbers really work. I'll lay out the numbers honestly: your savings, your costs, and your break-even month, and I'll tell you if waiting is the better move.
