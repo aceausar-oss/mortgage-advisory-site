@@ -9,9 +9,19 @@ export type YieldPoint = { date: string; y2: number; y5: number; y10: number; y3
 const csvUrl = (year: number) =>
   `https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/${year}/all?type=daily_treasury_yield_curve&field_tdr_date_value=${year}&page&_format=csv`;
 
+// Treasury's site intermittently answers 403/429 to automated requests, so try a few times before giving up.
+async function fetchCsv(year: number): Promise<Response> {
+  let last: Response | null = null;
+  for (let attempt = 0; attempt < 4; attempt++) {
+    if (attempt) await new Promise((r) => setTimeout(r, 1500 * attempt));
+    last = await fetch(csvUrl(year), { next: { revalidate: REVALIDATE } });
+    if (last.ok) return last;
+  }
+  throw new Error(`Treasury ${year}: HTTP ${last?.status}`);
+}
+
 async function fetchYear(year: number): Promise<YieldPoint[]> {
-  const res = await fetch(csvUrl(year), { next: { revalidate: REVALIDATE } });
-  if (!res.ok) throw new Error(`Treasury ${year}: HTTP ${res.status}`);
+  const res = await fetchCsv(year);
   const [header, ...rows] = (await res.text()).trim().split(/\r?\n/);
   const cols = header.split(",").map((c) => c.replace(/"/g, "").trim());
   const idx = (name: string) => cols.indexOf(name);
