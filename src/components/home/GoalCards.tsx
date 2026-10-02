@@ -7,7 +7,7 @@ const GOALS = [
   {
     href: "/loans/heloc",
     image: "/images/goals/goal-heloc-photo.jpg",
-    alt: "Couple reviewing remodel plans in a bright kitchen",
+    alt: "Couple at the dining table reviewing their numbers with a calculator",
     label: "Keep your low rate",
     title: "Tap your equity",
     text: "Get cash for a remodel, college, or a cushion without refinancing your first mortgage.",
