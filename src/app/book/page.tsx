@@ -1,6 +1,5 @@
 import Image from "next/image";
 import type { Metadata } from "next";
-import Script from "next/script";
 import { BookingPicker } from "@/components/BookingPicker";
 import { bookingEmbedUrl, bookingTypes } from "@/lib/home";
 import { licensing } from "@/lib/site";
@@ -12,7 +11,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/book" },
 };
 
-// Booking page (CLAUDE.md §7, Phase 1): Go High Level calendars; only the one the visitor picks loads (BookingPicker).
+// Booking page (CLAUDE.md §7, Phase 1): Go High Level calendars; "Pick a time" opens the chosen one full screen (BookingPicker).
 export default function BookPage() {
   return (
     <div className="mx-auto max-w-5xl space-y-10 px-4 py-12 sm:px-6">
@@ -39,7 +38,6 @@ export default function BookPage() {
       </div>
 
       <BookingPicker topics={bookingTypes.map((b) => ({ key: b.key, title: b.title, blurb: b.blurb, url: b.url, embedUrl: bookingEmbedUrl(b.calendarId) }))} />
-      <Script src="https://link.msgsndr.com/js/form_embed.js" strategy="lazyOnload" />
     </div>
   );
 }

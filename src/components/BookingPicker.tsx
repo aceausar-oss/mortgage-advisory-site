@@ -1,67 +1,102 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 type Topic = { key: string; title: string; blurb: string; embedUrl: string; url: string };
 
-// Book page: the original stacked calendar sections, but only the chosen calendar loads (Ace, Sept 2026).
-// Each section shows a "Pick a time" button until it's chosen; /book#equity (etc.) opens that section directly.
-// All calendars load hidden so the embed script can resize them (it only sizes iframes present when it runs).
-// Without JavaScript, the button links straight to the Go High Level booking page.
+// Book page: the original stacked topic sections. "Pick a time" opens that topic's Go High Level calendar in a
+// full-screen window (Ace, Oct 2026), so the whole calendar and form are in one view on any device, with no dependence
+// on Go High Level's resize script. /book#equity (etc.) opens the matching calendar directly. Without JavaScript, the
+// button links straight to the Go High Level booking page.
 export function BookingPicker({ topics }: { topics: Topic[] }) {
-  const [selected, setSelected] = useState<string | null>(null);
+  const [openKey, setOpenKey] = useState<string | null>(null);
+  const dialog = useRef<HTMLDialogElement>(null);
+  const topic = topics.find((t) => t.key === openKey) ?? null;
 
+  const open = useCallback((key: string) => {
+    setOpenKey(key);
+    history.replaceState(null, "", `#${key}`);
+  }, []);
+
+  const close = useCallback(() => {
+    setOpenKey(null);
+    history.replaceState(null, "", window.location.pathname + window.location.search);
+  }, []);
+
+  // Open from the address (/book#reverse), including links from other pages.
   useEffect(() => {
     const fromHash = () => {
       const key = window.location.hash.slice(1);
-      if (topics.some((t) => t.key === key)) setSelected(key);
+      if (topics.some((t) => t.key === key)) setOpenKey(key);
     };
     fromHash();
     window.addEventListener("hashchange", fromHash);
     return () => window.removeEventListener("hashchange", fromHash);
   }, [topics]);
 
-  function choose(key: string) {
-    setSelected(key);
-    history.replaceState(null, "", `#${key}`);
-    requestAnimationFrame(() => document.getElementById(`cal-${key}`)?.scrollIntoView({ behavior: "smooth", block: "start" }));
-  }
+  // Show or hide the window, and stop the page behind it from scrolling.
+  useEffect(() => {
+    const d = dialog.current;
+    if (!d) return;
+    if (topic && !d.open) d.showModal();
+    if (!topic && d.open) d.close();
+    document.documentElement.style.overflow = topic ? "hidden" : "";
+    return () => {
+      document.documentElement.style.overflow = "";
+    };
+  }, [topic]);
 
   return (
     <>
       {topics.map((t) => (
         <section key={t.key} aria-labelledby={`cal-${t.key}`} className="space-y-3 rounded-3xl border border-brand-steel/30 bg-white p-4 sm:p-6">
           <span id={t.key} className="block scroll-mt-24" />
-          <h2 id={`cal-${t.key}`} className="scroll-mt-24 text-2xl font-semibold">
+          <h2 id={`cal-${t.key}`} className="text-2xl font-semibold">
             {t.title}
           </h2>
           <p>{t.blurb}</p>
-          {/* Every calendar is in the page from the start (hidden until chosen), so Go High Level's embed script can size it
-              to fit its full form; only the chosen one is ever shown. */}
-          <div hidden={selected !== t.key}>
-            <iframe src={t.embedUrl} title={`Book a ${t.title} call`} scrolling="no" className="min-h-[700px] w-full rounded-2xl border-0" />
-            <p className="mt-3 text-sm">
-              Calendar not loading?{" "}
-              <a href={t.url} rel="noopener" className="font-semibold underline underline-offset-4">
-                Open the booking page
-              </a>
-              .
-            </p>
-          </div>
-          {selected !== t.key && (
-            <a
-              href={t.url}
-              onClick={(e) => {
-                e.preventDefault();
-                choose(t.key);
-              }}
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-soft px-5 py-2.5 font-semibold text-brand-ink hover:bg-brand-blue"
-            >
-              Pick a time <span aria-hidden="true">→</span>
-            </a>
-          )}
+          <a
+            href={t.url}
+            onClick={(e) => {
+              e.preventDefault();
+              open(t.key);
+            }}
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-soft px-5 py-2.5 font-semibold text-brand-ink hover:bg-brand-blue"
+          >
+            Pick a time <span aria-hidden="true">→</span>
+          </a>
         </section>
       ))}
+
+      <dialog
+        ref={dialog}
+        onClose={close}
+        onClick={(e) => {
+          if (e.target === dialog.current) close(); // click on the dimmed backdrop
+        }}
+        aria-labelledby="booking-title"
+        className="m-0 h-dvh max-h-none w-screen max-w-none bg-white p-0 backdrop:bg-black/50 sm:m-auto sm:h-[min(92dvh,920px)] sm:w-[min(96vw,1100px)] sm:rounded-3xl"
+      >
+        {topic && (
+          <div className="flex h-full flex-col">
+            <div className="flex items-center justify-between gap-4 border-b border-brand-steel/30 px-4 py-3 sm:px-6">
+              <h2 id="booking-title" className="text-lg font-semibold sm:text-xl">
+                {topic.title}: pick a time
+              </h2>
+              <button
+                type="button"
+                onClick={close}
+                autoFocus
+                aria-label="Close"
+                className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-brand-steel/40 text-2xl leading-none text-brand-ink hover:bg-mist"
+              >
+                ×
+              </button>
+            </div>
+            <iframe key={topic.key} src={topic.embedUrl} title={`Book a ${topic.title} call`} className="w-full flex-1 border-0" />
+          </div>
+        )}
+      </dialog>
     </>
   );
 }
