@@ -75,12 +75,12 @@ export function BookingPicker({ topics }: { topics: Topic[] }) {
           if (e.target === dialog.current) close(); // click on the dimmed backdrop
         }}
         aria-labelledby="booking-title"
-        className="m-0 h-dvh max-h-none w-screen max-w-none bg-white p-0 backdrop:bg-black/50 sm:m-auto sm:h-[min(92dvh,920px)] sm:w-[min(96vw,1100px)] sm:rounded-3xl"
+        className="fixed inset-0 m-0 h-full max-h-none w-full max-w-none overflow-hidden bg-white p-0 backdrop:bg-black/50 sm:inset-auto sm:top-1/2 sm:left-1/2 sm:h-[min(calc(100dvh-2rem),900px)] sm:w-[min(calc(100vw-2rem),1100px)] sm:-translate-x-1/2 sm:-translate-y-1/2 sm:rounded-3xl"
       >
         {topic && (
           <div className="flex h-full flex-col">
-            <div className="flex items-center justify-between gap-4 border-b border-brand-steel/30 px-4 py-3 sm:px-6">
-              <h2 id="booking-title" className="text-lg font-semibold sm:text-xl">
+            <div className="flex items-center justify-between gap-4 border-b border-brand-steel/30 px-4 py-2 sm:px-6">
+              <h2 id="booking-title" className="text-base font-semibold sm:text-lg">
                 {topic.title}: pick a time
               </h2>
               <button
@@ -88,12 +88,13 @@ export function BookingPicker({ topics }: { topics: Topic[] }) {
                 onClick={close}
                 autoFocus
                 aria-label="Close"
-                className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-brand-steel/40 text-2xl leading-none text-brand-ink hover:bg-mist"
+                className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-brand-steel/40 text-2xl leading-none text-brand-ink hover:bg-mist"
               >
                 ×
               </button>
             </div>
-            <iframe key={topic.key} src={topic.embedUrl} title={`Book a ${topic.title} call`} className="w-full flex-1 border-0" />
+            {/* aria-label instead of title: a title shows as a hover tooltip over the calendar. */}
+            <iframe key={topic.key} src={topic.embedUrl} aria-label={`Book a ${topic.title} call`} className="min-h-0 w-full flex-1 border-0" />
           </div>
         )}
       </dialog>
