@@ -6,6 +6,7 @@ type Topic = { key: string; title: string; blurb: string; embedUrl: string; url:
 
 // Book page: the original stacked calendar sections, but only the chosen calendar loads (Ace, Sept 2026).
 // Each section shows a "Pick a time" button until it's chosen; /book#equity (etc.) opens that section directly.
+// All calendars load hidden so the embed script can resize them (it only sizes iframes present when it runs).
 // Without JavaScript, the button links straight to the Go High Level booking page.
 export function BookingPicker({ topics }: { topics: Topic[] }) {
   const [selected, setSelected] = useState<string | null>(null);
@@ -35,18 +36,19 @@ export function BookingPicker({ topics }: { topics: Topic[] }) {
             {t.title}
           </h2>
           <p>{t.blurb}</p>
-          {selected === t.key ? (
-            <>
-              <iframe src={t.embedUrl} title={`Book a ${t.title} call`} scrolling="no" className="min-h-[700px] w-full rounded-2xl border-0" />
-              <p className="text-sm">
-                Calendar not loading?{" "}
-                <a href={t.url} rel="noopener" className="font-semibold underline underline-offset-4">
-                  Open the booking page
-                </a>
-                .
-              </p>
-            </>
-          ) : (
+          {/* Every calendar is in the page from the start (hidden until chosen), so Go High Level's embed script can size it
+              to fit its full form; only the chosen one is ever shown. */}
+          <div hidden={selected !== t.key}>
+            <iframe src={t.embedUrl} title={`Book a ${t.title} call`} scrolling="no" className="min-h-[700px] w-full rounded-2xl border-0" />
+            <p className="mt-3 text-sm">
+              Calendar not loading?{" "}
+              <a href={t.url} rel="noopener" className="font-semibold underline underline-offset-4">
+                Open the booking page
+              </a>
+              .
+            </p>
+          </div>
+          {selected !== t.key && (
             <a
               href={t.url}
               onClick={(e) => {
