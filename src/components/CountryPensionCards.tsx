@@ -38,15 +38,25 @@ export function CountryPensionCards({ heading = true }: { heading?: boolean }) {
   );
 }
 
-// Small inline row of the four flags, for spots with no room for the full cards.
+// More countries with the same idea, from Ace's updated "Hidden Pension" webinar (Oct 2026): the UK's lifetime
+// mortgage, France's prêt viager hypothécaire, and Australia's government Pension Loans Scheme (now the Home Equity
+// Access Scheme). Kept to a few so the row stays on one line on phones.
+const ROW_EXTRA = [
+  { code: "gb", name: "the United Kingdom", flagWidth: 48 },
+  { code: "fr", name: "France", flagWidth: 36 },
+  { code: "au", name: "Australia", flagWidth: 48 },
+];
+const ROW = [...COUNTRIES.filter((c) => c.code !== "us"), ...ROW_EXTRA, ...COUNTRIES.filter((c) => c.code === "us")];
+
+// Small inline row of flags, for spots with no room for the full cards.
 export function FlagRow({ caption = true }: { caption?: boolean }) {
   return (
     <p className="flex flex-wrap items-center gap-2 text-sm font-semibold text-brand-slate">
-      {COUNTRIES.map((c) => (
+      {ROW.map((c) => (
         // eslint-disable-next-line @next/next/no-img-element -- tiny local SVG flags
         <img key={c.code} src={`/flags/${c.code}.svg`} alt={`Flag of ${c.name}`} width={c.flagWidth} height={24} className="h-6 w-auto rounded-[3px] shadow-[0_0_0_1px_rgba(0,0,0,0.08),0_1px_3px_rgba(0,0,0,0.18)]" />
       ))}
-      {caption && <span>Called a “housing pension” in South Korea, Switzerland, and Sweden</span>}
+      {caption && <span>Called a “housing pension” in South Korea, Switzerland, and Sweden, and offered in the UK, France, Australia, and more</span>}
     </p>
   );
 }
