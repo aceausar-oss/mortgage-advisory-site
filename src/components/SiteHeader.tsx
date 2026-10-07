@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { MenuAutoClose } from "@/components/MenuAutoClose";
 import { licensing, mainNav, resourcesNav } from "@/lib/site";
 
 export function SiteHeader() {
@@ -64,8 +65,9 @@ export function SiteHeader() {
             Book a call
           </Link>
 
-          {/* Mobile menu: <details> works with JavaScript disabled. */}
+          {/* Mobile menu: <details> works with JavaScript disabled; MenuAutoClose closes it on link tap, outside tap, scroll, or Esc. */}
           <details className="group relative lg:hidden">
+            <MenuAutoClose />
             <summary className="flex h-10 w-10 cursor-pointer list-none items-center justify-center rounded-full border border-brand-steel/50 text-brand-slate [&::-webkit-details-marker]:hidden">
               <span className="sr-only">Menu</span>
               <svg viewBox="0 0 24 24" aria-hidden="true" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
