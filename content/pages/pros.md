@@ -37,6 +37,8 @@ Financial professionals whose clients own homes, especially clients 62 and older
 
 ## When should you think about the client's home?
 
+Nearly half of financial planners (47%) say their clients' biggest fear is running out of money in retirement, according to the Financial Planning Association's [2025 Trends in Retirement Planning](https://www.financialplanningassociation.org/press-room/releases-announcements/trends-in-retirement-research-2025-fpa) report. For many of those clients, the home is the biggest resource not yet in the plan.
+
 Flag a conversation when a client:
 
 - Is **62 or older and still making a mortgage payment** that strains their retirement cash flow

@@ -21,6 +21,10 @@ didYouKnow:
   - text: "With a HECM, you or your heirs never owe more than the home is worth. If heirs want to keep the home, they can pay off the loan for the lesser of the balance or 95% of the home's appraised value."
     sources:
       - { title: "HUD — FHA Reverse Mortgage for Seniors (HECM)", url: "https://www.hud.gov/hud-partners/single-family-hecmhome" }
+  - text: "88% of Americans want to retire in their current home, but only about 40% of U.S. homes have even the basic features for aging in place: a step-free entry and a bedroom and full bath on the first floor."
+    sources:
+      - { title: "Finance of America, 2023 Home Equity Survey", url: "https://www.financeofamerica.com/advisors/" }
+      - { title: "U.S. Census Bureau, Aging-Ready Homes in the United States (2023)", url: "https://www.census.gov/library/publications/2023/demo/p23-219.html" }
 updated: 2026-09-27
 reviewed_by: "Ace Ausar, NMLS #1143018"
 status: published

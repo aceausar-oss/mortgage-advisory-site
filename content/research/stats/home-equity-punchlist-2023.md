@@ -26,7 +26,7 @@ Punchlist: A Partner's Guide" (Home-Equity-Punchlist-Whitepaper-Multipage-WS-B2C
 | Stat | Who | Notes |
 |---|---|---|
 | 88% are interested in staying in their current home throughout retirement | Retirees | FOA also cites "88% of Americans want to retire in their current home" |
-| Only 10% of U.S. homes are "aging-ready" | U.S. homes | From U.S. Census Bureau (2020), "Old Housing, New Needs: Are U.S. Homes Ready for an Aging Population?" Aging-ready = step-free entry, first-floor bedroom and bathroom, and at least one bathroom accessibility feature. Cite the Census report directly. |
+| Only 10% of U.S. homes are "aging-ready" (**outdated: 2011 data; don't use**) | U.S. homes | From U.S. Census Bureau (2020), "Old Housing, New Needs: Are U.S. Homes Ready for an Aging Population?" Aging-ready = step-free entry, first-floor bedroom and bathroom, and at least one bathroom accessibility feature. Cite the Census report directly. |
 
 ## Top financial priorities (homeowners, 2023)
 
@@ -49,6 +49,10 @@ Punchlist: A Partner's Guide" (Home-Equity-Punchlist-Whitepaper-Multipage-WS-B2C
 | Financially supporting their family | 28% |
 
 ## Related, newer (verify before use)
+
+- **Use instead of the 10% stat:** U.S. Census Bureau, *Aging-Ready Homes in the United States* (2023, 2019 data): about 40% of homes have the most basic aging-ready features (step-free entry plus a first-floor bedroom and full bathroom). https://www.census.gov/library/publications/2023/demo/p23-219.html **Used on /loans/reverse-mortgage (Did you know).**
+- 88% want to retire in their current home: public source https://www.financeofamerica.com/advisors/ (2023 Home Equity Survey). **Used on /loans/reverse-mortgage.**
+- FPA 47% stat: FPA press release https://www.financialplanningassociation.org/press-room/releases-announcements/trends-in-retirement-research-2025-fpa **Used on /pros.**
 
 - Financial Planning Association, *2025 Trends in Retirement Planning* (released with support from Finance of
   America): 47% of planners say their clients' biggest fear is running out of money in retirement. Reported by NRMLA,
