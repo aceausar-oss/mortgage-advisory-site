@@ -52,7 +52,11 @@ const nextConfig: NextConfig = {
   },
   // Standard discovery location for the API description (CLAUDE.md §10).
   async rewrites() {
-    return [{ source: "/.well-known/openapi.json", destination: "/openapi.json" }];
+    return [
+      { source: "/.well-known/openapi.json", destination: "/openapi.json" },
+      // Short branded link for texting the Reverse 2nd page to borrowers.
+      { source: "/reverse2nd", destination: "/reverse2nd.html" },
+    ];
   },
 };
 
