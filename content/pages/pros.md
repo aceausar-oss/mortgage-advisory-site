@@ -47,6 +47,8 @@ Flag a conversation when a client:
 - Has a **home in a trust**, a **younger spouse**, or heirs who may not keep the home
 - Is **carrying high-interest debt** into retirement, or needs cash but has a first-mortgage rate worth keeping
 
+Not sure which program fits? See [which reverse mortgage fits which client](/answers/which-reverse-mortgage-fits-which-client).
+
 ## Which strategies can we model with you?
 
 **Retirement income and portfolio protection**
