@@ -2,7 +2,7 @@
 h1: "Privacy Policy"
 title: "Privacy Policy"
 description: "How The Mortgage Advisory, Inc. collects, uses, and protects your information on this site, including AI chat, booking, and California privacy rights."
-updated: 2026-09-27
+updated: 2026-10-08
 attorneyReview: done # reviewed by Ace's attorney, Sept 2026
 ---
 
@@ -30,6 +30,12 @@ We don't ask for or accept Social Security numbers, account numbers, or bank log
 - **When required by law,** or to protect our rights and the security of our users.
 
 **We do not sell your personal information, and we do not share it for cross-context behavioral advertising.**
+
+## Text messages (SMS)
+
+**We never share your mobile phone number or your consent to receive text messages with third parties or affiliates for their marketing or promotional purposes.** Text messaging opt-in data and consent are excluded from all of the sharing described above and are never sold, rented, or shared, except with the service providers that deliver our messages for us.
+
+If you agree to receive texts from us, you'll get messages about your inquiry, appointments, and loan. Message frequency varies. Message and data rates may apply. Reply **STOP** to opt out at any time, or **HELP** for help.
 
 ## Cookies
 
