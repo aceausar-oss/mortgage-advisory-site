@@ -1,4 +1,4 @@
-import { shareContentType, shareImage, shareSize } from "@/lib/shareImage";
+import { SPANISH_FAMILY, shareContentType, shareImage, shareSize } from "@/lib/shareImage";
 
 export const alt = "The Mortgage Advisory: su casa podría ser su pensión de vivienda. Hipotecas inversas, HELOC y préstamos hipotecarios. NMLS #1549739";
 export const size = shareSize;
@@ -8,10 +8,10 @@ export const contentType = shareContentType;
 // Spanish pages with their own opengraph-image override it.
 export default function Image() {
   return shareImage({
-    photo: "/images/retirement-couple.jpg",
+    photo: SPANISH_FAMILY.photo,
     headline: "Su casa podría ser su pensión de vivienda",
     sub: "Hipotecas inversas · HELOC · Préstamos hipotecarios",
-    position: "center 25%",
+    position: SPANISH_FAMILY.position,
     flags: true,
   });
 }

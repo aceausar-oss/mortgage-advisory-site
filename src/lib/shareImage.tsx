@@ -9,6 +9,9 @@ import { ImageResponse } from "next/og";
 export const shareSize = { width: 1200, height: 630 };
 export const shareContentType = "image/png";
 
+// Photo for Spanish link previews (Ace, Oct 2026): the Latino couple from the reverse mortgage page.
+export const SPANISH_FAMILY = { photo: "/images/loans/loan-reverse-mortgage.jpg", position: "20% center" };
+
 const FLAGS: [string, number][] = [["kr", 36], ["ch", 24], ["se", 38], ["gb", 48], ["fr", 36], ["au", 48], ["us", 46]];
 
 const asset = async (path: string) => {
