@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { JsonLd } from "@/components/JsonLd";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import { SpanishNotice } from "@/components/SpanishNotice";
 import { TreasuryTicker } from "@/components/TreasuryTicker";
 import { inter, montserrat } from "@/lib/fonts";
 import { ui, type Lang } from "@/lib/i18n";
@@ -26,6 +27,7 @@ export function SiteShell({ lang, children }: { lang: Lang; children: ReactNode 
         <JsonLd data={organizationJsonLd()} />
         <TreasuryTicker />
         <SiteHeader lang={lang} />
+        {lang === "en" && <SpanishNotice />}
         <main id="main" className="flex-1">
           {children}
         </main>

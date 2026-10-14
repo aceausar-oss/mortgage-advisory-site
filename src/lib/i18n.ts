@@ -4,6 +4,9 @@ import { LOAN_SLUGS } from "@/lib/loanSlugs";
 // twins (/loans/heloc ↔ /es/loans/heloc), so the EN/ES toggle and hreflang tags can map one to the other.
 export type Lang = "en" | "es";
 
+/** Cookie that remembers the visitor's language choice (set by src/proxy.ts). */
+export const LANG_COOKIE = "lang";
+
 // English paths that have a Spanish twin under /es. Anything else toggles to the Spanish homepage.
 export const SPANISH_PATHS: string[] = ["/", "/ask", "/book", ...LOAN_SLUGS.map((s) => `/loans/${s}`)];
 

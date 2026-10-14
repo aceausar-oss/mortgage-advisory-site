@@ -33,7 +33,12 @@ const nextConfig: NextConfig = {
   // English and Spanish use separate root layouts (app/(en), app/(es)), so the 404 page is app/global-not-found.tsx.
   experimental: { globalNotFound: true },
   async redirects() {
-    return OLD_SITE_REDIRECTS.map(([source, destination]) => ({ source, destination, permanent: true }));
+    return [
+      ...OLD_SITE_REDIRECTS.map(([source, destination]) => ({ source, destination, permanent: true })),
+      // Easy-to-say short links to the Spanish site (Ace, Oct 2026), for phone calls, texts, and flyers.
+      { source: "/espanol", destination: "/es", permanent: true },
+      { source: "/spanish", destination: "/es", permanent: true },
+    ];
   },
   // Keep the *.vercel.app test addresses out of search results; only the real domain should be indexed.
   async headers() {

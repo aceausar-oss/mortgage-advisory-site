@@ -9,7 +9,8 @@ import { SPANISH_PATHS, toEn, toEs, type Lang } from "@/lib/i18n";
 // A plain <a>, not next/link: the two languages use separate root layouts, so switching is a full page load anyway.
 export function LangToggle({ lang }: { lang: Lang }) {
   const path = usePathname() || "/";
-  const target = lang === "es" ? toEn(path) : SPANISH_PATHS.includes(path) ? toEs(path) : "/es";
+  // ?lang=en tells src/proxy.ts to remember English (so a visitor who chose Spanish earlier isn't sent back).
+  const target = lang === "es" ? `${toEn(path)}?lang=en` : SPANISH_PATHS.includes(path) ? toEs(path) : "/es";
   return (
     <a
       href={target}
