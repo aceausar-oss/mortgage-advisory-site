@@ -11,6 +11,8 @@ export const shareContentType = "image/png";
 
 // Photo for Spanish link previews (Ace, Oct 2026): the Latino couple from the reverse mortgage page.
 export const SPANISH_FAMILY = { photo: "/images/loans/loan-reverse-mortgage.jpg", position: "20% center" };
+// Young Latino family with keys and a SOLD sign (provided by Ace, Oct 2026): Spanish home buying link previews.
+export const SPANISH_BUYERS = { photo: "/images/es-buyers-family.jpg", position: "center 30%" };
 
 const FLAGS: [string, number][] = [["kr", 36], ["ch", 24], ["se", 38], ["gb", 48], ["fr", 36], ["au", 48], ["us", 46]];
 

@@ -57,8 +57,8 @@ const GOALS_ES = [
   },
   {
     href: "/es/loans/purchase",
-    image: "/images/goals/goal-buy-photo.jpg",
-    alt: "Familia joven en la puerta de su casa con las llaves",
+    image: "/images/es-buyers-family.jpg",
+    alt: "Familia sonriente frente a su casa nueva con las llaves y un letrero de vendido",
     label: "FHA · VA · Convencional",
     title: "Compre su próxima casa",
     text: "Obtenga su preaprobación y compare préstamos convencionales, FHA y VA lado a lado, con cada costo desde el principio.",

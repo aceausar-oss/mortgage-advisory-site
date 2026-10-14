@@ -10,8 +10,9 @@ products: [conventional, fha, va, non-qm]
 funding: mixed
 booking: purchase
 related: []
-image: "/images/loans/loan-purchase.jpg"
-imageAlt: "Familia cargando cajas de mudanza hacia su casa nueva mientras los niños corren adelante"
+image: "/images/es-buyers-family.jpg"
+imageAlt: "Familia sonriente frente a su casa nueva con las llaves y un letrero de vendido"
+imagePosition: "center 30%"
 sources:
   - { title: "HUD — Let FHA loans help you", url: "https://www.hud.gov/buying/loans" }
   - { title: "VA — Home loans", url: "https://www.va.gov/housing-assistance/home-loans/" }
