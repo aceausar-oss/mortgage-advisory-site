@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { EqualHousingLenderLogo } from "@/components/EqualHousingLenderLogo";
+import { spanishLegalNav, ui, type Lang } from "@/lib/i18n";
 import { getLoanPages, getLocationPages } from "@/lib/loans";
-import { fullAddress, legalNav, licensing, resourcesNav, stateCodes } from "@/lib/site";
+import { fullAddress, legalNav as enLegalNav, licensing, resourcesNav, stateCodes } from "@/lib/site";
 
 // Compliance block required on every page (CLAUDE.md §8). All facts come from content/data/licensing.json.
 // State license numbers that differ from the NMLS ID are shown here too.
@@ -11,7 +12,9 @@ const stateLicenseIds = licensing.states.flatMap((s) =>
     .filter((l) => !l.number.startsWith("NMLS"))
     .map((l) => `${s.code} ${Object.entries(SHORT).find(([k]) => l.number.startsWith(k))?.[1] ?? "License"} #${l.number}`),
 );
-export function SiteFooter() {
+export function SiteFooter({ lang = "en" }: { lang?: Lang }) {
+  const t = ui[lang];
+  const legalNav = lang === "es" ? spanishLegalNav : enLegalNav;
   return (
     <footer className="mt-auto px-4 pb-10 pt-6 text-brand-ink sm:px-6">
       {/* Rounded card with no fill or shadow: it matches the page background and is marked only by a thin white
@@ -30,7 +33,7 @@ export function SiteFooter() {
               >
                 NMLS #{licensing.nmls}
               </a>{" "}
-              · Direct lender & mortgage broker
+              · {t.directLender}
             </p>
             <address className="not-italic">
               {fullAddress} ·{" "}
@@ -43,10 +46,10 @@ export function SiteFooter() {
               </a>
             </address>
             <p>
-              Licensed in {stateCodes.join(", ")}
-              {stateLicenseIds.length > 0 && <> · {stateLicenseIds.join(" · ")}</>} — see{" "}
+              {t.licensedIn} {stateCodes.join(", ")}
+              {stateLicenseIds.length > 0 && <> · {stateLicenseIds.join(" · ")}</>} — {t.see}{" "}
               <Link href="/licensing" className="font-medium text-brand-button underline underline-offset-4 hover:text-brand-slate">
-                Licensing &amp; Disclosures
+                {t.licensingLink}
               </Link>
               .
             </p>
@@ -55,16 +58,16 @@ export function SiteFooter() {
           <div className="flex items-center gap-3">
             <EqualHousingLenderLogo className="h-14 w-14 text-brand-slate" />
             <span className="font-heading text-sm font-semibold uppercase tracking-wide text-brand-slate">
-              Equal Housing Lender
+              {t.equalHousing}
             </span>
           </div>
         </div>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr]">
           {[
-            { label: "Loans", links: getLoanPages().map((p) => ({ href: `${p.basePath}/${p.slug}`, label: p.name })) },
-            { label: "Where we lend", links: getLocationPages().map((p) => ({ href: `${p.basePath}/${p.slug}`, label: p.name })) },
-            { label: "Company & tools", links: resourcesNav },
+            { label: t.loansGroup, links: getLoanPages(lang).map((p) => ({ href: `${lang === "es" ? "/es" : ""}${p.basePath}/${p.slug}`, label: p.name })) },
+            { label: t.whereGroup, links: getLocationPages().map((p) => ({ href: `${p.basePath}/${p.slug}`, label: p.name })) },
+            { label: t.companyGroup, links: resourcesNav },
           ].map((group) => (
             <nav key={group.label} aria-label={group.label}>
               <p className="font-heading text-sm font-semibold uppercase tracking-wide text-brand-slate">{group.label}</p>
@@ -81,7 +84,8 @@ export function SiteFooter() {
           ))}
         </div>
 
-        <nav aria-label="Legal">
+        <nav aria-label={t.legal}>
+          {lang === "es" && <p className="mb-2 font-heading text-sm font-semibold uppercase tracking-wide text-brand-slate">{t.legal}</p>}
           <ul className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
             {legalNav.map((item) => (
               <li key={item.href}>
@@ -93,12 +97,9 @@ export function SiteFooter() {
           </ul>
         </nav>
 
-        <p className="border-t border-brand-blue/50 pt-6 text-xs leading-relaxed text-brand-slate">
-          This is not a commitment to lend. All loans subject to credit approval, underwriting, and
-          property valuation. Rates, terms, and programs subject to change without notice.
-        </p>
+        <p className="border-t border-brand-blue/50 pt-6 text-xs leading-relaxed text-brand-slate">{t.notCommitment}</p>
         <p className="text-xs text-brand-slate">
-          © {new Date().getFullYear()} {licensing.legalName} All rights reserved.
+          © {new Date().getFullYear()} {licensing.legalName} {t.rights}
         </p>
       </div>
       </div>

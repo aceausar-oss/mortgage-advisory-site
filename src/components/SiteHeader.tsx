@@ -1,13 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
+import { LangToggle } from "@/components/LangToggle";
 import { MenuAutoClose } from "@/components/MenuAutoClose";
-import { licensing, mainNav, resourcesNav } from "@/lib/site";
+import { spanishNav, spanishResourcesNav, ui, type Lang } from "@/lib/i18n";
+import { licensing, mainNav as enNav, resourcesNav as enResources } from "@/lib/site";
 
-export function SiteHeader() {
+export function SiteHeader({ lang = "en" }: { lang?: Lang }) {
+  const t = ui[lang];
+  const mainNav = lang === "es" ? spanishNav : enNav;
+  const resourcesNav = lang === "es" ? spanishResourcesNav : enResources;
   return (
     <header className="sticky top-0 z-40 border-b border-brand-steel/30 bg-white/95 backdrop-blur">
       <div className="mx-auto flex max-w-[75rem] items-center justify-between gap-2 px-4 py-3 sm:gap-4 sm:px-6">
-        <Link href="/" className="shrink-0" aria-label={`${licensing.brandName} home`}>
+        <Link href={lang === "es" ? "/es" : "/"} className="shrink-0" aria-label={`${licensing.brandName} ${t.home}`}>
           <Image
             src="/brand/logo-tma-2026.png"
             alt={licensing.brandName}
@@ -15,7 +20,7 @@ export function SiteHeader() {
             height={497}
             preload
             sizes="(min-width: 640px) 220px, 160px"
-            className="h-9 w-auto min-[360px]:h-10 sm:h-14"
+            className="h-9 w-auto min-[380px]:h-10 sm:h-14"
           />
         </Link>
 
@@ -31,7 +36,7 @@ export function SiteHeader() {
             {/* "Resources" dropdown: opens on hover and on keyboard focus (focus-within), so it needs no JavaScript. */}
             <li className="group relative">
               <button type="button" aria-haspopup="true" className="flex items-center gap-1 whitespace-nowrap hover:underline underline-offset-4">
-                Resources
+                {t.resources}
                 <svg viewBox="0 0 20 20" aria-hidden="true" className="h-4 w-4 transition group-hover:rotate-180 group-focus-within:rotate-180" fill="currentColor">
                   <path d="M5.2 7.2a.75.75 0 0 1 1.06 0L10 10.94l3.74-3.74a.75.75 0 1 1 1.06 1.06l-4.27 4.27a.75.75 0 0 1-1.06 0L5.2 8.26a.75.75 0 0 1 0-1.06z" />
                 </svg>
@@ -58,25 +63,27 @@ export function SiteHeader() {
           >
             {licensing.phone}
           </a>
+          <LangToggle lang={lang} />
           <Link
-            href="/book"
+            href={lang === "es" ? "/es/book" : "/book"}
             className="whitespace-nowrap rounded-full bg-brand-soft px-3 py-2 text-sm font-semibold text-brand-ink hover:bg-brand-blue sm:px-4"
           >
-            Book a call
+            <span className="sm:hidden">{t.bookShort}</span>
+            <span className="hidden sm:inline">{t.book}</span>
           </Link>
 
           {/* Mobile menu: <details> works with JavaScript disabled; MenuAutoClose closes it on link tap, outside tap, scroll, or Esc. */}
           <details className="group relative lg:hidden">
             <MenuAutoClose />
             <summary className="flex h-10 w-10 cursor-pointer list-none items-center justify-center rounded-full border border-brand-steel/50 text-brand-slate [&::-webkit-details-marker]:hidden">
-              <span className="sr-only">Menu</span>
+              <span className="sr-only">{t.menu}</span>
               <svg viewBox="0 0 24 24" aria-hidden="true" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
                 <path d="M4 7h16M4 12h16M4 17h16" className="group-open:hidden" />
                 <path d="M6 6l12 12M18 6 6 18" className="hidden group-open:block" />
               </svg>
             </summary>
             <nav
-              aria-label="Mobile"
+              aria-label={t.menu}
               className="absolute right-0 mt-2 w-64 rounded-2xl border border-brand-steel/30 bg-white p-2 shadow-lg"
             >
               <ul className="text-brand-slate">
@@ -87,7 +94,7 @@ export function SiteHeader() {
                     </Link>
                   </li>
                 ))}
-                <li className="mt-1 border-t border-brand-steel/20 px-3 pb-1 pt-3 text-xs font-semibold uppercase tracking-wide text-brand-steel">Resources</li>
+                <li className="mt-1 border-t border-brand-steel/20 px-3 pb-1 pt-3 text-xs font-semibold uppercase tracking-wide text-brand-steel">{t.resources}</li>
                 {resourcesNav.map((item) => (
                   <li key={item.href}>
                     <Link href={item.href} className="block rounded-lg px-3 py-2 hover:bg-mist">
@@ -97,7 +104,7 @@ export function SiteHeader() {
                 ))}
                 <li className="mt-1 border-t border-brand-steel/20 pt-1">
                   <a href={`tel:${licensing.phoneE164}`} className="block rounded-lg px-3 py-2 font-semibold hover:bg-mist">
-                    Call {licensing.phone}
+                    {t.call} {licensing.phone}
                   </a>
                 </li>
               </ul>

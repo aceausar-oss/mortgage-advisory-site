@@ -3,6 +3,13 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
+const CHIPS_ES = [
+  { label: "Obtener preaprobación", q: "Quiero obtener una preaprobación para comprar casa" },
+  { label: "Bajar mi tasa", q: "¿Cómo puedo bajar el pago o la tasa de mi hipoteca?" },
+  { label: "Sacar dinero de mi casa", q: "¿Cómo puedo sacar dinero de mi casa y conservar mi tasa baja?" },
+  { label: "Hipoteca inversa", q: "¿Me conviene una hipoteca inversa?" },
+];
+
 const CHIPS = [
   { label: "Get pre-approved", q: "I want to get pre-approved to buy a home" },
   { label: "Lower my rate", q: "How can I lower my mortgage payment or rate?" },
@@ -12,9 +19,12 @@ const CHIPS = [
 
 // Big hero question box (CLAUDE.md §4.1). A plain GET form to /ask, so it works without JavaScript;
 // with JavaScript, the placeholder "types" real borrower questions and the question feed can fill it.
-export function HeroChat({ examples }: { examples: string[] }) {
+export function HeroChat({ examples, lang = "en" }: { examples: string[]; lang?: "en" | "es" }) {
+  const es = lang === "es";
+  const ask = es ? "/es/ask" : "/ask";
+  const chips = es ? CHIPS_ES : CHIPS;
   const [value, setValue] = useState("");
-  const [placeholder, setPlaceholder] = useState("Ask anything about your mortgage or home equity…");
+  const [placeholder, setPlaceholder] = useState(es ? "Pregunte lo que quiera sobre su hipoteca o el valor de su casa…" : "Ask anything about your mortgage or home equity…");
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const formRef = useRef<HTMLFormElement>(null);
 
@@ -63,14 +73,14 @@ export function HeroChat({ examples }: { examples: string[] }) {
       <div aria-hidden="true" className="pointer-events-none absolute -inset-8 -z-10 rounded-full bg-brand-blue/30 blur-3xl" />
       <form
         ref={formRef}
-        action="/ask"
+        action={ask}
         method="get"
         role="search"
-        aria-label="Ask a mortgage question"
+        aria-label={es ? "Haga una pregunta sobre hipotecas" : "Ask a mortgage question"}
         className="silver-frame rounded-3xl p-4 sm:p-5"
       >
         <label htmlFor="hero-q" className="sr-only">
-          Ask a mortgage question
+          {es ? "Haga una pregunta sobre hipotecas" : "Ask a mortgage question"}
         </label>
         <div className="flex items-end gap-3">
           <textarea
@@ -92,7 +102,7 @@ export function HeroChat({ examples }: { examples: string[] }) {
           />
           <button
             type="submit"
-            aria-label="Ask"
+            aria-label={es ? "Preguntar" : "Ask"}
             className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-brand-soft text-brand-ink hover:bg-brand-blue"
           >
             <svg viewBox="0 0 24 24" aria-hidden="true" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
@@ -100,11 +110,11 @@ export function HeroChat({ examples }: { examples: string[] }) {
             </svg>
           </button>
         </div>
-        <ul className="mt-4 flex flex-wrap gap-2" aria-label="Quick questions">
-          {CHIPS.map((c) => (
+        <ul className="mt-4 flex flex-wrap gap-2" aria-label={es ? "Preguntas rápidas" : "Quick questions"}>
+          {chips.map((c) => (
             <li key={c.label}>
               <Link
-                href={`/ask?q=${encodeURIComponent(c.q)}`}
+                href={`${ask}?q=${encodeURIComponent(c.q)}`}
                 className="inline-block rounded-full border border-brand-steel/40 bg-mist px-3.5 py-1.5 text-sm font-medium text-brand-slate hover:border-brand-slate"
               >
                 {c.label}
@@ -112,22 +122,22 @@ export function HeroChat({ examples }: { examples: string[] }) {
             </li>
           ))}
           <li>
-            <Link href="/book" className="inline-block rounded-full bg-brand-soft px-3.5 py-1.5 text-sm font-semibold text-brand-ink hover:bg-brand-blue">
-              Book a call with an advisor
+            <Link href={es ? "/es/book" : "/book"} className="inline-block rounded-full bg-brand-soft px-3.5 py-1.5 text-sm font-semibold text-brand-ink hover:bg-brand-blue">
+              {es ? "Reserve una llamada con un asesor" : "Book a call with an advisor"}
             </Link>
           </li>
         </ul>
       </form>
       <p className="mt-3 text-center text-xs leading-relaxed text-brand-slate">
-        Chat sessions may be recorded. By using chat you agree to our{" "}
+        {es ? "Las sesiones de chat pueden grabarse. Al usar el chat, usted acepta nuestra" : "Chat sessions may be recorded. By using chat you agree to our"}{" "}
         <Link href="/privacy" className="underline underline-offset-2">
-          Privacy Policy
+          {es ? "Política de privacidad (en inglés)" : "Privacy Policy"}
         </Link>{" "}
-        and{" "}
+        {es ? "y" : "and"}{" "}
         <Link href="/terms" className="underline underline-offset-2">
-          Terms
+          {es ? "Términos (en inglés)" : "Terms"}
         </Link>
-        . Not a commitment to lend.
+        {es ? ". Esto no es un compromiso de préstamo." : ". Not a commitment to lend."}
       </p>
     </div>
   );

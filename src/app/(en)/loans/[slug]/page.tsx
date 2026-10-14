@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ProgramPage } from "@/components/ProgramPage";
 import { ReverseCalculator } from "@/components/reverse/ReverseCalculator";
+import { alternates } from "@/lib/i18n";
 import { getLoanPages, getLoanPage } from "@/lib/loans";
 
 export const dynamicParams = false;
@@ -17,7 +18,7 @@ export async function generateMetadata({ params }: PageProps<"/loans/[slug]">): 
   return {
     title: { absolute: title },
     description: page.description,
-    alternates: { canonical: `/loans/${page.slug}` },
+    alternates: getLoanPage(page.slug, "es") ? alternates(`/loans/${page.slug}`, "en") : { canonical: `/loans/${page.slug}` },
     openGraph: { type: "article", title, description: page.description, url: `/loans/${page.slug}`, modifiedTime: page.updated },
     robots: page.isDraft ? { index: false, follow: false } : undefined,
   };

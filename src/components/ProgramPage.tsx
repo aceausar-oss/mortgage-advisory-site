@@ -8,6 +8,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { bookingTypes } from "@/lib/home";
 import { getEntry } from "@/lib/kb";
 import type { LoanPage } from "@/lib/loans";
+import type { Lang } from "@/lib/i18n";
 import { licensing, siteUrl, stateCodes } from "@/lib/site";
 
 // Shared layout for loan program pages (/loans/*) and state pages (/locations/*), per the page template (CLAUDE.md §6).
@@ -21,13 +22,22 @@ const FUNDING: Record<LoanPage["funding"], string> = {
     "It depends on the loan. We're the direct lender on conventional, VA, and Non-QM loans (in Florida, where we're licensed as a mortgage broker, every loan is arranged through an approved lender). FHA loans, reverse mortgages, and HELOCs are arranged through approved partner lenders, with us as your mortgage broker. Either way, we tell you upfront who your lender is and how we're paid; it's all on your Loan Estimate.",
 };
 
-function WhoFunds({ funding }: { funding: LoanPage["funding"] }) {
+const FUNDING_ES: Record<LoanPage["funding"], string> = {
+  direct:
+    "Somos el prestamista directo en este préstamo. Nosotros tomamos la decisión del préstamo y lo financiamos. (En Florida, donde tenemos licencia de corredor hipotecario, lo gestionamos con un prestamista aprobado y le decimos desde el principio quién es su prestamista y cómo nos pagan).",
+  broker:
+    "Gestionamos este préstamo con prestamistas asociados aprobados y actuamos como su corredor hipotecario. El prestamista asociado financia el préstamo. Le diremos desde el principio quién es su prestamista y exactamente cómo nos pagan; todo aparece en su Estimado del Préstamo (Loan Estimate).",
+  mixed:
+    "Depende del préstamo. Somos el prestamista directo en préstamos convencionales, VA y Non-QM (en Florida, donde tenemos licencia de corredor hipotecario, todos los préstamos se gestionan con un prestamista aprobado). Los préstamos FHA, las hipotecas inversas y las HELOC se gestionan con prestamistas asociados aprobados, y nosotros somos su corredor hipotecario. En todos los casos le decimos desde el principio quién es su prestamista y cómo nos pagan; todo aparece en su Estimado del Préstamo (Loan Estimate).",
+};
+
+function WhoFunds({ funding, lang }: { funding: LoanPage["funding"]; lang: Lang }) {
   return (
     <section aria-labelledby="who-funds" className="rounded-2xl border border-brand-blue/50 bg-white p-5">
       <h2 id="who-funds" className="font-heading text-lg font-semibold">
-        Who funds your loan?
+        {lang === "es" ? "¿Quién financia su préstamo?" : "Who funds your loan?"}
       </h2>
-      <p className="mt-1 leading-relaxed">{FUNDING[funding]}</p>
+      <p className="mt-1 leading-relaxed">{(lang === "es" ? FUNDING_ES : FUNDING)[funding]}</p>
     </section>
   );
 }
@@ -59,6 +69,33 @@ function RelatedAnswers({ slugs }: { slugs: string[] }) {
   );
 }
 
+function LoanCtaEs({ page }: { page: LoanPage }) {
+  const booking = bookingTypes.find((b) => b.key === page.booking);
+  return (
+    <section aria-label="Hable con nuestro equipo" className="rounded-2xl bg-brand-slate p-6 text-white">
+      <p className="font-heading text-xl font-semibold text-white">¿Quiere ver sus números?</p>
+      <p className="mt-1 text-white/90">
+        Pregúntele al asistente de IA o reserve una llamada{booking ? ` de ${booking.titleEs.toLowerCase()}` : ""} con un asesor. Sin presión y en
+        palabras sencillas. ¿Prefiere hablar en español? Puede pedir un asesor que hable español.
+      </p>
+      <div className="mt-4 flex flex-wrap gap-3">
+        <Link href={booking ? `/es/book#${booking.key}` : "/es/book"} className="rounded-full bg-white px-5 py-2.5 font-semibold text-brand-slate hover:bg-mist">
+          Reserve una llamada con un asesor
+        </Link>
+        <Link
+          href={`/es/ask?q=${encodeURIComponent(`Quiero saber más sobre ${page.name.toLowerCase()} para mi situación`)}`}
+          className="rounded-full border border-white px-5 py-2.5 font-semibold text-white hover:bg-white/10"
+        >
+          Pregúntele al asistente
+        </Link>
+        <a href={`tel:${licensing.phoneE164}`} className="rounded-full border border-white px-5 py-2.5 font-semibold text-white hover:bg-white/10">
+          Llame al {licensing.phone}
+        </a>
+      </div>
+    </section>
+  );
+}
+
 function LoanCta({ page }: { page: LoanPage }) {
   const booking = bookingTypes.find((b) => b.key === page.booking);
   return (
@@ -84,10 +121,13 @@ function LoanCta({ page }: { page: LoanPage }) {
 }
 
 export function ProgramPage({ page, extra }: { page: LoanPage; extra?: ReactNode }) {
-  const url = `${siteUrl}${page.basePath}/${page.slug}`;
+  const lang = page.lang;
+  const es = lang === "es";
+  const prefix = es ? "/es" : "";
+  const url = `${siteUrl}${prefix}${page.basePath}/${page.slug}`;
   const crumbs = [
-    { href: "/", label: "Home" },
-    { href: `${page.basePath}/${page.slug}`, label: page.name },
+    { href: es ? "/es" : "/", label: es ? "Inicio" : "Home" },
+    { href: `${prefix}${page.basePath}/${page.slug}`, label: page.name },
   ];
   const jsonLd = {
     "@context": "https://schema.org",
@@ -102,7 +142,8 @@ export function ProgramPage({ page, extra }: { page: LoanPage; extra?: ReactNode
         mainEntityOfPage: url,
         dateModified: page.updated,
         datePublished: page.updated,
-        inLanguage: "en-US",
+        inLanguage: es ? "es-US" : "en-US",
+        ...(es && { translationOfWork: { "@id": `${siteUrl}${page.basePath}/${page.slug}#article` } }),
         author: { "@id": `${siteUrl}/#ace-ausar` },
         publisher: { "@id": `${siteUrl}/#organization` },
         about: { "@id": `${url}#service` },
@@ -130,7 +171,7 @@ export function ProgramPage({ page, extra }: { page: LoanPage; extra?: ReactNode
       <JsonLd data={jsonLd} />
       <div className={page.didYouKnow.length ? "lg:grid lg:grid-cols-[minmax(0,1fr)_18rem] lg:gap-10" : "mx-auto max-w-3xl"}>
         <article className="min-w-0 max-w-3xl space-y-8">
-          {page.isDraft && <DraftBanner />}
+          {page.isDraft && <DraftBanner lang={lang} />}
           <Breadcrumbs items={crumbs} />
           <header className="space-y-5">
             <p className="font-heading text-sm font-semibold uppercase tracking-[0.2em] text-brand-button">{page.name}</p>
@@ -148,26 +189,26 @@ export function ProgramPage({ page, extra }: { page: LoanPage; extra?: ReactNode
                 />
               </div>
             )}
-            <TldrBox text={page.tldr} />
+            <TldrBox text={page.tldr} lang={lang} />
           </header>
           {page.didYouKnow.length > 0 && (
             <div className="lg:hidden">
-              <DidYouKnow facts={page.didYouKnow} />
+              <DidYouKnow facts={page.didYouKnow} lang={lang} />
             </div>
           )}
           <div className="answer-body" dangerouslySetInnerHTML={{ __html: page.html }} />
           {extra}
-          <WhoFunds funding={page.funding} />
-          <RelatedAnswers slugs={page.related} />
-          {page.sources.length > 0 && <SourcesList sources={page.sources} />}
-          <AuthorBox entry={page} />
-          <Disclosures entry={page} />
-          <LoanCta page={page} />
+          <WhoFunds funding={page.funding} lang={lang} />
+          {!es && <RelatedAnswers slugs={page.related} />}
+          {page.sources.length > 0 && <SourcesList sources={page.sources} lang={lang} />}
+          <AuthorBox entry={page} lang={lang} />
+          <Disclosures entry={page} lang={lang} />
+          {es ? <LoanCtaEs page={page} /> : <LoanCta page={page} />}
         </article>
         {page.didYouKnow.length > 0 && (
           <div className="hidden lg:block">
             <div className="sticky top-24">
-              <DidYouKnow facts={page.didYouKnow} />
+              <DidYouKnow facts={page.didYouKnow} lang={lang} />
             </div>
           </div>
         )}

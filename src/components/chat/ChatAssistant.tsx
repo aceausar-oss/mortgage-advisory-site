@@ -7,7 +7,57 @@ import { Fragment, useEffect, useRef, useState, type ReactNode } from "react";
 type Msg = { role: "user" | "assistant"; content: string };
 
 // Chat window for the AI assistant (CLAUDE.md §11). Streams replies from /api/chat.
-export function ChatAssistant({ initialQuestion, phone, phoneE164 }: { initialQuestion?: string; phone: string; phoneE164: string }) {
+const T = {
+  en: {
+    error: (phone: string) => `Sorry, something went wrong. You can reach Ace at ${phone} or [book a call](/book).`,
+    region: "Chat with our AI mortgage assistant",
+    name: "Mortgage assistant",
+    sub: "AI assistant for The Mortgage Advisory · Ace and our team take it from here",
+    hello: "Hi! Ask me anything about HELOCs, reverse mortgages, buying a home, or refinancing.",
+    label: "Your question",
+    placeholder: "Type your question…",
+    send: "Send",
+    recorded: "Chat sessions may be recorded. By using chat you agree to our",
+    privacy: "Privacy Policy",
+    and: "and",
+    terms: "Terms",
+    after: ". Not a commitment to lend. Please don't share Social Security or account numbers.",
+    book: "Book a call with an advisor",
+    bookHref: "/book",
+    typing: "Assistant is typing",
+  },
+  es: {
+    error: (phone: string) => `Lo sentimos, algo salió mal. Puede llamarnos al ${phone} o [reservar una llamada](/es/book).`,
+    region: "Chat con nuestro asistente hipotecario de IA",
+    name: "Asistente hipotecario",
+    sub: "Asistente de IA de The Mortgage Advisory · Ace y nuestro equipo le dan seguimiento",
+    hello: "¡Hola! Pregúnteme lo que quiera sobre HELOC, hipotecas inversas, comprar casa o refinanciar.",
+    label: "Su pregunta",
+    placeholder: "Escriba su pregunta…",
+    send: "Enviar",
+    recorded: "Las sesiones de chat pueden grabarse. Al usar el chat, usted acepta nuestra",
+    privacy: "Política de privacidad (en inglés)",
+    and: "y",
+    terms: "Términos (en inglés)",
+    after: ". Esto no es un compromiso de préstamo. Por favor no comparta números de Seguro Social ni de cuentas.",
+    book: "Reserve una llamada con un asesor",
+    bookHref: "/es/book",
+    typing: "El asistente está escribiendo",
+  },
+};
+
+export function ChatAssistant({
+  initialQuestion,
+  phone,
+  phoneE164,
+  lang = "en",
+}: {
+  initialQuestion?: string;
+  phone: string;
+  phoneE164: string;
+  lang?: "en" | "es";
+}) {
+  const t = T[lang];
   const [messages, setMessages] = useState<Msg[]>([]);
   const [input, setInput] = useState("");
   const [busy, setBusy] = useState(false);
@@ -25,7 +75,7 @@ export function ChatAssistant({ initialQuestion, phone, phoneE164 }: { initialQu
       const res = await fetch("/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ messages: history }),
+        body: JSON.stringify({ messages: history, lang }),
       });
       if (!res.body) throw new Error("no response body");
       const reader = res.body.getReader();
@@ -38,7 +88,7 @@ export function ChatAssistant({ initialQuestion, phone, phoneE164 }: { initialQu
         setMessages([...history, { role: "assistant", content: reply }]);
       }
     } catch {
-      setMessages([...history, { role: "assistant", content: `Sorry, something went wrong. You can reach Ace at ${phone} or [book a call](/book).` }]);
+      setMessages([...history, { role: "assistant", content: t.error(phone) }]);
     } finally {
       setBusy(false);
     }
@@ -58,21 +108,21 @@ export function ChatAssistant({ initialQuestion, phone, phoneE164 }: { initialQu
   }, [messages]);
 
   return (
-    <section aria-label="Chat with our AI mortgage assistant" className="silver-frame rounded-3xl p-4 sm:p-6">
+    <section aria-label={t.region} className="silver-frame rounded-3xl p-4 sm:p-6">
       <header className="flex items-center gap-3 border-b border-brand-blue/30 pb-4">
         <span className="relative">
           <Image src="/brand/ace-polo.jpg" alt="" width={48} height={48} className="h-12 w-12 rounded-full object-cover object-top" />
           <Image src="/brand/logo-mark.png" alt="" width={20} height={20} className="absolute -bottom-1 -right-1 h-5 w-5 rounded-full bg-white" />
         </span>
         <div>
-          <p className="font-heading font-semibold text-brand-slate">Mortgage assistant</p>
-          <p className="text-xs text-brand-slate">AI assistant for The Mortgage Advisory · Ace and our team take it from here</p>
+          <p className="font-heading font-semibold text-brand-slate">{t.name}</p>
+          <p className="text-xs text-brand-slate">{t.sub}</p>
         </div>
       </header>
 
       <div className="max-h-[60vh] min-h-40 space-y-4 overflow-y-auto py-4" aria-live="polite">
         {messages.length === 0 && (
-          <p className="text-brand-slate">Hi! Ask me anything about HELOCs, reverse mortgages, buying a home, or refinancing.</p>
+          <p className="text-brand-slate">{t.hello}</p>
         )}
         {messages.map((m, i) =>
           m.role === "user" ? (
@@ -81,7 +131,7 @@ export function ChatAssistant({ initialQuestion, phone, phoneE164 }: { initialQu
             </div>
           ) : (
             <div key={i} className="max-w-[92%] rounded-2xl rounded-bl-md bg-mist px-4 py-3 leading-relaxed text-brand-ink">
-              {m.content ? <RichText text={m.content} /> : <TypingDots />}
+              {m.content ? <RichText text={m.content} /> : <TypingDots label={t.typing} />}
             </div>
           ),
         )}
@@ -96,7 +146,7 @@ export function ChatAssistant({ initialQuestion, phone, phoneE164 }: { initialQu
         className="flex items-end gap-2 border-t border-brand-blue/30 pt-4"
       >
         <label htmlFor="chat-input" className="sr-only">
-          Your question
+          {t.label}
         </label>
         <textarea
           id="chat-input"
@@ -110,7 +160,7 @@ export function ChatAssistant({ initialQuestion, phone, phoneE164 }: { initialQu
               void send(input);
             }
           }}
-          placeholder="Type your question…"
+          placeholder={t.placeholder}
           className="flex-1 resize-none rounded-2xl border border-brand-steel/40 px-4 py-2.5 focus:border-brand-blue"
         />
         <button
@@ -118,24 +168,24 @@ export function ChatAssistant({ initialQuestion, phone, phoneE164 }: { initialQu
           disabled={busy || !input.trim()}
           className="rounded-full bg-brand-soft px-5 py-2.5 font-semibold text-brand-ink hover:bg-brand-blue disabled:opacity-50"
         >
-          Send
+          {t.send}
         </button>
       </form>
       <div className="mt-3 flex flex-wrap items-center justify-between gap-2 text-xs text-brand-slate">
         <p>
-          Chat sessions may be recorded. By using chat you agree to our{" "}
+          {t.recorded}{" "}
           <Link href="/privacy" className="underline">
-            Privacy Policy
+            {t.privacy}
           </Link>{" "}
-          and{" "}
+          {t.and}{" "}
           <Link href="/terms" className="underline">
-            Terms
+            {t.terms}
           </Link>
-          . Not a commitment to lend. Please don&apos;t share Social Security or account numbers.
+          {t.after}
         </p>
         <span className="flex gap-2">
-          <Link href="/book" className="rounded-full bg-brand-soft px-3 py-1.5 font-semibold text-brand-ink hover:bg-brand-blue">
-            Book a call with an advisor
+          <Link href={t.bookHref} className="rounded-full bg-brand-soft px-3 py-1.5 font-semibold text-brand-ink hover:bg-brand-blue">
+            {t.book}
           </Link>
           <a href={`tel:${phoneE164}`} className="rounded-full border border-brand-blue px-3 py-1.5 font-semibold text-brand-slate">
             {phone}
@@ -146,9 +196,9 @@ export function ChatAssistant({ initialQuestion, phone, phoneE164 }: { initialQu
   );
 }
 
-function TypingDots() {
+function TypingDots({ label }: { label: string }) {
   return (
-    <span className="inline-flex gap-1" aria-label="Assistant is typing">
+    <span className="inline-flex gap-1" aria-label={label}>
       {[0, 1, 2].map((i) => (
         <span key={i} className="h-2 w-2 animate-bounce rounded-full bg-brand-blue-deep" style={{ animationDelay: `${i * 150}ms` }} />
       ))}

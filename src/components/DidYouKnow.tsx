@@ -1,7 +1,8 @@
 import type { KbEntry } from "@/lib/kb";
+import type { Lang } from "@/lib/i18n";
 
 // "Did you know?" fun-fact pill: a side card on desktop, an inline card on mobile.
-export function DidYouKnow({ facts }: { facts: KbEntry["didYouKnow"] }) {
+export function DidYouKnow({ facts, lang = "en" }: { facts: KbEntry["didYouKnow"]; lang?: Lang }) {
   if (!facts.length) return null;
   return (
     <aside aria-labelledby="did-you-know" className="rounded-3xl border border-brand-blue/50 bg-white p-5 shadow-sm">
@@ -11,7 +12,7 @@ export function DidYouKnow({ facts }: { facts: KbEntry["didYouKnow"] }) {
             <path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.3 1 2.3h6c0-1 .4-1.8 1-2.3A7 7 0 0 0 12 2Z" />
           </svg>
         </span>
-        Did you know?
+        {lang === "es" ? "¿Sabía que…?" : "Did you know?"}
       </p>
       <ul className="mt-3 space-y-3 text-[0.95rem] leading-relaxed">
         {facts.map((f) => (

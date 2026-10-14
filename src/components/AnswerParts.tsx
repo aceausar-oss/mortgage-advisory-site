@@ -2,11 +2,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { licensing } from "@/lib/site";
 import type { KbEntry } from "@/lib/kb";
+import type { Lang } from "@/lib/i18n";
 
-export function DraftBanner() {
+export function DraftBanner({ lang = "en" }: { lang?: Lang }) {
   return (
     <p role="note" className="rounded-xl border-2 border-dashed border-brand-slate bg-white px-4 py-3 text-sm font-semibold text-brand-slate">
-      Draft — not yet reviewed by Ace Ausar. Drafts are hidden on the live site until reviewed.
+      {lang === "es"
+        ? "Borrador: aún no revisado por Ace Ausar. Los borradores no se muestran en el sitio en vivo hasta que se revisan."
+        : "Draft — not yet reviewed by Ace Ausar. Drafts are hidden on the live site until reviewed."}
     </p>
   );
 }
@@ -32,20 +35,20 @@ export function Breadcrumbs({ items }: { items: { href: string; label: string }[
   );
 }
 
-export function TldrBox({ text }: { text: string }) {
+export function TldrBox({ text, lang = "en" }: { text: string; lang?: Lang }) {
   return (
     <div className="rounded-2xl border-l-4 border-brand-blue bg-white p-5">
-      <p className="mb-1 font-heading text-sm font-bold uppercase tracking-wide text-brand-slate">The short answer</p>
+      <p className="mb-1 font-heading text-sm font-bold uppercase tracking-wide text-brand-slate">{lang === "es" ? "La respuesta corta" : "The short answer"}</p>
       <p className="text-lg leading-relaxed">{text}</p>
     </div>
   );
 }
 
-export function SourcesList({ sources }: { sources: KbEntry["sources"] }) {
+export function SourcesList({ sources, lang = "en" }: { sources: KbEntry["sources"]; lang?: Lang }) {
   return (
     <section aria-labelledby="sources-heading">
       <h2 id="sources-heading" className="mb-2 text-xl font-semibold">
-        Sources
+        {lang === "es" ? "Fuentes (en inglés)" : "Sources"}
       </h2>
       <ul className="list-disc space-y-1 pl-5">
         {sources.map((s) => (
@@ -60,9 +63,10 @@ export function SourcesList({ sources }: { sources: KbEntry["sources"] }) {
   );
 }
 
-export function AuthorBox({ entry }: { entry: Pick<KbEntry, "updated" | "reviewed_by"> }) {
+export function AuthorBox({ entry, lang = "en" }: { entry: Pick<KbEntry, "updated" | "reviewed_by">; lang?: Lang }) {
+  const es = lang === "es";
   return (
-    <section aria-label="About the author" className="flex items-center gap-4 rounded-2xl border border-brand-steel/30 bg-white p-5">
+    <section aria-label={es ? "Sobre el autor" : "About the author"} className="flex items-center gap-4 rounded-2xl border border-brand-steel/30 bg-white p-5">
       <Image
         src={licensing.founder.image}
         alt={licensing.founder.name}
@@ -73,14 +77,20 @@ export function AuthorBox({ entry }: { entry: Pick<KbEntry, "updated" | "reviewe
       />
       <div className="text-sm leading-relaxed">
         <p className="font-heading text-base font-semibold text-brand-slate">
-          {licensing.founder.name}, {licensing.founder.jobTitle} · NMLS #{licensing.founder.nmls}
+          {licensing.founder.name}, {es ? "Banquero hipotecario" : licensing.founder.jobTitle} · NMLS #{licensing.founder.nmls}
         </p>
         <p>
           {licensing.legalName} · NMLS #{licensing.nmls}
         </p>
         <p>
-          {entry.reviewed_by ? `Reviewed by ${entry.reviewed_by}` : "Pending review"} · Updated{" "}
-          <time dateTime={entry.updated}>{entry.updated}</time>
+          {es
+            ? entry.reviewed_by
+              ? `Versión original en inglés revisada por ${entry.reviewed_by}`
+              : "Revisión pendiente"
+            : entry.reviewed_by
+              ? `Reviewed by ${entry.reviewed_by}`
+              : "Pending review"}{" "}
+          · {es ? "Actualizado" : "Updated"} <time dateTime={entry.updated}>{entry.updated}</time>
         </p>
       </div>
     </section>

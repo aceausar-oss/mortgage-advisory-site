@@ -2,13 +2,28 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 
-type Topic = { key: string; title: string; blurb: string; embedUrl: string; url: string };
+type Topic = {
+  key: string;
+  title: string;
+  blurb: string;
+  embedUrl: string;
+  url: string;
+  // Spanish-speaking advisor calendar for this topic, when one is set up (lib/home.ts spanishCalendars).
+  spanishEmbedUrl?: string;
+  spanishUrl?: string;
+};
 
 // Book page: the original stacked topic sections. "Pick a time" opens that topic's Go High Level calendar in a
 // full-screen window (Ace, Oct 2026), so the whole calendar and form are in one view on any device, with no dependence
 // on Go High Level's resize script. /book#equity (etc.) opens the matching calendar directly. Without JavaScript, the
 // button links straight to the Go High Level booking page.
-export function BookingPicker({ topics }: { topics: Topic[] }) {
+// Spanish page (lang="es", Ace Oct 2026): the visitor picks the language of the call. "Español" (the default) books the
+// topic's Spanish-speaking advisor calendar when there is one; otherwise the regular calendar, with a note asking them
+// to write "Español" in the booking form so the team assigns a Spanish speaker.
+export function BookingPicker({ topics, lang = "en" }: { topics: Topic[]; lang?: "en" | "es" }) {
+  const es = lang === "es";
+  const [callLang, setCallLang] = useState<"es" | "en">(es ? "es" : "en");
+  const wantsSpanish = es && callLang === "es";
   const [openKey, setOpenKey] = useState<string | null>(null);
   const dialog = useRef<HTMLDialogElement>(null);
   const topic = topics.find((t) => t.key === openKey) ?? null;
@@ -46,8 +61,41 @@ export function BookingPicker({ topics }: { topics: Topic[] }) {
     };
   }, [topic]);
 
+  const calendarFor = (t: Topic) =>
+    wantsSpanish && t.spanishEmbedUrl ? { embed: t.spanishEmbedUrl, url: t.spanishUrl ?? t.url, spanish: true } : { embed: t.embedUrl, url: t.url, spanish: false };
+  const current = topic ? calendarFor(topic) : null;
+
   return (
     <>
+      {es && (
+        <fieldset className="rounded-3xl border border-brand-blue/60 bg-white p-4 sm:p-6">
+          <legend className="float-left mb-3 w-full font-heading text-lg font-semibold text-brand-slate">¿En qué idioma prefiere su llamada?</legend>
+          <div className="clear-both flex flex-wrap gap-3">
+            {(
+              [
+                ["es", "Español: con un asesor que habla español"],
+                ["en", "Inglés"],
+              ] as const
+            ).map(([value, label]) => (
+              <label
+                key={value}
+                className={`flex cursor-pointer items-center gap-2 rounded-full border px-4 py-2 font-semibold ${
+                  callLang === value ? "border-brand-slate bg-brand-soft text-brand-ink" : "border-brand-steel/50 text-brand-slate"
+                }`}
+              >
+                <input type="radio" name="call-language" value={value} checked={callLang === value} onChange={() => setCallLang(value)} className="accent-[var(--color-brand-slate)]" />
+                {label}
+              </label>
+            ))}
+          </div>
+          <p className="mt-3 text-sm leading-relaxed text-brand-slate">
+            {wantsSpanish
+              ? "Le asignaremos un asesor que habla español. El calendario de reservas puede aparecer en inglés: elija su horario y, en las notas o comentarios del formulario, escriba «Español»."
+              : "Su llamada será en inglés. Si cambia de opinión, puede pedir un asesor que hable español en cualquier momento."}
+          </p>
+        </fieldset>
+      )}
+
       {topics.map((t) => (
         <section key={t.key} aria-labelledby={`cal-${t.key}`} className="space-y-3 rounded-3xl border border-brand-steel/30 bg-white p-4 sm:p-6">
           <span id={t.key} className="block scroll-mt-24" />
@@ -56,14 +104,14 @@ export function BookingPicker({ topics }: { topics: Topic[] }) {
           </h2>
           <p>{t.blurb}</p>
           <a
-            href={t.url}
+            href={calendarFor(t).url}
             onClick={(e) => {
               e.preventDefault();
               open(t.key);
             }}
             className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-soft px-5 py-2.5 font-semibold text-brand-ink hover:bg-brand-blue"
           >
-            Pick a time <span aria-hidden="true">→</span>
+            {es ? "Elegir horario" : "Pick a time"} <span aria-hidden="true">→</span>
           </a>
         </section>
       ))}
@@ -81,20 +129,31 @@ export function BookingPicker({ topics }: { topics: Topic[] }) {
           <div className="flex h-full flex-col">
             <div className="flex items-center justify-between gap-4 border-b border-brand-steel/30 px-4 py-2 sm:px-6">
               <h2 id="booking-title" className="text-base font-semibold sm:text-lg">
-                {topic.title}: pick a time
+                {topic.title}: {es ? "elija un horario" : "pick a time"}
               </h2>
               <button
                 type="button"
                 onClick={close}
                 autoFocus
-                aria-label="Close"
+                aria-label={es ? "Cerrar" : "Close"}
                 className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-brand-steel/40 text-2xl leading-none text-brand-ink hover:bg-mist"
               >
                 ×
               </button>
             </div>
+            {wantsSpanish && current && !current.spanish && (
+              <p className="border-b border-brand-blue/40 bg-mist px-4 py-2 text-sm text-brand-ink sm:px-6">
+                <strong>Llamada en español:</strong> en las notas o comentarios del formulario, escriba «Español» y le asignaremos un asesor que
+                habla español.
+              </p>
+            )}
             {/* aria-label instead of title: a title shows as a hover tooltip over the calendar. */}
-            <iframe key={topic.key} src={topic.embedUrl} aria-label={`Book a ${topic.title} call`} className="min-h-0 w-full flex-1 border-0" />
+            <iframe
+              key={`${topic.key}-${current?.embed}`}
+              src={current?.embed}
+              aria-label={es ? `Reservar una llamada de ${topic.title}` : `Book a ${topic.title} call`}
+              className="min-h-0 w-full flex-1 border-0"
+            />
           </div>
         )}
       </dialog>

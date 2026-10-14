@@ -10,6 +10,14 @@ export const dynamic = "force-dynamic";
 
 const MODEL = process.env.CHAT_MODEL || "claude-opus-5";
 const FALLBACK = `I'm having trouble answering right now. You can reach Ace directly at ${licensing.phone} or [book a call](/book).`;
+// Spanish versions of the notices the server writes itself (the AI answers in the visitor's language on its own).
+const ES = {
+  fallback: `No puedo responder en este momento. Puede comunicarse con nuestro equipo al ${licensing.phone} o [reservar una llamada](/es/book).`,
+  scrubbed:
+    "Por su privacidad, quité un número sensible de su mensaje. Por favor no comparta aquí números de Seguro Social, números de cuenta ni fechas de nacimiento; el equipo de Ace recibe los documentos de forma segura.\n\n",
+  refusal: `\n\nNo puedo ayudarle con eso aquí, pero nuestro equipo sí. Llame al ${licensing.phone} o [reserve una llamada](/es/book).`,
+  maxTokens: "\n\n(Esa respuesta salió larga. Pídame que continúe, o reserve una llamada con un asesor para ver el panorama completo).",
+};
 
 const text = (body: string, status = 200) =>
   new Response(body, { status, headers: { "Content-Type": "text/plain; charset=utf-8", "Cache-Control": "no-store" } });
@@ -34,6 +42,7 @@ export async function POST(req: Request) {
   } catch {}
   const parsed = ChatRequest.safeParse(payload);
   if (!parsed.success) return text("Sorry, I couldn't read that message. Please try again.", 400);
+  const es = parsed.data.lang === "es";
 
   let scrubbed = false;
   const messages: Anthropic.Beta.BetaMessageParam[] = parsed.data.messages.map((m) => {
@@ -51,7 +60,7 @@ export async function POST(req: Request) {
       const send = (s: string) => controller.enqueue(encoder.encode(s));
       try {
         if (scrubbed) {
-          send("For your privacy, I removed a sensitive number from your message. Please don't share Social Security, account numbers, or birth dates here; Ace's team collects documents securely.\n\n");
+          send(es ? ES.scrubbed : "For your privacy, I removed a sensitive number from your message. Please don't share Social Security, account numbers, or birth dates here; Ace's team collects documents securely.\n\n");
         }
         const stream = client.beta.messages.stream({
           model: MODEL,
@@ -65,14 +74,14 @@ export async function POST(req: Request) {
         stream.on("text", (delta) => send(delta));
         const final = await stream.finalMessage();
         if (final.stop_reason === "refusal") {
-          send(`\n\nI can't help with that one here, but Ace can. Call ${licensing.phone} or [book a call](/book).`);
+          send(es ? ES.refusal : `\n\nI can't help with that one here, but Ace can. Call ${licensing.phone} or [book a call](/book).`);
         } else if (final.stop_reason === "max_tokens") {
-          send("\n\n(That answer ran long. Ask me to continue, or book a call with an advisor for the full picture.)");
+          send(es ? ES.maxTokens : "\n\n(That answer ran long. Ask me to continue, or book a call with an advisor for the full picture.)");
         }
       } catch (err) {
         if (err instanceof Anthropic.APIError) console.error("chat API error", err.status, err.message);
         else console.error("chat error", err);
-        send(FALLBACK);
+        send(es ? ES.fallback : FALLBACK);
       } finally {
         controller.close();
       }

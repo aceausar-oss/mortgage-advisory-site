@@ -30,6 +30,8 @@ const OLD_SITE_REDIRECTS: [string, string][] = [
 ];
 
 const nextConfig: NextConfig = {
+  // English and Spanish use separate root layouts (app/(en), app/(es)), so the 404 page is app/global-not-found.tsx.
+  experimental: { globalNotFound: true },
   async redirects() {
     return OLD_SITE_REDIRECTS.map(([source, destination]) => ({ source, destination, permanent: true }));
   },

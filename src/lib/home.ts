@@ -16,6 +16,8 @@ export const bookingTypes = [
     key: "reverse",
     title: "Reverse Mortgage",
     blurb: "Explore a reverse mortgage or a reverse mortgage second, and see what fits your retirement.",
+    titleEs: "Hipoteca inversa",
+    blurbEs: "Conozca la hipoteca inversa o la hipoteca inversa de segundo gravamen, y vea qué le conviene para su jubilación.",
     calendarId: "8HkkWeAMaZ5lJbiZDK70",
     url: "https://api.leadconnectorhq.com/widget/bookings/reversemortgagerelief",
   },
@@ -23,6 +25,8 @@ export const bookingTypes = [
     key: "equity",
     title: "HELOC & Refinance",
     blurb: "Tap your equity, consolidate debt, or lower your payment, and keep your low first-mortgage rate.",
+    titleEs: "HELOC y refinanciamiento",
+    blurbEs: "Use el valor líquido de su casa, consolide deudas o baje su pago, y conserve la tasa baja de su primera hipoteca.",
     calendarId: "4Ah4Rs8f6GtPS2YwvIpS",
     url: "https://api.leadconnectorhq.com/widget/bookings/heloc_refi",
   },
@@ -30,10 +34,18 @@ export const bookingTypes = [
     key: "purchase",
     title: "Home Buyers",
     blurb: "Get pre-approved, compare FHA, VA, and conventional loans, and find down payment help.",
+    titleEs: "Compradores de vivienda",
+    blurbEs: "Obtenga su preaprobación, compare préstamos FHA, VA y convencionales, y encuentre ayuda para el pago inicial.",
     calendarId: "LuDajKl5AlreCcwVzXd2",
     url: "https://api.leadconnectorhq.com/widget/bookings/thaconsultation",
   },
 ] as const;
+
+// Spanish-speaking advisor calendars (Ace, Oct 2026). When a visitor on /es/book says they prefer Spanish, they get
+// this calendar for their topic. Add a Go High Level calendar that routes to a Spanish-speaking advisor here
+// ({ calendarId, url }); until one is set for a topic, they book the regular calendar and are asked to note
+// "Español" so the team assigns a Spanish speaker.
+export const spanishCalendars: Partial<Record<(typeof bookingTypes)[number]["key"], { calendarId: string; url: string }>> = {};
 
 export const bookingEmbedUrl = (calendarId: string) => `https://api.leadconnectorhq.com/widget/booking/${calendarId}`;
 

@@ -6,23 +6,19 @@ import { z } from "zod";
 import { CATEGORY_KEYS } from "@/lib/categories";
 import { DidYouKnowList, PRODUCTS, Source, showDrafts } from "@/lib/kb";
 
+// Spanish loan pages (Ace, Oct 2026) live in content/es/loans/ with the same slugs and frontmatter as the English
+// files; they render at /es/loans/[slug]. Location pages are English only for now.
+type Lang = "en" | "es";
+
 // Loan program pages (/loans/*, content/loans/) and state pages (/locations/*, content/locations/), both on the
 // page template (CLAUDE.md §6). Same editorial rules as the answers: question H1, TL;DR naming the brand,
 // Ace's review before publishing.
 
 const BRAND = "The Mortgage Advisory";
 
-export const LOAN_SLUGS = [
-  "purchase",
-  "refinance",
-  "heloc",
-  "reverse-mortgage",
-  "fha",
-  "va",
-  "debt-consolidation",
-  "conventional",
-  "non-qm",
-] as const;
+import { LOAN_SLUGS } from "@/lib/loanSlugs";
+
+export { LOAN_SLUGS };
 
 export const LOCATION_SLUGS = ["california", "texas", "florida", "colorado"] as const;
 
@@ -62,14 +58,16 @@ export type LoanPage = Omit<z.infer<typeof Frontmatter>, "updated"> & {
   body: string;
   isDraft: boolean;
   basePath: "/loans" | "/locations";
+  lang: Lang;
 };
 
 const cache = new Map<string, LoanPage[]>();
 
-function loadAll(kind: "loans" | "locations"): LoanPage[] {
-  const hit = cache.get(kind);
+function loadAll(kind: "loans" | "locations", lang: Lang = "en"): LoanPage[] {
+  const key = `${lang}:${kind}`;
+  const hit = cache.get(key);
   if (hit) return hit;
-  const dir = path.join(process.cwd(), "content", kind);
+  const dir = lang === "es" ? path.join(process.cwd(), "content", "es", kind) : path.join(process.cwd(), "content", kind);
   const allowed: readonly string[] = kind === "loans" ? LOAN_SLUGS : LOCATION_SLUGS;
   if (!fs.existsSync(dir)) return [];
   const pages: LoanPage[] = [];
@@ -93,20 +91,21 @@ function loadAll(kind: "loans" | "locations"): LoanPage[] {
       html: marked.parse(content, { async: false }),
       isDraft: parsed.data.status === "draft",
       basePath: `/${kind}`,
+      lang,
     });
   }
-  if (errors.length) throw new Error(`content/${kind} has ${errors.length} problem(s):\n${errors.join("\n")}`);
+  if (errors.length) throw new Error(`content/${lang === "es" ? "es/" : ""}${kind} has ${errors.length} problem(s):\n${errors.join("\n")}`);
   pages.sort((a, b) => allowed.indexOf(a.slug) - allowed.indexOf(b.slug)); // menu order, not file order
-  cache.set(kind, pages);
+  cache.set(key, pages);
   return pages;
 }
 
-export function getLoanPages(): LoanPage[] {
-  return loadAll("loans").filter((p) => showDrafts || !p.isDraft);
+export function getLoanPages(lang: Lang = "en"): LoanPage[] {
+  return loadAll("loans", lang).filter((p) => showDrafts || !p.isDraft);
 }
 
-export function getLoanPage(slug: string): LoanPage | undefined {
-  return getLoanPages().find((p) => p.slug === slug);
+export function getLoanPage(slug: string, lang: Lang = "en"): LoanPage | undefined {
+  return getLoanPages(lang).find((p) => p.slug === slug);
 }
 
 export function getLocationPages(): LoanPage[] {

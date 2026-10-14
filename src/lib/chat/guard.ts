@@ -8,6 +8,7 @@ export const MAX_CHARS = 2000;
 export const MAX_BODY_BYTES = 200_000;
 
 export const ChatRequest = z.object({
+  lang: z.enum(["en", "es"]).optional(), // page language; Spanish pages get Spanish system notices
   messages: z
     .array(z.object({ role: z.enum(["user", "assistant"]), content: z.string().min(1).max(MAX_CHARS * 4) }))
     .min(1)

@@ -38,16 +38,53 @@ const GOALS = [
   },
 ];
 
-export function GoalCards() {
+const GOALS_ES = [
+  {
+    href: "/es/loans/heloc",
+    image: "/images/goals/goal-heloc-photo.jpg",
+    alt: "Pareja en la mesa del comedor revisando sus números con una calculadora",
+    label: "Conserve su tasa baja",
+    title: "Use el valor líquido de su casa",
+    text: "Obtenga dinero para una remodelación, la universidad o un colchón sin refinanciar su primera hipoteca.",
+  },
+  {
+    href: "/es/loans/reverse-mortgage",
+    image: "/images/goals/goal-reverse-photo.jpg",
+    alt: "Pareja jubilada descansando en su porche",
+    label: "Propietarios de 62 años o más",
+    title: "Jubílese en la casa que ama",
+    text: "Convierta su valor líquido en dinero o en una línea de crédito que crece, sin pago hipotecario mensual obligatorio. Sigue pagando impuestos, seguro y mantenimiento.",
+  },
+  {
+    href: "/es/loans/purchase",
+    image: "/images/goals/goal-buy-photo.jpg",
+    alt: "Familia joven en la puerta de su casa con las llaves",
+    label: "FHA · VA · Convencional",
+    title: "Compre su próxima casa",
+    text: "Obtenga su preaprobación y compare préstamos convencionales, FHA y VA lado a lado, con cada costo desde el principio.",
+  },
+  {
+    href: "/es/loans/debt-consolidation",
+    image: "/images/goals/goal-debt-photo.jpg",
+    alt: "Pareja aliviada en la mesa de la cocina con una laptop y papeles",
+    label: "Baje lo que paga en intereses",
+    title: "Salga de las deudas con intereses altos",
+    text: "Vea cómo cambiar varias tarjetas por un solo pago más bajo, con el costo total a la vista primero.",
+  },
+];
+
+export function GoalCards({ lang = "en" }: { lang?: "en" | "es" }) {
+  const es = lang === "es";
+  const goals = es ? GOALS_ES : GOALS;
   return (
     <section aria-labelledby="goals-cards-heading" className="relative px-4 pb-16 sm:px-6">
       <div className="mx-auto max-w-6xl">
-        <p className="text-center font-heading text-sm font-semibold uppercase tracking-[0.2em] text-brand-button">Explore by goal</p>
+        <p className="text-center font-heading text-sm font-semibold uppercase tracking-[0.2em] text-brand-button">{es ? "Explore según su objetivo" : "Explore by goal"}</p>
         <h2 id="goals-cards-heading" className="mt-2 text-center text-3xl font-bold tracking-tight sm:text-4xl">
-          What would you like your home to do for you?
+          {es ? "¿Qué le gustaría que su casa hiciera por usted?" : "What would you like your home to do for you?"}
         </h2>
         <ul className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {GOALS.map((g) => (
+          {goals.map((g) => (
             <li key={g.href}>
               <Link
                 href={g.href}
@@ -69,7 +106,7 @@ export function GoalCards() {
                   <h3 className="text-lg font-semibold leading-snug">{g.title}</h3>
                   <p className="mt-2 flex-1 text-[0.95rem] leading-relaxed">{g.text}</p>
                   <span className="mt-4 font-semibold text-brand-button">
-                    Learn more <span aria-hidden="true">→</span>
+                    {es ? "Más información" : "Learn more"} <span aria-hidden="true">→</span>
                   </span>
                 </div>
               </Link>

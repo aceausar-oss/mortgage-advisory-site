@@ -11,11 +11,11 @@ const states = feature(topo, topo.objects.states).features;
 const borders = mesh(topo, topo.objects.states, (a, b) => a !== b);
 const path = geoPath();
 
-export function LicensedStatesMap() {
+export function LicensedStatesMap({ lang = "en" }: { lang?: "en" | "es" }) {
   return (
     <figure className="space-y-3">
       <svg viewBox="0 0 975 610" role="img" aria-labelledby="map-title" className="h-auto w-full">
-        <title id="map-title">Map of the United States highlighting California, Texas, Florida, and Colorado, where The Mortgage Advisory is licensed</title>
+        <title id="map-title">{lang === "es" ? "Mapa de Estados Unidos que resalta California, Texas, Florida y Colorado, donde The Mortgage Advisory tiene licencia" : "Map of the United States highlighting California, Texas, Florida, and Colorado, where The Mortgage Advisory is licensed"}</title>
         {states.map((s) => (
           <path key={String(s.id)} d={path(s) ?? undefined} fill={LICENSED[String(s.id)] ? "var(--color-brand-blue)" : "#e4ebf1"} />
         ))}
@@ -38,7 +38,7 @@ export function LicensedStatesMap() {
             );
           })}
       </svg>
-      <figcaption className="text-center font-heading text-sm font-semibold text-brand-slate">Licensed in California, Texas, Florida, and Colorado</figcaption>
+      <figcaption className="text-center font-heading text-sm font-semibold text-brand-slate">{lang === "es" ? "Con licencia en California, Texas, Florida y Colorado" : "Licensed in California, Texas, Florida, and Colorado"}</figcaption>
     </figure>
   );
 }

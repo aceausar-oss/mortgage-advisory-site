@@ -2,13 +2,14 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import { BookingPicker } from "@/components/BookingPicker";
 import { bookingEmbedUrl, bookingTypes } from "@/lib/home";
+import { alternates } from "@/lib/i18n";
 import { licensing } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Book a Call With an Advisor",
   description:
     "Schedule a call with a licensed advisor at The Mortgage Advisory (NMLS #1549739) about reverse mortgages, HELOCs, refinancing, or buying a home.",
-  alternates: { canonical: "/book" },
+  alternates: alternates("/book", "en"),
 };
 
 // Booking page (CLAUDE.md §7, Phase 1): Go High Level calendars; "Pick a time" opens the chosen one full screen (BookingPicker).
@@ -24,6 +25,12 @@ export default function BookPage() {
             {licensing.phone}
           </a>
           .
+        </p>
+        <p lang="es" className="text-brand-slate">
+          ¿Prefiere hablar en español?{" "}
+          <a href="/es/book" hrefLang="es" className="font-semibold text-brand-button underline underline-offset-4">
+            Reserve con un asesor que habla español →
+          </a>
         </p>
       </header>
       <div className="relative aspect-[3/2] overflow-hidden rounded-3xl sm:aspect-[21/9]">

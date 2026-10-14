@@ -1,3 +1,4 @@
+import { getLoanPages } from "@/lib/loans";
 import { CATEGORIES } from "@/lib/categories";
 import { booking, publishedAnswers as published, publishedLocations, publishedPrograms } from "@/lib/knowledge";
 import type { LoanPage } from "@/lib/loans";
@@ -56,6 +57,16 @@ export function llmsTxt() {
     "",
     ...booking().map((b) => `- [${b.topic}](${b.bookingUrl}): ${b.description}`),
     `- Phone: ${licensing.phone}`,
+    "",
+    "## En español (Spanish)",
+    "",
+    "Spanish versions of the homepage, loan program pages, and booking. Spanish speakers can ask for a Spanish-speaking advisor.",
+    "",
+    `- [Inicio](${siteUrl}/es): página principal en español`,
+    `- [Reserve una llamada](${siteUrl}/es/book): elija una llamada en español o en inglés`,
+    ...getLoanPages("es")
+      .filter((p) => !p.isDraft)
+      .map((p) => `- [${p.question}](${siteUrl}/es/loans/${p.slug}): ${p.description}`),
     "",
   ];
   for (const c of CATEGORIES) {
