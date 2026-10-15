@@ -2,7 +2,7 @@
 h1: "Privacy Policy"
 title: "Privacy Policy"
 description: "How The Mortgage Advisory, Inc. collects, uses, and protects your information on this site, including AI chat, booking, and California privacy rights."
-updated: 2026-10-08
+updated: 2026-10-14
 attorneyReview: done # reviewed by Ace's attorney, Sept 2026
 ---
 
@@ -10,7 +10,7 @@ This policy explains how The Mortgage Advisory, Inc. (NMLS #1549739) ("we," "us"
 
 ## What information we collect
 
-- **Information you give us:** your name, phone number, email, and details you share when you book a call, contact us, or use our AI chat assistant.
+- **Information you give us:** your name, phone number, email, and details you share when you book a call, request a free guide, contact us, or use our AI chat assistant.
 - **Chat messages:** the questions you type into our AI assistant. Please don't share Social Security numbers, account numbers, or dates of birth in chat; our system tries to remove them automatically before processing.
 - **Technical information:** your IP address, browser type, and pages visited, collected by our hosting provider for security and to keep the site running.
 
@@ -20,6 +20,7 @@ We don't ask for or accept Social Security numbers, account numbers, or bank log
 
 - To answer your questions and respond to your requests
 - To schedule and hold the calls you book
+- To send you a guide you request and, if you agreed when you asked for it, occasional emails about reverse mortgages and home financing. Every email has an unsubscribe link, and you can also unsubscribe by emailing [Ace@TheMortgageAdvisory.com](mailto:Ace@TheMortgageAdvisory.com).
 - To keep the site secure and prevent abuse (for example, limiting how many chat messages can be sent in a short time)
 - To comply with law and regulation
 

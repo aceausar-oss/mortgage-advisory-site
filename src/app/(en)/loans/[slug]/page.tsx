@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { GuideBox, GuidePopup } from "@/components/guide/GuideOffer";
 import { ProgramPage } from "@/components/ProgramPage";
 import { ReverseCalculator } from "@/components/reverse/ReverseCalculator";
+import { guideEnabled } from "@/lib/guide";
 import { alternates } from "@/lib/i18n";
 import { getLoanPages, getLoanPage } from "@/lib/loans";
 
@@ -27,6 +29,22 @@ export async function generateMetadata({ params }: PageProps<"/loans/[slug]">): 
 export default async function LoanProgramPage({ params }: PageProps<"/loans/[slug]">) {
   const page = getLoanPage((await params).slug);
   if (!page) notFound();
-  if (page.slug === "reverse-mortgage") return <ProgramPage page={page} extra={<ReverseCalculator stacked />} />;
+  if (page.slug === "reverse-mortgage") {
+    const guide = guideEnabled();
+    return (
+      <>
+        <ProgramPage
+          page={page}
+          extra={
+            <>
+              <ReverseCalculator stacked />
+              {guide && <GuideBox />}
+            </>
+          }
+        />
+        {guide && <GuidePopup />}
+      </>
+    );
+  }
   return <ProgramPage page={page} />;
 }

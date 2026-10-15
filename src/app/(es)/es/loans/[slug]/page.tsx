@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { GuideBox, GuidePopup } from "@/components/guide/GuideOffer";
 import { ProgramPage } from "@/components/ProgramPage";
+import { guideEnabled } from "@/lib/guide";
 import { alternates } from "@/lib/i18n";
 import { getLoanPage, getLoanPages } from "@/lib/loans";
 
@@ -50,6 +52,22 @@ function ReverseCalculatorLink() {
 export default async function SpanishLoanPage({ params }: { params: Promise<{ slug: string }> }) {
   const page = getLoanPage((await params).slug, "es");
   if (!page) notFound();
-  if (page.slug === "reverse-mortgage") return <ProgramPage page={page} extra={<ReverseCalculatorLink />} />;
+  if (page.slug === "reverse-mortgage") {
+    const guide = guideEnabled();
+    return (
+      <>
+        <ProgramPage
+          page={page}
+          extra={
+            <>
+              <ReverseCalculatorLink />
+              {guide && <GuideBox lang="es" />}
+            </>
+          }
+        />
+        {guide && <GuidePopup lang="es" />}
+      </>
+    );
+  }
   return <ProgramPage page={page} />;
 }

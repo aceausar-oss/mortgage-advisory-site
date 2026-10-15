@@ -3,7 +3,9 @@ import Link from "next/link";
 import { Breadcrumbs, TldrBox } from "@/components/AnswerParts";
 import { Disclosures } from "@/components/Disclosures";
 import { JsonLd } from "@/components/JsonLd";
+import { GuidePopup } from "@/components/guide/GuideOffer";
 import { ReverseCalculator } from "@/components/reverse/ReverseCalculator";
+import { guideEnabled } from "@/lib/guide";
 import { siteUrl } from "@/lib/site";
 
 // Shareable reverse mortgage calculator (Ace, Sept 2026): TheMortgageAdvisory.com/reverse-calculator.
@@ -41,6 +43,7 @@ export default function ReverseCalculatorPage() {
   return (
     <article className="mx-auto max-w-[75rem] space-y-8 px-4 py-12 sm:px-6">
       <JsonLd data={jsonLd} />
+      {guideEnabled() && <GuidePopup />}
       <Breadcrumbs items={[{ href: "/", label: "Home" }, { href: "/reverse-calculator", label: "Reverse Mortgage Calculator" }]} />
       <header className="space-y-5">
         <h1 className="text-3xl font-bold leading-tight sm:text-4xl">How much could a reverse mortgage give you?</h1>

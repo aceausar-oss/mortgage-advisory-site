@@ -4,6 +4,8 @@ import { AnswerCta, AuthorBox, Breadcrumbs, DraftBanner, SourcesList, TldrBox } 
 import { DidYouKnow } from "@/components/DidYouKnow";
 import { Disclosures } from "@/components/Disclosures";
 import { TreasuryChart } from "@/components/TreasuryChart";
+import { GuidePopup } from "@/components/guide/GuideOffer";
+import { guideEnabled } from "@/lib/guide";
 import { JsonLd } from "@/components/JsonLd";
 import { categoryLabel } from "@/lib/categories";
 import { getEntries, getEntry } from "@/lib/kb";
@@ -67,8 +69,12 @@ export default async function AnswerPage({ params }: PageProps<"/answers/[slug]"
     ],
   };
 
+  // Reverse mortgage answers (homeowners and families, not the planner answers) offer the free guide.
+  const guide = entry.category === "reverse-mortgage" && guideEnabled();
+
   return (
     <div className="mx-auto max-w-[75rem] px-4 py-10 sm:px-6">
+      {guide && <GuidePopup />}
       <JsonLd data={jsonLd} />
       {/* Side-pill layout: answer column + sticky "Did you know?" rail on large screens. */}
       <div className={entry.didYouKnow.length ? "lg:grid lg:grid-cols-[minmax(0,1fr)_18rem] lg:gap-10" : "mx-auto max-w-3xl"}>

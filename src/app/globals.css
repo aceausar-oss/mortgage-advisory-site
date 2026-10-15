@@ -302,3 +302,9 @@ h4 {
     background-position: -100% 0;
   }
 }
+
+/* Guide popup: slides up from the bottom on phones, rises gently on computers (GuideOffer.tsx). */
+@keyframes guide-up {
+  from { transform: translateY(24px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
