@@ -26,19 +26,44 @@ strong { font-weight: 700; }
 .eyebrow { font-size: 8.5pt; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--button); margin-bottom: 6pt; }
 .footer { position: absolute; left: 0.75in; right: 0.75in; bottom: 0.4in; display: flex; justify-content: space-between; font-size: 7.5pt; color: var(--steel); border-top: 1px solid #dde6ee; padding-top: 6pt; }
 
-/* Cover */
-.cover { padding: 0; background: var(--navy); color: #fff; }
-.cover .photo { height: 6.1in; background-size: cover; background-position: center 25%; position: relative; }
-.cover .photo::after { content: ""; position: absolute; inset: auto 0 0 0; height: 1.6in; background: linear-gradient(to bottom, rgba(31,78,121,0), var(--navy)); }
-.cover .brand { position: absolute; top: 0.45in; left: 0.6in; background: #fff; border-radius: 14pt; padding: 10pt 14pt; }
-.cover .brand img { height: 0.62in; display: block; }
-.cover .text { padding: 0.1in 0.75in 0; }
-.cover .kicker { font-family: "Montserrat"; font-weight: 700; letter-spacing: 0.2em; font-size: 9pt; color: var(--soft); text-transform: uppercase; }
-.cover h1 { color: #fff; font-size: 34pt; line-height: 1.08; margin: 8pt 0 14pt; }
-.cover h1 em { font-style: normal; color: var(--soft); }
-.cover .points { display: flex; gap: 22pt; font-family: "Montserrat"; font-weight: 700; font-size: 9.5pt; letter-spacing: 0.08em; text-transform: uppercase; }
-.cover .points span::before { content: "✓"; display: inline-block; width: 15pt; height: 15pt; line-height: 15pt; text-align: center; border-radius: 50%; background: var(--deep); margin-right: 6pt; font-size: 8pt; }
-.cover .by { position: absolute; bottom: 0.45in; left: 0.75in; right: 0.75in; font-size: 8.5pt; color: #cfe0f1; display: flex; justify-content: space-between; }
+/* Cover: same layout as the Reverse 2nd flyer (Ace, Oct 2026): white header bar with the logo, a navy band with
+   the headline on the left and the photo on the right, the seal on the photo's corner, then a checklist. */
+.cover { padding: 0; }
+.cover .topbar { height: 1.05in; display: flex; align-items: center; justify-content: space-between; padding: 0 0.6in; background: #fff; }
+.cover .topbar img { height: 0.62in; }
+.cover .topbar .lic { text-align: right; font-size: 8.5pt; line-height: 1.5; color: var(--slate); letter-spacing: 0.02em; }
+.cover .hero { position: relative; height: 3.95in; background: var(--navy); display: flex; }
+.cover .hero .copy { width: 53%; padding: 0.42in 0.2in 0.3in 0.6in; color: #fff; position: relative; z-index: 2; }
+.cover .hero .photo { position: absolute; right: 0; top: 0; bottom: 0; width: 50%; background-size: cover; }
+.cover .hero .photo::before { content: ""; position: absolute; inset: 0; background: linear-gradient(to right, var(--navy) 0%, rgba(31,78,121,0.45) 8%, rgba(31,78,121,0) 22%); }
+.cover .hero .seal { position: absolute; right: 0.35in; bottom: -0.55in; width: 1.15in; height: 1.15in; border-radius: 50%; background: #fff; padding: 0.06in; box-shadow: 0 6px 18px rgba(0,0,0,0.18); z-index: 3; }
+.cover .hero .seal img { width: 100%; height: 100%; object-fit: contain; }
+.cover .rule { height: 6pt; background: var(--deep); }
+.cover .kicker { font-family: "Montserrat"; font-weight: 700; letter-spacing: 0.12em; font-size: 9pt; color: var(--blue); text-transform: uppercase; }
+.cover h1 { color: #fff; font-size: 31pt; line-height: 1.08; margin: 10pt 0 12pt; }
+.cover h1 span { display: block; color: var(--blue); }
+.cover .lede { font-size: 11pt; line-height: 1.5; color: #dbe7f3; margin: 0; }
+.cover .inside { padding: 0.36in 0.6in 0; }
+.cover .inside h2 { font-size: 17pt; margin: 0 0 4pt; }
+.cover .inside h2::after { content: ""; display: block; width: 0.55in; height: 3pt; background: var(--deep); margin-top: 6pt; border-radius: 2pt; }
+.cover .checks { display: grid; grid-template-columns: 1fr 1fr; gap: 10pt 22pt; margin-top: 12pt; }
+.cover .checks p { margin: 0; }
+.cover .checks div { display: flex; gap: 8pt; }
+.cover .checks i { flex: none; width: 17pt; height: 17pt; border-radius: 50%; background: var(--deep); color: #fff; font-style: normal; font-size: 9pt; display: flex; align-items: center; justify-content: center; margin-top: 1pt; }
+.cover .checks b { display: block; font-family: "Montserrat"; font-size: 10.5pt; color: var(--slate); }
+.cover .checks span { font-size: 9pt; color: #4b5a62; line-height: 1.35; }
+.cover .steps { white-space: nowrap; justify-content: space-between; margin: 18pt 0.6in 0; background: #e8f1fa; border-radius: 24pt; padding: 9pt 14pt; display: flex; align-items: center; gap: 6pt; font-size: 8.3pt; }
+.cover .steps b { font-family: "Montserrat"; font-size: 8.5pt; letter-spacing: 0.06em; color: var(--slate); margin-right: 4pt; }
+.cover .steps span { display: flex; align-items: center; gap: 5pt; color: var(--slate); }
+.cover .steps em { font-style: normal; width: 16pt; height: 16pt; border-radius: 50%; background: var(--button); color: #fff; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 8pt; }
+.cover .by { position: absolute; left: 0.6in; right: 0.6in; bottom: 0.4in; display: flex; justify-content: space-between; align-items: flex-end; border-top: 1px solid #dde6ee; padding-top: 8pt; font-size: 8.5pt; color: var(--slate); }
+.cover .by b { font-family: "Montserrat"; font-size: 11pt; color: var(--slate); display: block; }
+
+/* Interior pages: a slim header with the logo, like the flyer, so every page is clearly ours. */
+.pagehead { position: absolute; top: 0; left: 0; right: 0; height: 0.62in; display: flex; align-items: center; justify-content: space-between; padding: 0 0.75in; border-bottom: 3pt solid var(--deep); background: #fff; }
+.pagehead img { height: 0.34in; }
+.pagehead span { font-family: "Montserrat"; font-weight: 700; font-size: 7.5pt; letter-spacing: 0.14em; text-transform: uppercase; color: var(--steel); }
+.page.has-head { padding-top: 0.92in; }
 
 /* Shared blocks */
 .lead { font-size: 12pt; color: var(--slate); }
