@@ -12,9 +12,8 @@ type Lang = "en" | "es";
 const T = {
   en: {
     badge: ["Free", "download"],
-    cover: "Your home, your housing pension",
-    coverSub: "A plain-English guide to reverse mortgages",
-    points: ["What it is", "Who it's for", "What it costs"],
+    coverImg: "/images/guides/guide-cover-en.jpg",
+    coverAlt: "Cover of the free guide “Your Home. Your Housing Pension.” from The Mortgage Advisory",
     get: "Get your",
     free: "FREE",
     title: "reverse mortgage guide.",
@@ -34,15 +33,11 @@ const T = {
     book: "Book a call with an advisor",
     bookHref: "/book#reverse",
     close: "Close",
-    photo: "/images/retirement-couple.jpg",
-    photoPos: "center 25%",
-    photoAlt: "Smiling retired couple at home",
   },
   es: {
     badge: ["Descarga", "gratis"],
-    cover: "Su casa, su pensión de vivienda",
-    coverSub: "Guía clara sobre la hipoteca inversa",
-    points: ["Qué es", "Para quién es", "Cuánto cuesta"],
+    coverImg: "/images/guides/guide-cover-es.jpg",
+    coverAlt: "Portada de la guía gratuita «Su Casa. Su Pensión de Vivienda.» de The Mortgage Advisory",
     get: "Reciba su guía",
     free: "GRATIS",
     title: "sobre la hipoteca inversa.",
@@ -62,9 +57,6 @@ const T = {
     book: "Reserve una llamada con un asesor",
     bookHref: "/es/book#reverse",
     close: "Cerrar",
-    photo: "/images/loans/loan-reverse-mortgage.jpg",
-    photoPos: "20% center",
-    photoAlt: "Pareja jubilada sonriendo en su jardín",
   },
 } as const;
 
@@ -87,34 +79,16 @@ function writeState(s: { closedAt?: number; done?: boolean }) {
 export function GuideCover({ lang, className = "" }: { lang: Lang; className?: string }) {
   const t = T[lang];
   return (
-    <div className={`relative mx-auto w-full max-w-[15rem] ${className}`}>
-      {/* The book: a slight 3D tilt, spine shadow on the left, and a soft floor shadow. */}
-      <div className="relative aspect-[3/4] overflow-hidden rounded-r-lg rounded-l-sm bg-[#1f4e79] shadow-[0_24px_40px_-18px_rgba(31,78,121,0.65),inset_6px_0_8px_-4px_rgba(0,0,0,0.35)] [transform:perspective(900px)_rotateY(-10deg)]">
-        <div className="absolute inset-x-0 top-0 h-[58%]">
-          <Image src={t.photo} alt={t.photoAlt} fill sizes="240px" className="object-cover" style={{ objectPosition: t.photoPos }} />
-          <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-b from-transparent to-[#1f4e79]" />
-          <div className="absolute left-3 top-3 rounded-md bg-white px-1.5 py-1">
-            <Image src="/brand/logo-tma-2026.png" alt="The Mortgage Advisory" width={1837} height={497} sizes="96px" className="h-5 w-auto" />
-          </div>
-        </div>
-        <div className="absolute inset-x-0 bottom-0 space-y-2 px-4 pb-4">
-          <p className="font-heading text-[1.05rem] font-bold leading-tight text-white">{t.cover}</p>
-          <p className="text-[0.62rem] leading-snug text-[#cfe0f1]">{t.coverSub}</p>
-          <ul className="space-y-1 pt-1">
-            {t.points.map((p) => (
-              <li key={p} className="flex items-center gap-1.5 font-heading text-[0.55rem] font-bold uppercase tracking-wider text-white">
-                <span aria-hidden="true" className="flex h-3 w-3 items-center justify-center rounded-full bg-brand-blue-deep text-[0.45rem]">
-                  ✓
-                </span>
-                {p}
-              </li>
-            ))}
-          </ul>
-        </div>
+    <div className={`relative mx-auto w-full ${className}`}>
+      {/* The real first page of the PDF (built by scripts/guides/build.py), shown as a book: slight 3D tilt,
+          spine shadow on the left, soft floor shadow. The logo sits in the white top bar, clear of the photo. */}
+      <div className="relative aspect-[600/776] overflow-hidden rounded-r-lg rounded-l-sm bg-white shadow-[0_24px_40px_-18px_rgba(31,78,121,0.65)] ring-1 ring-black/5 [transform:perspective(900px)_rotateY(-10deg)]">
+        <Image src={t.coverImg} alt={t.coverAlt} fill sizes="(min-width: 640px) 272px, 200px" className="object-cover" />
+        <div aria-hidden="true" className="absolute inset-y-0 left-0 w-2 bg-gradient-to-r from-black/25 to-transparent" />
       </div>
       <span
         aria-hidden="true"
-        className="absolute -left-6 top-[38%] flex h-[4.6rem] w-[4.6rem] flex-col items-center justify-center rounded-full bg-brand-button text-center font-heading text-[0.6rem] font-bold uppercase leading-tight tracking-wider text-white shadow-lg"
+        className="absolute -bottom-4 -right-5 flex h-[4.6rem] w-[4.6rem] flex-col items-center justify-center rounded-full bg-brand-button text-center font-heading text-[0.6rem] font-bold uppercase leading-tight tracking-wider text-white shadow-lg ring-4 ring-white"
       >
         {t.badge[0]}
         <br />
@@ -248,10 +222,27 @@ export function GuidePopup({ lang = "en" }: { lang?: Lang }) {
   const [open, setOpen] = useState(false);
   const [done, setDone] = useState(false);
   const shown = useRef(false);
+  const testing = useRef(false);
   const panel = useRef<HTMLDivElement>(null);
   const titleId = useId();
 
   useEffect(() => {
+    // Test links: ?guide=show opens the popup right away (ignores this browser's memory, remembers nothing);
+    // ?guide=reset forgets this browser's memory, then the normal triggers apply (scroll half the page, 40 s, exit).
+    const test = new URLSearchParams(window.location.search).get("guide");
+    if (test === "show") {
+      testing.current = true;
+      const id = setTimeout(() => {
+        shown.current = true;
+        setOpen(true);
+      }, 600);
+      return () => clearTimeout(id);
+    }
+    if (test === "reset") {
+      try {
+        localStorage.removeItem(KEY);
+      } catch {}
+    }
     const s = readState();
     if (s.done || (s.closedAt && Date.now() - s.closedAt < SNOOZE_MS)) return;
     const start = Date.now();
@@ -280,7 +271,7 @@ export function GuidePopup({ lang = "en" }: { lang?: Lang }) {
 
   const close = () => {
     setOpen(false);
-    if (!done) writeState({ closedAt: Date.now() });
+    if (!done && !testing.current) writeState({ closedAt: Date.now() });
   };
 
   useEffect(() => {
@@ -302,7 +293,7 @@ export function GuidePopup({ lang = "en" }: { lang?: Lang }) {
         role="dialog"
         aria-modal="true"
         aria-labelledby={titleId}
-        className="relative max-h-[78vh] w-full overflow-y-auto rounded-t-3xl bg-mist px-5 pb-6 pt-8 shadow-[0_-12px_40px_rgba(0,0,0,0.25)] motion-safe:animate-[guide-up_0.35s_ease-out] sm:max-h-[92vh] sm:max-w-4xl sm:overflow-visible sm:rounded-[2rem] sm:p-10 sm:shadow-2xl"
+        className="relative max-h-[78vh] w-full overflow-y-auto rounded-t-3xl bg-mist px-5 pb-6 pt-14 shadow-[0_-12px_40px_rgba(0,0,0,0.25)] motion-safe:animate-[guide-up_0.35s_ease-out] sm:max-h-[92vh] sm:max-w-4xl sm:overflow-visible sm:rounded-[2rem] sm:p-10 sm:shadow-2xl"
       >
         <button
           type="button"
@@ -315,7 +306,7 @@ export function GuidePopup({ lang = "en" }: { lang?: Lang }) {
           </svg>
         </button>
         <div className="grid items-center gap-6 sm:grid-cols-[0.9fr_1.1fr] sm:gap-10">
-          <GuideCover lang={lang} className="hidden sm:block" />
+          <GuideCover lang={lang} className="hidden max-w-[17rem] sm:block" />
           <div className="space-y-5">
             {!done && <Headline lang={lang} id={titleId} />}
             {done && <span id={titleId} className="sr-only">{t.doneTitle}</span>}
