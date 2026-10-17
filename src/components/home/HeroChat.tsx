@@ -3,15 +3,16 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
-const CHIPS_ES = [
-  { label: "Obtener preaprobación", q: "Quiero obtener una preaprobación para comprar casa" },
+// A chip with an href opens that page (the qualify quiz) instead of the chat.
+const CHIPS_ES: { label: string; q: string; href?: string }[] = [
+  { label: "Obtener preaprobación", q: "Quiero obtener una preaprobación para comprar casa", href: "/es/qualify?goal=buy" },
   { label: "Bajar mi tasa", q: "¿Cómo puedo bajar el pago o la tasa de mi hipoteca?" },
   { label: "Sacar dinero de mi casa", q: "¿Cómo puedo sacar dinero de mi casa y conservar mi tasa baja?" },
   { label: "Hipoteca inversa", q: "¿Me conviene una hipoteca inversa?" },
 ];
 
-const CHIPS = [
-  { label: "Get pre-approved", q: "I want to get pre-approved to buy a home" },
+const CHIPS: { label: string; q: string; href?: string }[] = [
+  { label: "Get pre-approved", q: "I want to get pre-approved to buy a home", href: "/qualify?goal=buy" },
   { label: "Lower my rate", q: "How can I lower my mortgage payment or rate?" },
   { label: "Get cash from my home", q: "How can I get cash from my home and keep my low rate?" },
   { label: "Reverse mortgage", q: "Is a reverse mortgage right for me?" },
@@ -114,7 +115,7 @@ export function HeroChat({ examples, lang = "en" }: { examples: string[]; lang?:
           {chips.map((c) => (
             <li key={c.label}>
               <Link
-                href={`${ask}?q=${encodeURIComponent(c.q)}`}
+                href={c.href ?? `${ask}?q=${encodeURIComponent(c.q)}`}
                 className="inline-block rounded-full border border-brand-steel/40 bg-mist px-3.5 py-1.5 text-sm font-medium text-brand-slate hover:border-brand-slate"
               >
                 {c.label}

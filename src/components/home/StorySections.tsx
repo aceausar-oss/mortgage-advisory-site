@@ -21,7 +21,7 @@ const GOALS = [
     headline: "Buying your first home?",
     copy: "FHA, VA, conventional, and down payment assistance programs in California, Texas, Florida, and Colorado. We'll help you find a payment you're comfortable with, not just the most you can borrow.",
     points: ["Pre-approval you can count on", "Down payment help in all four of our states", "Loan Estimates explained line by line"],
-    cta: { label: "Get pre-approved", q: "I want to get pre-approved to buy my first home" },
+    cta: { label: "Get pre-approved", q: "I want to get pre-approved to buy my first home", href: "/qualify?goal=buy" },
     related: { href: "/answers/how-much-house-can-i-afford", label: "How much house can I afford?" },
     image: { src: "/images/first-home-family.jpg", alt: "Family holding the keys in front of their new home with a sold sign" },
     icon: "M3 11l9-7 9 7M5 10v10h14V10M10 20v-6h4v6",
@@ -73,7 +73,7 @@ export function StorySections() {
                 </blockquote>
               )}
               <div className="mt-5 flex flex-wrap items-center gap-4">
-                <PillCta href={`/ask?q=${encodeURIComponent(g.cta.q)}`} label={g.cta.label} icon={g.icon} />
+                <PillCta href={"href" in g.cta && g.cta.href ? g.cta.href : `/ask?q=${encodeURIComponent(g.cta.q)}`} label={g.cta.label} icon={g.icon} />
                 {g.related && (
                   <Link href={g.related.href} className="text-sm font-semibold text-brand-button underline underline-offset-4">
                     {g.related.label}

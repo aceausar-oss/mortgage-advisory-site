@@ -5,6 +5,7 @@ import { AuthorBox, Breadcrumbs, DraftBanner, SourcesList, TldrBox } from "@/com
 import { DidYouKnow } from "@/components/DidYouKnow";
 import { Disclosures } from "@/components/Disclosures";
 import { JsonLd } from "@/components/JsonLd";
+import { QuizBanner, goalForLoan } from "@/components/qualify/QuizBanner";
 import { bookingTypes } from "@/lib/home";
 import { getEntry } from "@/lib/kb";
 import type { LoanPage } from "@/lib/loans";
@@ -83,6 +84,12 @@ function LoanCtaEs({ page }: { page: LoanPage }) {
           Reserve una llamada con un asesor
         </Link>
         <Link
+          href={`/es/qualify${goalForLoan(page.slug) ? `?goal=${goalForLoan(page.slug)}` : ""}`}
+          className="rounded-full border border-white px-5 py-2.5 font-semibold text-white hover:bg-white/10"
+        >
+          Vea para qué califica
+        </Link>
+        <Link
           href={`/es/ask?q=${encodeURIComponent(`Quiero saber más sobre ${page.name.toLowerCase()} para mi situación`)}`}
           className="rounded-full border border-white px-5 py-2.5 font-semibold text-white hover:bg-white/10"
         >
@@ -105,6 +112,12 @@ function LoanCta({ page }: { page: LoanPage }) {
       <div className="mt-4 flex flex-wrap gap-3">
         <Link href={booking ? `/book#${booking.key}` : "/book"} className="rounded-full bg-white px-5 py-2.5 font-semibold text-brand-slate hover:bg-mist">
           Book a call with an advisor
+        </Link>
+        <Link
+          href={`/qualify${page.basePath === "/loans" && goalForLoan(page.slug) ? `?goal=${goalForLoan(page.slug)}` : ""}`}
+          className="rounded-full border border-white px-5 py-2.5 font-semibold text-white hover:bg-white/10"
+        >
+          See what you qualify for
         </Link>
         <Link
           href={`/ask?q=${encodeURIComponent(page.state ? `What are my home loan options in ${page.name}?` : `Tell me about ${page.name.toLowerCase()} options for my situation`)}`}
@@ -196,6 +209,7 @@ export function ProgramPage({ page, extra }: { page: LoanPage; extra?: ReactNode
               <DidYouKnow facts={page.didYouKnow} lang={lang} />
             </div>
           )}
+          <QuizBanner lang={lang} goal={page.basePath === "/loans" ? goalForLoan(page.slug) : undefined} />
           <div className="answer-body" dangerouslySetInnerHTML={{ __html: page.html }} />
           {extra}
           <WhoFunds funding={page.funding} lang={lang} />

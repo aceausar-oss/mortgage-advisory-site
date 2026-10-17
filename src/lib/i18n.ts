@@ -8,7 +8,7 @@ export type Lang = "en" | "es";
 export const LANG_COOKIE = "lang";
 
 // English paths that have a Spanish twin under /es. Anything else toggles to the Spanish homepage.
-export const SPANISH_PATHS: string[] = ["/", "/ask", "/book", ...LOAN_SLUGS.map((s) => `/loans/${s}`)];
+export const SPANISH_PATHS: string[] = ["/", "/ask", "/book", "/qualify", "/pre-approval", ...LOAN_SLUGS.map((s) => `/loans/${s}`)];
 
 /** "/loans/heloc" → "/es/loans/heloc"; "/" → "/es". */
 export const toEs = (path: string) => (path === "/" ? "/es" : `/es${path}`);
@@ -100,6 +100,8 @@ export const spanishResourcesNav = [
   { href: "/es/loans/conventional", label: "Préstamos convencionales" },
   { href: "/es/loans/non-qm", label: "Préstamos Non-QM" },
   { href: "/es/loans/debt-consolidation", label: "Consolidar deudas" },
+  { href: "/es/pre-approval", label: "Obtener preaprobación" },
+  { href: "/es/qualify", label: "Vea para qué califica" },
   { href: "/es/ask", label: "Pregúntele al asistente" },
   { href: "/es/book", label: "Reservar una llamada" },
 ];

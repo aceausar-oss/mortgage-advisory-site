@@ -35,5 +35,5 @@ export function proxy(request: NextRequest) {
 
 // Only pages that exist in both languages (constants, as Next.js requires).
 export const config = {
-  matcher: ["/", "/ask", "/book", "/loans/:slug", "/es", "/es/:path*"],
+  matcher: ["/", "/ask", "/book", "/qualify", "/pre-approval", "/loans/:slug", "/es", "/es/:path*"],
 };

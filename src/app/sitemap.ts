@@ -20,6 +20,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${siteUrl}/answers`, lastModified: latest ?? new Date().toISOString().slice(0, 10) },
     { url: `${siteUrl}/how-we-estimate` },
     { url: `${siteUrl}/book`, ...both("/book") },
+    { url: `${siteUrl}/pre-approval`, lastModified: "2026-10-17", ...both("/pre-approval") },
+    { url: `${siteUrl}/qualify`, ...both("/qualify") },
     { url: `${siteUrl}/reviews` },
     ...["life-rate", "reverse-calculator", "costs", "pros", "about", "licensing", "privacy", "terms", "accessibility", "do-not-sell"].map((p) => ({ url: `${siteUrl}/${p}` })),
     ...loans.map((p) => ({
@@ -29,6 +31,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
     { url: `${siteUrl}/es`, ...both("/") },
     { url: `${siteUrl}/es/book`, ...both("/book") },
+    { url: `${siteUrl}/es/pre-approval`, lastModified: "2026-10-17", ...both("/pre-approval") },
+    { url: `${siteUrl}/es/qualify`, ...both("/qualify") },
     ...esLoans.map((p) => ({ url: `${siteUrl}/es/loans/${p.slug}`, lastModified: p.updated, ...both(`/loans/${p.slug}`) })),
     ...answers.map((e) => ({ url: `${siteUrl}/answers/${e.slug}`, lastModified: e.updated })),
     ...getHandouts()
