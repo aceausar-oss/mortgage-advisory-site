@@ -229,7 +229,10 @@ const BALANCE: Question = {
   max: 2_500_000,
   step: 5_000,
   initial: (a) =>
-    Math.round(((Number(a.homeValue) || 750_000) * 0.4) / 5_000) * 5_000,
+    Math.round(
+      ((Number(a.homeValue) || 750_000) * (a.goal === "reverse" ? 0.2 : 0.4)) /
+        5_000,
+    ) * 5_000,
 };
 
 export const PATHS: Record<Goal, Question[]> = {
@@ -1237,7 +1240,8 @@ function reverseResult(a: Answers): Result {
       ),
     });
   } else {
-    if (!keep)
+    const short = e.fit === "not-enough-equity";
+    if (!keep && !short)
       programs.push({
         name: t(
           "HECM reverse mortgage (FHA-insured)",
@@ -1248,7 +1252,7 @@ function reverseResult(a: Answers): Result {
           "Paga su hipoteca actual y le da una línea de crédito, un ingreso mensual o una combinación.",
         ),
       });
-    if (keep || a.keepFirst === "unsure")
+    if (keep || a.keepFirst === "unsure" || short)
       programs.push({
         name: t(
           "Reverse mortgage second",
@@ -1267,7 +1271,15 @@ function reverseResult(a: Answers): Result {
           `Su casa está por encima del límite de la FHA de ${usd(pricing.hecm.maxClaimAmount)}, así que un programa jumbo privado podría darle más.`,
         ),
       });
-    if (e.fit === "not-enough-equity")
+    if (short)
+      programs.push({
+        name: t("Other ways to lower your payment", "Otras formas de bajar su pago"),
+        why: t(
+          "A refinance, a HELOC, or a mix may fit better. We'll compare them side by side.",
+          "Un refinanciamiento, una HELOC o una combinación pueden funcionar mejor. Las compararemos lado a lado.",
+        ),
+      });
+    if (short)
       notes.push(
         t(
           "Your mortgage balance is higher than this estimate, so a HECM may not cover it. A reverse mortgage second or other options may still work.",
