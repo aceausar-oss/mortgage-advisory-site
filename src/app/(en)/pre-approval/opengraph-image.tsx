@@ -11,6 +11,6 @@ export default function Image() {
     photo: PHOTO.src,
     position: PHOTO.position,
     headline: "How do I get pre-approved for a mortgage?",
-    sub: "2-minute quiz · No credit check · No SSN",
+    sub: "2-minute quiz · No credit check",
   });
 }
