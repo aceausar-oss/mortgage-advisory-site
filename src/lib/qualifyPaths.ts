@@ -6,7 +6,7 @@ import type { Goal } from "@/lib/qualify";
 // photo, so a link texted to a client previews the right topic. Buyers use /pre-approval instead.
 // Photos match each loan page; Spanish previews use the Latino homeowner couple, like the Spanish loan pages.
 
-type Copy = { crumb: string; h1: string; lead: string; title: string; description: string; share: string; shareSub: string };
+type Copy = { photoAlt: string; crumb: string; h1: string; lead: string; title: string; description: string; share: string; shareSub: string };
 
 export type QualifyPath = {
   slug: "refinance" | "heloc" | "reverse-mortgage";
@@ -29,6 +29,7 @@ export const QUALIFY_PATHS: QualifyPath[] = [
     position: "center 25%",
     ...COUPLE,
     en: {
+      photoAlt: "Couple at the dining table reviewing their numbers with a calculator",
       crumb: "Refinance quiz",
       h1: "Is a refinance worth it for you?",
       lead: "Answer a few quick questions about your current loan and your goal. You'll see which refinance options fit, your equity today, and what to have ready.",
@@ -38,6 +39,7 @@ export const QUALIFY_PATHS: QualifyPath[] = [
       shareSub: "2-minute quiz · No credit check",
     },
     es: {
+      photoAlt: "Pareja de propietarios sonriendo en su patio",
       crumb: "Cuestionario de refinanciamiento",
       h1: "¿Le conviene refinanciar?",
       lead: "Conteste unas preguntas rápidas sobre su préstamo actual y su objetivo. Verá qué opciones de refinanciamiento le funcionan, su valor líquido hoy y qué tener listo.",
@@ -54,6 +56,7 @@ export const QUALIFY_PATHS: QualifyPath[] = [
     position: "center",
     ...COUPLE,
     en: {
+      photoAlt: "Homeowner and contractor reviewing plans for a new backyard addition",
       crumb: "Home equity quiz",
       h1: "How much cash could your home unlock?",
       lead: "Answer a few quick questions to see your estimated available equity and whether a HELOC or a cash-out refinance fits better, without giving up a low rate you already have.",
@@ -63,6 +66,7 @@ export const QUALIFY_PATHS: QualifyPath[] = [
       shareSub: "HELOC or cash-out · 2-minute quiz",
     },
     es: {
+      photoAlt: "Pareja de propietarios sonriendo en su patio",
       crumb: "Cuestionario de valor líquido",
       h1: "¿Cuánto dinero podría liberar su casa?",
       lead: "Conteste unas preguntas rápidas para ver su valor líquido disponible estimado y si le conviene más una HELOC o un refinanciamiento con retiro de efectivo, sin perder la tasa baja que ya tiene.",
@@ -79,6 +83,7 @@ export const QUALIFY_PATHS: QualifyPath[] = [
     position: "20% center",
     ...COUPLE,
     en: {
+      photoAlt: "Retired couple smiling in their backyard",
       crumb: "Reverse mortgage quiz",
       h1: "See your reverse mortgage estimate",
       lead: "For homeowners 62 and older. Answer a few quick questions to see an estimated range based on HUD's official tables, options to keep your current mortgage, and what to have ready.",
@@ -88,6 +93,7 @@ export const QUALIFY_PATHS: QualifyPath[] = [
       shareSub: "Homeowners 62+ · 2-minute quiz",
     },
     es: {
+      photoAlt: "Pareja jubilada sonriendo en su patio",
       crumb: "Cuestionario de hipoteca inversa",
       h1: "Vea su estimado de hipoteca inversa",
       lead: "Para propietarios de 62 años o más. Conteste unas preguntas rápidas para ver un rango estimado basado en las tablas oficiales de HUD, opciones para conservar su hipoteca actual y qué tener listo.",

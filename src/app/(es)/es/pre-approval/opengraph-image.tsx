@@ -9,7 +9,7 @@ export const contentType = shareContentType;
 export default function Image() {
   return shareImage({
     photo: PHOTO.src,
-    position: PHOTO.position,
+    position: PHOTO.sharePosition,
     headline: "¿Cómo obtengo una preaprobación hipotecaria?",
     sub: "Cuestionario de 2 minutos · Sin revisar su crédito",
   });

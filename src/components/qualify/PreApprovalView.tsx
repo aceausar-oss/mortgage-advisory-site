@@ -1,9 +1,11 @@
+import Image from "next/image";
 import Link from "next/link";
 import { AuthorBox, Breadcrumbs, TldrBox } from "@/components/AnswerParts";
 import { Disclosures } from "@/components/Disclosures";
 import { JsonLd } from "@/components/JsonLd";
 import { QualifyQuiz } from "@/components/qualify/QualifyQuiz";
 import type { Lang } from "@/lib/i18n";
+import { PRE_APPROVAL_PHOTO as PHOTO } from "@/lib/preApproval";
 import { licensing, siteUrl } from "@/lib/site";
 
 // /pre-approval and /es/pre-approval (Ace, Oct 2026): answer-first page for "How do I get pre-approved?" (CLAUDE.md §6),
@@ -399,22 +401,34 @@ export function PreApprovalView({ lang }: { lang: Lang }) {
   };
 
   return (
-    <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6">
+    <div className="mx-auto max-w-3xl px-4 py-6 sm:px-6 sm:py-10">
       <JsonLd data={jsonLd} />
-      <article className="space-y-8">
+      <article className="space-y-6 sm:space-y-8">
         <Breadcrumbs
           items={[
             { href: es ? "/es" : "/", label: es ? "Inicio" : "Home" },
             { href: path, label: c.crumb },
           ]}
         />
-        <header className="space-y-5">
-          <p className="font-heading text-sm font-semibold uppercase tracking-[0.2em] text-brand-button">
+        <header className="space-y-4 sm:space-y-5">
+          <p className="hidden font-heading text-sm font-semibold uppercase tracking-[0.2em] text-brand-button sm:block">
             {c.eyebrow}
           </p>
           <h1 className="text-3xl font-bold leading-tight sm:text-4xl">
             {c.h1}
           </h1>
+          {/* Short on phones so the four option tiles still show on the first screen. */}
+          <div className="relative aspect-[4/1] overflow-hidden rounded-2xl sm:aspect-[3/1]">
+            <Image
+              src={PHOTO.src}
+              alt={PHOTO.alt[lang]}
+              fill
+              preload
+              sizes="(min-width: 768px) 768px, 100vw"
+              className="object-cover"
+              style={{ objectPosition: PHOTO.position }}
+            />
+          </div>
         </header>
 
         {/* Quiz right under the headline so the four options (buy, refinance, HELOC, reverse) show on the first

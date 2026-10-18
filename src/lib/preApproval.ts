@@ -1,9 +1,11 @@
-// Young family with keys and a SOLD sign (provided by Ace): page photo and link preview, both languages.
+// Main pre-approval photo (provided by Ace, Oct 2026): a family at the kitchen table looking at a laptop together.
+// Neutral on purpose, so it fits buying, refinancing, HELOC, and reverse alike. Page photo and link preview, both languages.
 export const PRE_APPROVAL_PHOTO = {
-  src: "/images/es-buyers-family.jpg",
-  position: "center 30%",
+  src: "/images/pages/pre-approval-family.jpg",
+  position: "center 35%", // page banner
+  sharePosition: "center", // link preview (the crop is too narrow for all four; centered keeps the most)
   alt: {
-    en: "Young family smiling in front of their new home, holding the keys and a SOLD sign",
-    es: "Familia joven sonriendo frente a su casa nueva, con las llaves y un letrero de vendido",
+    en: "Family at the kitchen table smiling at a laptop together",
+    es: "Familia en la mesa de la cocina sonriendo frente a una computadora portátil",
   },
 };

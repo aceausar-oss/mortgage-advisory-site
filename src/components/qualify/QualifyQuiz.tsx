@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { Disclosures } from "@/components/Disclosures";
@@ -116,6 +117,13 @@ const T = {
   },
 };
 
+const GOAL_PHOTOS: Record<Goal, { src: string; srcEs?: string; position: string }> = {
+  buy: { src: "/images/first-home-family.jpg", srcEs: "/images/es-buyers-family.jpg", position: "center 30%" },
+  refi: { src: "/images/loans/loan-refinance.jpg", position: "center 25%" },
+  cash: { src: "/images/loans/loan-heloc.jpg", position: "center" },
+  reverse: { src: "/images/loans/loan-reverse-mortgage.jpg", position: "20% center" },
+};
+
 type Phase = "questions" | "contact" | "results" | "outside";
 
 export function QualifyQuiz({
@@ -192,9 +200,9 @@ export function QualifyQuiz({
           ? "Cuestionario: vea para qué califica"
           : "Quiz: see what you qualify for"
       }
-      className="rounded-3xl bg-white p-5 shadow-sm ring-1 ring-brand-blue/40 sm:p-8"
+      className="rounded-3xl bg-white p-4 shadow-sm ring-1 ring-brand-blue/40 sm:p-8"
     >
-      {phase !== "results" && (
+      {phase !== "results" && (phase !== "questions" || step > 0) && (
         <div className="mb-6 space-y-2">
           <div className="flex items-center justify-between gap-3 text-sm text-brand-slate">
             {phase === "contact" || phase === "outside" || step > 0 ? (
@@ -344,6 +352,52 @@ function QuestionView({
       )}
     </div>
   );
+
+  // First question: the four paths as photo tiles (Ace, Oct 2026), two across even on phones so all four stay in view.
+  if (q.kind === "choice" && q.id === "goal") {
+    return (
+      <div className="space-y-5">
+        {heading}
+        <ul className="grid grid-cols-2 gap-3 sm:grid-cols-4" aria-labelledby={`${id}-q`}>
+          {q.options.map((opt) => {
+            const picked = answers[q.id] === opt.value;
+            const img = GOAL_PHOTOS[opt.value as Goal];
+            return (
+              <li key={opt.value}>
+                <button
+                  type="button"
+                  aria-pressed={picked}
+                  onClick={() => onChoose(q.id, opt.value)}
+                  className={`flex h-full w-full flex-col overflow-hidden rounded-2xl text-left ring-1 transition-colors ${
+                    picked
+                      ? "bg-brand-soft ring-2 ring-brand-slate"
+                      : "bg-white ring-brand-steel/40 hover:bg-mist hover:ring-brand-blue-deep"
+                  }`}
+                >
+                  <span className="relative block aspect-[2/1] w-full bg-mist sm:aspect-[4/3]">
+                    <Image
+                      src={lang === "es" && img.srcEs ? img.srcEs : img.src}
+                      alt=""
+                      fill
+                      sizes="(min-width: 640px) 180px, 50vw"
+                      className="object-cover"
+                      style={{ objectPosition: img.position }}
+                    />
+                  </span>
+                  <span className="flex flex-1 items-start justify-between gap-2 px-3 py-2.5 text-base font-semibold leading-snug text-brand-ink">
+                    {opt.label[lang]}
+                    <span aria-hidden="true" className="text-brand-button">
+                      →
+                    </span>
+                  </span>
+                </button>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    );
+  }
 
   if (q.kind === "choice") {
     return (
