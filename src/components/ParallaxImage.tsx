@@ -11,12 +11,18 @@ export function ParallaxImage({
   sizes,
   className = "",
   strength = 0.12, // share of the frame height the photo can travel either way
+  position, // CSS object-position for the photo (default: 50% 65%)
+  preload = false,
+  imageClassName = "",
 }: {
   src: string;
   alt: string;
   sizes: string;
   className?: string;
   strength?: number;
+  position?: string;
+  preload?: boolean;
+  imageClassName?: string;
 }) {
   const frame = useRef<HTMLDivElement>(null);
   const layer = useRef<HTMLDivElement>(null);
@@ -24,7 +30,12 @@ export function ParallaxImage({
   useEffect(() => {
     const el = frame.current;
     const img = layer.current;
-    if (!el || !img || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (
+      !el ||
+      !img ||
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    )
+      return;
     let raf = 0;
     let visible = false;
     const update = () => {
@@ -32,7 +43,13 @@ export function ParallaxImage({
       const r = el.getBoundingClientRect();
       const vh = window.innerHeight;
       // -1 when the frame is just below the screen, +1 when just above it.
-      const p = Math.max(-1, Math.min(1, (vh / 2 - (r.top + r.height / 2)) / (vh / 2 + r.height / 2)));
+      const p = Math.max(
+        -1,
+        Math.min(
+          1,
+          (vh / 2 - (r.top + r.height / 2)) / (vh / 2 + r.height / 2),
+        ),
+      );
       img.style.transform = `translate3d(0, ${(p * strength * r.height).toFixed(1)}px, 0)`;
     };
     const onScroll = () => {
@@ -55,8 +72,21 @@ export function ParallaxImage({
 
   return (
     <div ref={frame} className={`relative overflow-hidden ${className}`}>
-      <div ref={layer} className="absolute inset-x-0 will-change-transform" style={{ top: `-${strength * 100}%`, bottom: `-${strength * 100}%` }}>
-        <Image src={src} alt={alt} fill sizes={sizes} className="object-cover object-[50%_65%]" />
+      <div
+        ref={layer}
+        className="absolute inset-x-0 will-change-transform"
+        style={{ top: `-${strength * 100}%`, bottom: `-${strength * 100}%` }}
+      >
+        <Image
+          key={src}
+          src={src}
+          alt={alt}
+          fill
+          sizes={sizes}
+          preload={preload}
+          className={`object-cover ${position ? "" : "object-[50%_65%]"} ${imageClassName}`}
+          style={position ? { objectPosition: position } : undefined}
+        />
       </div>
     </div>
   );

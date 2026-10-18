@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import { ParallaxImage } from "@/components/ParallaxImage";
 import { Breadcrumbs } from "@/components/AnswerParts";
 import { JsonLd } from "@/components/JsonLd";
 import { QualifyQuiz } from "@/components/qualify/QualifyQuiz";
@@ -89,8 +89,16 @@ export function QualifyPageView({
   const path = `${es ? "/es" : ""}/qualify${topic ? `/${topic.slug}` : ""}`;
   // Same photo as the link preview: each option's own photo, or the main pre-approval photo on /qualify.
   const photo = topic
-    ? { src: es ? topic.photoEs : topic.photo, position: es ? topic.positionEs : topic.position, alt: topic[lang].photoAlt }
-    : { src: PRE_APPROVAL_PHOTO.src, position: PRE_APPROVAL_PHOTO.position, alt: PRE_APPROVAL_PHOTO.alt[lang] };
+    ? {
+        src: es ? topic.photoEs : topic.photo,
+        position: es ? topic.positionEs : topic.position,
+        alt: topic[lang].photoAlt,
+      }
+    : {
+        src: PRE_APPROVAL_PHOTO.src,
+        position: PRE_APPROVAL_PHOTO.position,
+        alt: PRE_APPROVAL_PHOTO.alt[lang],
+      };
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
@@ -139,17 +147,15 @@ export function QualifyPageView({
           <h1 className="text-3xl font-bold leading-tight sm:text-4xl">
             {c.h1}
           </h1>
-          <div className="relative aspect-[3/1] overflow-hidden rounded-2xl sm:aspect-[3/1]">
-            <Image
-              src={photo.src}
-              alt={photo.alt}
-              fill
-              preload
-              sizes="(min-width: 768px) 768px, 100vw"
-              className="object-cover"
-              style={{ objectPosition: photo.position }}
-            />
-          </div>
+          <ParallaxImage
+            src={photo.src}
+            alt={photo.alt}
+            sizes="(min-width: 768px) 768px, 100vw"
+            position={photo.position}
+            preload
+            className="aspect-[3/1] rounded-2xl"
+            strength={0.2}
+          />
           <p className="text-lg leading-relaxed">{c.lead}</p>
           <ul className="flex flex-wrap gap-2">
             {c.points.map((p) => (
