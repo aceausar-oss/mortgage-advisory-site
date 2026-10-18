@@ -10,7 +10,7 @@ export default function Image() {
   return shareImage({
     photo: PHOTO.src,
     position: PHOTO.sharePosition,
-    headline: "How do I get pre-approved for a mortgage?",
-    sub: "2-minute quiz · No credit check",
+    headline: "What can you qualify for?",
+    sub: "Get pre-approved · 2-minute quiz",
   });
 }
