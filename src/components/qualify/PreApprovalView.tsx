@@ -24,7 +24,7 @@ const C = {
     tldr: "Share your income, assets, and debts, and let a lender review your credit and documents. That review is what turns a guess into a pre-approval letter sellers take seriously. At The Mortgage Advisory (NMLS #1549739), licensed in California, Texas, Florida, and Colorado, you start with a 2-minute quiz, then an advisor reviews your documents and gives you a pre-approval you can count on.",
     quizTitle: "Start with the 2-minute quiz",
     quizHelp:
-      "No credit check and no Social Security number. You'll see your housing budget, loan options that may fit, and your document checklist.",
+      "Buying, refinancing, tapping your equity, or a reverse mortgage: pick yours below. No credit check and no Social Security number. You'll see the loan options that may fit, an estimate where we can give one, and your document checklist.",
     scenarioTitle: "Example scenario (illustrative)",
     takeTitle: "Our take",
     ctaTitle: "Ready for a real pre-approval?",
@@ -41,7 +41,7 @@ const C = {
     tldr: "Comparta sus ingresos, bienes y deudas, y deje que un prestamista revise su crédito y sus documentos. Esa revisión es lo que convierte un cálculo en una carta de preaprobación que los vendedores toman en serio. En The Mortgage Advisory (NMLS #1549739), con licencia en California, Texas, Florida y Colorado, empieza con un cuestionario de 2 minutos; luego un asesor revisa sus documentos y le da una preaprobación con la que puede contar.",
     quizTitle: "Empiece con el cuestionario de 2 minutos",
     quizHelp:
-      "Sin revisar su crédito y sin número de Seguro Social. Verá su presupuesto de vivienda, las opciones de préstamo que pueden funcionarle y su lista de documentos.",
+      "Comprar, refinanciar, usar el valor líquido de su casa o una hipoteca inversa: elija la suya abajo. Sin revisar su crédito y sin número de Seguro Social. Verá las opciones de préstamo que pueden funcionarle, un estimado cuando es posible y su lista de documentos.",
     scenarioTitle: "Ejemplo (ilustrativo)",
     takeTitle: "Nuestra opinión",
     ctaTitle: "¿Listo para una preaprobación real?",
@@ -446,7 +446,8 @@ export function PreApprovalView({ lang }: { lang: Lang }) {
             {c.quizTitle}
           </h2>
           <p className="leading-relaxed text-brand-slate">{c.quizHelp}</p>
-          <QualifyQuiz lang={lang} startGoal="buy" />
+          {/* Opens on "What would you like to do?" so all four options show: buy, refinance, HELOC, reverse (Ace, Oct 2026). */}
+          <QualifyQuiz lang={lang} />
         </section>
 
         <div className="answer-body">
