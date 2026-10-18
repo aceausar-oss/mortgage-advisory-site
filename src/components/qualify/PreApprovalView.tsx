@@ -1,9 +1,11 @@
+import Image from "next/image";
 import Link from "next/link";
 import { AuthorBox, Breadcrumbs, TldrBox } from "@/components/AnswerParts";
 import { Disclosures } from "@/components/Disclosures";
 import { JsonLd } from "@/components/JsonLd";
 import { QualifyQuiz } from "@/components/qualify/QualifyQuiz";
 import type { Lang } from "@/lib/i18n";
+import { PRE_APPROVAL_PHOTO as PHOTO } from "@/lib/preApproval";
 import { licensing, siteUrl } from "@/lib/site";
 
 // /pre-approval and /es/pre-approval (Ace, Oct 2026): answer-first page for "How do I get pre-approved?" (CLAUDE.md §6),
@@ -421,6 +423,18 @@ export function PreApprovalView({ lang }: { lang: Lang }) {
           <h1 className="text-3xl font-bold leading-tight sm:text-4xl">
             {c.h1}
           </h1>
+          {/* Same young family as the share image (Ace, Oct 2026). Kept short on phones so the quiz stays close. */}
+          <div className="relative aspect-[16/9] overflow-hidden rounded-2xl sm:aspect-[21/9]">
+            <Image
+              src={PHOTO.src}
+              alt={PHOTO.alt[lang]}
+              fill
+              preload
+              sizes="(min-width: 768px) 768px, 100vw"
+              className="object-cover"
+              style={{ objectPosition: PHOTO.position }}
+            />
+          </div>
           <TldrBox text={c.tldr} lang={lang} />
         </header>
 
