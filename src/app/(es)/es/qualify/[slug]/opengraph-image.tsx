@@ -9,5 +9,5 @@ export const generateStaticParams = () => QUALIFY_PATHS.map((p) => ({ slug: p.sl
 // Spanish previews use the Latino homeowner couple, like the Spanish loan pages.
 export default async function Image({ params }: { params: Promise<{ slug: string }> }) {
   const p = qualifyPath((await params).slug) ?? QUALIFY_PATHS[0];
-  return shareImage({ photo: p.photoEs, position: p.positionEs, headline: p.es.share, sub: p.es.shareSub, flags: p.slug === "reverse-mortgage" });
+  return shareImage({ photo: p.photoEs, position: p.positionEs, headline: p.es.share, sub: p.es.shareSub });
 }
