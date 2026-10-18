@@ -208,7 +208,8 @@ export function QualifyQuiz({
             ) : (
               <span />
             )}
-            {phase !== "outside" && <span>{t.step(shownStep, total)}</span>}
+            {/* No count until a path is picked: the total depends on the path. */}
+            {phase !== "outside" && answers.goal ? <span>{t.step(shownStep, total)}</span> : null}
           </div>
           <div
             className="h-2 overflow-hidden rounded-full bg-mist"

@@ -1,11 +1,9 @@
-import Image from "next/image";
 import Link from "next/link";
 import { AuthorBox, Breadcrumbs, TldrBox } from "@/components/AnswerParts";
 import { Disclosures } from "@/components/Disclosures";
 import { JsonLd } from "@/components/JsonLd";
 import { QualifyQuiz } from "@/components/qualify/QualifyQuiz";
 import type { Lang } from "@/lib/i18n";
-import { PRE_APPROVAL_PHOTO as PHOTO } from "@/lib/preApproval";
 import { licensing, siteUrl } from "@/lib/site";
 
 // /pre-approval and /es/pre-approval (Ace, Oct 2026): answer-first page for "How do I get pre-approved?" (CLAUDE.md §6),
@@ -22,9 +20,6 @@ const C = {
     eyebrow: "Mortgage pre-approval",
     h1: "How do I get pre-approved for a mortgage?",
     tldr: "Share your income, assets, and debts, and let a lender review your credit and documents. That review is what turns a guess into a pre-approval letter sellers take seriously. At The Mortgage Advisory (NMLS #1549739), licensed in California, Texas, Florida, and Colorado, you start with a 2-minute quiz, then an advisor reviews your documents and gives you a pre-approval you can count on.",
-    quizTitle: "Start with the 2-minute quiz",
-    quizHelp:
-      "Buying, refinancing, tapping your equity, or a reverse mortgage: pick yours below. No credit check and no Social Security number. You'll see the loan options that may fit, an estimate where we can give one, and your document checklist.",
     scenarioTitle: "Example scenario (illustrative)",
     takeTitle: "Our take",
     ctaTitle: "Ready for a real pre-approval?",
@@ -39,9 +34,6 @@ const C = {
     eyebrow: "Preaprobación hipotecaria",
     h1: "¿Cómo obtengo una preaprobación para una hipoteca?",
     tldr: "Comparta sus ingresos, bienes y deudas, y deje que un prestamista revise su crédito y sus documentos. Esa revisión es lo que convierte un cálculo en una carta de preaprobación que los vendedores toman en serio. En The Mortgage Advisory (NMLS #1549739), con licencia en California, Texas, Florida y Colorado, empieza con un cuestionario de 2 minutos; luego un asesor revisa sus documentos y le da una preaprobación con la que puede contar.",
-    quizTitle: "Empiece con el cuestionario de 2 minutos",
-    quizHelp:
-      "Comprar, refinanciar, usar el valor líquido de su casa o una hipoteca inversa: elija la suya abajo. Sin revisar su crédito y sin número de Seguro Social. Verá las opciones de préstamo que pueden funcionarle, un estimado cuando es posible y su lista de documentos.",
     scenarioTitle: "Ejemplo (ilustrativo)",
     takeTitle: "Nuestra opinión",
     ctaTitle: "¿Listo para una preaprobación real?",
@@ -423,32 +415,13 @@ export function PreApprovalView({ lang }: { lang: Lang }) {
           <h1 className="text-3xl font-bold leading-tight sm:text-4xl">
             {c.h1}
           </h1>
-          {/* Same young family as the share image (Ace, Oct 2026). Kept short on phones so the quiz stays close. */}
-          <div className="relative aspect-[16/9] overflow-hidden rounded-2xl sm:aspect-[21/9]">
-            <Image
-              src={PHOTO.src}
-              alt={PHOTO.alt[lang]}
-              fill
-              preload
-              sizes="(min-width: 768px) 768px, 100vw"
-              className="object-cover"
-              style={{ objectPosition: PHOTO.position }}
-            />
-          </div>
-          <TldrBox text={c.tldr} lang={lang} />
         </header>
 
-        <section
-          aria-labelledby="quiz"
-          className="space-y-3 rounded-3xl bg-mist p-4 sm:p-6"
-        >
-          <h2 id="quiz" className="font-heading text-2xl font-semibold">
-            {c.quizTitle}
-          </h2>
-          <p className="leading-relaxed text-brand-slate">{c.quizHelp}</p>
-          {/* Opens on "What would you like to do?" so all four options show: buy, refinance, HELOC, reverse (Ace, Oct 2026). */}
-          <QualifyQuiz lang={lang} />
-        </section>
+        {/* Quiz right under the headline so the four options (buy, refinance, HELOC, reverse) show on the first
+            screen of a phone (Ace, Oct 2026). The short answer follows it; the photo lives only in the share image. */}
+        <QualifyQuiz lang={lang} />
+
+        <TldrBox text={c.tldr} lang={lang} />
 
         <div className="answer-body">
           {sections.map((s) => (
