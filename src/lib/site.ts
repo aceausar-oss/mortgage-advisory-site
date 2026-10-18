@@ -20,7 +20,6 @@ export const mainNav = [
 // Grouped under "Resources" in the header and "Company & tools" in the footer (Ace, Sept 2026: nothing removed).
 export const resourcesNav = [
   { href: "/pre-approval", label: "Get Pre-Approved" },
-  { href: "/qualify", label: "See What You Qualify For" },
   { href: "/answers", label: "Answers" },
   { href: "/life-rate", label: "Life Rate Calculator" },
   { href: "/reverse-calculator", label: "Reverse Mortgage Calculator" },

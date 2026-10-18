@@ -101,7 +101,6 @@ export const spanishResourcesNav = [
   { href: "/es/loans/non-qm", label: "Préstamos Non-QM" },
   { href: "/es/loans/debt-consolidation", label: "Consolidar deudas" },
   { href: "/es/pre-approval", label: "Obtener preaprobación" },
-  { href: "/es/qualify", label: "Vea para qué califica" },
   { href: "/es/ask", label: "Pregúntele al asistente" },
   { href: "/es/book", label: "Reservar una llamada" },
 ];

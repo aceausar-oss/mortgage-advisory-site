@@ -201,7 +201,7 @@ export function QualifyQuiz({
               <button
                 type="button"
                 onClick={back}
-                className="rounded-full px-2 py-1 font-semibold text-brand-button hover:bg-mist"
+                className="inline-flex min-h-11 items-center gap-1 rounded-full px-3 font-semibold text-brand-button hover:bg-mist"
               >
                 <span aria-hidden="true">←</span> {t.back}
               </button>
@@ -479,7 +479,7 @@ function QuestionView({
               isAge ? q.title[lang] : `${q.title[lang]} ${t.inDollars}`
             }
             onChange={(e) => setNum(Math.max(0, Number(e.target.value) || 0))}
-            className="w-36 rounded-lg border border-brand-steel/50 px-2 py-1.5 text-right"
+            className="min-h-11 w-36 rounded-lg border border-brand-steel/50 px-3 text-right"
           />
         </label>
         <button
@@ -850,7 +850,7 @@ function Results({
               <li key={r.href}>
                 <Link
                   href={r.href}
-                  className="font-semibold text-brand-button underline underline-offset-4"
+                  className="inline-flex min-h-11 items-center font-semibold text-brand-button underline underline-offset-4"
                   hrefLang={es ? "en" : undefined}
                 >
                   {r.label[lang]}
@@ -874,7 +874,7 @@ function Results({
       <button
         type="button"
         onClick={onRestart}
-        className="text-sm font-semibold text-brand-button underline underline-offset-4"
+        className="inline-flex min-h-11 items-center text-sm font-semibold text-brand-button underline underline-offset-4"
       >
         {t.startOver}
       </button>
