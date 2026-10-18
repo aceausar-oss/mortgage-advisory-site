@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Lang } from "@/lib/i18n";
 import type { Goal } from "@/lib/qualify";
+import { quizHref } from "@/lib/qualifyPaths";
 
 // Loan and state pages: a short invite into the qualify quiz, opened on the matching path (Ace, Oct 2026).
 const COPY: Record<
@@ -83,7 +84,7 @@ export function QuizBanner({
 }) {
   const [title, body] = COPY[goal ?? "any"][lang];
   const es = lang === "es";
-  const href = `${es ? "/es" : ""}/qualify${goal ? `?goal=${goal}` : ""}`;
+  const href = quizHref(goal, lang);
   return (
     <aside
       aria-label={title}

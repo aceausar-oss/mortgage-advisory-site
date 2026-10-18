@@ -4,6 +4,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { QualifyQuiz } from "@/components/qualify/QualifyQuiz";
 import type { Lang } from "@/lib/i18n";
 import { GOALS, type Goal } from "@/lib/qualify";
+import type { QualifyPath } from "@/lib/qualifyPaths";
 import { licensing, siteUrl } from "@/lib/site";
 
 // /qualify and /es/qualify: the quiz on its own page. Loan pages link here with ?goal= so visitors land on their path.
@@ -71,10 +72,19 @@ export const goalFrom = (
   return g && GOALS.includes(g) ? g : undefined;
 };
 
-export function QualifyPageView({ lang, goal }: { lang: Lang; goal?: Goal }) {
-  const c = C[lang];
+export function QualifyPageView({
+  lang,
+  goal,
+  topic,
+}: {
+  lang: Lang;
+  goal?: Goal;
+  topic?: QualifyPath; // /qualify/refinance etc.: that path's own heading and link
+}) {
   const es = lang === "es";
-  const path = es ? "/es/qualify" : "/qualify";
+  const c = topic ? { ...C[lang], ...topic[lang] } : C[lang];
+  const startGoal = topic?.goal ?? goal;
+  const path = `${es ? "/es" : ""}/qualify${topic ? `/${topic.slug}` : ""}`;
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
@@ -139,7 +149,7 @@ export function QualifyPageView({ lang, goal }: { lang: Lang; goal?: Goal }) {
           </ul>
         </header>
 
-        <QualifyQuiz lang={lang} startGoal={goal} />
+        <QualifyQuiz lang={lang} startGoal={startGoal} />
         <noscript>
           <p className="rounded-2xl bg-white p-4 ring-1 ring-brand-steel/40">
             {c.noJs}{" "}

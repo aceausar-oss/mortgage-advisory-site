@@ -6,6 +6,7 @@ import { DidYouKnow } from "@/components/DidYouKnow";
 import { Disclosures } from "@/components/Disclosures";
 import { JsonLd } from "@/components/JsonLd";
 import { QuizBanner, goalForLoan } from "@/components/qualify/QuizBanner";
+import { quizHref } from "@/lib/qualifyPaths";
 import { bookingTypes } from "@/lib/home";
 import { getEntry } from "@/lib/kb";
 import type { LoanPage } from "@/lib/loans";
@@ -84,7 +85,7 @@ function LoanCtaEs({ page }: { page: LoanPage }) {
           Reserve una llamada con un asesor
         </Link>
         <Link
-          href={`/es/qualify${goalForLoan(page.slug) ? `?goal=${goalForLoan(page.slug)}` : ""}`}
+          href={quizHref(goalForLoan(page.slug), "es")}
           className="rounded-full border border-white px-5 py-2.5 font-semibold text-white hover:bg-white/10"
         >
           Vea para qué califica
@@ -114,7 +115,7 @@ function LoanCta({ page }: { page: LoanPage }) {
           Book a call with an advisor
         </Link>
         <Link
-          href={`/qualify${page.basePath === "/loans" && goalForLoan(page.slug) ? `?goal=${goalForLoan(page.slug)}` : ""}`}
+          href={quizHref(page.basePath === "/loans" ? goalForLoan(page.slug) : undefined, "en")}
           className="rounded-full border border-white px-5 py-2.5 font-semibold text-white hover:bg-white/10"
         >
           See what you qualify for

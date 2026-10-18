@@ -3,6 +3,7 @@ import { getHandouts } from "@/lib/handouts";
 import { getEntries } from "@/lib/kb";
 import { getLoanPages, getLocationPages } from "@/lib/loans";
 import { toEs } from "@/lib/i18n";
+import { QUALIFY_PATHS } from "@/lib/qualifyPaths";
 import { siteUrl } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -22,6 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${siteUrl}/book`, ...both("/book") },
     { url: `${siteUrl}/pre-approval`, lastModified: "2026-10-17", ...both("/pre-approval") },
     { url: `${siteUrl}/qualify`, ...both("/qualify") },
+    ...QUALIFY_PATHS.map((p) => ({ url: `${siteUrl}/qualify/${p.slug}`, ...both(`/qualify/${p.slug}`) })),
     { url: `${siteUrl}/reviews` },
     ...["life-rate", "reverse-calculator", "costs", "pros", "about", "licensing", "privacy", "terms", "accessibility", "do-not-sell"].map((p) => ({ url: `${siteUrl}/${p}` })),
     ...loans.map((p) => ({
@@ -33,6 +35,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${siteUrl}/es/book`, ...both("/book") },
     { url: `${siteUrl}/es/pre-approval`, lastModified: "2026-10-17", ...both("/pre-approval") },
     { url: `${siteUrl}/es/qualify`, ...both("/qualify") },
+    ...QUALIFY_PATHS.map((p) => ({ url: `${siteUrl}/es/qualify/${p.slug}`, ...both(`/qualify/${p.slug}`) })),
     ...esLoans.map((p) => ({ url: `${siteUrl}/es/loans/${p.slug}`, lastModified: p.updated, ...both(`/loans/${p.slug}`) })),
     ...answers.map((e) => ({ url: `${siteUrl}/answers/${e.slug}`, lastModified: e.updated })),
     ...getHandouts()

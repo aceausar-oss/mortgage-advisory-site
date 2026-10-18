@@ -8,7 +8,7 @@ export type Lang = "en" | "es";
 export const LANG_COOKIE = "lang";
 
 // English paths that have a Spanish twin under /es. Anything else toggles to the Spanish homepage.
-export const SPANISH_PATHS: string[] = ["/", "/ask", "/book", "/qualify", "/pre-approval", ...LOAN_SLUGS.map((s) => `/loans/${s}`)];
+export const SPANISH_PATHS: string[] = ["/", "/ask", "/book", "/qualify", "/pre-approval", "/qualify/refinance", "/qualify/heloc", "/qualify/reverse-mortgage", ...LOAN_SLUGS.map((s) => `/loans/${s}`)];
 
 /** "/loans/heloc" → "/es/loans/heloc"; "/" → "/es". */
 export const toEs = (path: string) => (path === "/" ? "/es" : `/es${path}`);
