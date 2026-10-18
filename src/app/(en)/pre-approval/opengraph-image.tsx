@@ -10,7 +10,7 @@ export default function Image() {
   return shareImage({
     photo: PHOTO.src,
     position: PHOTO.sharePosition,
-    headline: "What can you qualify for?",
+    headline: "What can I qualify for?",
     sub: "Get pre-approved · 2-minute quiz",
   });
 }

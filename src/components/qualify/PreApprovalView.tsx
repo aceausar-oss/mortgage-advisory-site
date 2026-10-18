@@ -19,7 +19,7 @@ const C = {
   en: {
     crumb: "Get pre-approved",
     eyebrow: "Mortgage pre-approval",
-    h1: "What can you qualify for?",
+    h1: "What can I qualify for?",
     faqQ: "How do I get pre-approved for a mortgage?",
     tldr: "Share your income, assets, and debts, and let a lender review your credit and documents. That review is what turns a guess into a pre-approval letter sellers take seriously. At The Mortgage Advisory (NMLS #1549739), licensed in California, Texas, Florida, and Colorado, you start with a 2-minute quiz, then an advisor reviews your documents and gives you a pre-approval you can count on.",
     scenarioTitle: "Example scenario (illustrative)",
@@ -34,7 +34,7 @@ const C = {
   es: {
     crumb: "Obtener preaprobación",
     eyebrow: "Preaprobación hipotecaria",
-    h1: "¿Para qué puede calificar?",
+    h1: "¿Para qué puedo calificar?",
     faqQ: "¿Cómo obtengo una preaprobación para una hipoteca?",
     tldr: "Comparta sus ingresos, bienes y deudas, y deje que un prestamista revise su crédito y sus documentos. Esa revisión es lo que convierte un cálculo en una carta de preaprobación que los vendedores toman en serio. En The Mortgage Advisory (NMLS #1549739), con licencia en California, Texas, Florida y Colorado, empieza con un cuestionario de 2 minutos; luego un asesor revisa sus documentos y le da una preaprobación con la que puede contar.",
     scenarioTitle: "Ejemplo (ilustrativo)",

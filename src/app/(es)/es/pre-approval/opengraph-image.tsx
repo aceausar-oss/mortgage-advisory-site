@@ -10,7 +10,7 @@ export default function Image() {
   return shareImage({
     photo: PHOTO.src,
     position: PHOTO.sharePosition,
-    headline: "¿Para qué puede calificar?",
+    headline: "¿Para qué puedo calificar?",
     sub: "Preaprobación · Cuestionario de 2 minutos",
   });
 }
