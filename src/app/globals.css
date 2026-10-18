@@ -308,3 +308,9 @@ h4 {
   from { transform: translateY(24px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
 }
+
+/* Quiz banner photo swap (pre-approval page) */
+@keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

@@ -1,9 +1,8 @@
-import Image from "next/image";
 import Link from "next/link";
 import { AuthorBox, Breadcrumbs, TldrBox } from "@/components/AnswerParts";
 import { Disclosures } from "@/components/Disclosures";
 import { JsonLd } from "@/components/JsonLd";
-import { QualifyQuiz } from "@/components/qualify/QualifyQuiz";
+import { QuizWithPhoto } from "@/components/qualify/QuizWithPhoto";
 import type { Lang } from "@/lib/i18n";
 import { PRE_APPROVAL_PHOTO as PHOTO } from "@/lib/preApproval";
 import { licensing, siteUrl } from "@/lib/site";
@@ -417,23 +416,10 @@ export function PreApprovalView({ lang }: { lang: Lang }) {
           <h1 className="text-3xl font-bold leading-tight sm:text-4xl">
             {c.h1}
           </h1>
-          {/* Short on phones so the four option tiles still show on the first screen. */}
-          <div className="relative aspect-[4/1] overflow-hidden rounded-2xl sm:aspect-[3/1]">
-            <Image
-              src={PHOTO.src}
-              alt={PHOTO.alt[lang]}
-              fill
-              preload
-              sizes="(min-width: 768px) 768px, 100vw"
-              className="object-cover"
-              style={{ objectPosition: PHOTO.position }}
-            />
-          </div>
         </header>
 
-        {/* Quiz right under the headline so the four options (buy, refinance, HELOC, reverse) show on the first
-            screen of a phone (Ace, Oct 2026). The short answer follows it; the photo lives only in the share image. */}
-        <QualifyQuiz lang={lang} />
+        {/* Banner photo + quiz: the photo changes to the picked option's photo (Ace, Oct 2026). */}
+        <QuizWithPhoto lang={lang} defaultPhoto={PHOTO} />
 
         <TldrBox text={c.tldr} lang={lang} />
 

@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { Disclosures } from "@/components/Disclosures";
@@ -117,21 +116,17 @@ const T = {
   },
 };
 
-const GOAL_PHOTOS: Record<Goal, { src: string; srcEs?: string; position: string }> = {
-  buy: { src: "/images/first-home-family.jpg", srcEs: "/images/es-buyers-family.jpg", position: "center 30%" },
-  refi: { src: "/images/loans/loan-refinance.jpg", position: "center 25%" },
-  cash: { src: "/images/loans/loan-heloc.jpg", position: "center" },
-  reverse: { src: "/images/loans/loan-reverse-mortgage.jpg", position: "20% center" },
-};
-
 type Phase = "questions" | "contact" | "results" | "outside";
 
 export function QualifyQuiz({
   lang = "en",
   startGoal,
+  onGoalChange,
 }: {
   lang?: Lang;
   startGoal?: Goal;
+  /** Called when the visitor picks (or clears) a path, so the page can show that path's photo. */
+  onGoalChange?: (goal: Goal | undefined) => void;
 }) {
   const t = T[lang];
   const es = lang === "es";
@@ -145,6 +140,10 @@ export function QualifyQuiz({
   const [sendFailed, setSendFailed] = useState(false);
   const headingRef = useRef<HTMLHeadingElement>(null);
   const moved = useRef(false);
+  const goal = answers.goal as Goal | undefined;
+  useEffect(() => {
+    onGoalChange?.(goal);
+  }, [goal, onGoalChange]);
   const id = useId();
 
   // Move focus to the new question (not on first load, so the page doesn't jump).
@@ -352,52 +351,6 @@ function QuestionView({
       )}
     </div>
   );
-
-  // First question: the four paths as photo tiles (Ace, Oct 2026), two across even on phones so all four stay in view.
-  if (q.kind === "choice" && q.id === "goal") {
-    return (
-      <div className="space-y-5">
-        {heading}
-        <ul className="grid grid-cols-2 gap-3 sm:grid-cols-4" aria-labelledby={`${id}-q`}>
-          {q.options.map((opt) => {
-            const picked = answers[q.id] === opt.value;
-            const img = GOAL_PHOTOS[opt.value as Goal];
-            return (
-              <li key={opt.value}>
-                <button
-                  type="button"
-                  aria-pressed={picked}
-                  onClick={() => onChoose(q.id, opt.value)}
-                  className={`flex h-full w-full flex-col overflow-hidden rounded-2xl text-left ring-1 transition-colors ${
-                    picked
-                      ? "bg-brand-soft ring-2 ring-brand-slate"
-                      : "bg-white ring-brand-steel/40 hover:bg-mist hover:ring-brand-blue-deep"
-                  }`}
-                >
-                  <span className="relative block aspect-[2/1] w-full bg-mist sm:aspect-[4/3]">
-                    <Image
-                      src={lang === "es" && img.srcEs ? img.srcEs : img.src}
-                      alt=""
-                      fill
-                      sizes="(min-width: 640px) 180px, 50vw"
-                      className="object-cover"
-                      style={{ objectPosition: img.position }}
-                    />
-                  </span>
-                  <span className="flex flex-1 items-start justify-between gap-2 px-3 py-2.5 text-base font-semibold leading-snug text-brand-ink">
-                    {opt.label[lang]}
-                    <span aria-hidden="true" className="text-brand-button">
-                      →
-                    </span>
-                  </span>
-                </button>
-              </li>
-            );
-          })}
-        </ul>
-      </div>
-    );
-  }
 
   if (q.kind === "choice") {
     return (
