@@ -30,7 +30,7 @@ reviewed_by: "Ace Ausar, NMLS #1143018"
 status: published
 ---
 
-## How does a reverse mortgage work in plain English?
+## How does a reverse mortgage work, in simple terms?
 
 It's a loan against your home's equity where **you don't make a monthly mortgage payment**. Instead, the interest and fees are added to the balance over time. You keep the title and keep living in the home. The loan is repaid when the last borrower moves out, sells, or passes away, usually by selling the home, and any equity left over belongs to you or your heirs.
 

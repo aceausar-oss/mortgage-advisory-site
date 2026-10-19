@@ -26,7 +26,7 @@ Both, and we'll always tell you which. We're the **direct lender** on convention
 ## What we believe
 
 - **Show every cost.** Including ours.
-- **Plain English.** If you don't understand something, that's on us.
+- **Made simple.** If you don't understand something, that's on us.
 - **Do the math, not the headline.** We look at your Life Rate, the blended rate on everything you owe, not just your mortgage rate.
 - **Answer the phone.** You'll talk to people who know your file.
 - **Say no when it's right.** If a loan doesn't help you, we'll tell you.

@@ -1,6 +1,6 @@
 ---
 title: "Email Template: Starting a Home Equity Conversation"
-description: "A ready-to-edit email financial professionals can send a client to introduce home equity options, with links to plain-English answers."
+description: "A ready-to-edit email financial professionals can send a client to introduce home equity options, with links to simple, clear answers."
 audience: professional
 order: 4
 updated: 2026-09-30
@@ -17,7 +17,7 @@ Copy, edit, and send from your own email. Replace the parts in [brackets]. Your 
 >
 > As we've been working on your retirement plan, I want to make sure we're looking at every resource you have, including your home. For many retirees, it's the largest asset they own, and it's often left out of the plan.
 >
-> Here are two short, plain-English articles worth a few minutes of your time:
+> Here are two short, simple articles worth a few minutes of your time:
 >
 > - Can a reverse mortgage pay me every month for life? TheMortgageAdvisory.com/answers/reverse-mortgage-monthly-income-for-life
 > - When is a reverse mortgage a bad idea? TheMortgageAdvisory.com/answers/when-is-a-reverse-mortgage-a-bad-idea

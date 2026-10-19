@@ -28,7 +28,7 @@ const TOOLS: { title: string; body: string; href: string; cta: string; image?: {
   },
   {
     title: "Reverse mortgage library",
-    body: "Plain-English answers on the line of credit, taxes, trusts, spouses, heirs, and when a reverse mortgage is a bad idea. Safe to share with clients.",
+    body: "Simple, clear answers on the line of credit, taxes, trusts, spouses, heirs, and when a reverse mortgage is a bad idea. Safe to share with clients.",
     href: "/answers",
     cta: "Browse the answers",
   },

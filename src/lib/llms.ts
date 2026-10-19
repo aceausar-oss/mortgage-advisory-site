@@ -29,7 +29,7 @@ export function llmsTxt() {
     "## Key pages",
     "",
     `- [Home](${siteUrl}/): who we are and how to reach us`,
-    `- [Mortgage questions answered](${siteUrl}/answers): plain-English answers to real borrower questions, searchable by topic and state`,
+    `- [Mortgage questions answered](${siteUrl}/answers): simple, clear answers to real borrower questions, searchable by topic and state`,
     `- [Full answer text](${siteUrl}/llms-full.txt): every published answer as plain text`,
     `- [Costs and how we're paid](${siteUrl}/costs): typical closing costs, fees, and how we're compensated`,
     `- [How to get pre-approved](${siteUrl}/pre-approval): documents, timing, credit impact, and pre-qualification vs. pre-approval`,

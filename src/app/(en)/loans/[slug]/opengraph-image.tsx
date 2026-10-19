@@ -14,7 +14,7 @@ export default async function Image({ params }: { params: Promise<{ slug: string
   const page = getLoanPage((await params).slug);
   return shareImage({
     photo: page?.image ?? "/images/pages/home-banner-photo.jpg",
-    headline: page?.question ?? "Plain-English mortgage answers",
+    headline: page?.question ?? "Mortgage answers, made simple",
     sub: page ? `${page.name} · Answered by Ace Ausar` : undefined,
     position: page?.imagePosition ?? "center",
     flags: page?.slug === "reverse-mortgage",

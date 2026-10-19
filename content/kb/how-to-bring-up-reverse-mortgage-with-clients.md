@@ -2,8 +2,8 @@
 question: "How do I bring up a reverse mortgage with a client without it sounding like a sales pitch?"
 slug: how-to-bring-up-reverse-mortgage-with-clients
 seoTitle: "How to Bring Up a Reverse Mortgage With a Client"
-description: "Start with the client's goal, not the product. Plain-English openers, questions to ask, and how to bring in a lender while you stay in control."
-tldr: "Start with the client's goal, not the product, and with what the rest of the world already knows: in South Korea, Switzerland, and Sweden, a reverse mortgage is called a housing pension. Ask how they feel about their mortgage payment, a down market, or staying in the home, and introduce home equity as one more resource in the plan. Share a plain-English article first, then bring in a lender for the numbers, with you in the room. The Mortgage Advisory offers financial professionals free case reviews and never offers or accepts referral fees."
+description: "Start with the client's goal, not the product. Simple, clear openers, questions to ask, and how to bring in a lender while you stay in control."
+tldr: "Start with the client's goal, not the product, and with what the rest of the world already knows: in South Korea, Switzerland, and Sweden, a reverse mortgage is called a housing pension. Ask how they feel about their mortgage payment, a down market, or staying in the home, and introduce home equity as one more resource in the plan. Share a simple, clear article first, then bring in a lender for the numbers, with you in the room. The Mortgage Advisory offers financial professionals free case reviews and never offers or accepts referral fees."
 category: pros
 products: [hecm, proprietary-reverse, reverse-second]
 persona: financial-professional

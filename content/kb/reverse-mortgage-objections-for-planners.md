@@ -3,7 +3,7 @@ question: "What should I say when a client thinks a reverse mortgage is a scam o
 slug: reverse-mortgage-objections-for-planners
 seoTitle: "Answering Client Objections to Reverse Mortgages"
 description: "Plain answers to the objections planners hear most, a 30-second way to introduce home equity, the family talk, and ad red flags to warn clients about."
-tldr: "Most objections come from old stories, not today's loan. Answer with facts: it's a regulated loan with independent counseling, the client keeps title, and FHA-insured HECMs are non-recourse. Then ask what's really holding them back, and bring the family in. The Mortgage Advisory gives financial professionals plain-English answers and never offers or accepts referral fees."
+tldr: "Most objections come from old stories, not today's loan. Answer with facts: it's a regulated loan with independent counseling, the client keeps title, and FHA-insured HECMs are non-recourse. Then ask what's really holding them back, and bring the family in. The Mortgage Advisory gives financial professionals simple, clear answers and never offers or accepts referral fees."
 category: pros
 products: [hecm, proprietary-reverse, reverse-second]
 persona: financial-professional

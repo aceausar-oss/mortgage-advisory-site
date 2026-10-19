@@ -18,7 +18,7 @@ status: published
 researchId: heloc-how-it-works
 ---
 
-## What is a HELOC in plain English?
+## What is a HELOC, in simple terms?
 
 Think of it like a credit card backed by your house, just with a much lower rate. You get a credit limit based on your equity (what your home is worth minus what you owe), and you can use it without touching your first mortgage.
 
