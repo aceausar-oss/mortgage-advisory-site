@@ -1,7 +1,7 @@
 ---
 h1: "How can home equity strengthen your clients' retirement plans?"
 title: "Resources for Financial Professionals"
-description: "Free tools and plain-English resources for CFPs, advisors, CPAs, and estate planners whose clients could use a reverse mortgage, HELOC, or refinance."
+description: "Free tools and simple, clear resources for CFPs, advisors, CPAs, and estate planners whose clients could use a reverse mortgage, HELOC, or refinance."
 intro: "For most retirees, the home is the biggest asset on the balance sheet, and it's usually left out of the plan. The Mortgage Advisory helps financial professionals put it to work for their clients with reverse mortgages, HELOCs, and refinances. We never touch your clients' investments, never sell annuities or insurance, and never offer or accept referral fees."
 updated: 2026-09-30
 faq:
@@ -97,7 +97,7 @@ Not sure which program fits? See [which reverse mortgage fits which client](/ans
 
 Yes, two ways, both built to keep your firm and ours in compliance:
 
-- **Our free educational workshops.** We host plain-English homeowner workshops, like *Is Your Home a Hidden Pension?*, open to the public. You're welcome to invite your clients and attend. They're our events, at our cost, and aren't offered in exchange for referrals.
+- **Our free educational workshops.** We host simple, no-jargon homeowner workshops, like *Is Your Home a Hidden Pension?*, open to the public. You're welcome to invite your clients and attend. They're our events, at our cost, and aren't offered in exchange for referrals.
 - **Co-hosted workshops.** When we present together, each firm pays its fair share of the costs, agreed in writing up front. Both firms' compliance teams review the materials before anything goes out.
 
 Either way, we present education only. No loan applications are taken at the event, and no one is ever pressured.

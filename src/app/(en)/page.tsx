@@ -122,7 +122,7 @@ export default function Home() {
         eyebrow="Common questions"
         title={
           <>
-            Real questions, <span className="text-brand-blue-deep">plain-English answers</span>.
+            Real questions, <span className="text-brand-blue-deep">answers made simple</span>.
           </>
         }
         intro="Pick a topic. Every answer is reviewed by a licensed mortgage banker."
@@ -140,7 +140,7 @@ export default function Home() {
               Book a call with an <span className="text-brand-blue-deep">advisor</span>.
             </>
           }
-          intro="Pick the topic that fits, choose a time, and talk it through, with no pressure and plain English."
+          intro="Pick the topic that fits, choose a time, and talk it through, with no pressure and no jargon."
         >
           <BookingSection />
         </FloatingCard>

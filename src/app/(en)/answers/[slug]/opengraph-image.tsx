@@ -1,7 +1,7 @@
 import { getEntries, getEntry } from "@/lib/kb";
 import { shareContentType, shareImage, shareSize } from "@/lib/shareImage";
 
-export const alt = "A plain-English answer from The Mortgage Advisory";
+export const alt = "A simple, clear answer from The Mortgage Advisory";
 export const size = shareSize;
 export const contentType = shareContentType;
 
@@ -28,7 +28,7 @@ export default async function Image({ params }: { params: Promise<{ slug: string
   const pick = (entry && PHOTO[entry.category]) || { photo: "/images/pages/home-banner-photo.jpg" };
   return shareImage({
     photo: pick.photo,
-    headline: entry?.question ?? "Plain-English mortgage answers",
+    headline: entry?.question ?? "Mortgage answers, made simple",
     sub: "Answered by Ace Ausar, mortgage banker",
     position: pick.position,
   });

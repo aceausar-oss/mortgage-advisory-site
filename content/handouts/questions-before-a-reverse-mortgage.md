@@ -7,7 +7,7 @@ updated: 2026-09-30
 status: published
 ---
 
-Ask any lender these questions, including us. A good lender will answer every one in plain English and in writing.
+Ask any lender these questions, including us. A good lender will answer every one simply, clearly and in writing.
 
 1. **Is this an FHA-insured HECM or a private (proprietary) reverse mortgage?** The protections and costs are different.
 2. **What are all the costs?** Ask for the FHA insurance premium, origination fee, closing costs, and ongoing costs, on paper.

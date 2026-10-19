@@ -9,7 +9,7 @@ import { licensing } from "@/lib/site";
 // best-matching answers plus ways to reach us. Without JavaScript, the answers list and a plain form still work.
 export const metadata: Metadata = {
   title: "Ask a Mortgage Question",
-  description: "Get plain-English answers to your mortgage, HELOC, reverse mortgage, and home equity questions from a licensed mortgage lender and broker, NMLS #1549739.",
+  description: "Get simple, clear answers to your mortgage, HELOC, reverse mortgage, and home equity questions from a licensed mortgage lender and broker, NMLS #1549739.",
   alternates: { canonical: "/ask" },
   robots: { index: false, follow: true },
 };
@@ -42,7 +42,7 @@ export default async function AskPage({ searchParams }: PageProps<"/ask">) {
     <div className="mx-auto max-w-3xl space-y-8 px-4 py-12 sm:px-6">
       <header className="space-y-2">
         <h1 className="text-2xl font-bold sm:text-3xl">Ask our mortgage assistant</h1>
-        <p className="text-brand-slate">Plain-English answers about HELOCs, reverse mortgages, buying, and refinancing. Ace and our team take it from there.</p>
+        <p className="text-brand-slate">Simple, clear answers about HELOCs, reverse mortgages, buying, and refinancing. Ace and our team take it from there.</p>
       </header>
 
       {/* With JavaScript: the live AI chat. Without it: a simple form that shows matching answers below. */}
