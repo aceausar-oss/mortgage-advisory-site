@@ -47,6 +47,14 @@ export const bookingTypes = [
 // "Español" so the team assigns a Spanish speaker.
 export const spanishCalendars: Partial<Record<(typeof bookingTypes)[number]["key"], { calendarId: string; url: string }>> = {};
 
+// Financial Pro Partner Call (Ace, Nov 2026): the advisor-only calendar for /pros (case reviews and workshops).
+// Bookings run the "FinPro - Partner Call Booked" workflow in GHL (finpro tag, Financial Pro Partners pipeline),
+// so advisors never land in the homeowner calendars or drips.
+export const prosBooking = {
+  calendarId: "qFNvWy839XWxpfLTfp3D",
+  url: "https://api.leadconnectorhq.com/widget/bookings/financial-pro-call",
+} as const;
+
 export const bookingEmbedUrl = (calendarId: string) => `https://api.leadconnectorhq.com/widget/booking/${calendarId}`;
 
 // Client stories (CLAUDE.md §4.4): rendered only with written consent on file.

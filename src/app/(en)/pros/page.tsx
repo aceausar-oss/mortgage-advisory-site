@@ -5,6 +5,7 @@ import { Disclosures } from "@/components/Disclosures";
 import { ContentPageView, contentPageMetadata } from "@/components/ContentPageView";
 import { getHandouts } from "@/lib/handouts";
 import { getEntries } from "@/lib/kb";
+import { prosBooking } from "@/lib/home";
 import { getContentPage } from "@/lib/pages";
 import { licensing } from "@/lib/site";
 
@@ -35,13 +36,13 @@ const TOOLS: { title: string; body: string; href: string; cta: string; image?: {
   {
     title: "15-minute case review",
     body: "Bring a client scenario, no names needed. We'll tell you honestly whether a reverse mortgage, HELOC, or refinance fits.",
-    href: "/book",
+    href: prosBooking.url,
     cta: "Book a case review",
   },
   {
     title: "Client workshops",
     body: "Invite clients to our free homeowner workshops, or co-host one with us at fair, shared cost. Materials sent early for compliance review.",
-    href: "/book",
+    href: prosBooking.url,
     cta: "Ask about a workshop",
     image: { src: "/images/pages/pros-workshop.jpg", alt: "Ace Ausar presenting a reverse mortgage workshop to a small group of homeowners" },
   },
@@ -149,9 +150,9 @@ export default function ProsPage() {
             <p className="font-heading text-xl font-semibold text-white">Have a client in mind?</p>
             <p className="mt-1 text-white/90">Book a 15-minute case review with our team. No names needed. We never offer or accept referral fees.</p>
             <div className="mt-4 flex flex-wrap gap-3">
-              <Link href="/book" className="rounded-full bg-white px-5 py-2.5 font-semibold text-brand-slate hover:bg-mist">
+              <a href={prosBooking.url} className="rounded-full bg-white px-5 py-2.5 font-semibold text-brand-slate hover:bg-mist">
                 Book a case review
-              </Link>
+              </a>
               <a href={`tel:${licensing.phoneE164}`} className="rounded-full border border-white px-5 py-2.5 font-semibold text-white hover:bg-white/10">
                 Call {licensing.phone}
               </a>
