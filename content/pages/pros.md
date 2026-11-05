@@ -104,4 +104,4 @@ Either way, we present education only. No loan applications are taken at the eve
 
 ## What's the easiest next step?
 
-Book a 15-minute case review. Bring a client scenario (no names needed), and we'll tell you honestly whether a reverse mortgage, HELOC, or refinance fits, and what it could look like.
+Book a 30-minute case review. Bring a client scenario (no names needed), and we'll tell you honestly whether a reverse mortgage, HELOC, or refinance fits, and what it could look like.
