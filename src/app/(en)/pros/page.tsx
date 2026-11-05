@@ -5,7 +5,8 @@ import { Disclosures } from "@/components/Disclosures";
 import { ContentPageView, contentPageMetadata } from "@/components/ContentPageView";
 import { getHandouts } from "@/lib/handouts";
 import { getEntries } from "@/lib/kb";
-import { prosBooking } from "@/lib/home";
+import { CalendarPopupButton } from "@/components/CalendarPopupButton";
+import { bookingEmbedUrl, prosBooking } from "@/lib/home";
 import { getContentPage } from "@/lib/pages";
 import { licensing } from "@/lib/site";
 
@@ -14,7 +15,10 @@ import { licensing } from "@/lib/site";
 const page = getContentPage("pros");
 export const metadata = contentPageMetadata(page);
 
-const TOOLS: { title: string; body: string; href: string; cta: string; image?: { src: string; alt: string } }[] = [
+// Case reviews and workshops book the Financial Pro calendar in a pop-up window (same as /book), not a new page.
+const PROS_CALENDAR = { title: "Financial Pro Partner Call", url: prosBooking.url, embedUrl: bookingEmbedUrl(prosBooking.calendarId) };
+
+const TOOLS: { title: string; body: string; href: string; cta: string; popup?: boolean; image?: { src: string; alt: string } }[] = [
   {
     title: "Reverse Mortgage Calculator",
     body: "Four numbers, an estimated range, and an honest fit rating, built on HUD's official tables. Share the link with clients: TheMortgageAdvisory.com/reverse-calculator.",
@@ -38,12 +42,14 @@ const TOOLS: { title: string; body: string; href: string; cta: string; image?: {
     body: "Bring a client scenario, no names needed. We'll tell you honestly whether a reverse mortgage, HELOC, or refinance fits.",
     href: prosBooking.url,
     cta: "Book a case review",
+    popup: true,
   },
   {
     title: "Client workshops",
     body: "Invite clients to our free homeowner workshops, or co-host one with us at fair, shared cost. Materials sent early for compliance review.",
     href: prosBooking.url,
     cta: "Ask about a workshop",
+    popup: true,
     image: { src: "/images/pages/pros-workshop.jpg", alt: "Ace Ausar presenting a reverse mortgage workshop to a small group of homeowners" },
   },
 ];
@@ -101,9 +107,17 @@ export default function ProsPage() {
                 <div className="flex flex-1 flex-col p-5">
                   <h3 className="font-heading text-lg font-semibold">{t.title}</h3>
                   <p className="mt-1 flex-1 leading-relaxed">{t.body}</p>
-                  <Link href={t.href} className="mt-3 font-semibold text-brand-button underline underline-offset-4">
-                    {t.cta} →
-                  </Link>
+                  {t.popup ? (
+                    <CalendarPopupButton
+                      {...PROS_CALENDAR}
+                      label={`${t.cta} →`}
+                      className="mt-3 font-semibold text-brand-button underline underline-offset-4"
+                    />
+                  ) : (
+                    <Link href={t.href} className="mt-3 font-semibold text-brand-button underline underline-offset-4">
+                      {t.cta} →
+                    </Link>
+                  )}
                 </div>
               </li>
             ))}
@@ -150,9 +164,12 @@ export default function ProsPage() {
             <p className="font-heading text-xl font-semibold text-white">Have a client in mind?</p>
             <p className="mt-1 text-white/90">Book a 30-minute case review with our team. No names needed. We never offer or accept referral fees.</p>
             <div className="mt-4 flex flex-wrap gap-3">
-              <a href={prosBooking.url} className="rounded-full bg-white px-5 py-2.5 font-semibold text-brand-slate hover:bg-mist">
-                Book a case review
-              </a>
+              <CalendarPopupButton
+                {...PROS_CALENDAR}
+                label="Book a case review"
+                hashKey="book"
+                className="rounded-full bg-white px-5 py-2.5 font-semibold text-brand-slate hover:bg-mist"
+              />
               <a href={`tel:${licensing.phoneE164}`} className="rounded-full border border-white px-5 py-2.5 font-semibold text-white hover:bg-white/10">
                 Call {licensing.phone}
               </a>
