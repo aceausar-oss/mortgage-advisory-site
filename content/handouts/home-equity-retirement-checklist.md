@@ -37,4 +37,4 @@ For most retirees, the home is the biggest asset they own, and it's often left o
 
 If you checked **three or more**, it's worth a conversation about home equity options: a reverse mortgage, a HELOC, or a refinance. The goal isn't to take out a loan; it's to make sure your plan uses every resource you have.
 
-**Next step:** ask your financial professional to book a 15-minute case review with The Mortgage Advisory at TheMortgageAdvisory.com/pros, or call (949) 649-4499.
+**Next step:** ask your financial professional to book a 30-minute case review with The Mortgage Advisory at TheMortgageAdvisory.com/pros, or call (949) 649-4499.

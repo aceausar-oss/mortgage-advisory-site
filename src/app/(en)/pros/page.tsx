@@ -34,7 +34,7 @@ const TOOLS: { title: string; body: string; href: string; cta: string; image?: {
     cta: "Browse the answers",
   },
   {
-    title: "15-minute case review",
+    title: "30-minute case review",
     body: "Bring a client scenario, no names needed. We'll tell you honestly whether a reverse mortgage, HELOC, or refinance fits.",
     href: prosBooking.url,
     cta: "Book a case review",
@@ -148,7 +148,7 @@ export default function ProsPage() {
         <>
           <section aria-label="Talk to our team" className="rounded-2xl bg-brand-slate p-6 text-white">
             <p className="font-heading text-xl font-semibold text-white">Have a client in mind?</p>
-            <p className="mt-1 text-white/90">Book a 15-minute case review with our team. No names needed. We never offer or accept referral fees.</p>
+            <p className="mt-1 text-white/90">Book a 30-minute case review with our team. No names needed. We never offer or accept referral fees.</p>
             <div className="mt-4 flex flex-wrap gap-3">
               <a href={prosBooking.url} className="rounded-full bg-white px-5 py-2.5 font-semibold text-brand-slate hover:bg-mist">
                 Book a case review
