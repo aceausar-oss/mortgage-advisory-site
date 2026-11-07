@@ -8,7 +8,8 @@ import { GuidePopup } from "@/components/guide/GuideOffer";
 import { guideEnabled } from "@/lib/guide";
 import { JsonLd } from "@/components/JsonLd";
 import { categoryLabel } from "@/lib/categories";
-import { getEntries, getEntry } from "@/lib/kb";
+import { alternates } from "@/lib/i18n";
+import { getEntries, getEntry, hasSpanish } from "@/lib/kb";
 import { siteUrl } from "@/lib/site";
 
 export const dynamicParams = false;
@@ -25,7 +26,8 @@ export async function generateMetadata({ params }: PageProps<"/answers/[slug]">)
     // Absolute title: the question itself is the best title; skip the "| brand" suffix to stay under 60 chars.
     title: { absolute: title },
     description: entry.description,
-    alternates: { canonical: `/answers/${entry.slug}` },
+    // Answers with a Spanish twin (/es/answers/*) list both languages (hreflang).
+    alternates: hasSpanish(entry.slug) ? alternates(`/answers/${entry.slug}`, "en") : { canonical: `/answers/${entry.slug}` },
     openGraph: { type: "article", title, description: entry.description, url: `/answers/${entry.slug}`, modifiedTime: entry.updated },
     robots: entry.isDraft ? { index: false, follow: false } : undefined,
   };

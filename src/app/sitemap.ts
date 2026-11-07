@@ -15,6 +15,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const esLoans = getLoanPages("es").filter((p) => !p.isDraft);
   const both = (path: string) => ({ alternates: { languages: { "en-US": `${siteUrl}${path}`, "es-US": `${siteUrl}${toEs(path)}` } } });
   const esLoanSlugs = new Set(esLoans.map((p) => p.slug));
+  const esAnswers = getEntries("es").filter((e) => !e.isDraft);
+  const esAnswerSlugs = new Set(esAnswers.map((e) => e.slug));
 
   return [
     { url: `${siteUrl}/`, lastModified: latest ?? new Date().toISOString().slice(0, 10), ...both("/") },
@@ -37,7 +39,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${siteUrl}/es/qualify`, ...both("/qualify") },
     ...QUALIFY_PATHS.map((p) => ({ url: `${siteUrl}/es/qualify/${p.slug}`, ...both(`/qualify/${p.slug}`) })),
     ...esLoans.map((p) => ({ url: `${siteUrl}/es/loans/${p.slug}`, lastModified: p.updated, ...both(`/loans/${p.slug}`) })),
-    ...answers.map((e) => ({ url: `${siteUrl}/answers/${e.slug}`, lastModified: e.updated })),
+    ...answers.map((e) => ({ url: `${siteUrl}/answers/${e.slug}`, lastModified: e.updated, ...(esAnswerSlugs.has(e.slug) && both(`/answers/${e.slug}`)) })),
+    ...esAnswers.map((e) => ({ url: `${siteUrl}/es/answers/${e.slug}`, lastModified: e.updated, ...both(`/answers/${e.slug}`) })),
     ...getHandouts()
       .filter((h) => !h.isDraft)
       .map((h) => ({ url: `${siteUrl}/pros/handouts/${h.slug}`, lastModified: h.updated })),

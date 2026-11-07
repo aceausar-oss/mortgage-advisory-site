@@ -4,11 +4,16 @@ import matter from "gray-matter";
 import { marked } from "marked";
 import { z } from "zod";
 import { CATEGORY_KEYS, type CategoryKey } from "@/lib/categories";
+import { ES_ANSWER_SLUGS } from "@/lib/esAnswerSlugs";
+import type { Lang } from "@/lib/i18n";
 
 // Knowledge base loader (CLAUDE.md §10). One markdown file per question in content/kb/.
+// Spanish twins (Ace, Nov 2026) live in content/es/kb/ with the same slug as their English answer and render at
+// /es/answers/[slug]; every Spanish file needs an English twin and a spot in ES_ANSWER_SLUGS.
 // Any invalid file fails the build with a message naming the file.
 
 const KB_DIR = path.join(process.cwd(), "content", "kb");
+const ES_KB_DIR = path.join(process.cwd(), "content", "es", "kb");
 const BRAND = "The Mortgage Advisory";
 
 export const PRODUCTS = [
@@ -77,16 +82,21 @@ export type KbEntry = Omit<z.infer<typeof Frontmatter>, "updated"> & {
 // Drafts are visible locally and on preview deploys, never on the live site.
 export const showDrafts = process.env.VERCEL_ENV !== "production" && process.env.KB_HIDE_DRAFTS !== "1";
 
-let cache: KbEntry[] | null = null;
+const cache = new Map<Lang, KbEntry[]>();
 
-function loadAll(): KbEntry[] {
-  if (cache) return cache;
-  if (!fs.existsSync(KB_DIR)) return (cache = []);
+function loadAll(lang: Lang = "en"): KbEntry[] {
+  const hit = cache.get(lang);
+  if (hit) return hit;
+  const dir = lang === "es" ? ES_KB_DIR : KB_DIR;
+  if (!fs.existsSync(dir)) {
+    cache.set(lang, []);
+    return [];
+  }
 
   const entries: KbEntry[] = [];
   const errors: string[] = [];
-  for (const file of fs.readdirSync(KB_DIR).filter((f) => f.endsWith(".md")).sort()) {
-    const { data, content } = matter(fs.readFileSync(path.join(KB_DIR, file), "utf8"));
+  for (const file of fs.readdirSync(dir).filter((f) => f.endsWith(".md")).sort()) {
+    const { data, content } = matter(fs.readFileSync(path.join(dir, file), "utf8"));
     const parsed = Frontmatter.safeParse(data);
     if (!parsed.success) {
       errors.push(`${file}: ${parsed.error.issues.map((i) => `${i.path.join(".") || "file"} — ${i.message}`).join("; ")}`);
@@ -107,18 +117,32 @@ function loadAll(): KbEntry[] {
     if (slugs.has(e.slug)) errors.push(`duplicate slug "${e.slug}"`);
     slugs.add(e.slug);
   }
-  if (errors.length) throw new Error(`content/kb has ${errors.length} problem(s):\n${errors.join("\n")}`);
+  if (lang === "es") {
+    const listed: readonly string[] = ES_ANSWER_SLUGS;
+    for (const e of entries) {
+      if (!fs.existsSync(path.join(KB_DIR, `${e.slug}.md`))) errors.push(`${e.slug}.md: no English answer with this slug in content/kb`);
+      if (!listed.includes(e.slug)) errors.push(`${e.slug}.md: add "${e.slug}" to ES_ANSWER_SLUGS in src/lib/esAnswerSlugs.ts`);
+    }
+    for (const s of listed) if (!slugs.has(s)) errors.push(`ES_ANSWER_SLUGS lists "${s}" but content/es/kb/${s}.md is missing`);
+  }
+  if (errors.length) throw new Error(`content/${lang === "es" ? "es/" : ""}kb has ${errors.length} problem(s):\n${errors.join("\n")}`);
 
-  return (cache = entries);
+  cache.set(lang, entries);
+  return entries;
 }
 
 /** All answers visible in this environment (drafts excluded on the live site). */
-export function getEntries(): KbEntry[] {
-  return loadAll().filter((e) => showDrafts || !e.isDraft);
+export function getEntries(lang: Lang = "en"): KbEntry[] {
+  return loadAll(lang).filter((e) => showDrafts || !e.isDraft);
 }
 
-export function getEntry(slug: string): KbEntry | undefined {
-  return getEntries().find((e) => e.slug === slug);
+export function getEntry(slug: string, lang: Lang = "en"): KbEntry | undefined {
+  return getEntries(lang).find((e) => e.slug === slug);
+}
+
+/** True when a published (or, on previews, draft) Spanish twin exists for this answer. */
+export function hasSpanish(slug: string): boolean {
+  return !!getEntry(slug, "es");
 }
 
 export function searchEntries({ q, category, state }: { q?: string; category?: string; state?: string }) {
