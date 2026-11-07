@@ -34,7 +34,7 @@ status: published
 
 Es un préstamo sobre el valor líquido de su casa en el que **usted no hace un pago hipotecario mensual**. En cambio, los intereses y cargos se suman al saldo con el tiempo. Usted conserva el título de propiedad y sigue viviendo en la casa. El préstamo se paga cuando el último prestatario se muda, vende o fallece, normalmente con la venta de la casa, y el valor líquido que quede le pertenece a usted o a sus herederos.
 
-Lo que **sí** sigue pagando: impuestos a la propiedad, seguro de la vivienda, cuotas de la asociación (HOA) si las tiene y el mantenimiento básico. Ese es el trato, y así mantiene el préstamo en regla.
+Lo que **sí** sigue pagando: impuestos a la propiedad, seguro de la vivienda, cuotas de la asociación (HOA) si las tiene y el mantenimiento básico. Ese es el trato, y así mantiene el préstamo en regla. Vea [¿Puede perder su casa con una hipoteca inversa?](/es/answers/can-you-lose-your-home-with-a-reverse-mortgage)
 
 ## ¿Cómo se llama en otros países?
 
