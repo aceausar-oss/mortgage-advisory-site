@@ -1,8 +1,8 @@
 ---
 question: "Can you lose your home with a reverse mortgage?"
 slug: can-you-lose-your-home-with-a-reverse-mortgage
-description: "Only if you stop living there, fall behind on property taxes or insurance, or let the home go. Here's how to make sure that never happens."
-tldr: "Only if the loan terms aren't kept up: the last borrower moves out, property taxes or homeowners insurance go unpaid, or the home isn't maintained. At The Mortgage Advisory, we set up every reverse mortgage with those costs planned for from day one, so our clients can focus on enjoying their home."
+description: "Like any mortgage, only if the loan terms aren't kept: you move out, fall behind on taxes or insurance, or let the home go. Here's how to avoid that."
+tldr: "Only if the loan terms aren't kept up, just like with any mortgage. A reverse mortgage is still a home loan: it comes due if the last borrower moves out, property taxes or homeowners insurance go unpaid, or the home isn't maintained. At The Mortgage Advisory, we set up every reverse mortgage with those costs planned for from day one, so our clients can focus on enjoying their home."
 category: reverse-mortgage
 products: [hecm, proprietary-reverse]
 states: []
@@ -10,7 +10,7 @@ persona: retiree
 featured: true
 sources:
   - { title: "HUD — FHA Reverse Mortgage for Seniors (HECM)", url: "https://www.hud.gov/hud-partners/single-family-hecmhome" }
-updated: 2026-09-27
+updated: 2026-11-07
 reviewed_by: "Ace Ausar, NMLS #1143018"
 status: published
 researchId: rm-lose-home
@@ -18,7 +18,7 @@ researchId: rm-lose-home
 
 ## When does a reverse mortgage come due?
 
-There's no monthly mortgage payment, but there are a few simple rules. The loan comes due when:
+A reverse mortgage is still a mortgage, so like any home loan it has terms you agree to keep. There's no monthly mortgage payment, but the loan comes due when:
 
 - The last borrower **passes away** or **sells** the home
 - The last borrower **moves out** for good, including living in a care facility for more than 12 months in a row (for HECMs)
