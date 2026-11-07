@@ -93,7 +93,7 @@ Not sure which program fits? See [which reverse mortgage fits which client](/ans
 
 ## Can we hold a workshop for your clients?
 
-<img src="/images/pages/pros-family-review.jpg" alt="Retired couple and their adult children reviewing reverse mortgage information together" width="1536" height="1024" class="answer-photo" loading="lazy">
+<img src="/images/pages/pros-family-review-v2.jpg" alt="Retired couple and their adult children reviewing reverse mortgage information together" width="1536" height="1024" class="answer-photo" loading="lazy">
 
 Yes, two ways, both built to keep your firm and ours in compliance:
 
