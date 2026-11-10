@@ -82,7 +82,7 @@ export default async function AskPage({ searchParams }: PageProps<"/ask">) {
           </ul>
         </section>
       ) : (
-        q && <p className="rounded-2xl bg-white p-5">That&apos;s a great question for Ace directly. Book a time below or give us a call.</p>
+        q && <p className="rounded-2xl bg-white p-5">That&apos;s a great question for our team. Book a time below or give us a call.</p>
       )}
 
       <section aria-label="Talk to our team" className="rounded-3xl bg-brand-slate p-6 text-white">
