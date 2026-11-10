@@ -86,7 +86,7 @@ export default async function AnswersPage({ searchParams }: PageProps<"/answers"
           </div>
           {results.length === 0 ? (
             <p className="rounded-2xl bg-white p-5">
-              No answers match yet. Ask Ace directly —{" "}
+              No answers match yet. Ask our team —{" "}
               <Link href="/book" className="font-semibold underline underline-offset-4">
                 book a call
               </Link>{" "}
