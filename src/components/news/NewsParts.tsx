@@ -79,28 +79,35 @@ export function EventsList({ lang, compact = false }: { lang: Lang; compact?: bo
   if (!main && !local.length) return null;
   const lead = main ?? local[0];
   const sessions = nextSessions(lead, lang, compact ? 2 : 4);
+
+  // The webinar cover as a clickable brochure (Ace, Nov 2026): sits in the bottom-right corner, beside the area
+  // buttons, and opens the Eventbrite page like the main button does.
+  const brochure = (
+    <a
+      href={lead.url}
+      rel="noopener"
+      aria-label={es ? "Ver el seminario web en Eventbrite" : "View the webinar on Eventbrite"}
+      className={`group relative block shrink-0 pb-3 pr-3 ${compact ? "w-44" : "w-56"}`}
+    >
+      <span className="block overflow-hidden rounded-r-lg rounded-l-sm bg-white shadow-[0_20px_34px_-16px_rgba(31,78,121,0.6)] ring-1 ring-black/5 transition-transform duration-500 [transform:perspective(900px)_rotateY(10deg)] group-hover:[transform:perspective(900px)_rotateY(0deg)_translateY(-3px)] group-focus-visible:[transform:none]">
+        <Image src={WEBINAR_COVER} alt="" width={1600} height={897} sizes="224px" className="w-full" />
+      </span>
+      <span className="absolute bottom-0 right-0 flex h-14 w-14 flex-col items-center justify-center rounded-full bg-brand-button text-center font-heading text-[0.55rem] font-bold uppercase leading-tight tracking-wider text-white shadow-lg ring-4 ring-white transition-transform group-hover:scale-105">
+        {es ? "Reserve" : "Save my"}
+        <br />
+        {es ? "lugar →" : "seat →"}
+      </span>
+    </a>
+  );
+
   return (
     <section aria-labelledby="events-h" className="rounded-3xl border border-brand-blue/50 bg-white p-6 sm:p-8">
-      <div className={`grid items-center gap-8 ${compact ? "md:grid-cols-[1fr_11rem]" : "md:grid-cols-[1fr_15rem] lg:gap-12"}`}>
-      {/* Webinar cover shown as a brochure (Ace, Nov 2026): slight 3D tilt, page shadow, and a badge. Links to Eventbrite. */}
-      <a href={lead.url} rel="noopener" tabIndex={-1} aria-hidden="true" className={`group relative mx-auto block w-full pb-4 pr-4 md:order-last ${compact ? "max-w-[11rem]" : "max-w-[15rem]"}`}>
-        <span className="block overflow-hidden rounded-r-lg rounded-l-sm bg-white shadow-[0_24px_40px_-18px_rgba(31,78,121,0.65)] ring-1 ring-black/5 transition-transform duration-500 [transform:perspective(900px)_rotateY(10deg)] group-hover:[transform:perspective(900px)_rotateY(3deg)]">
-          <Image src={WEBINAR_COVER} alt="" width={1600} height={897} sizes="(min-width: 768px) 240px, 70vw" className="w-full" />
-          <span className="absolute inset-y-0 left-0 w-2 bg-gradient-to-r from-black/25 to-transparent" />
-        </span>
-        <span className="absolute bottom-0 right-0 flex h-[3.8rem] w-[3.8rem] flex-col items-center justify-center rounded-full bg-brand-button text-center font-heading text-[0.6rem] font-bold uppercase leading-tight tracking-wider text-white shadow-lg ring-4 ring-white">
-          {es ? "En vivo" : "Free"}
-          <br />
-          {es ? "gratis" : "webinar"}
-        </span>
-      </a>
-      <div>
       <p className="text-sm font-semibold uppercase tracking-[0.15em] text-brand-blue-deep">{es ? "Próximos eventos · Seminario web gratuito" : "Upcoming events · Free webinar"}</p>
       <h2 id="events-h" className="mt-2 text-2xl font-bold">
         {es ? lead.titleEs : lead.title}
       </h2>
       <p className="mt-1 font-semibold text-brand-slate">{scheduleText(lead, lang)}</p>
-      {lead.summary && <p className="mt-3 leading-relaxed">{es ? (lead.summaryEs ?? lead.summary) : lead.summary}</p>}
+      {lead.summary && <p className="mt-3 max-w-3xl leading-relaxed">{es ? (lead.summaryEs ?? lead.summary) : lead.summary}</p>}
       {sessions.length > 0 && (
         <ul className="mt-4 flex flex-wrap gap-2" aria-label={es ? "Próximas fechas" : "Next dates"}>
           {sessions.map((o) => (
@@ -112,34 +119,37 @@ export function EventsList({ lang, compact = false }: { lang: Lang; compact?: bo
           ))}
         </ul>
       )}
-      <a
-        href={lead.url}
-        rel="noopener"
-        className="mt-5 inline-flex min-h-11 items-center gap-2 rounded-full bg-brand-soft px-5 py-2.5 font-semibold text-brand-ink hover:bg-brand-blue"
-      >
-        {es ? "Reserve su lugar gratis en Eventbrite" : "Save your free seat on Eventbrite"} <span aria-hidden="true">→</span>
-      </a>
-      {!compact && local.length > 0 && (
-        <div className="mt-6">
-          <p className="font-semibold text-brand-slate">{es ? "O elija la sesión de su zona:" : "Or pick the session for your area:"}</p>
-          <ul className="mt-2 flex flex-wrap gap-2">
-            {local.map((s) => (
-              <li key={s.id}>
-                <a href={s.url} rel="noopener" className="inline-flex min-h-11 items-center rounded-full px-4 text-sm font-semibold text-brand-button ring-1 ring-brand-blue-deep/60 hover:bg-mist">
-                  {es ? s.areaEs : s.area}
-                </a>
-              </li>
-            ))}
-          </ul>
+      <div className="mt-5 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+        <div className="min-w-0">
+          <a
+            href={lead.url}
+            rel="noopener"
+            className="inline-flex min-h-11 items-center gap-2 rounded-full bg-brand-soft px-5 py-2.5 font-semibold text-brand-ink hover:bg-brand-blue"
+          >
+            {es ? "Reserve su lugar gratis en Eventbrite" : "Save your free seat on Eventbrite"} <span aria-hidden="true">→</span>
+          </a>
+          {!compact && local.length > 0 && (
+            <div className="mt-6">
+              <p className="font-semibold text-brand-slate">{es ? "O elija la sesión de su zona:" : "Or pick the session for your area:"}</p>
+              <ul className="mt-2 flex flex-wrap gap-2">
+                {local.map((s) => (
+                  <li key={s.id}>
+                    <a href={s.url} rel="noopener" className="inline-flex min-h-11 items-center rounded-full px-4 text-sm font-semibold text-brand-button ring-1 ring-brand-blue-deep/60 hover:bg-mist">
+                      {es ? s.areaEs : s.area}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
-      )}
+        <div className="self-center sm:self-end">{brochure}</div>
+      </div>
       <p className="mt-5 text-xs leading-relaxed text-brand-slate">
         {es
           ? "Evento educativo, presentado en inglés; asistir no lo obliga a solicitar un préstamo. Este material no ha sido revisado, aprobado ni emitido por HUD, la FHA ni ninguna agencia del gobierno."
           : "Educational event; attending doesn't obligate you to apply for a loan. This material has not been reviewed, approved, or issued by HUD, FHA, or any government agency."}
       </p>
-      </div>
-      </div>
     </section>
   );
 }
