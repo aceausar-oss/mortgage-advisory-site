@@ -65,7 +65,8 @@ export function NewsletterSignup({ lang = "en", page = "" }: { lang?: Lang; page
 
   return (
     <section aria-labelledby={`${id}-h`} className="rounded-3xl bg-brand-slate p-6 text-white sm:p-8">
-      <h2 id={`${id}-h`} className="font-heading text-2xl font-bold text-white">
+      {/* Inline color: the global h2 color would otherwise win over the utility class on this dark panel. */}
+      <h2 id={`${id}-h`} className="font-heading text-2xl font-bold" style={{ color: "#fff" }}>
         {t.title}
       </h2>
       <p className="mt-2 max-w-2xl text-white/90">{t.sub}</p>
