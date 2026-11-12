@@ -1,12 +1,25 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { CarouselAutoplay } from "@/components/CarouselAutoplay";
+import { CarouselDots } from "@/components/CarouselDots";
 import data from "../../content/data/reviews.json";
 
-// Real Google reviews (content/data/reviews.json), shown word for word. No AggregateRating schema:
+// Real client reviews (content/data/reviews.json), shown word for word. No AggregateRating schema:
 // Google treats a business's own star markup as self-serving and ignores or penalizes it.
-export type Review = { name: string; year: number; text: string; featured?: boolean };
-export const reviewsData = data as { rating: number; count: number; googleUrl: string; reviews: Review[] };
+// Each review names its source (Google by default; Yelp, Zillow, BBB, Facebook as they're added), and every
+// source in `sources` gets a "Read on …" link so visitors can check the originals.
+export type ReviewSource = "google" | "yelp" | "zillow" | "bbb" | "facebook";
+export type Review = { name: string; year: number; text: string; featured?: boolean; source?: ReviewSource; url?: string };
+type SourceInfo = { label: string; url: string; rating?: number; count?: number };
+export const reviewsData = data as {
+  rating: number;
+  count: number;
+  googleUrl: string;
+  sources?: Partial<Record<ReviewSource, SourceInfo>>;
+  reviews: Review[];
+};
+const SOURCE_LABEL: Record<ReviewSource, string> = { google: "Google", yelp: "Yelp", zillow: "Zillow", bbb: "BBB", facebook: "Facebook" };
+const otherSources = Object.entries(reviewsData.sources ?? {}).filter(([k]) => k !== "google") as [ReviewSource, SourceInfo][];
 
 const Stars = ({ className = "" }: { className?: string }) => (
   <span className={`tracking-tight text-amber-500 ${className}`} aria-hidden="true">
@@ -28,7 +41,9 @@ export function ReviewCard({ review, compact = false }: { review: Review; compac
         </span>
         <span className="text-sm">
           <span className="block font-semibold text-brand-ink">{review.name}</span>
-          <span className="text-brand-slate">Google review · {review.year}</span>
+          <span className="text-brand-slate">
+            {SOURCE_LABEL[review.source ?? "google"]} review · {review.year}
+          </span>
         </span>
       </figcaption>
     </figure>
@@ -51,12 +66,23 @@ export function ReviewsSummary({ extra }: { extra?: ReactNode }) {
       >
         Read all reviews on Google ↗
       </a>
+      {otherSources.map(([key, src]) => (
+        <a
+          key={key}
+          href={src.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="rounded-full border-2 border-brand-blue bg-white px-4 py-1.5 text-sm font-semibold text-brand-button hover:border-brand-blue-deep"
+        >
+          {src.rating && src.count ? `${src.rating.toFixed(1)} ★ · ${src.count} on ${src.label}` : `Read reviews on ${src.label}`} ↗
+        </a>
+      ))}
       {extra}
     </div>
   );
 }
 
-export const reviewsFootnote = "Real Google reviews, shown word for word. Everyone’s situation is different; your rate, costs, and timeline will vary.";
+export const reviewsFootnote = `Real ${["Google", ...otherSources.map(([, s]) => s.label)].join(" and ")} reviews, shown word for word. Everyone’s situation is different; your rate, costs, and timeline will vary.`;
 
 // Vora-style side-scrolling row. Native scroll with snap points: swipe, trackpad, or keyboard (it's focusable).
 export function ReviewsCarousel() {
@@ -74,11 +100,11 @@ export function ReviewsCarousel() {
         <ul
           id="reviews-row"
           tabIndex={0}
-          aria-label="Google reviews, scroll sideways for more"
-          className="relative flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth scroll-px-4 px-4 pb-8 pt-3 [scrollbar-width:thin] sm:scroll-px-[max(1.5rem,calc((100vw-72rem)/2))] sm:px-[max(1.5rem,calc((100vw-72rem)/2))]"
+          aria-label="Client reviews, scroll sideways for more"
+          className="relative flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth scroll-px-4 px-4 pb-6 pt-3 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:scroll-px-[max(1.5rem,calc((100vw-72rem)/2))] sm:px-[max(1.5rem,calc((100vw-72rem)/2))]"
         >
           {featured.map((r) => (
-            <li key={r.name} className="w-[calc(100vw-2rem)] shrink-0 snap-center sm:w-[calc((100vw-4.25rem)/2)] sm:snap-start lg:w-[calc((min(100vw,72rem)-6.75rem)/4)]">
+            <li key={`${r.source ?? "google"}-${r.name}`} className="w-[calc(100vw-2rem)] shrink-0 snap-center sm:w-[calc((100vw-4.25rem)/2)] sm:snap-start lg:w-[calc((min(100vw,72rem)-6.75rem)/4)]">
               <ReviewCard review={r} compact />
             </li>
           ))}
@@ -90,6 +116,9 @@ export function ReviewsCarousel() {
         </ul>
         <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 left-0 hidden w-16 bg-gradient-to-r from-mist sm:block" />
         <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 right-0 hidden w-16 bg-gradient-to-l from-mist sm:block" />
+      </div>
+      <div className="mb-4">
+        <CarouselDots targetId="reviews-row" />
       </div>
       <p className="px-4 text-center text-xs text-brand-slate">Swipe or scroll sideways for more; the row pauses while you read. {reviewsFootnote}</p>
     </div>
