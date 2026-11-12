@@ -7,7 +7,7 @@ category: investor
 products: [non-qm]
 states: []
 persona: investor
-featured: false
+featured: true
 sources: []
 didYouKnow:
   - text: "DSCR stands for debt service coverage ratio: the property's monthly rent divided by its monthly payment, including taxes, insurance, and HOA dues. A ratio of 1.0 means the rent covers the payment exactly."
