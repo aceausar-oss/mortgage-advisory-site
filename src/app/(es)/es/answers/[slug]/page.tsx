@@ -27,6 +27,7 @@ const TOPIC: Record<string, { href: string; label: string }> = {
   buying: { href: "/es/loans/purchase", label: "Comprar casa" },
   "debt-consolidation": { href: "/es/loans/debt-consolidation", label: "Consolidar deudas" },
   "self-employed": { href: "/es/loans/non-qm", label: "Préstamos Non-QM" },
+  investor: { href: "/es/loans/dscr", label: "Préstamos DSCR" },
   va: { href: "/es/loans/va", label: "Préstamos VA" },
 };
 

@@ -30,7 +30,7 @@ Regular loans qualify you on your **taxable income**, and good tax planning lowe
 |---|---|---|
 | **Bank statement** | 12 or 24 months of personal or business bank deposits | Business owners and self-employed borrowers with big write-offs |
 | **1099** | Your 1099s instead of full tax returns | Independent contractors, gig and commission earners |
-| **DSCR (investor)** | The property's rent covers the payment; no personal income documents | Real estate investors buying or refinancing rentals |
+| **[DSCR (investor)](/loans/dscr)** | The property's rent covers the payment; no personal income documents | Real estate investors buying or refinancing rentals |
 
 These work for purchases and refinances, including cash-out.
 

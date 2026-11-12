@@ -100,6 +100,7 @@ export const spanishResourcesNav = [
   { href: "/es/loans/va", label: "Préstamos VA" },
   { href: "/es/loans/conventional", label: "Préstamos convencionales" },
   { href: "/es/loans/non-qm", label: "Préstamos Non-QM" },
+  { href: "/es/loans/dscr", label: "Préstamos DSCR" },
   { href: "/es/loans/debt-consolidation", label: "Consolidar deudas" },
   { href: "/es/pre-approval", label: "Obtener preaprobación" },
   { href: "/es/ask", label: "Pregúntele al asistente" },

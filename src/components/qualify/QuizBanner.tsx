@@ -66,6 +66,7 @@ const GOAL_BY_SLUG: Record<string, Goal> = {
   fha: "buy",
   va: "buy",
   "non-qm": "buy",
+  dscr: "buy",
   refinance: "refi",
   heloc: "cash",
   "debt-consolidation": "cash",
