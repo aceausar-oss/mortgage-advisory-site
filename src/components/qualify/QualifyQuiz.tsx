@@ -872,7 +872,12 @@ function Results({
 
       <Disclosures
         entry={{
-          category: result.goal === "reverse" ? "reverse-mortgage" : "buying",
+          category:
+            result.goal === "reverse"
+              ? "reverse-mortgage"
+              : result.goal === "invest"
+                ? "investor"
+                : "buying",
           products: result.disclosures.products,
         }}
         debt={result.disclosures.debt}

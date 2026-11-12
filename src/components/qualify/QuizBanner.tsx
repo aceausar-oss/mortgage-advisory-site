@@ -48,14 +48,24 @@ const COPY: Record<
       "Con base en las tablas oficiales de HUD, con opciones para conservar su hipoteca actual.",
     ],
   },
+  invest: {
+    en: [
+      "Investing? See which loans fit",
+      "DSCR or conventional, your cash-out estimate, and a document checklist in about 2 minutes. No tax returns needed to start.",
+    ],
+    es: [
+      "¿Invierte en propiedades? Vea qué préstamos le funcionan",
+      "DSCR o convencional, su estimado de retiro de efectivo y una lista de documentos en unos 2 minutos.",
+    ],
+  },
   any: {
     en: [
       "See what you qualify for",
-      "Buying, refinancing, tapping equity, or a reverse mortgage: a personal snapshot in about 2 minutes.",
+      "Buying, refinancing, tapping equity, a reverse mortgage, or a rental property: a personal snapshot in about 2 minutes.",
     ],
     es: [
       "Vea para qué califica",
-      "Comprar, refinanciar, usar su valor líquido o una hipoteca inversa: un resumen personal en unos 2 minutos.",
+      "Comprar, refinanciar, usar su valor líquido, una hipoteca inversa o una propiedad de renta: un resumen personal en unos 2 minutos.",
     ],
   },
 };
@@ -66,7 +76,7 @@ const GOAL_BY_SLUG: Record<string, Goal> = {
   fha: "buy",
   va: "buy",
   "non-qm": "buy",
-  dscr: "buy",
+  dscr: "invest",
   refinance: "refi",
   heloc: "cash",
   "debt-consolidation": "cash",

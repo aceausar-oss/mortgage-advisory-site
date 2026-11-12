@@ -49,12 +49,14 @@ const GOAL_LABEL = {
   refi: "Refinance",
   cash: "Cash from home (HELOC / cash-out)",
   reverse: "Reverse mortgage",
+  invest: "Investor / DSCR",
 } as const;
 const GOAL_TAG = {
   buy: "quiz: buy",
   refi: "quiz: refinance",
   cash: "quiz: heloc-cash",
   reverse: "quiz: reverse",
+  invest: "quiz: investor-dscr",
 } as const;
 
 export async function POST(req: Request) {

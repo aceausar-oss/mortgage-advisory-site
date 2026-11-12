@@ -17,8 +17,8 @@ type Product = KbEntry["products"][number];
 // the equity formula from /how-we-estimate (pricing.json maxCLTV), and the HUD-table reverse estimate (reverseCalc).
 // No rates, APRs, or loan payments are ever shown (CLAUDE.md §8, §9).
 
-export type Goal = "buy" | "refi" | "cash" | "reverse";
-export const GOALS: Goal[] = ["buy", "refi", "cash", "reverse"];
+export type Goal = "buy" | "refi" | "cash" | "reverse" | "invest";
+export const GOALS: Goal[] = ["buy", "refi", "cash", "reverse", "invest"];
 export type Answers = Record<string, string | number>;
 
 type Text = { en: string; es: string };
@@ -91,6 +91,11 @@ export const GOAL_QUESTION: Question = {
       "reverse",
       "Reverse mortgage (62 or older)",
       "Hipoteca inversa (62 años o más)",
+    ),
+    o(
+      "invest",
+      "Buy or refinance a rental property (investor)",
+      "Comprar o refinanciar una propiedad de renta (inversionista)",
     ),
   ],
 };
@@ -525,6 +530,186 @@ export const PATHS: Record<Goal, Question[]> = {
       ],
     },
     TIMELINE,
+  ],
+  // Investor / DSCR track (Ace, Nov 2026). No rates or payments: the DSCR ratio itself is run on the call.
+  invest: [
+    {
+      id: "investPurpose",
+      kind: "choice",
+      title: t("What are you looking to do?", "¿Qué le gustaría hacer?"),
+      options: [
+        o("purchase", "Buy a rental property", "Comprar una propiedad de renta"),
+        o(
+          "refi",
+          "Refinance a rental I own",
+          "Refinanciar una propiedad de renta que ya tengo",
+        ),
+        o(
+          "cashout",
+          "Take cash out of a rental I own",
+          "Sacar dinero de una propiedad de renta que ya tengo",
+        ),
+      ],
+    },
+    {
+      ...STATE,
+      title: t("Where is the property?", "¿Dónde está la propiedad?"),
+      help: t(
+        "In Florida, we arrange your loan as a mortgage broker with a partner lender.",
+        "En Florida, tramitamos su préstamo como corredor hipotecario con un prestamista asociado.",
+      ),
+    },
+    CITY,
+    {
+      id: "propertyType",
+      kind: "choice",
+      title: t("What kind of property is it?", "¿Qué tipo de propiedad es?"),
+      options: [
+        o("sfr", "Single-family home", "Casa unifamiliar"),
+        o("condo", "Condo or townhome", "Condominio o townhome"),
+        o("2-4", "2 to 4 units", "De 2 a 4 unidades"),
+        o(
+          "str",
+          "Short-term rental (Airbnb, VRBO)",
+          "Renta a corto plazo (Airbnb, VRBO)",
+        ),
+      ],
+    },
+    {
+      id: "price",
+      kind: "money",
+      title: t(
+        "What's the purchase price, roughly?",
+        "¿Cuál es el precio de compra, más o menos?",
+      ),
+      min: 75_000,
+      max: 5_000_000,
+      step: 5_000,
+      initial: 500_000,
+      show: (a) => a.investPurpose === "purchase",
+    },
+    {
+      id: "homeValue",
+      kind: "money",
+      title: t(
+        "About how much is the property worth?",
+        "¿Cuánto vale la propiedad, más o menos?",
+      ),
+      help: t(
+        "A rough estimate is fine. The appraisal confirms value later.",
+        "Un estimado está bien. El avalúo confirma el valor más adelante.",
+      ),
+      min: 75_000,
+      max: 5_000_000,
+      step: 5_000,
+      initial: 500_000,
+      show: (a) => a.investPurpose !== "purchase",
+    },
+    {
+      id: "balance",
+      kind: "money",
+      title: t(
+        "What do you still owe on this property?",
+        "¿Cuánto debe todavía sobre esta propiedad?",
+      ),
+      help: t(
+        "Include any second loan. Enter 0 if it's free and clear.",
+        "Incluya cualquier segundo préstamo. Escriba 0 si está libre de deuda.",
+      ),
+      min: 0,
+      max: 4_000_000,
+      step: 5_000,
+      initial: (a) =>
+        Math.round(((Number(a.homeValue) || 500_000) * 0.5) / 5_000) * 5_000,
+      show: (a) => a.investPurpose !== "purchase",
+    },
+    {
+      id: "down",
+      kind: "money",
+      title: t(
+        "How much do you plan to put down?",
+        "¿Cuánto piensa dar de enganche?",
+      ),
+      help: t(
+        "Keep some savings aside too. Lenders look for a few months of payments in reserve.",
+        "Guarde también algunos ahorros. Los prestamistas piden unos meses de pagos en reserva.",
+      ),
+      min: 0,
+      max: 2_500_000,
+      step: 5_000,
+      initial: (a) =>
+        Math.round(((Number(a.price) || 500_000) * 0.25) / 5_000) * 5_000,
+      show: (a) => a.investPurpose === "purchase",
+    },
+    {
+      id: "rent",
+      kind: "money",
+      perMonth: true,
+      title: t(
+        "What monthly rent do you expect?",
+        "¿Cuánta renta mensual espera recibir?",
+      ),
+      help: t(
+        "Current lease, or a fair estimate for the area. For short-term rentals, your average month.",
+        "El contrato actual, o un estimado justo para la zona. Para rentas a corto plazo, su mes promedio.",
+      ),
+      min: 0,
+      max: 50_000,
+      step: 50,
+      initial: 3_000,
+    },
+    CREDIT,
+    {
+      id: "propertiesOwned",
+      kind: "choice",
+      title: t(
+        "How many financed properties do you own now?",
+        "¿Cuántas propiedades con préstamo tiene ahora?",
+      ),
+      help: t(
+        "Count your own home too if it has a mortgage.",
+        "Cuente también su casa si tiene hipoteca.",
+      ),
+      options: [
+        o("0", "None yet", "Ninguna todavía"),
+        o("1-4", "1 to 4", "De 1 a 4"),
+        o("5-9", "5 to 9", "De 5 a 9"),
+        o("10+", "10 or more", "10 o más"),
+      ],
+    },
+    {
+      id: "vesting",
+      kind: "choice",
+      title: t(
+        "Whose name will the property be in?",
+        "¿A nombre de quién estará la propiedad?",
+      ),
+      options: [
+        o("personal", "My own name", "A mi nombre"),
+        o("llc", "An LLC or business entity", "Una LLC o empresa"),
+        o("unsure", "Not sure yet", "Todavía no lo sé"),
+      ],
+    },
+    {
+      id: "docIncome",
+      kind: "choice",
+      title: t(
+        "Can you document your income on tax returns?",
+        "¿Puede comprobar sus ingresos con sus declaraciones de impuestos?",
+      ),
+      help: t(
+        "Many investors write off a lot, so their returns show less income. That's common, and it's what DSCR loans are for.",
+        "Muchos inversionistas deducen bastante, así que sus declaraciones muestran menos ingreso. Es común, y para eso existen los préstamos DSCR.",
+      ),
+      options: [
+        o("yes", "Yes, my returns show my income", "Sí, mis declaraciones muestran mis ingresos"),
+        o(
+          "no",
+          "No, or I'd rather not use them",
+          "No, o prefiero no usarlas",
+        ),
+      ],
+    },
   ],
 };
 
@@ -1411,8 +1596,284 @@ function reverseResult(a: Answers): Result {
   };
 }
 
+// Investor / DSCR results (Ace, Nov 2026). Typical guidelines, not a quote: most DSCR lenders look for 20% down
+// (about 25% for short-term rentals), a 660+ score, and cash-out up to about 75% of value. No rates or payments.
+const INVEST_CASH_OUT_LTV = 0.75;
+
+function investResult(a: Answers): Result {
+  const purpose = String(a.investPurpose);
+  const purchase = purpose === "purchase";
+  const cashOutGoal = purpose === "cashout";
+  const type = String(a.propertyType);
+  const str = type === "str";
+  const multi = type === "2-4";
+  const price = num(a, "price");
+  const down = num(a, "down");
+  const value = purchase ? price : num(a, "homeValue");
+  const balance = purchase ? 0 : num(a, "balance");
+  const downPct = price > 0 ? down / price : 0;
+  const ltv = value > 0 ? balance / value : 0;
+  const available = Math.max(0, Math.round(value * INVEST_CASH_OUT_LTV - balance));
+  const rent = num(a, "rent");
+  const owned = String(a.propertiesOwned);
+  const llc = a.vesting === "llc";
+  const taxReturns = a.docIncome === "yes";
+  const fl = a.state === "FL";
+  const lowCredit = !creditAtLeast(a, 660) && a.credit !== "unknown";
+  const conventional =
+    taxReturns && !llc && owned !== "10+" && creditAtLeast(a, 620) && !str;
+
+  const programs: Program[] = [
+    {
+      name: t("DSCR loan (Non-QM)", "Préstamo DSCR (Non-QM)"),
+      why: llc
+        ? t(
+            "Qualifies on the property's rent, not your tax returns, and can close in your LLC's name.",
+            "Califica con la renta de la propiedad, no con sus impuestos, y se puede cerrar a nombre de su LLC.",
+          )
+        : !taxReturns
+          ? t(
+              "Qualifies on the property's rent, so write-offs on your tax returns don't hold you back.",
+              "Califica con la renta de la propiedad, así que las deducciones en sus impuestos no le afectan.",
+            )
+          : str
+            ? t(
+                "Many DSCR lenders count short-term rental income from booking history or a market projection.",
+                "Muchos prestamistas DSCR cuentan el ingreso de renta a corto plazo con su historial de reservas o una proyección del mercado.",
+              )
+            : owned === "10+"
+              ? t(
+                  "No 10-property cap with most DSCR lenders, so it scales with your portfolio.",
+                  "La mayoría de los prestamistas DSCR no tienen límite de 10 propiedades, así que crece con su portafolio.",
+                )
+              : t(
+                  "Qualifies on the property's rent instead of your personal income. No tax returns or pay stubs.",
+                  "Califica con la renta de la propiedad en lugar de su ingreso personal. Sin declaraciones de impuestos ni talones de pago.",
+                ),
+    },
+  ];
+  if (conventional)
+    programs.push({
+      name: t(
+        "Conventional investment property loan",
+        "Préstamo convencional para propiedad de inversión",
+      ),
+      why: t(
+        "When your tax returns show the income, this is often the lower-cost option. It closes in your personal name, up to 10 financed properties.",
+        "Cuando sus declaraciones muestran el ingreso, esta suele ser la opción de menor costo. Se cierra a su nombre, hasta 10 propiedades con préstamo.",
+      ),
+    });
+
+  const notes: Text[] = [];
+  if (programs.length > 1)
+    notes.push(
+      t(
+        "Both may fit. We'll price them side by side so you can see which one costs less over the time you plan to hold the property.",
+        "Ambos pueden funcionar. Los compararemos lado a lado para que vea cuál cuesta menos durante el tiempo que piensa conservar la propiedad.",
+      ),
+    );
+  if (purchase && price > 0 && downPct < 0.2)
+    notes.push(
+      t(
+        `${usd(down)} is about ${pct(downPct)} down. Most DSCR loans start at 20%${str ? " (about 25% for short-term rentals)" : ""}, so under 20% won't fit most programs. Adding to the down payment or a lower price can open it up.`,
+        `${usd(down)} es cerca del ${pct(downPct)} de enganche. La mayoría de los préstamos DSCR empiezan en 20 %${str ? " (cerca de 25 % para rentas a corto plazo)" : ""}, así que con menos de 20 % no aplica la mayoría de los programas. Aumentar el enganche o bajar el precio puede ayudar.`,
+      ),
+    );
+  else if (purchase && str && downPct < 0.25)
+    notes.push(
+      t(
+        `Short-term rentals usually need about 25% down. You're at about ${pct(downPct)}, so we'll look for lenders that fit or plan the gap.`,
+        `Las rentas a corto plazo normalmente necesitan cerca de 25 % de enganche. Usted tiene cerca del ${pct(downPct)}, así que buscaremos prestamistas que se ajusten o planearemos la diferencia.`,
+      ),
+    );
+  if (purchase && multi && conventional && downPct < 0.25)
+    notes.push(
+      t(
+        "For 2 to 4 units, conventional investment loans usually need 25% down.",
+        "Para 2 a 4 unidades, los préstamos convencionales de inversión normalmente piden 25 % de enganche.",
+      ),
+    );
+  if (lowCredit)
+    notes.push(
+      t(
+        "Most DSCR lenders look for a score of 660 or higher, so a score under 660 limits options. A few targeted credit moves can help, and we can map them out.",
+        "La mayoría de los prestamistas DSCR piden un puntaje de 660 o más, así que con menos de 660 las opciones son limitadas. Unos pasos concretos de crédito pueden ayudar, y los planeamos juntos.",
+      ),
+    );
+  if (cashOutGoal && available === 0)
+    notes.push(
+      t(
+        `Most DSCR cash-out loans go up to about ${pct(INVEST_CASH_OUT_LTV)} of value, and your balance is already about ${pct(ltv)}. A rate-and-term refinance may still help.`,
+        `La mayoría de los préstamos DSCR con retiro de efectivo llegan hasta cerca del ${pct(INVEST_CASH_OUT_LTV)} del valor, y su saldo ya es cerca del ${pct(ltv)}. Un refinanciamiento de tasa y plazo todavía puede ayudar.`,
+      ),
+    );
+  if (cashOutGoal)
+    notes.push(
+      t(
+        "Most lenders want you to have owned the property for at least a few months before a cash-out refinance. Tell us when you bought it and we'll check.",
+        "La mayoría de los prestamistas piden que haya tenido la propiedad al menos unos meses antes de un refinanciamiento con retiro de efectivo. Díganos cuándo la compró y lo revisamos.",
+      ),
+    );
+  if (owned === "10+")
+    notes.push(
+      t(
+        "Conventional loans cap at 10 financed properties, so DSCR is the usual path from here.",
+        "Los préstamos convencionales tienen un límite de 10 propiedades con préstamo, así que DSCR es el camino normal desde aquí.",
+      ),
+    );
+  if (fl)
+    notes.push(
+      t(
+        "In Florida we're licensed as a mortgage broker (MBR5368), so we arrange your loan with a partner lender and tell you upfront how we're paid.",
+        "En Florida tenemos licencia de corredor hipotecario (MBR5368), así que tramitamos su préstamo con un prestamista asociado y le decimos desde el principio cómo se nos paga.",
+      ),
+    );
+  notes.push(
+    t(
+      "On the call, we run your DSCR: the rent divided by the full monthly cost of the property (loan, taxes, insurance, and HOA), using today's pricing.",
+      "En la llamada calculamos su DSCR: la renta dividida entre el costo mensual total de la propiedad (préstamo, impuestos, seguro y HOA), con los precios de hoy.",
+    ),
+  );
+
+  const figure: Result["figure"] = purchase
+    ? {
+        label: t("Your down payment", "Su enganche"),
+        value: price > 0 ? pct(downPct) : "—",
+        math: price > 0 ? `${usd(down)} ÷ ${usd(price)}` : undefined,
+      }
+    : cashOutGoal
+      ? {
+          label: t(
+            "Cash you could take out (estimate)",
+            "Dinero que podría sacar (estimado)",
+          ),
+          value: usd(available),
+          math: `${usd(value)} × ${pct(INVEST_CASH_OUT_LTV)} − ${usd(balance)}`,
+        }
+      : {
+          label: t("Your equity in the property", "Su valor líquido en la propiedad"),
+          value: usd(Math.max(0, value - balance)),
+          math: `${usd(value)} − ${usd(balance)}`,
+        };
+
+  const extra: Result["extra"] = [
+    {
+      label: t("Monthly rent you expect", "Renta mensual que espera"),
+      value: usd(rent),
+    },
+    purchase
+      ? {
+          label: t("Typical minimum down for DSCR", "Enganche mínimo típico para DSCR"),
+          value: str ? "25%" : "20%",
+        }
+      : {
+          label: t("What you owe as a share of value", "Lo que debe como parte del valor"),
+          value: pct(ltv),
+        },
+    ...(purpose === "refi"
+      ? [
+          {
+            label: t(
+              `Cash-out room at ${pct(INVEST_CASH_OUT_LTV)} of value`,
+              `Margen para retiro de efectivo al ${pct(INVEST_CASH_OUT_LTV)} del valor`,
+            ),
+            value: usd(available),
+          },
+        ]
+      : []),
+  ];
+
+  const checklist: Text[] = [
+    t("A government photo ID", "Una identificación oficial con foto"),
+    t(
+      `Last 2 months of bank statements showing ${purchase ? "your down payment and " : ""}reserves (a few months of payments)`,
+      `Estados de cuenta bancarios de los últimos 2 meses que muestren ${purchase ? "su enganche y " : ""}sus reservas (unos meses de pagos)`,
+    ),
+    str
+      ? t(
+          "12 months of booking history, or a short-term rental income projection",
+          "12 meses de historial de reservas, o una proyección de ingresos de renta a corto plazo",
+        )
+      : t(
+          purchase
+            ? "The current lease, or a rent estimate (the appraiser also confirms market rent)"
+            : "Your current lease(s)",
+          purchase
+            ? "El contrato de renta actual, o un estimado de renta (el valuador también confirma la renta de mercado)"
+            : "Su(s) contrato(s) de renta actual(es)",
+        ),
+    purchase
+      ? t(
+          "A landlord insurance quote for the property",
+          "Una cotización de seguro de arrendador para la propiedad",
+        )
+      : t(
+          "Your latest mortgage statement and insurance declarations page",
+          "Su estado de cuenta hipotecario más reciente y la página de declaraciones del seguro",
+        ),
+    ...(llc
+      ? [
+          t(
+            "LLC articles, operating agreement, and EIN letter",
+            "Acta constitutiva de la LLC, acuerdo operativo y carta del EIN",
+          ),
+        ]
+      : []),
+    ...(owned !== "0"
+      ? [
+          t(
+            "A list of the properties you own, with what you owe and the rent on each",
+            "Una lista de sus propiedades, con lo que debe y la renta de cada una",
+          ),
+        ]
+      : []),
+    conventional
+      ? t(
+          "For the conventional option only: your last 2 years of tax returns. The DSCR option doesn't need them.",
+          "Solo para la opción convencional: sus declaraciones de impuestos de los últimos 2 años. La opción DSCR no las necesita.",
+        )
+      : t(
+          "No tax returns or pay stubs for a DSCR loan",
+          "Sin declaraciones de impuestos ni talones de pago para un préstamo DSCR",
+        ),
+  ];
+
+  const reads: Link[] = [
+    ans("how-to-calculate-dscr", "How do I calculate DSCR?", "¿Cómo se calcula el DSCR?"),
+    ans("dscr-loan-requirements", "What are DSCR loan requirements?", "¿Cuáles son los requisitos de un préstamo DSCR?"),
+    ...(conventional
+      ? [ans("dscr-vs-conventional-investment-loan", "DSCR or a conventional investment loan?", "¿DSCR o préstamo convencional de inversión?")]
+      : []),
+    ...(str ? [ans("dscr-loan-short-term-rental", "DSCR loans for short-term rentals", "Préstamos DSCR para rentas a corto plazo")] : []),
+    ...(multi ? [ans("dscr-loan-2-4-units", "DSCR loans for 2 to 4 units", "Préstamos DSCR para 2 a 4 unidades")] : []),
+    ...(llc ? [ans("dscr-loan-llc", "Can I get a DSCR loan in an LLC?", "¿Puedo obtener un préstamo DSCR a nombre de una LLC?")] : []),
+    ...(!purchase ? [ans("dscr-cash-out-refinance", "DSCR cash-out refinance", "Refinanciamiento DSCR con retiro de efectivo")] : []),
+    ...(owned === "0" ? [ans("dscr-loan-first-time-investor", "DSCR loans for first-time investors", "Préstamos DSCR para inversionistas principiantes")] : []),
+    ...(owned === "5-9" || owned === "10+"
+      ? [ans("dscr-loan-multiple-properties", "DSCR loans for multiple properties", "Préstamos DSCR para varias propiedades")]
+      : []),
+    ...(lowCredit ? [ans("dscr-loan-credit-score", "What credit score do DSCR loans need?", "¿Qué puntaje de crédito piden los préstamos DSCR?")] : []),
+    ...(purchase && !lowCredit ? [ans("dscr-loan-down-payment", "How much down for a DSCR loan?", "¿Cuánto enganche para un préstamo DSCR?")] : []),
+  ].slice(0, 5);
+
+  return {
+    goal: "invest",
+    figure,
+    extra,
+    notes,
+    programs,
+    checklist,
+    reads,
+    booking: purchase ? "purchase" : "equity",
+    disclosures: { products: ["non-qm"] },
+    summary: `Investor: ${purpose}, ${type}, ${purchase ? `price ${usd(price)}, down ${usd(down)} (${pct(downPct)})` : `value ${usd(value)}, owes ${usd(balance)} (${pct(ltv)})${cashOutGoal ? `, cash-out est. ${usd(available)} at 75%` : ""}`}, rent ${usd(rent)}/mo, credit ${a.credit}, financed properties ${owned}, vesting ${a.vesting}, tax-return income: ${a.docIncome}. Fits: ${programs.map((p) => p.name.en).join(", ")}.`,
+  };
+}
+
 export function resultFor(a: Answers): Result {
   switch (a.goal as Goal) {
+    case "invest":
+      return investResult(a);
     case "buy":
       return buyResult(a);
     case "refi":
