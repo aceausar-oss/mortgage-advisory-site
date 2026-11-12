@@ -7,7 +7,7 @@ category: investor
 products: [non-qm]
 states: []
 persona: investor
-featured: false
+featured: true
 sources: []
 didYouKnow:
   - text: "Many DSCR programs also allow trusts and some partnerships, but each lender has its own rules on who must sign the guarantee."

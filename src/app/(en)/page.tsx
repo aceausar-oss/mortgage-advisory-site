@@ -18,7 +18,13 @@ import { getEntries } from "@/lib/kb";
 
 export default function Home() {
   const entries = getEntries();
-  const featured = entries.filter((e) => e.featured);
+  // Mix topics in the rolling feed (one per category in turn) so related questions don't bunch up.
+  const byTopic = new Map<string, typeof entries>();
+  for (const e of entries.filter((x) => x.featured)) byTopic.set(e.category, [...(byTopic.get(e.category) ?? []), e]);
+  const lanes = [...byTopic.values()];
+  const featured = Array.from({ length: Math.max(0, ...lanes.map((l) => l.length)) }, (_, i) => lanes.map((l) => l[i]))
+    .flat()
+    .filter((e): e is (typeof entries)[number] => Boolean(e));
 
   return (
     <>

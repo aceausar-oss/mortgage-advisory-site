@@ -9,6 +9,7 @@ const CHIPS_ES: { label: string; q: string; href?: string }[] = [
   { label: "Bajar mi tasa", q: "¿Cómo puedo bajar el pago o la tasa de mi hipoteca?" },
   { label: "Sacar dinero de mi casa", q: "¿Cómo puedo sacar dinero de mi casa y conservar mi tasa baja?" },
   { label: "Hipoteca inversa", q: "¿Me conviene una hipoteca inversa?" },
+  { label: "Inversionista (DSCR)", q: "Soy inversionista. ¿Puedo calificar para una propiedad de renta con un préstamo DSCR?" },
 ];
 
 const CHIPS: { label: string; q: string; href?: string }[] = [
@@ -16,6 +17,7 @@ const CHIPS: { label: string; q: string; href?: string }[] = [
   { label: "Lower my rate", q: "How can I lower my mortgage payment or rate?" },
   { label: "Get cash from my home", q: "How can I get cash from my home and keep my low rate?" },
   { label: "Reverse mortgage", q: "Is a reverse mortgage right for me?" },
+  { label: "Investor (DSCR)", q: "I'm a real estate investor. Can I qualify for a rental property with a DSCR loan?" },
 ];
 
 // Big hero question box (CLAUDE.md §4.1). A plain GET form to /ask, so it works without JavaScript;

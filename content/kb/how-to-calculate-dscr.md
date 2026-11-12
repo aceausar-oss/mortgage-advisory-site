@@ -8,7 +8,7 @@ category: investor
 products: [non-qm]
 states: []
 persona: investor
-featured: false
+featured: true
 sources: []
 updated: 2026-11-11
 reviewed_by: "Ace Ausar, NMLS #1143018"
