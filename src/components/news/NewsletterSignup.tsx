@@ -79,11 +79,11 @@ export function NewsletterSignup({ lang = "en", page = "" }: { lang?: Lang; page
           <div className="grid gap-3 sm:grid-cols-[1fr_1.4fr_auto]">
             <label className="block">
               <span className="sr-only">{t.first}</span>
-              <input name="firstName" autoComplete="given-name" placeholder={t.first} className="min-h-12 w-full rounded-full border-0 px-5 text-brand-ink" />
+              <input name="firstName" autoComplete="given-name" placeholder={t.first} className="min-h-12 w-full rounded-full border-0 bg-white px-5 text-brand-ink placeholder:text-brand-slate" />
             </label>
             <label className="block">
               <span className="sr-only">{t.email}</span>
-              <input name="email" type="email" required autoComplete="email" placeholder={t.email} className="min-h-12 w-full rounded-full border-0 px-5 text-brand-ink" />
+              <input name="email" type="email" required autoComplete="email" placeholder={t.email} className="min-h-12 w-full rounded-full border-0 bg-white px-5 text-brand-ink placeholder:text-brand-slate" />
             </label>
             <button
               type="submit"
