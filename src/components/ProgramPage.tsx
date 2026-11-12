@@ -210,6 +210,20 @@ export function ProgramPage({ page, extra }: { page: LoanPage; extra?: ReactNode
               <DidYouKnow facts={page.didYouKnow} lang={lang} />
             </div>
           )}
+          {page.gallery.length > 0 && (
+            <ul className={`grid gap-4 ${page.gallery.length >= 3 ? "sm:grid-cols-3" : "sm:grid-cols-2"}`}>
+              {page.gallery.map((g) => (
+                <li key={g.src}>
+                  <figure className="overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-brand-steel/20">
+                    <div className="relative aspect-[4/3]">
+                      <Image src={g.src} alt={g.alt} fill sizes="(min-width: 640px) 256px, 100vw" className="object-cover" />
+                    </div>
+                    <figcaption className="px-4 py-3 font-heading text-sm font-semibold text-brand-slate">{g.caption}</figcaption>
+                  </figure>
+                </li>
+              ))}
+            </ul>
+          )}
           <QuizBanner lang={lang} goal={page.basePath === "/loans" ? goalForLoan(page.slug) : undefined} />
           <div className="answer-body" dangerouslySetInnerHTML={{ __html: page.html }} />
           {extra}

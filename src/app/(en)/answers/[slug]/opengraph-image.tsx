@@ -15,6 +15,7 @@ const PHOTO: Record<string, { photo: string; position?: string }> = {
   "debt-consolidation": { photo: "/images/goals/goal-debt-photo.jpg" },
   "reverse-mortgage": { photo: "/images/retirement-couple-2.jpg", position: "center 30%" },
   "self-employed": { photo: "/images/self-employed-cafe.jpg", position: "45% center" },
+  investor: { photo: "/images/loans/loan-dscr.jpg" },
   costs: { photo: "/images/pages/costs.jpg" },
   pros: { photo: "/images/pages/pros-planner-meeting.jpg", position: "40% center" },
 };

@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element -- share images are drawn by ImageResponse, which needs plain <img> */
+import { existsSync } from "node:fs";
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { ImageResponse } from "next/og";
@@ -37,7 +38,8 @@ export async function shareImage({
 }) {
   const [logo, img, flagSrcs] = await Promise.all([
     asset("/brand/logo-tma-2026.png"),
-    asset(photo),
+    // A photo slot that hasn't been filled yet (e.g. new investor photos) falls back to the site-wide banner.
+    asset(existsSync(join(process.cwd(), "public", photo)) ? photo : "/images/pages/home-banner-photo.jpg"),
     flags ? Promise.all(FLAGS.map(([c]) => asset(`/flags/${c}.svg`))) : Promise.resolve([]),
   ]);
   const size = headline.length > 70 ? 34 : headline.length > 46 ? 40 : 50;

@@ -8,6 +8,18 @@ tldr: "Un préstamo DSCR permite a los inversionistas comprar o refinanciar prop
 category: investor
 products: [non-qm]
 funding: direct
+image: "/images/loans/loan-dscr.jpg"
+imageAlt: "Inversionista de bienes raíces frente a una propiedad de renta"
+gallery:
+  - src: "/images/loans/dscr-single-family.jpg"
+    alt: "Casa unifamiliar de renta con el jardín bien cuidado"
+    caption: "Casas unifamiliares de renta"
+  - src: "/images/loans/dscr-multi-unit.jpg"
+    alt: "Edificio pequeño de cuatro unidades"
+    caption: "Dúplex a cuádruplex"
+  - src: "/images/loans/dscr-short-term.jpg"
+    alt: "Casa vacacional amueblada con patio"
+    caption: "Rentas a corto plazo"
 related: []
 didYouKnow:
   - text: "DSCR significa debt service coverage ratio (índice de cobertura de la deuda): la renta mensual dividida entre el pago mensual completo. Un índice de 1.25 significa que la renta cubre el pago y sobra un 25%."
