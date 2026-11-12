@@ -3,7 +3,7 @@ question: "What is a DSCR loan, and how do I qualify for one?"
 slug: what-is-a-dscr-loan
 description: "A DSCR loan qualifies you on a rental property's income instead of your personal income. Usually 20% to 25% down, and prepayment penalties are common."
 tldr: "A DSCR loan is for rental properties: you qualify based on whether the property's rent covers its payment, not on your personal income or tax returns. Most programs look for rent at or above the full monthly payment and ask for about 20% to 25% down. The Mortgage Advisory is the direct lender on DSCR loans in California, Texas, and Colorado (in Florida, we arrange them as a licensed mortgage broker), and we're upfront about the prepayment penalties that often come with them."
-category: self-employed
+category: investor
 products: [non-qm]
 states: []
 persona: investor
@@ -11,7 +11,7 @@ featured: false
 sources: []
 didYouKnow:
   - text: "DSCR stands for debt service coverage ratio: the property's monthly rent divided by its monthly payment, including taxes, insurance, and HOA dues. A ratio of 1.0 means the rent covers the payment exactly."
-updated: 2026-09-27
+updated: 2026-11-11
 reviewed_by: "Ace Ausar, NMLS #1143018"
 status: published
 ---
@@ -43,6 +43,10 @@ It's for **investment properties only**, not the home you live in.
 ## Example scenario (illustrative)
 
 An investor in Orlando wants a $350,000 single-family rental. The appraiser estimates rent at $2,600, and the full payment with 25% down comes to about $2,350, a ratio of about 1.1. He qualifies without showing any personal income, and chooses a three-year prepayment penalty in exchange for a lower rate.
+
+## Where can I learn more?
+
+See our [DSCR and investor loans](/loans/dscr) page, including how to [calculate DSCR](/answers/how-to-calculate-dscr), [down payments](/answers/dscr-loan-down-payment), and [prepayment penalties](/answers/dscr-loan-prepayment-penalty).
 
 ## Our take
 

@@ -9,4 +9,5 @@ export const LOAN_SLUGS = [
   "debt-consolidation",
   "conventional",
   "non-qm",
+  "dscr",
 ] as const;

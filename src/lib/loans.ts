@@ -42,6 +42,12 @@ const Frontmatter = z
     imageAlt: z.string().optional(),
     // Which part of a wide photo stays in view when the frame crops it, e.g. "20% center" (CSS object-position).
     imagePosition: z.string().regex(/^[0-9a-z% ]+$/).optional(),
+    // Optional photo strip under the TL;DR (Ace, Nov 2026: investor photos on /loans/dscr). Photos whose file isn't in
+    // /public yet are skipped, so a slot can be listed before the photo arrives.
+    gallery: z
+      .array(z.object({ src: z.string().startsWith("/images/"), alt: z.string().min(5), caption: z.string().min(3) }))
+      .max(4)
+      .default([]),
     sources: z.array(Source).default([]),
     didYouKnow: DidYouKnowList,
     updated: z.coerce.date(),
@@ -84,8 +90,11 @@ function loadAll(kind: "loans" | "locations", lang: Lang = "en"): LoanPage[] {
     for (const r of parsed.data.related) {
       if (!fs.existsSync(path.join(process.cwd(), "content", "kb", `${r}.md`))) errors.push(`${file}: related answer "${r}" not found`);
     }
+    const inPublic = (src: string) => fs.existsSync(path.join(process.cwd(), "public", src));
     pages.push({
       ...parsed.data,
+      image: parsed.data.image && inPublic(parsed.data.image) ? parsed.data.image : undefined,
+      gallery: parsed.data.gallery.filter((g) => inPublic(g.src)),
       updated: parsed.data.updated.toISOString().slice(0, 10),
       body: content.trim(),
       html: marked.parse(content, { async: false }),

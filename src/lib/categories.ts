@@ -8,6 +8,7 @@ export const CATEGORIES = [
   { key: "debt-consolidation", label: "Debt Consolidation", long: "Debt consolidation with home equity" },
   { key: "reverse-mortgage", label: "Reverse Mortgage", long: "Reverse mortgages" },
   { key: "self-employed", label: "Self-Employed / Non-QM", long: "Self-employed & Non-QM loans" },
+  { key: "investor", label: "Investors & DSCR", long: "DSCR & investment property loans" },
   { key: "costs", label: "Common Fees", long: "Common fees, costs & rates" },
   { key: "about", label: "About Us", long: "About The Mortgage Advisory" },
   { key: "pros", label: "For Financial Pros", long: "For financial professionals" },
