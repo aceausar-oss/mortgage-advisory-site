@@ -144,12 +144,23 @@ export function NewsletterSignup({ lang = "en", page = "" }: { lang?: Lang; page
   const t = T[lang];
   const id = useId();
   return (
-    <section aria-labelledby={`${id}-h`} className="rounded-3xl bg-brand-slate p-6 text-white sm:p-8">
+    // Same market artwork as the popup and page banner, so the sign-up stands out instead of fading into the page.
+    <section aria-labelledby={`${id}-h`} className="relative isolate overflow-hidden rounded-[2rem] p-6 text-white shadow-lg sm:p-10">
+      <MarketArt className="absolute inset-0 -z-10 h-full w-full" />
+      <p className="text-sm font-semibold uppercase tracking-[0.18em] text-white/85">{t.popKicker}</p>
       {/* Inline color: the global h2 color would otherwise win over the utility class on this dark panel. */}
-      <h2 id={`${id}-h`} className="font-heading text-2xl font-bold" style={{ color: "#fff" }}>
+      <h2 id={`${id}-h`} className="mt-2 max-w-2xl font-heading text-2xl font-bold sm:text-3xl" style={{ color: "#fff" }}>
         {t.title}
       </h2>
       <p className="mt-2 max-w-2xl text-white/90">{t.sub}</p>
+      <ul className="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-sm text-white/95">
+        {t.popPoints.map((x) => (
+          <li key={x} className="flex gap-2">
+            <span aria-hidden="true">✓</span>
+            {x}
+          </li>
+        ))}
+      </ul>
       <NewsletterForm lang={lang} page={page} tone="dark" />
     </section>
   );

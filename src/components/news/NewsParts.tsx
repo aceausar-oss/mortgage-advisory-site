@@ -80,19 +80,21 @@ export function EventsList({ lang, compact = false }: { lang: Lang; compact?: bo
   const lead = main ?? local[0];
   const sessions = nextSessions(lead, lang, compact ? 2 : 4);
   return (
-    <section aria-labelledby="events-h" className="overflow-hidden rounded-3xl border border-brand-blue/50 bg-white">
-      {/* Webinar cover (Ace, Nov 2026): links to the Eventbrite page. */}
-      <a href={lead.url} rel="noopener" className="group block bg-mist" tabIndex={-1} aria-hidden="true">
-        <Image
-          src={WEBINAR_COVER}
-          alt=""
-          width={1600}
-          height={897}
-          sizes="(min-width: 1200px) 1100px, 100vw"
-          className={`w-full object-cover transition-transform duration-500 group-hover:scale-[1.01] ${compact ? "max-h-72 object-[center_35%]" : ""}`}
-        />
+    <section aria-labelledby="events-h" className="rounded-3xl border border-brand-blue/50 bg-white p-6 sm:p-8">
+      <div className={`grid items-center gap-8 ${compact ? "md:grid-cols-[14rem_1fr]" : "md:grid-cols-[19rem_1fr] lg:gap-12"}`}>
+      {/* Webinar cover shown as a brochure (Ace, Nov 2026): slight 3D tilt, page shadow, and a badge. Links to Eventbrite. */}
+      <a href={lead.url} rel="noopener" tabIndex={-1} aria-hidden="true" className="group relative mx-auto block w-full max-w-[19rem] pb-4 pr-4">
+        <span className="block overflow-hidden rounded-r-lg rounded-l-sm bg-white shadow-[0_24px_40px_-18px_rgba(31,78,121,0.65)] ring-1 ring-black/5 transition-transform duration-500 [transform:perspective(900px)_rotateY(-12deg)] group-hover:[transform:perspective(900px)_rotateY(-4deg)]">
+          <Image src={WEBINAR_COVER} alt="" width={1600} height={897} sizes="(min-width: 768px) 304px, 80vw" className="w-full" />
+          <span className="absolute inset-y-0 left-0 w-2 bg-gradient-to-r from-black/25 to-transparent" />
+        </span>
+        <span className="absolute bottom-0 right-0 flex h-[4.4rem] w-[4.4rem] flex-col items-center justify-center rounded-full bg-brand-button text-center font-heading text-[0.6rem] font-bold uppercase leading-tight tracking-wider text-white shadow-lg ring-4 ring-white">
+          {es ? "En vivo" : "Free"}
+          <br />
+          {es ? "gratis" : "webinar"}
+        </span>
       </a>
-      <div className="p-6 sm:p-8">
+      <div>
       <p className="text-sm font-semibold uppercase tracking-[0.15em] text-brand-blue-deep">{es ? "Próximos eventos · Seminario web gratuito" : "Upcoming events · Free webinar"}</p>
       <h2 id="events-h" className="mt-2 text-2xl font-bold">
         {es ? lead.titleEs : lead.title}
@@ -136,6 +138,7 @@ export function EventsList({ lang, compact = false }: { lang: Lang; compact?: bo
           ? "Evento educativo, presentado en inglés; asistir no lo obliga a solicitar un préstamo. Este material no ha sido revisado, aprobado ni emitido por HUD, la FHA ni ninguna agencia del gobierno."
           : "Educational event; attending doesn't obligate you to apply for a loan. This material has not been reviewed, approved, or issued by HUD, FHA, or any government agency."}
       </p>
+      </div>
       </div>
     </section>
   );
