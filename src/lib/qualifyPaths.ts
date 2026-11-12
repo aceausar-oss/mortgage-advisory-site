@@ -9,7 +9,7 @@ import type { Goal } from "@/lib/qualify";
 type Copy = { photoAlt: string; crumb: string; h1: string; lead: string; title: string; description: string; share: string; shareSub: string };
 
 export type QualifyPath = {
-  slug: "refinance" | "heloc" | "reverse-mortgage";
+  slug: "refinance" | "heloc" | "reverse-mortgage" | "investor";
   goal: Goal;
   photo: string;
   position: string;
@@ -101,6 +101,34 @@ export const QUALIFY_PATHS: QualifyPath[] = [
       description: "Propietarios de 62 años o más: vea un rango estimado de hipoteca inversa con las tablas de HUD y opciones para conservar su hipoteca actual. Sin revisar su crédito.",
       share: "Vea su estimado de hipoteca inversa",
       shareSub: "Propietarios de 62+ · Cuestionario de 2 minutos",
+    },
+  },
+  {
+    slug: "investor",
+    goal: "invest",
+    photo: "/images/loans/loan-dscr.jpg",
+    position: "center 30%",
+    photoEs: "/images/loans/loan-dscr.jpg",
+    positionEs: "center 30%",
+    en: {
+      photoAlt: "Smiling real estate investor holding keys in front of a rental home",
+      crumb: "Investor quiz",
+      h1: "Which rental property loans fit you?",
+      lead: "Buying, refinancing, or pulling cash from a rental? Answer a few quick questions to see whether a DSCR loan, a conventional investment loan, or both may fit, plus what to have ready. No tax returns needed to start.",
+      title: "DSCR & Investor Loan Quiz: 2 Minutes",
+      description: "Investors: see if a DSCR or conventional investment loan fits, your cash-out estimate, and a document checklist. CA, TX, FL, CO. NMLS #1549739.",
+      share: "Which rental property loans fit you?",
+      shareSub: "DSCR or conventional · 2-minute quiz",
+    },
+    es: {
+      photoAlt: "Inversionista sonriente con las llaves frente a una casa de renta",
+      crumb: "Cuestionario para inversionistas",
+      h1: "¿Qué préstamos para propiedades de renta le funcionan?",
+      lead: "¿Va a comprar, refinanciar o sacar dinero de una propiedad de renta? Conteste unas preguntas rápidas para ver si le funciona un préstamo DSCR, uno convencional de inversión o ambos, y qué tener listo.",
+      title: "Cuestionario DSCR para inversionistas: 2 minutos",
+      description: "Inversionistas: vea si le funciona un préstamo DSCR o uno convencional de inversión, su estimado de retiro de efectivo y una lista de documentos.",
+      share: "¿Qué préstamos de renta le funcionan?",
+      shareSub: "DSCR o convencional · 2 minutos",
     },
   },
 ];

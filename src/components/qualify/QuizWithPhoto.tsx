@@ -44,6 +44,14 @@ const GOAL_PHOTOS: Record<Goal, Photo & { srcEs?: string }> = {
       es: "Pareja jubilada sonriendo en su patio",
     },
   },
+  invest: {
+    src: "/images/loans/loan-dscr.jpg",
+    position: "center 30%",
+    alt: {
+      en: "Smiling real estate investor holding keys in front of a rental home",
+      es: "Inversionista sonriente con las llaves frente a una casa de renta",
+    },
+  },
 };
 
 export function QuizWithPhoto({
