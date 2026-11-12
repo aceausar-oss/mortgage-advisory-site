@@ -61,6 +61,7 @@ export function NewsHero({ kicker, title, children, as = "h1" }: { kicker: React
   return (
     <div className="relative isolate overflow-hidden rounded-[2rem] px-6 py-10 shadow-lg sm:px-10 sm:py-14">
       <MarketArt className="absolute inset-0 -z-10 h-full w-full" />
+      <div aria-hidden="true" className="absolute inset-0 -z-10 bg-gradient-to-r from-[#24343c]/85 via-[#24343c]/45 to-transparent" />
       <p className="text-sm font-semibold uppercase tracking-[0.18em] text-white/85">{kicker}</p>
       {/* Inline color: the global heading color would otherwise win over the utility class on this dark banner. */}
       <Title className="mt-3 max-w-3xl font-heading text-3xl font-bold leading-tight sm:text-5xl" style={{ color: "#fff" }}>

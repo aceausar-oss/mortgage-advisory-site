@@ -147,6 +147,7 @@ export function NewsletterSignup({ lang = "en", page = "" }: { lang?: Lang; page
     // Same market artwork as the popup and page banner, so the sign-up stands out instead of fading into the page.
     <section aria-labelledby={`${id}-h`} className="relative isolate overflow-hidden rounded-[2rem] p-6 text-white shadow-lg sm:p-10">
       <MarketArt className="absolute inset-0 -z-10 h-full w-full" />
+      <div aria-hidden="true" className="absolute inset-0 -z-10 bg-gradient-to-r from-[#24343c]/85 via-[#24343c]/45 to-transparent" />
       <p className="text-sm font-semibold uppercase tracking-[0.18em] text-white/85">{t.popKicker}</p>
       {/* Inline color: the global h2 color would otherwise win over the utility class on this dark panel. */}
       <h2 id={`${id}-h`} className="mt-2 max-w-2xl font-heading text-2xl font-bold sm:text-3xl" style={{ color: "#fff" }}>
