@@ -8,20 +8,20 @@ tldr: "A DSCR loan lets real estate investors buy or refinance rental properties
 category: investor
 products: [non-qm]
 funding: direct
-# Investor photos (Ace, Nov 2026). Drop the files into public/images/loans/ with these names and they appear
-# automatically: hero 1536x1024 (keep the subject centered; it's cropped wider on desktop), strip photos 1200x900.
+# Investor photos (Ace, Nov 2026) in public/images/loans/: hero 1536x1024 (cropped wider on desktop), strip 1200x900.
 image: "/images/loans/loan-dscr.jpg"
-imageAlt: "Real estate investor standing in front of a rental property"
+imageAlt: "Smiling real estate investor holding keys in front of a rental home"
+imagePosition: "center 30%"
 gallery:
   - src: "/images/loans/dscr-single-family.jpg"
-    alt: "Single-family rental home with a well-kept front yard"
+    alt: "Single-story rental home with a two-car garage and a green front lawn"
     caption: "Single-family rentals"
+  - src: "/images/loans/dscr-duplex.jpg"
+    alt: "Single-story duplex with two front doors and a shared lawn"
+    caption: "Duplexes"
   - src: "/images/loans/dscr-multi-unit.jpg"
-    alt: "Small fourplex apartment building"
-    caption: "Duplexes to fourplexes"
-  - src: "/images/loans/dscr-short-term.jpg"
-    alt: "Furnished vacation rental with a patio"
-    caption: "Short-term rentals"
+    alt: "Two-story fourplex with a shared staircase and parking"
+    caption: "Triplexes and fourplexes"
 related: [what-is-a-dscr-loan, dscr-loan-requirements, how-to-calculate-dscr, dscr-loan-down-payment, dscr-loan-prepayment-penalty, dscr-vs-conventional-investment-loan, dscr-cash-out-refinance, dscr-loan-short-term-rental, dscr-loan-llc, dscr-loan-multiple-properties]
 didYouKnow:
   - text: "DSCR stands for debt service coverage ratio: monthly rent divided by the full monthly payment. A ratio of 1.25 means the rent covers the payment with 25% to spare."

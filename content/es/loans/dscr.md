@@ -9,17 +9,18 @@ category: investor
 products: [non-qm]
 funding: direct
 image: "/images/loans/loan-dscr.jpg"
-imageAlt: "Inversionista de bienes raíces frente a una propiedad de renta"
+imageAlt: "Inversionista de bienes raíces sonriendo con las llaves frente a una casa de renta"
+imagePosition: "center 30%"
 gallery:
   - src: "/images/loans/dscr-single-family.jpg"
-    alt: "Casa unifamiliar de renta con el jardín bien cuidado"
+    alt: "Casa de renta de un piso con garaje para dos autos y jardín verde"
     caption: "Casas unifamiliares de renta"
+  - src: "/images/loans/dscr-duplex.jpg"
+    alt: "Dúplex de un piso con dos puertas de entrada y jardín compartido"
+    caption: "Dúplex"
   - src: "/images/loans/dscr-multi-unit.jpg"
-    alt: "Edificio pequeño de cuatro unidades"
-    caption: "Dúplex a cuádruplex"
-  - src: "/images/loans/dscr-short-term.jpg"
-    alt: "Casa vacacional amueblada con patio"
-    caption: "Rentas a corto plazo"
+    alt: "Edificio de cuatro unidades de dos pisos con escalera compartida y estacionamiento"
+    caption: "Tríplex y cuádruplex"
 related: []
 didYouKnow:
   - text: "DSCR significa debt service coverage ratio (índice de cobertura de la deuda): la renta mensual dividida entre el pago mensual completo. Un índice de 1.25 significa que la renta cubre el pago y sobra un 25%."

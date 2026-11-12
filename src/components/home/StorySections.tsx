@@ -37,6 +37,17 @@ const GOALS = [
     icon: "M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10Z",
   },
   {
+    // Investors are the #2 focus niche after reverse mortgages (Ace, Nov 2026). A common scenario, not a client testimonial.
+    goal: "investor",
+    headline: "Growing a rental portfolio?",
+    copy: "Here's a story we hear all the time: an investor owns three rentals, every one of them pays for itself, and the bank still says no, because write-offs shrink the tax returns and the debt-to-income looks maxed out. A DSCR loan looks at the property instead. If the rent covers the payment, it qualifies, in your name or your LLC, with no tax returns.",
+    points: ["Qualify on the property's rent, not your tax returns", "Close in your name or your LLC", "Prepayment terms shown in dollars up front"],
+    cta: { label: "See DSCR investor loans", q: "How do DSCR loans work for real estate investors?", href: "/loans/dscr" },
+    related: { href: "/answers/how-to-calculate-dscr", label: "How do you calculate DSCR?" },
+    image: { src: "/images/loans/loan-dscr.jpg", alt: "Smiling real estate investor holding keys in front of a rental home" },
+    icon: "M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6",
+  },
+  {
     goal: "self-employed",
     headline: "Self-employed?",
     copy: "Great business, big write-offs, and a tax return that doesn't show what you really earn? Bank statement, 1099, and P&L loan programs look at your actual cash flow instead.",
