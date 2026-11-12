@@ -9,7 +9,10 @@ export type Lang = "en" | "es";
 export const LANG_COOKIE = "lang";
 
 // English paths that have a Spanish twin under /es. Anything else toggles to the Spanish homepage.
-export const SPANISH_PATHS: string[] = ["/", "/ask", "/book", "/qualify", "/pre-approval", "/qualify/refinance", "/qualify/heloc", "/qualify/reverse-mortgage", ...LOAN_SLUGS.map((s) => `/loans/${s}`), ...ES_ANSWER_SLUGS.map((s) => `/answers/${s}`)];
+export const SPANISH_PATHS: string[] = ["/", "/news", "/ask", "/book", "/qualify", "/pre-approval", "/qualify/refinance", "/qualify/heloc", "/qualify/reverse-mortgage", ...LOAN_SLUGS.map((s) => `/loans/${s}`), ...ES_ANSWER_SLUGS.map((s) => `/answers/${s}`)];
+
+/** Does this English path have a Spanish twin? Every published edition of The Advisory Report (/news/*) has one. */
+export const hasSpanishTwin = (path: string) => SPANISH_PATHS.includes(path) || /^\/news\/[a-z0-9-]+$/.test(path);
 
 /** "/loans/heloc" → "/es/loans/heloc"; "/" → "/es". */
 export const toEs = (path: string) => (path === "/" ? "/es" : `/es${path}`);
@@ -22,7 +25,7 @@ export const href = (path: string, lang: Lang) => {
   if (lang === "en") return path;
   const [base, hash] = path.split("#");
   const bare = base.split("?")[0] || "/";
-  if (!SPANISH_PATHS.includes(bare)) return path; // English-only page: link stays English
+  if (!hasSpanishTwin(bare)) return path; // English-only page: link stays English
   return `${toEs(base || "/")}${hash !== undefined ? `#${hash}` : ""}`;
 };
 
@@ -101,6 +104,7 @@ export const spanishResourcesNav = [
   { href: "/es/loans/conventional", label: "Préstamos convencionales" },
   { href: "/es/loans/non-qm", label: "Préstamos Non-QM" },
   { href: "/es/loans/dscr", label: "Préstamos DSCR" },
+  { href: "/es/news", label: "The Advisory Report (noticias)" },
   { href: "/es/loans/debt-consolidation", label: "Consolidar deudas" },
   { href: "/es/pre-approval", label: "Obtener preaprobación" },
   { href: "/es/ask", label: "Pregúntele al asistente" },

@@ -1,5 +1,5 @@
 import { NextResponse, type NextRequest } from "next/server";
-import { LANG_COOKIE, SPANISH_PATHS, toEs } from "@/lib/i18n";
+import { LANG_COOKIE, hasSpanishTwin, toEs } from "@/lib/i18n";
 
 // Remembers the visitor's language (Ace, Oct 2026). Visiting any /es page saves "es"; the English button on Spanish
 // pages links with ?lang=en, which saves "en". A visitor who chose Spanish and then opens an English page that has a
@@ -24,7 +24,7 @@ export function proxy(request: NextRequest) {
     return remember(NextResponse.redirect(url, 307), "en");
   }
 
-  if (saved === "es" && SPANISH_PATHS.includes(pathname)) {
+  if (saved === "es" && hasSpanishTwin(pathname)) {
     const url = request.nextUrl.clone();
     url.pathname = toEs(pathname);
     return NextResponse.redirect(url, 307);
@@ -35,5 +35,5 @@ export function proxy(request: NextRequest) {
 
 // Only pages that exist in both languages (constants, as Next.js requires).
 export const config = {
-  matcher: ["/", "/ask", "/book", "/qualify", "/qualify/:slug", "/pre-approval", "/loans/:slug", "/es", "/es/:path*"],
+  matcher: ["/", "/ask", "/book", "/qualify", "/qualify/:slug", "/pre-approval", "/loans/:slug", "/news", "/news/:slug", "/es", "/es/:path*"],
 };

@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { getHandouts } from "@/lib/handouts";
 import { getEntries } from "@/lib/kb";
 import { getLoanPages, getLocationPages } from "@/lib/loans";
+import { getEditions } from "@/lib/news";
 import { toEs } from "@/lib/i18n";
 import { QUALIFY_PATHS } from "@/lib/qualifyPaths";
 import { siteUrl } from "@/lib/site";
@@ -17,6 +18,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const esLoanSlugs = new Set(esLoans.map((p) => p.slug));
   const esAnswers = getEntries("es").filter((e) => !e.isDraft);
   const esAnswerSlugs = new Set(esAnswers.map((e) => e.slug));
+  const editions = getEditions().filter((e) => !e.isDraft);
+  const esEditions = getEditions("es").filter((e) => !e.isDraft);
+  const newsLatest = editions[0]?.date;
 
   return [
     { url: `${siteUrl}/`, lastModified: latest ?? new Date().toISOString().slice(0, 10), ...both("/") },
@@ -27,6 +31,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${siteUrl}/qualify`, ...both("/qualify") },
     ...QUALIFY_PATHS.map((p) => ({ url: `${siteUrl}/qualify/${p.slug}`, ...both(`/qualify/${p.slug}`) })),
     { url: `${siteUrl}/reviews` },
+    { url: `${siteUrl}/news`, lastModified: newsLatest, ...both("/news") },
+    { url: `${siteUrl}/es/news`, lastModified: esEditions[0]?.date, ...both("/news") },
+    ...editions.map((e) => ({ url: `${siteUrl}/news/${e.slug}`, lastModified: e.date, ...both(`/news/${e.slug}`) })),
+    ...esEditions.map((e) => ({ url: `${siteUrl}/es/news/${e.slug}`, lastModified: e.date, ...both(`/news/${e.slug}`) })),
     ...["life-rate", "reverse-calculator", "costs", "pros", "about", "licensing", "privacy", "terms", "accessibility", "do-not-sell"].map((p) => ({ url: `${siteUrl}/${p}` })),
     ...loans.map((p) => ({
       url: `${siteUrl}${p.basePath}/${p.slug}`,

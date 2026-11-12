@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { SPANISH_PATHS, toEn, toEs, type Lang } from "@/lib/i18n";
+import { hasSpanishTwin, toEn, toEs, type Lang } from "@/lib/i18n";
 
 // EN/ES switch in the header. Goes to the same page in the other language when it exists (/loans/heloc ↔
 // /es/loans/heloc); English pages without a Spanish twin go to the Spanish homepage. Rendered on the server too
@@ -10,7 +10,7 @@ import { SPANISH_PATHS, toEn, toEs, type Lang } from "@/lib/i18n";
 export function LangToggle({ lang }: { lang: Lang }) {
   const path = usePathname() || "/";
   // ?lang=en tells src/proxy.ts to remember English (so a visitor who chose Spanish earlier isn't sent back).
-  const target = lang === "es" ? `${toEn(path)}?lang=en` : SPANISH_PATHS.includes(path) ? toEs(path) : "/es";
+  const target = lang === "es" ? `${toEn(path)}?lang=en` : hasSpanishTwin(path) ? toEs(path) : "/es";
   return (
     <a
       href={target}

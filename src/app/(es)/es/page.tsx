@@ -4,6 +4,7 @@ import { BookingSection } from "@/components/home/BookingSection";
 import { EquitySlider } from "@/components/home/EquitySlider";
 import { FloatingCard } from "@/components/home/FloatingCard";
 import { GoalCards } from "@/components/home/GoalCards";
+import { LatestReport } from "@/components/news/LatestReport";
 import { HeroChat } from "@/components/home/HeroChat";
 import { LicensedStatesMap } from "@/components/home/LicensedStatesMap";
 import { pricing } from "@/lib/home";
@@ -48,6 +49,8 @@ export default function SpanishHome() {
         </section>
 
         <GoalCards lang="es" />
+
+        <LatestReport lang="es" />
 
         <FloatingCard
           bare

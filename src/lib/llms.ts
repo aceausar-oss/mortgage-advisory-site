@@ -1,5 +1,7 @@
 import { getEntries } from "@/lib/kb";
 import { getLoanPages } from "@/lib/loans";
+import { getEditions } from "@/lib/news";
+import { eventSeries, scheduleText } from "@/lib/events";
 import { CATEGORIES } from "@/lib/categories";
 import { booking, publishedAnswers as published, publishedLocations, publishedPrograms } from "@/lib/knowledge";
 import type { LoanPage } from "@/lib/loans";
@@ -40,8 +42,20 @@ export function llmsTxt() {
     `- [About Ace Ausar and the company](${siteUrl}/about)`,
     `- [Resources for financial professionals](${siteUrl}/pros): resources for financial planners, CFPs, CPAs, and estate planners whose clients could use a reverse mortgage, HELOC, or refinance`,
     `- [Client reviews](${siteUrl}/reviews): real Google reviews`,
+    `- [The Advisory Report](${siteUrl}/news): weekly housing and market news every Monday, with sourced numbers (RSS: ${siteUrl}/news/rss.xml)`,
     `- [Licensing and disclosures](${siteUrl}/licensing)`,
     `- [Book a call](${siteUrl}/book): schedule with a licensed advisor`,
+    "",
+    "## The Advisory Report (weekly)",
+    "",
+    ...getEditions()
+      .filter((e) => !e.isDraft)
+      .slice(0, 8)
+      .map((e) => `- [${e.title} (${e.date})](${siteUrl}/news/${e.slug}): ${e.tldr}`),
+    "",
+    "## Upcoming events (free webinars)",
+    "",
+    ...eventSeries.map((ev) => `- [${ev.title}](${ev.url}): ${scheduleText(ev, "en")}`),
     "",
     "## Knowledge API",
     "",
