@@ -33,6 +33,7 @@ const T = {
     book: "Book a call with an advisor",
     bookHref: "/book#reverse",
     close: "Close",
+    weekly: "Also send me The Advisory Report, a free weekly email on housing and market news.",
   },
   es: {
     badge: ["Descarga", "gratis"],
@@ -57,6 +58,7 @@ const T = {
     book: "Reserve una llamada con un asesor",
     bookHref: "/es/book#reverse",
     close: "Cerrar",
+    weekly: "Envíenme también The Advisory Report, un correo semanal gratis con noticias de vivienda y del mercado.",
   },
 } as const;
 
@@ -112,7 +114,9 @@ function GuideForm({ lang, onDone, autoFocus = false }: { lang: Lang; onDone?: (
     e.preventDefault();
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) return setStatus("bad");
     setStatus("sending");
-    const website = (new FormData(e.currentTarget).get("website") as string) || "";
+    const form = new FormData(e.currentTarget);
+    const website = (form.get("website") as string) || "";
+    const weekly = form.get("weekly") === "on";
     try {
       const res = await fetch("/api/guide", {
         method: "POST",
@@ -124,6 +128,20 @@ function GuideForm({ lang, onDone, autoFocus = false }: { lang: Lang; onDone?: (
       if (!res.ok || !data.ok) throw new Error();
       setGuide(data.guide || GUIDE_PDF[lang]);
       writeState({ done: true });
+      // Optional: also join The Advisory Report weekly email (separate, unchecked-by-default box).
+      if (weekly)
+        fetch("/api/newsletter", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email, consent: true, lang, page: window.location.pathname }),
+        })
+          .then((r) => {
+            if (r.ok)
+              try {
+                localStorage.setItem("tma-news", JSON.stringify({ done: true }));
+              } catch {}
+          })
+          .catch(() => {});
       setStatus("done");
       onDone?.();
     } catch {
@@ -186,6 +204,10 @@ function GuideForm({ lang, onDone, autoFocus = false }: { lang: Lang; onDone?: (
       >
         {status === "sending" ? t.sending : t.button}
       </button>
+      <label className="flex items-start gap-3 text-left text-sm leading-relaxed text-brand-slate">
+        <input type="checkbox" name="weekly" className="mt-0.5 h-5 w-5 shrink-0" />
+        <span>{t.weekly}</span>
+      </label>
       <p id={`${id}-msg`} aria-live="polite" className="min-h-0 text-sm font-semibold text-amber-800">
         {status === "bad" ? t.bad : status === "error" ? t.error : ""}
       </p>
@@ -283,7 +305,8 @@ export function GuidePopup({ lang = "en" }: { lang?: Lang }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [open]);
 
-  if (!open) return null;
+  // Marker for the Advisory Report popup: on guide pages it waits until this browser has seen the guide offer.
+  if (!open) return <span data-guide-page hidden />;
   return (
     <div className="fixed inset-0 z-50 flex items-end justify-center sm:items-center sm:p-6" lang={lang}>
       {/* Dimmed page behind (computer only; on phones the page above the panel stays visible). */}

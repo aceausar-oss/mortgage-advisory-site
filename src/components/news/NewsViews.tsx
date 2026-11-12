@@ -3,17 +3,17 @@ import { AuthorBox, Breadcrumbs, DraftBanner, SourcesList, TldrBox } from "@/com
 import { DidYouKnow } from "@/components/DidYouKnow";
 import { Disclosures } from "@/components/Disclosures";
 import { JsonLd } from "@/components/JsonLd";
+import { NewsHero } from "@/components/news/MarketArt";
 import { EditionCard, EventsList, StatsGrid, TreasuryWeek } from "@/components/news/NewsParts";
 import { NewsletterSignup } from "@/components/news/NewsletterSignup";
 import { eventsJsonLd } from "@/lib/events";
 import type { Lang } from "@/lib/i18n";
-import { NEWS_NAME, editionDate, getEditions, type Edition } from "@/lib/news";
+import { NEWS_NAME, editionDate, getEditions, newsSignupEnabled, type Edition } from "@/lib/news";
 import { licensing, siteUrl } from "@/lib/site";
 
 // Shared page bodies for The Advisory Report in English (/news) and Spanish (/es/news).
 
 const pre = (lang: Lang) => (lang === "es" ? "/es" : "");
-export const newsSignupEnabled = () => !!process.env.GHL_NEWSLETTER_WEBHOOK_URL || process.env.VERCEL_ENV !== "production";
 
 function Cta({ lang }: { lang: Lang }) {
   const es = lang === "es";
@@ -75,19 +75,21 @@ export function EditionView({ e, lang }: { e: Edition; lang: Lang }) {
     ],
   };
   return (
-    <div className="mx-auto max-w-[75rem] px-4 py-10 sm:px-6">
+    <div className="mx-auto max-w-[75rem] space-y-8 px-4 py-10 sm:px-6">
       <JsonLd data={jsonLd} />
+      {e.isDraft && <DraftBanner lang={lang} />}
+      <Breadcrumbs items={crumbs} />
+      <NewsHero
+        kicker={
+          <>
+            {NEWS_NAME} · <time dateTime={e.date}>{editionDate(e.date, lang)}</time>
+          </>
+        }
+        title={e.title}
+      />
       <div className={e.didYouKnow.length ? "lg:grid lg:grid-cols-[minmax(0,1fr)_18rem] lg:gap-10" : "mx-auto max-w-3xl"}>
         <article className="min-w-0 max-w-3xl space-y-8">
-          {e.isDraft && <DraftBanner lang={lang} />}
-          <Breadcrumbs items={crumbs} />
-          <header className="space-y-4">
-            <p className="text-sm font-semibold uppercase tracking-[0.15em] text-brand-blue-deep">
-              {NEWS_NAME} · <time dateTime={e.date}>{editionDate(e.date, lang)}</time>
-            </p>
-            <h1 className="text-3xl font-bold leading-tight sm:text-4xl">{e.title}</h1>
-            <TldrBox text={e.tldr} lang={lang} />
-          </header>
+          <TldrBox text={e.tldr} lang={lang} />
           {e.didYouKnow.length > 0 && (
             <div className="lg:hidden">
               <DidYouKnow facts={e.didYouKnow} lang={lang} />
@@ -144,15 +146,13 @@ export function NewsHubView({ lang }: { lang: Lang }) {
   return (
     <div className="mx-auto max-w-[75rem] space-y-10 px-4 py-10 sm:px-6">
       <JsonLd data={jsonLd} />
-      <header className="max-w-3xl space-y-4">
+      <header className="space-y-4">
         <Breadcrumbs items={[{ href: es ? "/es" : "/", label: es ? "Inicio" : "Home" }, { href: `${pre(lang)}/news`, label: NEWS_NAME }]} />
-        <p className="text-sm font-semibold uppercase tracking-[0.15em] text-brand-blue-deep">{es ? "Cada lunes" : "Every Monday"}</p>
-        <h1 className="text-4xl font-bold leading-tight sm:text-5xl">{NEWS_NAME}</h1>
-        <p className="text-lg leading-relaxed">
+        <NewsHero kicker={es ? "Noticias de vivienda y mercados · Cada lunes" : "Housing & market news · Every Monday"} title={NEWS_NAME}>
           {es
             ? "¿Qué está pasando con los precios de las casas, el valor líquido y los mercados esta semana? Cada lunes, The Mortgage Advisory reúne los números que importan, cada uno con su fuente, más algunos datos curiosos y lo que significan para propietarios, compradores, jubilados e inversionistas en California, Texas, Florida y Colorado."
             : "What's happening with home prices, home equity, and the markets this week? Every Monday, The Mortgage Advisory rounds up the numbers that matter, each with its source, plus a few fun facts and what they mean for homeowners, buyers, retirees, and investors in California, Texas, Florida, and Colorado."}
-        </p>
+        </NewsHero>
       </header>
       {latest ? (
         <section aria-labelledby="latest-h" className="space-y-4">

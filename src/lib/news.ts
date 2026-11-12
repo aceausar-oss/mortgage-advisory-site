@@ -104,3 +104,6 @@ export const latestEdition = (lang: Lang = "en") => getEditions(lang)[0];
 
 export const editionDate = (iso: string, lang: Lang) =>
   new Date(`${iso}T12:00:00Z`).toLocaleDateString(lang === "es" ? "es-US" : "en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" });
+
+/** Newsletter sign-up shows on the live site only once Go High Level is connected (GHL_NEWSLETTER_WEBHOOK_URL). */
+export const newsSignupEnabled = () => !!process.env.GHL_NEWSLETTER_WEBHOOK_URL || process.env.VERCEL_ENV !== "production";

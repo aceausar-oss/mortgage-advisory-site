@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { eventSeries, nextSessions, scheduleText } from "@/lib/events";
 import type { Lang } from "@/lib/i18n";
@@ -69,6 +70,8 @@ export async function TreasuryWeek({ asOf, lang }: { asOf: string; lang: Lang })
   );
 }
 
+const WEBINAR_COVER = "/images/events/hidden-pension-webinar.jpg";
+
 export function EventsList({ lang, compact = false }: { lang: Lang; compact?: boolean }) {
   const es = lang === "es";
   const main = eventSeries.find((s) => !s.area);
@@ -77,8 +80,20 @@ export function EventsList({ lang, compact = false }: { lang: Lang; compact?: bo
   const lead = main ?? local[0];
   const sessions = nextSessions(lead, lang, compact ? 2 : 4);
   return (
-    <section aria-labelledby="events-h" className="rounded-3xl border border-brand-blue/50 bg-white p-6 sm:p-8">
-      <p className="text-sm font-semibold uppercase tracking-[0.15em] text-brand-blue-deep">{es ? "Próximos eventos" : "Upcoming events"}</p>
+    <section aria-labelledby="events-h" className="overflow-hidden rounded-3xl border border-brand-blue/50 bg-white">
+      {/* Webinar cover (Ace, Nov 2026): links to the Eventbrite page. */}
+      <a href={lead.url} rel="noopener" className="group block bg-mist" tabIndex={-1} aria-hidden="true">
+        <Image
+          src={WEBINAR_COVER}
+          alt=""
+          width={1600}
+          height={897}
+          sizes="(min-width: 1200px) 1100px, 100vw"
+          className={`w-full object-cover transition-transform duration-500 group-hover:scale-[1.01] ${compact ? "max-h-72 object-[center_35%]" : ""}`}
+        />
+      </a>
+      <div className="p-6 sm:p-8">
+      <p className="text-sm font-semibold uppercase tracking-[0.15em] text-brand-blue-deep">{es ? "Próximos eventos · Seminario web gratuito" : "Upcoming events · Free webinar"}</p>
       <h2 id="events-h" className="mt-2 text-2xl font-bold">
         {es ? lead.titleEs : lead.title}
       </h2>
@@ -121,6 +136,7 @@ export function EventsList({ lang, compact = false }: { lang: Lang; compact?: bo
           ? "Evento educativo, presentado en inglés; asistir no lo obliga a solicitar un préstamo. Este material no ha sido revisado, aprobado ni emitido por HUD, la FHA ni ninguna agencia del gobierno."
           : "Educational event; attending doesn't obligate you to apply for a loan. This material has not been reviewed, approved, or issued by HUD, FHA, or any government agency."}
       </p>
+      </div>
     </section>
   );
 }
