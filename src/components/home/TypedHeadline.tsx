@@ -13,8 +13,8 @@ const subscribe = (cb: () => void) => {
   return () => mq.removeEventListener("change", cb);
 };
 
-const TYPE_MS = 55;
-const ERASE_MS = 30;
+const TYPE_MS = 110;
+const ERASE_MS = 60;
 const HOLD_MS = 2200;
 
 export function TypedHeadline({ lead, phrases, className = "" }: { lead: string; phrases: string[]; className?: string }) {
