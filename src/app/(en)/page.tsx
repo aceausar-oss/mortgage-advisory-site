@@ -10,7 +10,6 @@ import { LicensedStatesMap } from "@/components/home/LicensedStatesMap";
 import { QuestionFeed } from "@/components/home/QuestionFeed";
 import { ReviewsCarousel } from "@/components/Reviews";
 import { StatsBand } from "@/components/home/StatsBand";
-import { LatestReport } from "@/components/news/LatestReport";
 import { ParallaxImage } from "@/components/ParallaxImage";
 import { StorySections } from "@/components/home/StorySections";
 import { pricing, verifiedStats } from "@/lib/home";
@@ -69,9 +68,6 @@ export default function Home() {
 
         {/* Market reality in three numbers (sourced, content/data/stats.json): the big picture before "check yours". */}
         <StatsBand stats={verifiedStats} />
-
-        {/* Newest edition of The Advisory Report (weekly market news). */}
-        <LatestReport />
 
         {/* Amex-style photo cards by goal */}
         <GoalCards />
