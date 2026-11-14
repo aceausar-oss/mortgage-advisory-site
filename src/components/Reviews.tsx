@@ -19,6 +19,16 @@ export const reviewsData = data as {
   reviews: Review[];
 };
 const SOURCE_LABEL: Record<ReviewSource, string> = { google: "Google", yelp: "Yelp", zillow: "Zillow", bbb: "BBB", facebook: "Facebook" };
+// Small source badge in each card's corner (Ace, Nov 2026): tinted pill with a colored dot.
+const SOURCE_BADGE: Record<ReviewSource, { pill: string; dot: string }> = {
+  google: { pill: "bg-[#eef4fb] text-brand-blue-deep", dot: "bg-brand-blue-deep" },
+  yelp: { pill: "bg-[#fdecec] text-[#b42020]", dot: "bg-[#d32323]" },
+  zillow: { pill: "bg-[#e8f2fe] text-[#0b5bc4]", dot: "bg-[#006aff]" },
+  bbb: { pill: "bg-[#e8f1f7] text-[#0a5a8a]", dot: "bg-[#015a8b]" },
+  facebook: { pill: "bg-[#e9f0fd] text-[#1b5fd1]", dot: "bg-[#1877f2]" },
+};
+// Sources that actually have reviews shown on the site (for the "shown word for word" line).
+const shownSources = [...new Set(reviewsData.reviews.map((r) => SOURCE_LABEL[r.source ?? "google"]))];
 const otherSources = Object.entries(reviewsData.sources ?? {}).filter(([k]) => k !== "google") as [ReviewSource, SourceInfo][];
 
 const Stars = ({ className = "" }: { className?: string }) => (
@@ -32,8 +42,14 @@ const Stars = ({ className = "" }: { className?: string }) => (
 export function ReviewCard({ review, compact = false }: { review: Review; compact?: boolean }) {
   return (
     <figure className="flex h-full flex-col rounded-xl border border-brand-blue bg-white p-5 shadow-[0_0_18px_rgba(136,180,224,0.55)]">
-      <Stars className="text-base" />
-      <span className="sr-only">5 out of 5 stars</span>
+      <div className="flex items-center justify-between gap-3">
+        <Stars className="text-base" />
+        <span className="sr-only">5 out of 5 stars</span>
+        <span className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5 text-xs font-bold ${SOURCE_BADGE[review.source ?? "google"].pill}`}>
+          <span aria-hidden="true" className={`h-2 w-2 rounded-full ${SOURCE_BADGE[review.source ?? "google"].dot}`} />
+          {SOURCE_LABEL[review.source ?? "google"]}
+        </span>
+      </div>
       <blockquote className={`mt-2 flex-1 text-[0.95rem] leading-relaxed text-brand-ink ${compact ? "line-clamp-6" : ""}`}>“{review.text}”</blockquote>
       <figcaption className="mt-4 flex items-center gap-3 border-t border-brand-blue/30 pt-3">
         <span aria-hidden="true" className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-brand-soft font-heading font-bold text-brand-ink">
@@ -52,6 +68,7 @@ export function ReviewCard({ review, compact = false }: { review: Review; compac
 
 export function ReviewsSummary({ extra }: { extra?: ReactNode }) {
   return (
+    <div>
     <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-3">
       <p className="flex items-center gap-2 font-heading text-lg font-semibold text-brand-ink">
         {reviewsData.rating.toFixed(1)} <Stars className="text-xl" />
@@ -66,23 +83,28 @@ export function ReviewsSummary({ extra }: { extra?: ReactNode }) {
       >
         Read all reviews on Google ↗
       </a>
-      {otherSources.map(([key, src]) => (
-        <a
-          key={key}
-          href={src.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="rounded-full border-2 border-brand-blue bg-white px-4 py-1.5 text-sm font-semibold text-brand-button hover:border-brand-blue-deep"
-        >
-          {src.rating && src.count ? `${src.rating.toFixed(1)} ★ · ${src.count} on ${src.label}` : `Read reviews on ${src.label}`} ↗
-        </a>
-      ))}
       {extra}
+    </div>
+    {/* Other review sites: one quiet line, not more buttons (Ace, Nov 2026). */}
+    {otherSources.length > 0 && (
+      <p className="mt-3 text-center text-sm text-brand-slate">
+        {otherSources.map(([key, src], i) => (
+          <span key={key}>
+            {i > 0 && " · "}
+            Also rated{src.rating ? <> <b className="text-brand-ink">{src.rating.toFixed(1)}</b> <span className="text-amber-500" aria-hidden="true">★</span></> : null} on{" "}
+            <a href={src.url} target="_blank" rel="noopener noreferrer" className="font-semibold text-brand-button underline decoration-brand-blue underline-offset-4 hover:text-brand-slate">
+              {src.label}
+              {src.count ? ` (${src.count} reviews)` : ""} ↗
+            </a>
+          </span>
+        ))}
+      </p>
+    )}
     </div>
   );
 }
 
-export const reviewsFootnote = `Real ${["Google", ...otherSources.map(([, s]) => s.label)].join(" and ")} reviews, shown word for word. Everyone’s situation is different; your rate, costs, and timeline will vary.`;
+export const reviewsFootnote = `Real ${shownSources.join(" and ")} reviews, shown word for word. Everyone’s situation is different; your rate, costs, and timeline will vary.`;
 
 // Vora-style side-scrolling row. Native scroll with snap points: swipe, trackpad, or keyboard (it's focusable).
 export function ReviewsCarousel() {
