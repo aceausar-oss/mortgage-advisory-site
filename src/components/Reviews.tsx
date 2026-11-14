@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { CarouselAutoplay } from "@/components/CarouselAutoplay";
@@ -30,6 +31,23 @@ const SOURCE_BADGE: Record<ReviewSource, { pill: string; dot: string }> = {
   bbb: { pill: "bg-[#e8f1f7] text-[#0a5a8a]", dot: "bg-[#015a8b]" },
   facebook: { pill: "bg-[#e9f0fd] text-[#1b5fd1]", dot: "bg-[#1877f2]" },
 };
+// Source logo in each card's top-right corner (Ace, Nov 2026). Files supplied by Ace in public/images/brands/.
+const SOURCE_LOGO: Partial<Record<ReviewSource, { src: string; w: number; h: number; cls: string }>> = {
+  google: { src: "/images/brands/google-g.png", w: 93, h: 96, cls: "h-5 w-auto" },
+  yelp: { src: "/images/brands/yelp-logo.png", w: 121, h: 72, cls: "h-6 w-auto" },
+};
+function SourceMark({ source }: { source: ReviewSource }) {
+  const logo = SOURCE_LOGO[source];
+  if (!logo)
+    return (
+      <span className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5 text-xs font-bold ${SOURCE_BADGE[source].pill}`}>
+        <span aria-hidden="true" className={`h-2 w-2 rounded-full ${SOURCE_BADGE[source].dot}`} />
+        {SOURCE_LABEL[source]}
+      </span>
+    );
+  return <Image src={logo.src} alt={`${SOURCE_LABEL[source]} review`} width={logo.w} height={logo.h} className={logo.cls} />;
+}
+
 // Sources that actually have reviews shown on the site (for the "shown word for word" line).
 const yelpEmbeds = reviewsData.yelpEmbeds ?? [];
 const shownSources = [...new Set([...reviewsData.reviews.map((r) => SOURCE_LABEL[r.source ?? "google"]), ...(yelpEmbeds.length ? ["Yelp"] : [])])];
@@ -41,10 +59,7 @@ export function YelpReviewCard({ embed }: { embed: YelpEmbed }) {
   return (
     <figure className="flex h-full flex-col rounded-xl border border-brand-blue bg-white p-3 shadow-[0_0_18px_rgba(136,180,224,0.55)]">
       <div className="flex justify-end px-2 pt-1">
-        <span className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5 text-xs font-bold ${SOURCE_BADGE.yelp.pill}`}>
-          <span aria-hidden="true" className={`h-2 w-2 rounded-full ${SOURCE_BADGE.yelp.dot}`} />
-          Yelp
-        </span>
+        <SourceMark source="yelp" />
       </div>
       <div className="mt-1 min-h-[15rem] flex-1 overflow-hidden">
         <span className="yelp-review" data-review-id={embed.id} data-hostname="www.yelp.com">
@@ -86,17 +101,15 @@ const Stars = ({ className = "" }: { className?: string }) => (
 // 6 lines; /reviews shows every review in full.
 export function ReviewCard({ review, compact = false }: { review: Review; compact?: boolean }) {
   return (
-    <figure className="flex h-full flex-col rounded-xl border border-brand-blue bg-white p-5 shadow-[0_0_18px_rgba(136,180,224,0.55)]">
+    // Carousel cards are all the same fixed height (Ace, Nov 2026) so the row looks even.
+    <figure className={`flex flex-col rounded-xl border border-brand-blue bg-white p-5 shadow-[0_0_18px_rgba(136,180,224,0.55)] ${compact ? "h-[18.5rem]" : "h-full"}`}>
       <div className="flex items-center justify-between gap-3">
         <Stars className="text-base" />
         <span className="sr-only">5 out of 5 stars</span>
-        <span className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5 text-xs font-bold ${SOURCE_BADGE[review.source ?? "google"].pill}`}>
-          <span aria-hidden="true" className={`h-2 w-2 rounded-full ${SOURCE_BADGE[review.source ?? "google"].dot}`} />
-          {SOURCE_LABEL[review.source ?? "google"]}
-        </span>
+        <SourceMark source={review.source ?? "google"} />
       </div>
       <blockquote className={`mt-2 text-[0.95rem] leading-relaxed text-brand-ink ${compact ? "line-clamp-6" : ""}`}>“{review.text}”</blockquote>
-      {/* Spacer keeps the name at the bottom when a taller Yelp card stretches the row (the clamp stays at 6 lines). */}
+      {/* Spacer keeps the name at the bottom of the fixed-height card. */}
       <div className="flex-1" />
       <figcaption className="mt-4 flex items-center gap-3 border-t border-brand-blue/30 pt-3">
         <span aria-hidden="true" className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-brand-soft font-heading font-bold text-brand-ink">
@@ -139,8 +152,8 @@ export function ReviewsSummary({ extra }: { extra?: ReactNode }) {
           <span key={key}>
             {i > 0 && " · "}
             Also rated{src.rating ? <> <b className="text-brand-ink">{src.rating.toFixed(1)}</b> <span className="text-amber-500" aria-hidden="true">★</span></> : null} on{" "}
-            <a href={src.url} target="_blank" rel="noopener noreferrer" className="font-semibold text-brand-button underline decoration-brand-blue underline-offset-4 hover:text-brand-slate">
-              {src.label}
+            <a href={src.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 font-semibold text-brand-button underline decoration-brand-blue underline-offset-4 hover:text-brand-slate">
+              {SOURCE_LOGO[key] ? <Image src={SOURCE_LOGO[key]!.src} alt={src.label} width={SOURCE_LOGO[key]!.w} height={SOURCE_LOGO[key]!.h} className="h-5 w-auto" /> : src.label}
               {src.count ? ` (${src.count} reviews)` : ""} ↗
             </a>
           </span>
@@ -157,7 +170,10 @@ export const reviewsFootnote = `Real ${shownSources.join(" and ")} reviews, show
 export const yelpReviewEmbeds = yelpEmbeds;
 
 export function ReviewsCarousel() {
-  const row = mixedRow(reviewsData.reviews.filter((r) => r.featured));
+  // Google-only for now: Yelp's embed box can't be restyled to match, and Yelp text can't be copied. Yelp shows as
+  // the "Also rated on Yelp" line here and as Yelp's own boxes on /reviews. mixedRow() is ready if that changes.
+  const row: RowItem[] = reviewsData.reviews.filter((r) => r.featured).map((review) => ({ kind: "google", review }));
+  void mixedRow;
   return (
     <div>
       <p className="text-center font-heading text-sm font-semibold uppercase tracking-[0.2em] text-brand-button">What clients say</p>
@@ -198,8 +214,8 @@ export function ReviewsCarousel() {
       <div className="mb-4">
         <CarouselDots targetId="reviews-row" />
       </div>
-      {yelpEmbeds.length > 0 && <YelpEmbedLoader targetId="reviews-row" />}
-      <p className="px-4 text-center text-xs text-brand-slate">Swipe or scroll sideways for more; the row pauses while you read. {reviewsFootnote}</p>
+      {row.some((i) => i.kind === "yelp") && <YelpEmbedLoader targetId="reviews-row" />}
+      <p className="px-4 text-center text-xs text-brand-slate">Swipe or scroll sideways for more; the row pauses while you read. {reviewsFootnote.replace("Google and Yelp", "Google")}</p>
     </div>
   );
 }
