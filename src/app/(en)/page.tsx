@@ -37,7 +37,7 @@ export default function Home() {
           <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-mist" />
           <div className="relative mx-auto max-w-5xl space-y-6 px-4 pb-16 pt-14 text-center sm:px-6 sm:pt-20">
             <TypedHeadline
-              className="text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl"
+              className="text-[6.2vw] font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl"
               lead="Tap your home equity"
               phrases={["and keep your low rate.", "with a reverse mortgage.", "with a HELOC.", "with a Reverse 2nd.", "with a DSCR loan."]}
             />
