@@ -3,7 +3,7 @@
   "rating": 5.0,
   "count": 40,
   "googleUrl": "https://share.google/qZgX0T5SsUolWltS3",
-  "sources": {},
+  "sources": { "yelp": { "label": "Yelp", "url": "https://www.yelp.com/biz/the-mortgage-advisory-ladera-ranch-2", "rating": 5.0, "count": 12 } },
   "reviews": [
     { "name": "Tracy M.", "year": 2025, "featured": true, "text": "Ace and his team are amazing! He assisted me with the purchase of my first home, which happens to be my childhood home. He's very responsive, attentive and explains everything thoroughly. I would highly recommend him for any of your mortgage needs. I can't thank you enough, Ace!!!" },
     { "name": "A. M.", "year": 2025, "featured": true, "text": "This is the third time we have worked with The Mortgage Advisory and every time it has been an easy process. They are clear with communication, professional, and always make sure things get done right. We trust them completely and appreciate how smooth they make everything from start to finish." },
