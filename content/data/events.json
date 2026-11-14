@@ -1,0 +1,67 @@
+{
+  "_note": "Upcoming events for /news (The Advisory Report). Each Eventbrite series repeats weekly on `days` (0=Sun … 6=Sat) at `time` Pacific. Edit or remove a series here when the Eventbrite page changes; past dates drop off on their own.",
+  "series": [
+    {
+      "id": "hidden-pension",
+      "title": "Is Your Home a Hidden Pension? Reverse Mortgage Facts for Homeowners 62+",
+      "titleEs": "¿Su casa es una pensión escondida? Datos sobre la hipoteca inversa para propietarios de 62+",
+      "area": "",
+      "areaEs": "",
+      "url": "https://www.eventbrite.com/e/is-your-home-a-hidden-pension-reverse-mortgage-facts-for-homeowners-62-tickets-2004110335964",
+      "days": [2, 4],
+      "time": "10:30",
+      "durationMin": 45,
+      "language": "English",
+      "summary": "Free 45-minute live webinar with mortgage banker Ace Ausar: how a reverse mortgage (HECM) works, what it costs, the common myths, and who it fits. Facts first, no sales pitch, live Q&A at the end.",
+      "summaryEs": "Seminario web gratuito de 45 minutos con el banquero hipotecario Ace Ausar: cómo funciona una hipoteca inversa (HECM), cuánto cuesta, los mitos comunes y a quién le conviene. Primero los datos, sin presión de ventas, con preguntas en vivo al final. Se presenta en inglés."
+    },
+    {
+      "id": "los-angeles",
+      "title": "Reverse Mortgage Facts for Los Angeles Homeowners 62+",
+      "titleEs": "Datos sobre la hipoteca inversa para propietarios de Los Ángeles de 62+",
+      "area": "Los Angeles",
+      "areaEs": "Los Ángeles",
+      "url": "https://www.eventbrite.com/e/reverse-mortgage-facts-for-los-angeles-homeowners-62-free-webinar-tickets-2004111057121",
+      "days": [2, 4],
+      "time": "10:30",
+      "durationMin": 45,
+      "language": "English"
+    },
+    {
+      "id": "orange-county",
+      "title": "Reverse Mortgage Facts for Orange County Homeowners 62+",
+      "titleEs": "Datos sobre la hipoteca inversa para propietarios del Condado de Orange de 62+",
+      "area": "Orange County",
+      "areaEs": "Condado de Orange",
+      "url": "https://www.eventbrite.com/e/reverse-mortgage-facts-for-orange-county-homeowners-62-free-webinar-tickets-2004111477378",
+      "days": [2, 4],
+      "time": "10:30",
+      "durationMin": 45,
+      "language": "English"
+    },
+    {
+      "id": "san-diego",
+      "title": "Reverse Mortgage Facts for San Diego Homeowners 62+",
+      "titleEs": "Datos sobre la hipoteca inversa para propietarios de San Diego de 62+",
+      "area": "San Diego",
+      "areaEs": "San Diego",
+      "url": "https://www.eventbrite.com/e/reverse-mortgage-facts-for-san-diego-homeowners-62-free-webinar-tickets-2004111318904",
+      "days": [2, 4],
+      "time": "10:30",
+      "durationMin": 45,
+      "language": "English"
+    },
+    {
+      "id": "inland-empire",
+      "title": "Reverse Mortgage Facts for Riverside & Inland Empire Homeowners 62+",
+      "titleEs": "Datos sobre la hipoteca inversa para propietarios de Riverside y el Inland Empire de 62+",
+      "area": "Riverside & Inland Empire",
+      "areaEs": "Riverside y el Inland Empire",
+      "url": "https://www.eventbrite.com/e/2004111165445",
+      "days": [2, 4],
+      "time": "10:30",
+      "durationMin": 45,
+      "language": "English"
+    }
+  ]
+}

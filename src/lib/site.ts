@@ -20,6 +20,7 @@ export const mainNav = [
 // Grouped under "Resources" in the header and "Company & tools" in the footer (Ace, Sept 2026: nothing removed).
 export const resourcesNav = [
   { href: "/loans/dscr", label: "DSCR & Investor Loans" },
+  { href: "/news", label: "The Advisory Report" },
   { href: "/pre-approval", label: "Get Pre-Approved" },
   { href: "/answers", label: "Answers" },
   { href: "/life-rate", label: "Life Rate Calculator" },

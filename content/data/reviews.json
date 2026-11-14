@@ -1,8 +1,9 @@
 {
-  "_note": "Real Google reviews, copied word for word from the Google Business Profile (Sept 27, 2026). Never edit a reviewer's words. Text ending in … is Google's own preview cut; the full review is on Google. Names shortened to first name + last initial. Years are approximate (Google shows relative dates).",
+  "_note": "Real Google reviews, copied word for word from the Google Business Profile (Sept 27, 2026). Never edit a reviewer's words. Text ending in … is Google's own preview cut; the full review is on Google. Names shortened to first name + last initial. Years are approximate (Google shows relative dates). Other sites: add each one to `sources` (label, url, optional rating and count) and give its reviews \"source\": \"yelp\" (or zillow, bbb, facebook) plus the review's own url.",
   "rating": 5.0,
   "count": 40,
   "googleUrl": "https://share.google/qZgX0T5SsUolWltS3",
+  "sources": {},
   "reviews": [
     { "name": "Tracy M.", "year": 2025, "featured": true, "text": "Ace and his team are amazing! He assisted me with the purchase of my first home, which happens to be my childhood home. He's very responsive, attentive and explains everything thoroughly. I would highly recommend him for any of your mortgage needs. I can't thank you enough, Ace!!!" },
     { "name": "A. M.", "year": 2025, "featured": true, "text": "This is the third time we have worked with The Mortgage Advisory and every time it has been an easy process. They are clear with communication, professional, and always make sure things get done right. We trust them completely and appreciate how smooth they make everything from start to finish." },

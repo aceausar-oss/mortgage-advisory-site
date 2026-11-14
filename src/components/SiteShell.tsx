@@ -4,6 +4,8 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SpanishNotice } from "@/components/SpanishNotice";
 import { TreasuryTicker } from "@/components/TreasuryTicker";
+import { NewsletterPopup } from "@/components/news/NewsletterSignup";
+import { newsSignupEnabled } from "@/lib/news";
 import { inter, montserrat } from "@/lib/fonts";
 import { ui, type Lang } from "@/lib/i18n";
 import { organizationJsonLd } from "@/lib/site";
@@ -32,6 +34,7 @@ export function SiteShell({ lang, children }: { lang: Lang; children: ReactNode 
           {children}
         </main>
         <SiteFooter lang={lang} />
+        {newsSignupEnabled() && <NewsletterPopup lang={lang} />}
       </body>
     </html>
   );

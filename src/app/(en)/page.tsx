@@ -10,6 +10,7 @@ import { LicensedStatesMap } from "@/components/home/LicensedStatesMap";
 import { QuestionFeed } from "@/components/home/QuestionFeed";
 import { ReviewsCarousel } from "@/components/Reviews";
 import { StatsBand } from "@/components/home/StatsBand";
+import { TypedHeadline } from "@/components/home/TypedHeadline";
 import { ParallaxImage } from "@/components/ParallaxImage";
 import { StorySections } from "@/components/home/StorySections";
 import { pricing, verifiedStats } from "@/lib/home";
@@ -35,10 +36,12 @@ export default function Home() {
           <div aria-hidden="true" className="platinum" />
           <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-mist" />
           <div className="relative mx-auto max-w-5xl space-y-6 px-4 pb-16 pt-14 text-center sm:px-6 sm:pt-20">
-            <h1 className="text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
-              Tap your home equity and <em className="not-italic text-brand-blue-deep">keep</em> your low rate.
-            </h1>
-            <p className="mx-auto max-w-3xl text-lg leading-relaxed sm:text-xl">
+            <TypedHeadline
+              className="text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl"
+              lead="Tap your home equity"
+              phrases={["and keep your low rate.", "with a reverse mortgage.", "with a HELOC.", "with a Reverse 2nd.", "with a DSCR loan."]}
+            />
+            <p className="mx-auto max-w-3xl text-base leading-relaxed sm:text-xl">
               Access cash with HELOCs, reverse mortgages, and home loans. Ask our AI mortgage assistant anything, and our team will take it from
               there.
             </p>

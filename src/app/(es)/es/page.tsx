@@ -4,6 +4,7 @@ import { BookingSection } from "@/components/home/BookingSection";
 import { EquitySlider } from "@/components/home/EquitySlider";
 import { FloatingCard } from "@/components/home/FloatingCard";
 import { GoalCards } from "@/components/home/GoalCards";
+import { TypedHeadline } from "@/components/home/TypedHeadline";
 import { HeroChat } from "@/components/home/HeroChat";
 import { LicensedStatesMap } from "@/components/home/LicensedStatesMap";
 import { pricing } from "@/lib/home";
@@ -28,10 +29,12 @@ export default function SpanishHome() {
           <div aria-hidden="true" className="platinum" />
           <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-mist" />
           <div className="relative mx-auto max-w-5xl space-y-6 px-4 pb-16 pt-14 text-center sm:px-6 sm:pt-20">
-            <h1 className="text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
-              Use el valor de su casa y <em className="not-italic text-brand-blue-deep">conserve</em> su tasa baja.
-            </h1>
-            <p className="mx-auto max-w-3xl text-lg leading-relaxed sm:text-xl">
+            <TypedHeadline
+              className="text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl"
+              lead="Use el valor de su casa"
+              phrases={["y conserve su tasa baja.", "con una hipoteca inversa.", "con una HELOC.", "con una Reverse 2nd.", "con un préstamo DSCR."]}
+            />
+            <p className="mx-auto max-w-3xl text-base leading-relaxed sm:text-xl">
               Obtenga dinero con una HELOC, una hipoteca inversa o un préstamo para comprar casa. Pregúntele lo que quiera a nuestro asistente
               hipotecario de IA, y nuestro equipo le dará seguimiento, en español si lo prefiere.
             </p>
