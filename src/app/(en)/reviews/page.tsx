@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { AnswerCta, Breadcrumbs } from "@/components/AnswerParts";
-import { ReviewCard, ReviewsSummary, reviewsData, reviewsFootnote } from "@/components/Reviews";
+import { ReviewCard, ReviewsSummary, YelpReviewCard, reviewsData, reviewsFootnote, yelpReviewEmbeds } from "@/components/Reviews";
+import { YelpEmbedLoader } from "@/components/YelpEmbeds";
 
 export const metadata: Metadata = {
   title: "Client Reviews",
@@ -18,11 +19,26 @@ export default function ReviewsPage() {
       </header>
       <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {reviewsData.reviews.map((r) => (
-          <li key={r.name}>
+          <li key={`${r.source ?? "google"}-${r.name}`}>
             <ReviewCard review={r} />
           </li>
         ))}
       </ul>
+      {yelpReviewEmbeds.length > 0 && (
+        <section aria-labelledby="yelp-h" className="space-y-5">
+          <h2 id="yelp-h" className="text-center text-2xl font-semibold">
+            Reviews on Yelp
+          </h2>
+          <ul id="yelp-grid" className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {yelpReviewEmbeds.map((e) => (
+              <li key={e.id}>
+                <YelpReviewCard embed={e} />
+              </li>
+            ))}
+          </ul>
+          <YelpEmbedLoader targetId="yelp-grid" />
+        </section>
+      )}
       <p className="text-center text-xs text-brand-slate">
         {reviewsFootnote} Reviews ending in “…” are cut short by Google; read the full text on Google.
       </p>
