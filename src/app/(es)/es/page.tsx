@@ -34,7 +34,7 @@ export default function SpanishHome() {
               lead="Use el valor de su casa"
               phrases={["y conserve su tasa baja.", "con una hipoteca inversa.", "con una HELOC.", "con una Reverse 2nd.", "con un préstamo DSCR."]}
             />
-            <p className="mx-auto max-w-3xl text-lg leading-relaxed sm:text-xl">
+            <p className="mx-auto max-w-3xl text-base leading-relaxed sm:text-xl">
               Obtenga dinero con una HELOC, una hipoteca inversa o un préstamo para comprar casa. Pregúntele lo que quiera a nuestro asistente
               hipotecario de IA, y nuestro equipo le dará seguimiento, en español si lo prefiere.
             </p>

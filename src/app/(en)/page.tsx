@@ -41,7 +41,7 @@ export default function Home() {
               lead="Tap your home equity"
               phrases={["and keep your low rate.", "with a reverse mortgage.", "with a HELOC.", "with a Reverse 2nd.", "with a DSCR loan."]}
             />
-            <p className="mx-auto max-w-3xl text-lg leading-relaxed sm:text-xl">
+            <p className="mx-auto max-w-3xl text-base leading-relaxed sm:text-xl">
               Access cash with HELOCs, reverse mortgages, and home loans. Ask our AI mortgage assistant anything, and our team will take it from
               there.
             </p>
