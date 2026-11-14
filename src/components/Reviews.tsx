@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { CarouselAutoplay } from "@/components/CarouselAutoplay";
 import { CarouselDots } from "@/components/CarouselDots";
+import { YelpEmbedLoader } from "@/components/YelpEmbeds";
 import data from "../../content/data/reviews.json";
 
 // Real client reviews (content/data/reviews.json), shown word for word. No AggregateRating schema:
@@ -10,12 +11,14 @@ import data from "../../content/data/reviews.json";
 // source in `sources` gets a "Read on …" link so visitors can check the originals.
 export type ReviewSource = "google" | "yelp" | "zillow" | "bbb" | "facebook";
 export type Review = { name: string; year: number; text: string; featured?: boolean; source?: ReviewSource; url?: string };
+export type YelpEmbed = { id: string; name: string; year: number };
 type SourceInfo = { label: string; url: string; rating?: number; count?: number };
 export const reviewsData = data as {
   rating: number;
   count: number;
   googleUrl: string;
   sources?: Partial<Record<ReviewSource, SourceInfo>>;
+  yelpEmbeds?: YelpEmbed[];
   reviews: Review[];
 };
 const SOURCE_LABEL: Record<ReviewSource, string> = { google: "Google", yelp: "Yelp", zillow: "Zillow", bbb: "BBB", facebook: "Facebook" };
@@ -28,7 +31,49 @@ const SOURCE_BADGE: Record<ReviewSource, { pill: string; dot: string }> = {
   facebook: { pill: "bg-[#e9f0fd] text-[#1b5fd1]", dot: "bg-[#1877f2]" },
 };
 // Sources that actually have reviews shown on the site (for the "shown word for word" line).
-const shownSources = [...new Set(reviewsData.reviews.map((r) => SOURCE_LABEL[r.source ?? "google"]))];
+const yelpEmbeds = reviewsData.yelpEmbeds ?? [];
+const shownSources = [...new Set([...reviewsData.reviews.map((r) => SOURCE_LABEL[r.source ?? "google"]), ...(yelpEmbeds.length ? ["Yelp"] : [])])];
+const YELP_URL = reviewsData.sources?.yelp?.url ?? "https://www.yelp.com";
+
+// A Yelp review, shown only through Yelp's official embed (their rules don't allow copying the text). Same card
+// frame and glow as the Google cards, with the red Yelp badge in the top-right corner (Ace, Nov 2026).
+export function YelpReviewCard({ embed }: { embed: YelpEmbed }) {
+  return (
+    <figure className="flex h-full flex-col rounded-xl border border-brand-blue bg-white p-3 shadow-[0_0_18px_rgba(136,180,224,0.55)]">
+      <div className="flex justify-end px-2 pt-1">
+        <span className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5 text-xs font-bold ${SOURCE_BADGE.yelp.pill}`}>
+          <span aria-hidden="true" className={`h-2 w-2 rounded-full ${SOURCE_BADGE.yelp.dot}`} />
+          Yelp
+        </span>
+      </div>
+      <div className="mt-1 min-h-[15rem] flex-1 overflow-hidden">
+        <span className="yelp-review" data-review-id={embed.id} data-hostname="www.yelp.com">
+          <a href={`${YELP_URL}?hrid=${embed.id}`} target="_blank" rel="nofollow noopener" className="block p-3 text-sm font-semibold text-brand-button underline underline-offset-4">
+            Read {embed.name}&rsquo;s review of The Mortgage Advisory on Yelp ↗
+          </a>
+        </span>
+      </div>
+    </figure>
+  );
+}
+
+type RowItem = { kind: "google"; review: Review } | { kind: "yelp"; embed: YelpEmbed };
+/** Google and Yelp mixed into one row, alternating, without the same reviewer twice in a row. */
+function mixedRow(google: Review[]): RowItem[] {
+  const g = google.map((review) => ({ kind: "google" as const, review }));
+  const y = yelpEmbeds.map((embed) => ({ kind: "yelp" as const, embed }));
+  const out: RowItem[] = [];
+  while (g.length || y.length) {
+    if (g.length) out.push(g.shift()!);
+    if (y.length) {
+      const last = out.at(-1);
+      const lastName = last?.kind === "google" ? last.review.name : last?.embed.name;
+      const i = y.findIndex((e) => e.embed.name !== lastName);
+      out.push(...y.splice(i < 0 ? 0 : i, 1));
+    }
+  }
+  return out;
+}
 const otherSources = Object.entries(reviewsData.sources ?? {}).filter(([k]) => k !== "google") as [ReviewSource, SourceInfo][];
 
 const Stars = ({ className = "" }: { className?: string }) => (
@@ -107,8 +152,10 @@ export function ReviewsSummary({ extra }: { extra?: ReactNode }) {
 export const reviewsFootnote = `Real ${shownSources.join(" and ")} reviews, shown word for word. Everyone’s situation is different; your rate, costs, and timeline will vary.`;
 
 // Vora-style side-scrolling row. Native scroll with snap points: swipe, trackpad, or keyboard (it's focusable).
+export const yelpReviewEmbeds = yelpEmbeds;
+
 export function ReviewsCarousel() {
-  const featured = reviewsData.reviews.filter((r) => r.featured);
+  const row = mixedRow(reviewsData.reviews.filter((r) => r.featured));
   return (
     <div>
       <p className="text-center font-heading text-sm font-semibold uppercase tracking-[0.2em] text-brand-button">What clients say</p>
@@ -125,14 +172,21 @@ export function ReviewsCarousel() {
           aria-label="Client reviews, scroll sideways for more"
           className="relative flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth scroll-px-4 px-4 pb-6 pt-3 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:scroll-px-[max(1.5rem,calc((100vw-72rem)/2))] sm:px-[max(1.5rem,calc((100vw-72rem)/2))]"
         >
-          {featured.map((r) => (
-            <li key={`${r.source ?? "google"}-${r.name}`} className="w-[calc(100vw-2rem)] shrink-0 snap-center sm:w-[calc((100vw-4.25rem)/2)] sm:snap-start lg:w-[calc((min(100vw,72rem)-6.75rem)/4)]">
-              <ReviewCard review={r} compact />
-            </li>
-          ))}
+          {row.map((item) =>
+            item.kind === "google" ? (
+              <li key={`google-${item.review.name}`} className="w-[calc(100vw-2rem)] shrink-0 snap-center sm:w-[calc((100vw-4.25rem)/2)] sm:snap-start lg:w-[calc((min(100vw,72rem)-6.75rem)/4)]">
+                <ReviewCard review={item.review} compact />
+              </li>
+            ) : (
+              // Yelp's review box needs at least 320px, so Yelp cards are a little wider on computers.
+              <li key={`yelp-${item.embed.id}`} className="w-[calc(100vw-2rem)] shrink-0 snap-center sm:w-[22rem] sm:snap-start">
+                <YelpReviewCard embed={item.embed} />
+              </li>
+            ),
+          )}
           <li className="flex w-[calc(100vw-2rem)] shrink-0 snap-center items-center justify-center sm:w-56 sm:snap-start">
             <Link href="/reviews" className="rounded-full bg-brand-soft px-5 py-2.5 font-semibold text-brand-ink hover:bg-brand-blue">
-              See all {reviewsData.reviews.length} reviews →
+              See all {reviewsData.reviews.length + yelpEmbeds.length} reviews →
             </Link>
           </li>
         </ul>
@@ -142,6 +196,7 @@ export function ReviewsCarousel() {
       <div className="mb-4">
         <CarouselDots targetId="reviews-row" />
       </div>
+      {yelpEmbeds.length > 0 && <YelpEmbedLoader targetId="reviews-row" />}
       <p className="px-4 text-center text-xs text-brand-slate">Swipe or scroll sideways for more; the row pauses while you read. {reviewsFootnote}</p>
     </div>
   );
