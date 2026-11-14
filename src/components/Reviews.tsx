@@ -95,7 +95,9 @@ export function ReviewCard({ review, compact = false }: { review: Review; compac
           {SOURCE_LABEL[review.source ?? "google"]}
         </span>
       </div>
-      <blockquote className={`mt-2 flex-1 text-[0.95rem] leading-relaxed text-brand-ink ${compact ? "line-clamp-6" : ""}`}>“{review.text}”</blockquote>
+      <blockquote className={`mt-2 text-[0.95rem] leading-relaxed text-brand-ink ${compact ? "line-clamp-6" : ""}`}>“{review.text}”</blockquote>
+      {/* Spacer keeps the name at the bottom when a taller Yelp card stretches the row (the clamp stays at 6 lines). */}
+      <div className="flex-1" />
       <figcaption className="mt-4 flex items-center gap-3 border-t border-brand-blue/30 pt-3">
         <span aria-hidden="true" className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-brand-soft font-heading font-bold text-brand-ink">
           {review.name.charAt(0).toUpperCase()}
