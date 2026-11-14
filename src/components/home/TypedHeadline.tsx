@@ -46,9 +46,13 @@ export function TypedHeadline({ lead, phrases, className = "" }: { lead: string;
       <span aria-hidden="true" className="block">
         {lead}
       </span>
-      {/* One line, always: on phones the whole headline scales with the screen width (set on the h1) so even the
-          longest phrase fits, and one line's height is reserved so the page doesn't jump while it changes. */}
-      <span aria-hidden="true" className="block min-h-[1.25em] whitespace-nowrap text-brand-blue-deep">
+      {/* Phones: the lead keeps its big size and the blue phrase scales to the screen width so even the longest one
+          fits on one line (no gap). Tablets and computers: unchanged, the phrase matches the lead's size. One line's
+          height is reserved so the page doesn't jump while the phrase changes. */}
+      <span
+        aria-hidden="true"
+        className="block min-h-[1.25em] whitespace-nowrap text-[6.2vw] text-brand-blue-deep sm:whitespace-normal sm:text-[length:inherit]"
+      >
         {shown}
         <span className="ml-1 inline-block h-[0.9em] w-[3px] translate-y-[0.1em] animate-pulse rounded-full bg-brand-blue-deep align-baseline motion-reduce:hidden" />
       </span>

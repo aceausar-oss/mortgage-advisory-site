@@ -30,7 +30,7 @@ export default function SpanishHome() {
           <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-mist" />
           <div className="relative mx-auto max-w-5xl space-y-6 px-4 pb-16 pt-14 text-center sm:px-6 sm:pt-20">
             <TypedHeadline
-              className="text-[6.2vw] font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl"
+              className="text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl"
               lead="Use el valor de su casa"
               phrases={["y conserve su tasa baja.", "con una hipoteca inversa.", "con una HELOC.", "con una Reverse 2nd.", "con un préstamo DSCR."]}
             />
