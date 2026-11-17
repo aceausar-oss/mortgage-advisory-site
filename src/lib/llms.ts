@@ -37,6 +37,7 @@ export function llmsTxt() {
     `- [Costs and how we're paid](${siteUrl}/costs): typical closing costs, fees, and how we're compensated`,
     `- [How to get pre-approved](${siteUrl}/pre-approval): documents, timing, credit impact, and pre-qualification vs. pre-approval`,
     `- [See what you qualify for](${siteUrl}/qualify): 2-minute quiz for buying, refinancing, HELOC/cash-out, or reverse mortgage; no credit check; direct links: /qualify/refinance, /qualify/heloc, /qualify/reverse-mortgage (buyers: /pre-approval)`,
+    `- [DSCR calculator](${siteUrl}/dscr-calculator): a rental property's debt service coverage ratio (monthly rent ÷ principal, interest, taxes, insurance, and HOA)`,
     `- [Reverse mortgage calculator](${siteUrl}/reverse-calculator): estimates what a HECM could provide, using HUD's Principal Limit Factor tables`,
     `- [How we estimate home equity](${siteUrl}/how-we-estimate): the formula behind our equity estimate`,
     `- [About Ace Ausar and the company](${siteUrl}/about)`,

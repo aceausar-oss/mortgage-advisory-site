@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { GuideBox, GuidePopup } from "@/components/guide/GuideOffer";
+import { DscrCalculatorSection, DscrFeature } from "@/components/dscr/DscrFeature";
 import { ProgramPage } from "@/components/ProgramPage";
 import { ReverseCalculator } from "@/components/reverse/ReverseCalculator";
 import { guideEnabled } from "@/lib/guide";
@@ -45,6 +46,9 @@ export default async function LoanProgramPage({ params }: PageProps<"/loans/[slu
         {guide && <GuidePopup />}
       </>
     );
+  }
+  if (page.slug === "dscr") {
+    return <ProgramPage page={page} parallax feature={<DscrFeature />} extra={<DscrCalculatorSection />} />;
   }
   return <ProgramPage page={page} />;
 }

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { GuideBox, GuidePopup } from "@/components/guide/GuideOffer";
+import { DscrCalculatorSection, DscrFeature } from "@/components/dscr/DscrFeature";
 import { ProgramPage } from "@/components/ProgramPage";
 import { guideEnabled } from "@/lib/guide";
 import { alternates } from "@/lib/i18n";
@@ -68,6 +69,9 @@ export default async function SpanishLoanPage({ params }: { params: Promise<{ sl
         {guide && <GuidePopup lang="es" />}
       </>
     );
+  }
+  if (page.slug === "dscr") {
+    return <ProgramPage page={page} parallax feature={<DscrFeature lang="es" />} extra={<DscrCalculatorSection lang="es" />} />;
   }
   return <ProgramPage page={page} />;
 }

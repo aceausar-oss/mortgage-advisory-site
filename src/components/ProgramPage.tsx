@@ -5,6 +5,7 @@ import { AuthorBox, Breadcrumbs, DraftBanner, SourcesList, TldrBox } from "@/com
 import { DidYouKnow } from "@/components/DidYouKnow";
 import { Disclosures } from "@/components/Disclosures";
 import { JsonLd } from "@/components/JsonLd";
+import { ParallaxImage } from "@/components/ParallaxImage";
 import { QuizBanner, goalForLoan } from "@/components/qualify/QuizBanner";
 import { quizHref } from "@/lib/qualifyPaths";
 import { bookingTypes } from "@/lib/home";
@@ -134,7 +135,9 @@ function LoanCta({ page }: { page: LoanPage }) {
   );
 }
 
-export function ProgramPage({ page, extra }: { page: LoanPage; extra?: ReactNode }) {
+// `feature` replaces the small quiz banner with a page's own, bigger call to action (shown right under the TL;DR);
+// `parallax` makes the header photo drift as the page scrolls (Ace, Nov 2026: DSCR page).
+export function ProgramPage({ page, extra, feature, parallax = false }: { page: LoanPage; extra?: ReactNode; feature?: ReactNode; parallax?: boolean }) {
   const lang = page.lang;
   const es = lang === "es";
   const prefix = es ? "/es" : "";
@@ -190,21 +193,33 @@ export function ProgramPage({ page, extra }: { page: LoanPage; extra?: ReactNode
           <header className="space-y-5">
             <p className="font-heading text-sm font-semibold uppercase tracking-[0.2em] text-brand-button">{page.name}</p>
             <h1 className="text-3xl font-bold leading-tight sm:text-4xl">{page.question}</h1>
-            {page.image && (
-              <div className="relative aspect-[3/2] overflow-hidden rounded-2xl sm:aspect-[21/9]">
-                <Image
+            {page.image &&
+              (parallax ? (
+                <ParallaxImage
                   src={page.image}
                   alt={page.imageAlt ?? ""}
-                  fill
                   preload
+                  strength={0.14}
                   sizes="(min-width: 768px) 768px, 100vw"
-                  className="object-cover"
-                  style={page.imagePosition ? { objectPosition: page.imagePosition } : undefined}
+                  position={page.imagePosition}
+                  className="aspect-[3/2] rounded-2xl sm:aspect-[21/9]"
                 />
-              </div>
-            )}
+              ) : (
+                <div className="relative aspect-[3/2] overflow-hidden rounded-2xl sm:aspect-[21/9]">
+                  <Image
+                    src={page.image}
+                    alt={page.imageAlt ?? ""}
+                    fill
+                    preload
+                    sizes="(min-width: 768px) 768px, 100vw"
+                    className="object-cover"
+                    style={page.imagePosition ? { objectPosition: page.imagePosition } : undefined}
+                  />
+                </div>
+              ))}
             <TldrBox text={page.tldr} lang={lang} />
           </header>
+          {feature}
           {page.didYouKnow.length > 0 && (
             <div className="lg:hidden">
               <DidYouKnow facts={page.didYouKnow} lang={lang} />
@@ -224,7 +239,7 @@ export function ProgramPage({ page, extra }: { page: LoanPage; extra?: ReactNode
               ))}
             </ul>
           )}
-          <QuizBanner lang={lang} goal={page.basePath === "/loans" ? goalForLoan(page.slug) : undefined} />
+          {!feature && <QuizBanner lang={lang} goal={page.basePath === "/loans" ? goalForLoan(page.slug) : undefined} />}
           <div className="answer-body" dangerouslySetInnerHTML={{ __html: page.html }} />
           {extra}
           <WhoFunds funding={page.funding} lang={lang} />

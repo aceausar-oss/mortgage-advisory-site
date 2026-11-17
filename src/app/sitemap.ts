@@ -35,7 +35,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${siteUrl}/es/news`, lastModified: esEditions[0]?.date, ...both("/news") },
     ...editions.map((e) => ({ url: `${siteUrl}/news/${e.slug}`, lastModified: e.date, ...both(`/news/${e.slug}`) })),
     ...esEditions.map((e) => ({ url: `${siteUrl}/es/news/${e.slug}`, lastModified: e.date, ...both(`/news/${e.slug}`) })),
-    ...["life-rate", "reverse-calculator", "costs", "pros", "about", "licensing", "privacy", "terms", "accessibility", "do-not-sell"].map((p) => ({ url: `${siteUrl}/${p}` })),
+    ...["life-rate", "dscr-calculator", "reverse-calculator", "costs", "pros", "about", "licensing", "privacy", "terms", "accessibility", "do-not-sell"].map((p) => ({ url: `${siteUrl}/${p}` })),
     ...loans.map((p) => ({
       url: `${siteUrl}${p.basePath}/${p.slug}`,
       lastModified: p.updated,
