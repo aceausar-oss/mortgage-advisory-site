@@ -10,7 +10,7 @@ import { DscrCalculator } from "@/components/dscr/DscrCalculator";
 
 const COPY = {
   en: {
-    kicker: "2-minute investor check · No tax returns needed",
+    kicker: "2 minutes · No tax returns needed",
     title: "Will your rental qualify for a DSCR loan?",
     points: ["DSCR or conventional: which fits this property", "Your estimated cash-out on a refinance", "Your document checklist, ready to go"],
     cta: "Check if my rental qualifies",
@@ -19,7 +19,7 @@ const COPY = {
     alt: "Single-family rental home",
   },
   es: {
-    kicker: "Revisión para inversionistas en 2 minutos · Sin declaraciones de impuestos",
+    kicker: "2 minutos · Sin declaraciones de impuestos",
     title: "¿Su propiedad de renta califica para un préstamo DSCR?",
     points: ["DSCR o convencional: cuál le funciona a esta propiedad", "Su estimado de retiro de efectivo al refinanciar", "Su lista de documentos, lista para usar"],
     cta: "Ver si mi propiedad califica",
