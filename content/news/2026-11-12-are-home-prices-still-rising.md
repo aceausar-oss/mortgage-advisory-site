@@ -78,7 +78,7 @@ The typical first-time buyer is now **40 years old**, tied for the oldest on rec
 
 **If you're 62 or older:** Rising home values raise the amount a reverse mortgage can provide, up to the HUD limit. If you'd like to keep a low-rate first mortgage, there are [reverse mortgage options that keep it](/answers/reverse-mortgage-keep-first-mortgage). Our free [reverse mortgage calculator](/reverse-calculator) gives you a quick estimate.
 
-**If you invest in rentals:** Equity in a rental you already own can fund the next one. A [DSCR cash-out refinance](/answers/dscr-cash-out-refinance) qualifies on the property's rent instead of your tax returns. Take the 2-minute [investor quiz](/qualify/investor) to see which loans fit.
+**If you invest in rentals:** Equity in a rental you already own can fund the next one. A [DSCR cash-out refinance](/answers/dscr-cash-out-refinance) qualifies on the property's rent instead of your tax returns. [See which loans fit your rental](/qualify/investor) in about 2 minutes.
 
 ## Our take
 

@@ -6,7 +6,7 @@ import {
 import { alternates } from "@/lib/i18n";
 
 export const metadata: Metadata = {
-  title: "Vea para qué califica: cuestionario hipotecario de 2 minutos",
+  title: "Vea para qué califica en 2 minutos",
   description:
     "¿Comprar, refinanciar, una HELOC o una hipoteca inversa? Conteste unas preguntas y vea opciones que pueden funcionarle. Sin revisar su crédito ni SSN.",
   alternates: alternates("/qualify", "es"),
