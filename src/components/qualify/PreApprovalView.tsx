@@ -78,7 +78,7 @@ const SECTIONS: Record<Lang, Section[]> = {
                 <tr>
                   <th scope="row">Credit check</th>
                   <td>No</td>
-                  <td>Yes</td>
+                  <td>Soft pull to start (no effect on your score); hard pull before underwriting</td>
                 </tr>
                 <tr>
                   <th scope="row">Time</th>
@@ -131,16 +131,29 @@ const SECTIONS: Record<Lang, Section[]> = {
     },
     {
       q: "Does getting pre-approved hurt my credit?",
-      a: "A pre-approval uses a credit check that can lower your score by a few points for a short time. Several mortgage inquiries within a short window (14 to 45 days, depending on the scoring model) generally count as one.",
+      a: "Not to start. The Mortgage Advisory begins your pre-approval with a soft credit pull, which has no effect on your credit score. Once your loan moves toward underwriting, a hard credit report and score are required, and that inquiry can lower your score by a few points for a short time.",
       body: (
-        <p>
-          A pre-approval uses a credit check, which can lower your score by a
-          few points for a short time. Shopping several mortgage lenders within
-          a short window (14 to 45 days, depending on the scoring model)
-          generally counts as a single inquiry, so comparing lenders won&apos;t
-          hurt you more. Seeing what you qualify for on this page doesn&apos;t check
-          your credit at all.
-        </p>
+        <>
+          <p>
+            <strong>To start: a soft pull, with no effect on your score.</strong>{" "}
+            We begin your pre-approval with a soft credit pull. It lets us see
+            your credit and tell you where you stand, and it doesn&apos;t
+            affect your credit score.
+          </p>
+          <p>
+            <strong>Before underwriting: a hard credit report.</strong> When
+            you&apos;re ready to move forward and your loan heads to
+            underwriting, a hard credit report and score are required. A hard
+            inquiry can lower your score by a few points for a short time.
+            Several mortgage inquiries within a short window (14 to 45 days,
+            depending on the scoring model) generally count as one, so comparing
+            lenders won&apos;t hurt you more.
+          </p>
+          <p>
+            We&apos;ll always tell you before a hard pull is run. Seeing what
+            you qualify for on this page doesn&apos;t check your credit at all.
+          </p>
+        </>
       ),
     },
     {
@@ -215,7 +228,7 @@ const SECTIONS: Record<Lang, Section[]> = {
                 <tr>
                   <th scope="row">Revisión de crédito</th>
                   <td>No</td>
-                  <td>Sí</td>
+                  <td>Consulta suave para empezar (no afecta su puntaje); consulta completa antes de la suscripción</td>
                 </tr>
                 <tr>
                   <th scope="row">Tiempo</th>
@@ -273,16 +286,30 @@ const SECTIONS: Record<Lang, Section[]> = {
     },
     {
       q: "¿La preaprobación afecta mi crédito?",
-      a: "Incluye una revisión de crédito que puede bajar su puntaje unos puntos por poco tiempo. Varias consultas hipotecarias en un periodo corto (de 14 a 45 días, según el modelo) normalmente cuentan como una.",
+      a: "No, para empezar. The Mortgage Advisory comienza su preaprobación con una consulta de crédito suave (soft pull), que no afecta su puntaje. Cuando su préstamo avanza hacia la suscripción (underwriting), se requiere un reporte y un puntaje de crédito completos (hard pull), y esa consulta puede bajar su puntaje unos puntos por poco tiempo.",
       body: (
-        <p>
-          La preaprobación incluye una revisión de crédito, que puede bajar su
-          puntaje unos puntos por poco tiempo. Comparar varios prestamistas
-          hipotecarios en un periodo corto (de 14 a 45 días, según el modelo de
-          puntaje) normalmente cuenta como una sola consulta, así que comparar
-          no le perjudica más. Ver para qué califica en esta página no revisa su
-          crédito.
-        </p>
+        <>
+          <p>
+            <strong>Para empezar: una consulta suave, sin efecto en su puntaje.</strong>{" "}
+            Comenzamos su preaprobación con una consulta de crédito suave (soft
+            pull). Nos permite ver su crédito y decirle dónde está, y no afecta
+            su puntaje.
+          </p>
+          <p>
+            <strong>Antes de la suscripción: un reporte de crédito completo.</strong>{" "}
+            Cuando esté listo para avanzar y su préstamo pase a suscripción
+            (underwriting), se requiere un reporte y un puntaje de crédito
+            completos (hard pull). Esa consulta puede bajar su puntaje unos
+            puntos por poco tiempo. Varias consultas hipotecarias en un periodo
+            corto (de 14 a 45 días, según el modelo de puntaje) normalmente
+            cuentan como una sola, así que comparar prestamistas no le perjudica
+            más.
+          </p>
+          <p>
+            Siempre le avisaremos antes de hacer una consulta completa. Ver para
+            qué califica en esta página no revisa su crédito.
+          </p>
+        </>
       ),
     },
     {
