@@ -79,7 +79,7 @@ export async function POST(req: Request) {
   const answers = retrieveAnswers(parsed.data.messages);
   // Daily message count in Vercel Web Analytics (counts only; never the visitor's words).
   const turn = parsed.data.messages.filter((m) => m.role === "user").length;
-  await track("chat_message", { lang: es ? "es" : "en", first: turn === 1 ? "yes" : "no", answers: answers.length }).catch(() => {});
+  await track("chat_message", { lang: es ? "es" : "en", first: turn === 1 ? "yes" : "no" }).catch(() => {});
 
   const body = new ReadableStream<Uint8Array>({
     async start(controller) {
