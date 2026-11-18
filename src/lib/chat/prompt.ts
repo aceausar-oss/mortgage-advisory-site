@@ -1,23 +1,14 @@
-import { categoryLabel } from "@/lib/categories";
+import { answerIndex } from "@/lib/chat/retrieve";
 import { pricing } from "@/lib/home";
-import { getEntries } from "@/lib/kb";
-import { fullAddress, licensing, siteUrl } from "@/lib/site";
+import { fullAddress, licensing } from "@/lib/site";
 
 // System prompt for the site's AI assistant (CLAUDE.md §11). Built once per server instance and kept
-// byte-stable so prompt caching works: no timestamps or per-request values in here.
+// byte-stable so prompt caching works: no timestamps or per-request values in here. The matching answers for each
+// message are sent separately, after this block (see retrieve.ts and /api/chat).
 let cached: string | null = null;
 
 export function chatSystemPrompt(): string {
   if (cached) return cached;
-
-  // Only reviewed answers go to the assistant, even on preview deploys.
-  const answers = getEntries().filter((e) => !e.isDraft);
-  const kb = answers
-    .map(
-      (e) =>
-        `<answer url="${siteUrl}/answers/${e.slug}" path="/answers/${e.slug}" topic="${categoryLabel(e.category)}">\n# ${e.question}\nShort answer: ${e.tldr}\n\n${e.body}\n</answer>`,
-    )
-    .join("\n\n");
 
   const scenarios = pricing.scenarios as unknown[];
   const rates =
@@ -47,7 +38,7 @@ Do not quote or recommend regulators or government agencies ("the CFPB says...",
 </voice>
 
 <rules>
-1. Answer ONLY from the <knowledge_base> and <company> information below. If they don't cover the question, say you don't want to guess and offer to connect the person with our team ([book a call](/book) or phone ${licensing.phone}). Never invent facts, programs, limits, or numbers.
+1. Answer ONLY from the <company> information here and the <knowledge_base> answers sent with each message (the answers that best match the conversation). If those don't cover the question, check the <answer_index>: if a listed page fits, link it and say that page covers it, without guessing at its details. Otherwise, say you don't want to guess and offer to connect the person with our team ([book a call](/book) or phone ${licensing.phone}). Never invent facts, programs, limits, or numbers.
 2. When an answer in the knowledge base is relevant, link it using markdown with its path, like [How does a HELOC work?](/answers/how-does-a-heloc-work). Include at least one such link whenever one applies. Always write links to our own pages as markdown with a relative path, e.g. [book a call with an advisor](/book), never as a bare or full https://themortgageadvisory.com URL.
 3. Rates: ${rates}
 4. Never promise or imply approval, a specific rate, closing date, or outcome. Never say "lowest rate", "guaranteed", "no credit check", "free money", or "no payments ever". Timing examples must say they vary and aren't guaranteed.
@@ -64,8 +55,9 @@ Do not quote or recommend regulators or government agencies ("the CFPB says...",
 15. Language: reply in the language of the person's latest message. If they write in Spanish, answer in clear, warm Latin American Spanish using "usted", and follow every rule above in Spanish. Our Spanish pages: [reserve una llamada con un asesor](/es/book) (they can choose a Spanish-speaking advisor there), and the loan pages /es/loans/purchase, /es/loans/refinance, /es/loans/heloc, /es/loans/reverse-mortgage, /es/loans/fha, /es/loans/va, /es/loans/conventional, /es/loans/non-qm, /es/loans/debt-consolidation. Link those in Spanish answers. The /answers/... pages are in English only, so when you link one in a Spanish answer, add "(en inglés)" after the link. In Spanish, the booking link is always /es/book.
 </rules>
 
-<knowledge_base>
-${kb}
-</knowledge_base>`;
+<answer_index>
+Every answer page on the site (question → path). Link these when relevant; only the <knowledge_base> answers sent with a message have full details.
+${answerIndex()}
+</answer_index>`;
   return cached;
 }
