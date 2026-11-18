@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { Analytics } from "@vercel/analytics/next";
 import { JsonLd } from "@/components/JsonLd";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
@@ -35,6 +36,8 @@ export function SiteShell({ lang, children }: { lang: Lang; children: ReactNode 
         </main>
         <SiteFooter lang={lang} />
         {newsSignupEnabled() && <NewsletterPopup lang={lang} />}
+        {/* Cookieless page-view counts (Vercel Web Analytics); also receives the chat_message counts from /api/chat. */}
+        <Analytics />
       </body>
     </html>
   );

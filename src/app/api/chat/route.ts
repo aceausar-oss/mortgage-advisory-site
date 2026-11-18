@@ -1,5 +1,7 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { chatSystemPrompt } from "@/lib/chat/prompt";
+import { knowledgeBlock, retrieveAnswers } from "@/lib/chat/retrieve";
+import { track } from "@vercel/analytics/server";
 import { ChatRequest, MAX_BODY_BYTES, rateLimited, scrubPii } from "@/lib/chat/guard";
 import { licensing } from "@/lib/site";
 
@@ -8,7 +10,8 @@ import { licensing } from "@/lib/site";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
-const MODEL = process.env.CHAT_MODEL || "claude-opus-5";
+// Sonnet (Ace, Nov 2026): answers only from the knowledge base, at a fraction of Opus's cost. Override with CHAT_MODEL.
+const MODEL = process.env.CHAT_MODEL || "claude-sonnet-5-5";
 const FALLBACK = `I'm having trouble answering right now. You can reach our team at ${licensing.phone} or [book a call with an advisor](/book).`;
 // Spanish versions of the notices the server writes itself (the AI answers in the visitor's language on its own).
 const ES = {
@@ -72,6 +75,11 @@ export async function POST(req: Request) {
   const workspace = process.env.ANTHROPIC_WORKSPACE_ID?.trim();
   const client = new Anthropic(workspace ? { defaultHeaders: { "anthropic-workspace-id": workspace } } : {});
   const encoder = new TextEncoder();
+  // Only the answers that match this conversation go with the message (about 1/6 of the old prompt size).
+  const answers = retrieveAnswers(parsed.data.messages);
+  // Daily message count in Vercel Web Analytics (counts only; never the visitor's words).
+  const turn = parsed.data.messages.filter((m) => m.role === "user").length;
+  await track("chat_message", { lang: es ? "es" : "en", first: turn === 1 ? "yes" : "no", answers: answers.length }).catch(() => {});
 
   const body = new ReadableStream<Uint8Array>({
     async start(controller) {
@@ -86,7 +94,10 @@ export async function POST(req: Request) {
           betas: ["server-side-fallback-2026-07-01"],
           fallbacks: "default",
           output_config: { effort: "medium" },
-          system: [{ type: "text", text: chatSystemPrompt(), cache_control: { type: "ephemeral" } }],
+          system: [
+            { type: "text", text: chatSystemPrompt(), cache_control: { type: "ephemeral" } },
+            { type: "text", text: knowledgeBlock(answers) },
+          ],
           messages,
         });
         stream.on("text", (delta) => send(delta));

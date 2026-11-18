@@ -262,6 +262,7 @@ The same files generate:
 
 - Server route `/api/chat` using the Anthropic API (model from env `CHAT_MODEL`, key `ANTHROPIC_API_KEY`). Streams responses.
 - Retrieval: answer ONLY from the knowledge base + licensing/pricing data files; link the matching `/answers/[slug]` page in every answer.
+- **Cost (Ace, Nov 2026):** never send the whole knowledge base with each message. `src/lib/chat/retrieve.ts` picks the ~8 best-matching answers per message (plus an index of every answer page in the cached system prompt). Default model is Sonnet (`CHAT_MODEL` overrides). Each message is counted in Vercel Web Analytics as `chat_message` (counts only, never the visitor's words).
 - Persona: friendly, simple-and-clear guide for The Mortgage Advisory, speaking on Ace's behalf. Avatar: `ace-polo.png` + logo mark.
 - Rules (system prompt): never quote a specific rate/APR outside `pricing.json` scenarios; never promise approval; no "lowest rate" claims; always offer to book with Ace; say "I'm an AI assistant" when asked; decline to collect SSN, full account numbers, or DOB in chat; stay neutral and consistent (fair lending); outside licensed states → say we're not licensed there.
 - Lead capture: name, email, phone (with TCPA checkbox), goal, state → Phase 2 posts to GHL contact API; Phase 1 hands off to GHL booking embed.
