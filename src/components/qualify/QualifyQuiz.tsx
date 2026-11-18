@@ -196,8 +196,8 @@ export function QualifyQuiz({
     <section
       aria-label={
         es
-          ? "Cuestionario: vea para qué califica"
-          : "Quiz: see what you qualify for"
+          ? "Vea para qué califica"
+          : "See what you qualify for"
       }
       className="rounded-3xl bg-white p-4 shadow-sm ring-1 ring-brand-blue/40 sm:p-8"
     >
@@ -724,8 +724,8 @@ function Results({
   const es = lang === "es";
   const pre = es ? "/es" : "";
   const askQ = es
-    ? "Acabo de hacer el cuestionario de calificación. ¿Cuáles son mis siguientes pasos?"
-    : `I just took the qualify quiz (${result.programs.map((p) => p.name.en).join(", ")}). What are my next steps?`;
+    ? "Acabo de ver para qué califico en su sitio. ¿Cuáles son mis siguientes pasos?"
+    : `I just checked what I qualify for on your site (${result.programs.map((p) => p.name.en).join(", ")}). What are my next steps?`;
   const card = "rounded-2xl bg-mist p-5";
 
   return (

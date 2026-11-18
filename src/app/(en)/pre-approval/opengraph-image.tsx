@@ -11,6 +11,6 @@ export default function Image() {
     photo: PHOTO.src,
     position: PHOTO.sharePosition,
     headline: "What can I qualify for?",
-    sub: "Get pre-approved · 2-minute quiz",
+    sub: "Get pre-approved · See what you qualify for",
   });
 }

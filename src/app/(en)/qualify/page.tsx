@@ -6,7 +6,7 @@ import {
 import { alternates } from "@/lib/i18n";
 
 export const metadata: Metadata = {
-  title: "See What You Qualify For: 2-Minute Mortgage Quiz",
+  title: "See What You Qualify For in 2 Minutes",
   description:
     "Buying, refinancing, a HELOC, or a reverse mortgage? Answer a few questions and see loan options that may fit. No credit check, no SSN. NMLS #1549739.",
   alternates: alternates("/qualify", "en"),

@@ -108,7 +108,7 @@ export async function POST(req: Request) {
     // TCPA: texts only with this unchecked-by-default box ticked. Without it, the phone is for calls about the request.
     sms_consent: smsConsent ? "yes" : "no",
     sms_consent_text: smsConsent
-      ? "Agreed to receive calls and text messages, including automated ones, from The Mortgage Advisory, Inc. about this request (website quiz). Consent is not a condition of service."
+      ? "Agreed to receive calls and text messages, including automated ones, from The Mortgage Advisory, Inc. about this request (website: See what you qualify for). Consent is not a condition of service."
       : "",
     language: lang === "es" ? "Spanish" : "English",
     quiz_goal: GOAL_LABEL[goal],

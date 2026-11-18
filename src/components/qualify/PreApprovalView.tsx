@@ -21,7 +21,7 @@ const C = {
     eyebrow: "Mortgage pre-approval",
     h1: "What can I qualify for?",
     faqQ: "How do I get pre-approved for a mortgage?",
-    tldr: "Share your income, assets, and debts, and let a lender review your credit and documents. That review is what turns a guess into a pre-approval letter sellers take seriously. At The Mortgage Advisory (NMLS #1549739), licensed in California, Texas, Florida, and Colorado, you start with a 2-minute quiz, then an advisor reviews your documents and gives you a pre-approval you can count on.",
+    tldr: "Share your income, assets, and debts, and let a lender review your credit and documents. That review is what turns a guess into a pre-approval letter sellers take seriously. At The Mortgage Advisory (NMLS #1549739), licensed in California, Texas, Florida, and Colorado, you start by seeing what you qualify for in about 2 minutes, then an advisor reviews your documents and gives you a pre-approval you can count on.",
     scenarioTitle: "Example scenario (illustrative)",
     takeTitle: "Our take",
     ctaTitle: "Ready for a real pre-approval?",
@@ -36,7 +36,7 @@ const C = {
     eyebrow: "Preaprobación hipotecaria",
     h1: "¿Para qué puedo calificar?",
     faqQ: "¿Cómo obtengo una preaprobación para una hipoteca?",
-    tldr: "Comparta sus ingresos, bienes y deudas, y deje que un prestamista revise su crédito y sus documentos. Esa revisión es lo que convierte un cálculo en una carta de preaprobación que los vendedores toman en serio. En The Mortgage Advisory (NMLS #1549739), con licencia en California, Texas, Florida y Colorado, empieza con un cuestionario de 2 minutos; luego un asesor revisa sus documentos y le da una preaprobación con la que puede contar.",
+    tldr: "Comparta sus ingresos, bienes y deudas, y deje que un prestamista revise su crédito y sus documentos. Esa revisión es lo que convierte un cálculo en una carta de preaprobación que los vendedores toman en serio. En The Mortgage Advisory (NMLS #1549739), con licencia en California, Texas, Florida y Colorado, empieza viendo para qué califica en unos 2 minutos; luego un asesor revisa sus documentos y le da una preaprobación con la que puede contar.",
     scenarioTitle: "Ejemplo (ilustrativo)",
     takeTitle: "Nuestra opinión",
     ctaTitle: "¿Listo para una preaprobación real?",
@@ -138,8 +138,8 @@ const SECTIONS: Record<Lang, Section[]> = {
           few points for a short time. Shopping several mortgage lenders within
           a short window (14 to 45 days, depending on the scoring model)
           generally counts as a single inquiry, so comparing lenders won&apos;t
-          hurt you more. The quiz on this page doesn&apos;t check your credit at
-          all.
+          hurt you more. Seeing what you qualify for on this page doesn&apos;t check
+          your credit at all.
         </p>
       ),
     },
@@ -280,7 +280,7 @@ const SECTIONS: Record<Lang, Section[]> = {
           puntaje unos puntos por poco tiempo. Comparar varios prestamistas
           hipotecarios en un periodo corto (de 14 a 45 días, según el modelo de
           puntaje) normalmente cuenta como una sola consulta, así que comparar
-          no le perjudica más. El cuestionario de esta página no revisa su
+          no le perjudica más. Ver para qué califica en esta página no revisa su
           crédito.
         </p>
       ),
@@ -328,8 +328,8 @@ const SECTIONS: Record<Lang, Section[]> = {
 };
 
 const SCENARIO = {
-  en: "A first-time buyer in Fort Worth takes the quiz on a Sunday night: W-2 income, a 690 score, $18,000 saved. Her snapshot shows FHA and a conventional 3%-down loan as options, plus her document checklist. She uploads pay stubs and bank statements on Monday, and by Wednesday she has a pre-approval letter and a payment she's comfortable with, not just the maximum.",
-  es: "Una compradora de primera vez en Fort Worth hace el cuestionario un domingo en la noche: sueldo W-2, puntaje de 690 y $18,000 ahorrados. Su resumen muestra FHA y un préstamo convencional con 3 % de enganche como opciones, además de su lista de documentos. El lunes envía sus talones de pago y estados de cuenta, y para el miércoles tiene su carta de preaprobación y un pago con el que se siente cómoda, no solo el máximo.",
+  en: "A first-time buyer in Fort Worth checks what she qualifies for on a Sunday night: W-2 income, a 690 score, $18,000 saved. Her snapshot shows FHA and a conventional 3%-down loan as options, plus her document checklist. She uploads pay stubs and bank statements on Monday, and by Wednesday she has a pre-approval letter and a payment she's comfortable with, not just the maximum.",
+  es: "Una compradora de primera vez en Fort Worth revisa para qué califica un domingo en la noche: sueldo W-2, puntaje de 690 y $18,000 ahorrados. Su resumen muestra FHA y un préstamo convencional con 3 % de enganche como opciones, además de su lista de documentos. El lunes envía sus talones de pago y estados de cuenta, y para el miércoles tiene su carta de preaprobación y un pago con el que se siente cómoda, no solo el máximo.",
 };
 
 const TAKE = {

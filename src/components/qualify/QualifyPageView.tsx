@@ -16,9 +16,9 @@ const C = {
     h1: "See what you qualify for",
     lead: "Buying, refinancing, tapping your equity, or looking at a reverse mortgage? Answer a few quick questions and get a personal snapshot: the loan options that may fit, an estimate where we can give one, and what to have ready.",
     points: ["About 2 minutes", "No credit check", "No Social Security number"],
-    noJs: "This quiz needs JavaScript. You can also book a call or call us at",
+    noJs: "This tool needs JavaScript. You can also book a call or call us at",
     book: "book a call",
-    how: "What happens after the quiz?",
+    how: "What happens next?",
     steps: [
       [
         "You see your snapshot right away",
@@ -45,9 +45,9 @@ const C = {
       "Sin revisar su crédito",
       "Sin número de Seguro Social",
     ],
-    noJs: "Este cuestionario necesita JavaScript. También puede reservar una llamada o llamarnos al",
+    noJs: "Esta herramienta necesita JavaScript. También puede reservar una llamada o llamarnos al",
     book: "reservar una llamada",
-    how: "¿Qué pasa después del cuestionario?",
+    how: "¿Qué pasa después?",
     steps: [
       [
         "Ve su resumen de inmediato",
