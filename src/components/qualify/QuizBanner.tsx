@@ -70,6 +70,16 @@ const COPY: Record<
   },
 };
 
+// Button text says what the visitor gets, never "quiz" (Ace, Nov 2026).
+const BUTTON: Record<Goal | "any", { en: string; es: string }> = {
+  buy: { en: "See what I qualify for", es: "Ver para qué califico" },
+  refi: { en: "See my refinance options", es: "Ver mis opciones" },
+  cash: { en: "See how much I could unlock", es: "Ver cuánto podría liberar" },
+  reverse: { en: "See my estimate", es: "Ver mi estimado" },
+  invest: { en: "Check if my rental qualifies", es: "Ver si mi propiedad califica" },
+  any: { en: "See what I qualify for", es: "Ver para qué califico" },
+};
+
 const GOAL_BY_SLUG: Record<string, Goal> = {
   purchase: "buy",
   conventional: "buy",
@@ -111,7 +121,7 @@ export function QuizBanner({
         href={href}
         className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-brand-soft px-5 py-2.5 font-semibold text-brand-ink hover:bg-brand-blue"
       >
-        {es ? "Empezar" : "Start the quiz"} <span aria-hidden="true">→</span>
+        {BUTTON[goal ?? "any"][lang]} <span aria-hidden="true">→</span>
       </Link>
     </aside>
   );

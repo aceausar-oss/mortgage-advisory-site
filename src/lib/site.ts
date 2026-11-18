@@ -24,6 +24,7 @@ export const resourcesNav = [
   { href: "/pre-approval", label: "Get Pre-Approved" },
   { href: "/answers", label: "Answers" },
   { href: "/life-rate", label: "Life Rate Calculator" },
+  { href: "/dscr-calculator", label: "DSCR Calculator" },
   { href: "/reverse-calculator", label: "Reverse Mortgage Calculator" },
   { href: "/costs", label: "Costs & Fees" },
   { href: "/reviews", label: "Reviews" },
